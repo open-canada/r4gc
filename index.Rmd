@@ -3,32 +3,25 @@ knit: "bookdown::render_book" # This lines needs to be FIRST, if you file is not
 site: bookdown::bookdown_site
 documentclass: book
 
-#title: |
-#  ![R4GC](images/r4gc-header.png){.cover width="100%"}
-# "Learn Data Science with R (The R4GC book)
-# title: "R4GC book"
+# title: "The R4GC Book"
 # title: "R for Government of Canada"
-title: "Learn Data Science with R (The R4GC book)" # Use R in GC
+title: "Learn Data Science with R (The R4GC Book)" # Use R in GC
 
 
 subtitle: "Notes and tutorials from the R4GC Community 'Lunch and Learn' meetups"
 # subtitle: "Notes and tutorials from the R4GC Community meetups"
 
-
 author: "Dmitry Gorodnichy and Patrick Little"
-# author: "Dmitry Gorodnichy, Jonathan Dench, Patrick Little, Joseph Stinziano"
-# author: 'R4GC Community'
 # author:
 #   - Dmitry Gorodnichy
 #   - Patrick Little
-#   - Joseph Stinziano
 
 description: "Notes and tutorials from 'Lunch and Learn Data Science with R' weekly Meetups organized by the R4GC (Use R!) Community"
 # date: "`r format(Sys.time(), '%d %B %Y')` (https\://open-canada.github.io/r4gc)"  
 
 # 
 date: |
-  `r format(Sys.time(), '%d %B %Y')` (DRAFT - See [Release Notes])    
+  `r format(Sys.time(), '%d %B %Y')`   
   URL: [https\://open-canada.github.io/r4gc](https\://open-canada.github.io/r4gc)
 github-repo: "open-canada/r4gc"
 url: 'https\://open-canada.github.io/r4gc'
