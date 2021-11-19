@@ -8,20 +8,20 @@
 
 # Why R? 
 
-This is the question many ask. - Why should I use/learn R? 
+<!-- This is the question many ask. - Why should I use/learn R?  -->
 
 R is one of the fastest growing programming languages and environment for data science, visualization and processing. 
-R integrates well with Python and other free and commercial Data Science tools. It can also do something that other tools cannot and is very well  supported by growing international community. I
-t also comes with RStudio - a free Integrated Development Environment (IDE)  that is now supported by most GC Agencies and Departments, and that is becoming one of the main tools  for data related problems worldwide. For Microsoft data users, anything you do with  Excel, Access, Power BI, you can also do with R and RStudio.
+R integrates well with Python and other free and commercial Data Science tools. It can also do something that other tools cannot and is very well  supported by growing international community. 
+
+It also comes with RStudio - a free Integrated Development Environment (IDE)  that is now supported by most GC Agencies and Departments, and that is becoming one of the main tools  for data related problems worldwide. For Microsoft data users, anything you do with  Excel, Access, Power BI, you can also do with R and RStudio.
 
 
  
 
-### 10 main reasons to use R for Data Science 
+## 10 main reasons to use R for Data Science 
 
  
- 
-Below are our own top 10 reasons to use R for Data Science - filtered and refined over the past two years by the members of this community, with links. 
+There was much discussion around this topic, and below are our own top 10 reasons to use R for Data Science - filtered and refined  by the members of this community. 
 
  
 
@@ -60,7 +60,7 @@ Below are our own top 10 reasons to use R for Data Science - filtered and refine
 <!-- Easy web-publishing of data reports and deployment of web-applications -->
 
 
-# R and Python 
+# R vs. Python 
 
 
 Main references:
@@ -112,7 +112,12 @@ The used code is available from GCCode:  https://gccode.ssc-spc.gc.ca/r4gc/resou
 
 
 
-# Best way to learn R
+# Other resources
+
+
+
+
+## Best way to learn R
 
 
 The number of resources and ways to learn R is enormous.
@@ -130,7 +135,6 @@ Helping yourself, you also help others, and contribute to further improvement of
 <!-- # Ways to continue improving your R skills -->
 
 
-
 <!-- ## "Great bookdown books" -->
 
 
@@ -140,7 +144,101 @@ Helping yourself, you also help others, and contribute to further improvement of
 
 
 
-# Events and Forums for R users
+
+## Events and Forums for R users
+
+
+## Other R communities in GC
+
+
+Roughly sorted by the level of group activity
+
+ 
+
+### GCConnex (GC only):
+
+- https://gcconnex.gc.ca/groups/profile/5394852/data-science-goc
+
+- https://gcconnex.gc.ca/groups/profile/56632124/statcan-data-science-communities-of-practice-hub
+
+- https://gcconnex.gc.ca/groups/profile/53857931/applied-machine-learning-ml-for-text-analysis-community-of-practice-cop
+
+- https://gcconnex.gc.ca/groups/profile/22346843/big-data-community
+
+- https://gcconnex.gc.ca/groups/profile/39621554/data-visualization-resources
+
+- https://gcconnex.gc.ca/groups/profile/24345174/data-visualization
+
+- https://gcconnex.gc.ca/groups/profile/47035648/machine-learning-in-remote-sensing-cop
+
+- https://gcconnex.gc.ca/groups/profile/24825105/data-analytics-coalition
+
+- https://gcconnex.gc.ca/groups/profile/47035648/machine-learning-in-remote-sensing-cop
+
+- https://gcconnex.gc.ca/groups/profile/19758048/analytics-mining-and-hypothesis-testing
+
+- https://gcconnex.gc.ca/groups/profile/62219803/artificial-intelligence-and-data-science-group
+
+- https://gcconnex.gc.ca/groups/profile/30787891/digital-academy
+
+- https://gcconnex.gc.ca/groups/profile/36236376/candev-data-challenge-
+
+- https://gcconnex.gc.ca/groups/profile/4474153/data-analytics-working-group-dawg
+
+- https://gcconnex.gc.ca/groups/profile/34024870/welcome-to-r-canadian-government (not active)
+
+ 
+
+ 
+
+### GCcode (GC only):
+
+- https://gccode.ssc-spc.gc.ca/r4gc
+
+- https://gccode.ssc-spc.gc.ca/DSCV
+
+ 
+
+### GCcollab (public with login):
+
+- https://gccollab.ca/groups/profile/778815/eneccc-network-of-experts-and-researchers-in-data-science-nerdsfrlabo-de-donnu00e9es
+
+- https://gccollab.ca/groups/profile/3465987/enswam-support-for-wildlife-analysis-and-monitoringfr
+
+- https://gccollab.ca/groups/profile/18873/enopen-governmentfrgouvernement-ouvert
+
+- https://gccollab.ca/groups/profile/7071541/endata-engineering-challenges-and-solutions (#GCData2021 conference workshop)
+
+ 
+
+More GCcollab groups are listed at https://wiki.gccollab.ca/The_Square/GCcollab_Groups
+
+ 
+
+### GCwiki (public):
+
+- https://wiki.gccollab.ca/The_Square/Data_Science
+
+ 
+
+### GitHub (public):
+
+- https://github.com/open-data
+
+- https://github.com/canada-ca
+
+- https://github.com/PatLittle
+
+ 
+
+## Other groups
+
+- https://code.open.canada.ca/en/open-source-softwares.html
+
+
+<!-- # Open R codes for GC: on GCcode and GitHub -->
+
+
 
 
 ### RStudio-Enterprise-Community-Meetup
@@ -157,46 +255,58 @@ Each meetup is dedicated to a specific topic, following which they post many Q&A
 
  
 
-###  from rviews.rstudio.com
+###   R conferences
 
-Other R conferences
+
 
 (from https://rviews.rstudio.com/2021/03/03/2021-r-conferences)
 
  
 
-CascadiaRConf 2021 (June 4 - 5), a jewel of a regional R conference for its first three years, was canceled in 2020. It is back this year as a virtual event. The Call for Presentations is open.
+Cascadia RConf 2021 (June 4 - 5), a jewel of a regional R conference for its first three years, was canceled in 2020. It is back this year as a virtual event. The Call for Presentations is open.
+
 useR! 2021 (July 5 - 9) has an outstanding lineup of keynote speakers. The program is very likely to make US based attendees night-owls
+
 EARL Conference 2021 (September 6 - 10), the premier R in industry event, will be online this year. The call for abstracts is already open.
  
 
  
 
-Other venues for submitting your R / Data Science work:
+### Other venues for submitting your R / Data Science work:
 
  
 
 https://peerj.com/articles/?q=data
 rpubs.com
+
 https://earlconf.com/#about: The Enterprise Applications of the R Language Conference (EARL)
+
 https://odsc.com/boston/: Data Science Conference & Expo
  
 https://journals.plos.org/plosone/search?filterJournals=PLoSONE&q=data+science
 (research by the US Department of Homeland Security is published there)
  
 See also: from http://charteredabs.org/academic-journal-guide-2015-view/  (Rank 4-3)
+
 Management Science
+
  IEEE Transactions on Systems, Man, and Cybernetics: Systems (formerly "IEEE Transactions on Systems, Man and Cybernetics - Part A: Systems and Humans")
+ 
 Annals of Operations Research
+
 Operations Research
-EEE Transactions on Cybernetics (formerly "IEEE Transactions on Systems Man and Cybernetics Part C (Applications and Reviews)")
+
+IEEE Transactions on Cybernetics (formerly "IEEE Transactions on Systems Man and Cybernetics Part C (Applications and Reviews)")
+
 INFORMS Journal on Computing
 OR Spectrum
+
 Transportation Science
+
 Computational Statistics & Data Analysis  
 
 
-Academic Conferences:
+### Academic Conferences:
 
  
 Canadian AI Conference  - https://www.caiac.ca/en/conferences
@@ -206,7 +316,7 @@ Operations Research (Informs): https://pubsonline.informs.org/journal/opre
 https://www.scirp.org/journal/jdaip/ - Journal of Data Analysis and Information Processing
 
 
-IEEE Conferences:
+### IEEE Conferences:
  
 IEEE BigData 
 IEEE International Conference on Technologies for Homeland Security HST 

@@ -43,21 +43,21 @@ output:
           <!-- <li><a href="index.html"> "R4GC workbook"</a> </li> -->
           <li><a href="index.html"> <img width="100%" src="images/r4gc-banner.png"> </a>      </li>
         after: |
-          <li> This book is built using [bookdown](https://bookdown.org)</li>
-      download: [epub]
+          <li> This book is built using <a href="https://bookdown.org"> bookdown</a>. </li>
+      download: [epub,pdf]
       sharing:
         facebook: yes
         linkedin: yes
    
     
-  # bookdown::html_document2:  # I need compile it from here By clicking "knit" NOT from Build menu!
-  #   toc: yes
-  #   toc_depth: 2
-  #   toc_float: yes
-  #   collapsed: yes # no
-  #   number_sections: false
+  bookdown::html_document2:  # I need compile it from here By clicking "knit" NOT from Build menu!
+    toc: yes
+    toc_depth: 2
+    toc_float: yes
+    collapsed: yes # no
+    number_sections: false
 
-  # bookdown::epub_book: default
+  bookdown::epub_book: default
 ---
 
 <!-- <a href="https://www.bookdown.org" target="blank">bookdown</a> -->
@@ -83,11 +83,14 @@ knitr::opts_chunk$set(echo=T) # Set echo=T to use with "code_folding: hide"
 
 <!-- ## Book source and credits -->
 
-This workbook is prepared as part of the R4GC Community  skill enhancing and knowledge gathering  exercise. 
+This book is prepared as part of the R4GC Community  skill enhancing and knowledge gathering  exercise. 
+
+It  aims at consolidating the knowledge-based that is being gathered by the R4GC Community spread across various R4GC community portals and discussions.
+
 It also serves to illustrate - as always with source code - one of the most powerful 
 features of R, which is 
 <!-- the capability to collaboratively develop data science codes and reports using RMarkdown. -->
-the collaborative peer-reviewed development of data science codes and reports using RMarkdown.
+the collaborative peer-reviewed development of data science codes and reports using [R Markdown](https://rmarkdown.rstudio.com/).
 
 ## Contributors {.unnumbered}
 
@@ -98,14 +101,14 @@ the collaborative peer-reviewed development of data science codes and reports us
 R4GC is a collaborative effort of many people who have contributed to the development of the knowledgebase that is gathered in this book.
 They are listed below.
 
-> Jonathan Dench, Joseph Stinziano, Henry Luan, Eric Littlewood, Philippe-Israel Morin, Tony Machado, Maxime Girouard, Martin Jean, Tim Roy, Dejan Pavlic, Utku Suleymanoglu, Alex Goncharov.
+> Jonathan Dench, Joseph Stinziano, Henry Luan, Eric Littlewood, Philippe-Israel Morin, Tony Machado, Maxime Girouard, Martin Jean, Tim Roy, Mehrez Samaali, Dejan Pavlic, Utku Suleymanoglu, Alex Goncharov.
 
 Additionally, much support has been also received from wider international R community through stackoverflow.org portal and knowledge-sharing events organized by the RStudio, as well as from several other Government of Canada employees who remained anonymous.
 
 Their help is greatly appreciated.
 <!-- and shows, once again, the power of open data science collaboration, where so much can be achieved when peers are help each other  -->
 
-<!-- in addition to the names listed below, there are over a dozen of ind -->
+
 
 
 
@@ -173,7 +176,8 @@ On October 29, 2021, the work of this group was presented at the  [2021 Internat
 
 This book aims at consolidating all knowledgebase gathered by the R4GC Community at its  portals and meetups
 
-## Weekly "Data Science with R" meetups {-}
+## Lunch and Learn meetups {-} 
+<!-- ## "Data Science with R" Lunch and Learn meetups {-} -->
 
 _"Building advanced Data Science skills using R, together - one meeting at a time!_" 
 
@@ -186,19 +190,72 @@ No registration is required to join the meeting.  However, in order to view the 
 For Agenda and Dial-in MS Teams numbers please see Group Events page at https://gccollab.ca/event_calendar/group/7391537.
 
 
+ 
+## Community portals {-}
 
-<!-- Additional information:  -->
+The R4GC community makes used of the following colloaborative platforms provided by Share Services Canada.
+
+<!-- This book aims at consolidating the knowledge spread across various R4GC community portals, described below. -->
 
 
-<!-- GCcollab: Use R! (https://gccollab.ca/groups/profile/7391537/enuse-rfruse-r) -->
-<!-- GCcode: r4gc (https://gccode.ssc-spc.gc.ca/r4gc) -->
-<!-- Slido:  r4gc -->
+###  GCcode group - r4gc {-}
 
-<!-- GitHub: https://open-canada.github.io/UseR/  -->
-<!-- Source: https://github.com/open-canada/UserR  -->
-<!-- For questions and feedback please contact: -->
+URL: https://gccode.ssc-spc.gc.ca/r4gc
 
-<!-- Dmitry Gorodnichy: Dmitry.Gorodnichy@cbsa-asfc.gc.c -->
+GCcode is the GitLab solution that is accessible from within the GC network. As such, it allows one to view and update (pull and push) codes and documentation with a single click of button on a GC laptop from an RStudio. The tutorial on how to do it is developed. The 'r4gc' group has been created wihin GCcodes, where the codes, tutorials and other resources are gathered. It contains three main folders:
+
+ 
+
+- /codes. - This is where "raw" (not-reviewed, unedited) R codes contributed by GC community are uploaded. Currently, this includes codes for analyzing and visualizing PSES (Public Service Employee Survey) results, ATIP requests, COVID-19 statistics, and various codes for ease of day to day work and maintenance. Some codes are readily available to become packages, some are short code snippets taken from various blogs,  question and answer portals, such as www.stackoverflow.org and www.rseek.org, and open-source textbooks.
+
+- /gc-packages. - This is where the work on packages being developed from the submitted "raw" codes is happening. Currently it includes repositories for building packages to process PSES results, COVID-19 data, and the utility functions package for data engineering and efficient data processing.
+
+- /resources. - This where the rest of knowledge-base is gathered, including the tutorials, slides, and codes presented at the community weekly ‘Lunch and Learn’ meetups.
+
+### GCcollab: R4GC (Use R) {-}
+
+URL: 
+https://gccollab.ca/groups/profile/7391537/enuse-rfruse-r
+
+
+GCcollab allows one to participate in the discussion from within and outside GC network (for registered users). This makes it convenient for gathering information from any sources, including those that my not be available from within the GC network. In order to facilitate the curation of knowledge, a number of discussion threads have been created there to address of topics of highest interest for the R4GC community. 
+These are reviewed and updated regularly, commonly as part of  community weekly meetups.
+
+
+### GCcollab Subgroup: Lunch and Learn R {-}
+
+URL: https://gccollab.ca/groups/profile/7855030/enfridays-lunch-and-learn-r-meet-upsfr
+
+This subgroup is created for sharing minutes, notes and video-recordings from the community weekly meetups, 
+
+### GCwiki: UseR! {-}
+
+URL: https://wiki.gccollab.ca/UseR!
+
+This platform is used to consolidate all discussion topics in one place and link them with other data science resources in the wiki space.
+ 
+
+### GitHub: open-canada  {-}
+
+URL: https://open-canada.github.io/UseR/ 
+
+Inline with the GC policies of open science and open data \ref{open-gov}, since most  information gathered by the R4GC community is unclassified and comes from public domain, a public facing organizational account has been created on GitHub (https://github.com/open-canada) for sharing and growing the R4GC community knowledgebase. This is where  public-facing community outputs are gathered, including the growing collection of Web Apps and codes that were built with contributions from GC data scientists using open source tools and data. 
+
+
+#### GitHub (Apps repository) {-}
+
+https://github.com/open-canada/Apps 
+
+<!-- This pa -->
+
+### Slido (r4gc) {-}
+
+URL: https://sli.do.  Code "r4gc"
+
+This platform is used for wider audience forums and conferences. A number of polls have been conducted there, in a addition to opening and ranking new questions.
+
+<!-- There are discussed later in this book -->
+
 
 
 
@@ -206,46 +263,66 @@ For Agenda and Dial-in MS Teams numbers please see Group Events page at https://
 
 <!-- # Book overview and other resources -->
 
-# Book overview {-}
-
-TBA
- 
-## Community portals {-}
-
-This book aims at consolidating the knowledge spread across various R4GC community portals, listed below.
+# Book structure {-}
 
 
-###  GCcode group - r4gc {-}
-https://gccode.ssc-spc.gc.ca/r4gc
+The book is organized in several parts. 
+
+Part I is dedicated to General discussions, which includes the following:
+
+1 Why R?
+2 R and Python
+3 Best way to learn R
+4 Other resources and bookdown textbooks
+5 Events and Forums for R users
 
 
+Part II is dedicated to the Best Practices and Efficient Coding in R and includes the following:
 
-### GCcollab: R4GC (Use R) {-}
-(https://gccollab.ca/groups/profile/7391537/enuse-rfruse-r)
+6 From Excel to R
+7 data.table: your best fRiend
+8 Reading various kinds of data in R
+9 Efficient programming in R
 
+Part III is dedicated to Visualization and Reporting and includes the following: 
 
-### GCcollab Subgroup: Lunch and Learn R {-}
-https://gccollab.ca/groups/profile/7855030/enfridays-lunch-and-learn-r-meet-upsfr
+10 R Markdown for literate programming and automated reports
+11 ggplot2 and its extensions for data visualization
+12 Shiny for Interactive Data Visualization, Analysis and Web App development
+13 Using R with GC data infrastructure (gcdocs, AWS, etc)
+14 Interactive Outputs in R: 'plotly', 'Datatable', 'reactable'
 
+Part IV is dedicated advanced use of Data Science, Machine Learning,  and AI. It includes:
 
-
-### https://open-canada.github.io/UseR/ 
-
-
-<!-- Public facing page:  -->
-
-### GitHub (Apps repository) {-} https://github.com/open-canada/Apps 
-
-### Slido (Q&A and  Polls): sli.do code r4gc
-
-### GCwiki: https://wiki.gccollab.ca/UseR!
-
- 
-
+15 Record Linking and other Data Engineering tasks in R
+16 Geo/Spatial coding and visualization in R
+17 Text Analysis in R
+18 Machine Learning and Modeling in R
 
 
+Part V contains the Tutorials developed by and for the community. This are: 
 
-# Technical details {-}
+19 GCCode 101
+20 Packages 101
+21 R101: Building COVID-19 Tracker App from scratch
+
+22.1 Geo/Spatial coding and visualization with R. Part 1:
+22.2 Text Analysis with R. Part 1:
+
+and a number of short "How To: tutorials such as:
+
+22.3 Dual Coding - Python and R unite !
+22.4 Working with ggtables
+22.5 Automate common look and feel of your ggplot graphs
+and others
+
+
+Part VI presents the outputs of the community development such as  Shiny Web Apps and other codes and libraries developed by community members.
+
+Finally, Appendix includes schedule and agendas for the R4GC community "Lunch and Learn" meetups, Release Notes, plans and  invitation for collaboration, in particular to make this knowledgebase bilingual - in support of bilingualism in Canada and as an another opportunity for applying data science skills for public good.
+
+
+## About this book {-}
 
 This is book is built using the [`bookdown`](https://bookdown.org) R package in RStudio.
 It is hosted at Open Canada GitHub repo https://open-canada.github.io/r4gc.
@@ -265,8 +342,13 @@ Additionally, as with any markdown file, in addtion to the output visible in the
 
 ## Other formats {-}
 
-One of the beauties of the `bookdown` R package is that it allows one to generate multiple kinds of outputs  from the same source .Rmd files, such as pdf, epub, and various hmtl formats (single page html, multiple-page two-column and multiple-page three-column formats, with and withought interactive menus)
-The alternative formats of this R4GC book are saved at https\://open-canada.github.io/r4gc/alt
+One of the beauties of the `bookdown` R package is that it allows one to generate multiple kinds of outputs  from the same source .Rmd files, such as pdf, epub, and various hmtl formats (single page html, multiple-page two-column and multiple-page three-column formats, with and without interactive menus)
+The alternative formats of this R4GC book are available here  https://open-canada.github.io/r4gc/alt: 
+
+- epub: 
+- pdf:
+- one-page html
+- mulpi-page three-colummn website: 
 
 
 
@@ -287,11 +369,19 @@ Alternatively, you can always contact the R4GC group lead at the contact listed 
 <!-- - Contact us: dmitry.gorodnichy@cbsa-asfc.gc.ca -->
 
 
+## About authors  {-}
+
+[Dmitry Gorodnichy](https://www.linkedin.com/in/dmitry-gorodnichy) is Research Data Scientist with the Chief Data Office at the Canadian Border Agency. 
+
+[Patrick Little](https://www.linkedin.com/in/patrickjlittle/) is Advisor on the Open Government systems team at the Treasury Board of Canada Secretariat. 
+
+<!-- He is passionate about making the government data and tools open to public -->
+
 
 
 ## Contacts and feedback  {-}
 
-For questions and feedback, please contact the group lead Dmitry Gorodnichy: <dmitry.gorodnichy@cbsa-asfc.gc.ca> (r <dmitry@gorodnichy.ca>
+For questions and feedback, please contact the group lead and moderator Dmitry Gorodnichy: <dmitry.gorodnichy@cbsa-asfc.gc.ca> or <dmitry@gorodnichy.ca>
 
 
 
@@ -413,19 +503,19 @@ Contributed by:
 
 
 
-<!-- # Technical information -->
+# Technical information
+
+This book is written in R Markdown and R, with the use of 'bookdown' package, and compiled in R Studio.
+
+## Colophone
+
+TBD
 
 
-<!-- ## Colophone -->
+```{r 00-releaseNotes.Rmd, child = '00-releaseNotes.Rmd'}
+```
 
 
-<!-- ```{r 00-releaseNotes.Rmd, child = '00-releaseNotes.Rmd'} -->
-<!-- ``` -->
-
-
-## Release Notes
-
-TBA
 
 
 

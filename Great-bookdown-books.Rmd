@@ -1,16 +1,17 @@
 
-# Other resources
-
 
 
 ## Great bookdown textbooks
 
-This book is prepared using `bookdown` R package and 
-many 
-open source codes and examples provided in other  `bookdown`-built textbooks.
-Below are listed those of particular value to this book.
+This book is prepared using bookdown R package.
 
-## Examples and source codes of three-column bookdown format:
+It is inspired by many other  
+open source codes and examples.
+Below are listed those of particular value in developing  this book.
+
+See also textbook reference for each of the community discussion topics later in the book.
+
+### Great three-column bookdown format:
 
 On Shiny:
 
@@ -26,11 +27,10 @@ From Hadley:
 
 - https://geocompr.robinlovelace.net/
 
-## Many more  examples and source codes of two-column and three-column bookdown-built books:
+### Great two-column books:
 
 - https://www.bigbookofr.com/
 - https://bookdown.org/
-
 
 
 
@@ -60,18 +60,18 @@ https://bookdown.org/igisc/EnvDataSci/
 Introduction to Environmental Data Science
 
 
-https://bookdown.org/jerome_m_levesque/branchingAppUserGuide/
-A policy tool for COVID-19 workplace mitigation strategies
-Jerome Levesque and David Maybury
+<!-- https://bookdown.org/jerome_m_levesque/branchingAppUserGuide/ -->
+<!-- A policy tool for COVID-19 workplace mitigation strategies -->
+<!-- Jerome Levesque and David Maybury -->
 
 
-https://bookdown.org/selesnow/build_telegram_bot_using_r/
-Разработка telegram ботов на языке R
-Алексей Селезнёв
-2021-08-26
+<!-- https://bookdown.org/selesnow/build_telegram_bot_using_r/ -->
+<!-- Разработка telegram ботов на языке R -->
+<!-- Алексей Селезнёв -->
+<!-- 2021-08-26 -->
 
 
-https://bookdown.org/f_pianzola/Korean_literature/
+<!-- https://bookdown.org/f_pianzola/Korean_literature/ -->
 
 
 https://bookdown.org/sunboklee/intror_ewha/
@@ -81,6 +81,7 @@ Sunbok Lee (Ewha Womans University, 2021-2)
 
 
 https://bookdown.org/aclark/chess/
+
 
 
 
@@ -101,97 +102,6 @@ https://bookdown.org/aclark/chess/
 <!-- UA -->
 <!-- &#127482 &#127462 -->
 
-
-
-## Other R communities in GC
-
-
-Roughly sorted by the level of group activity
-
- 
-
-### GCConnex (GC only):
-
-- https://gcconnex.gc.ca/groups/profile/5394852/data-science-goc
-
-- https://gcconnex.gc.ca/groups/profile/56632124/statcan-data-science-communities-of-practice-hub
-
-- https://gcconnex.gc.ca/groups/profile/53857931/applied-machine-learning-ml-for-text-analysis-community-of-practice-cop
-
-- https://gcconnex.gc.ca/groups/profile/22346843/big-data-community
-
-- https://gcconnex.gc.ca/groups/profile/39621554/data-visualization-resources
-
-- https://gcconnex.gc.ca/groups/profile/24345174/data-visualization
-
-- https://gcconnex.gc.ca/groups/profile/47035648/machine-learning-in-remote-sensing-cop
-
-- https://gcconnex.gc.ca/groups/profile/24825105/data-analytics-coalition
-
-- https://gcconnex.gc.ca/groups/profile/47035648/machine-learning-in-remote-sensing-cop
-
-- https://gcconnex.gc.ca/groups/profile/19758048/analytics-mining-and-hypothesis-testing
-
-- https://gcconnex.gc.ca/groups/profile/62219803/artificial-intelligence-and-data-science-group
-
-- https://gcconnex.gc.ca/groups/profile/30787891/digital-academy
-
-- https://gcconnex.gc.ca/groups/profile/36236376/candev-data-challenge-
-
-- https://gcconnex.gc.ca/groups/profile/4474153/data-analytics-working-group-dawg
-
-- https://gcconnex.gc.ca/groups/profile/34024870/welcome-to-r-canadian-government (not active)
-
- 
-
- 
-
-### GCcode (GC only):
-
-- https://gccode.ssc-spc.gc.ca/r4gc
-
-- https://gccode.ssc-spc.gc.ca/DSCV
-
- 
-
-### GCcollab (public with login):
-
-- https://gccollab.ca/groups/profile/778815/eneccc-network-of-experts-and-researchers-in-data-science-nerdsfrlabo-de-donnu00e9es
-
-- https://gccollab.ca/groups/profile/3465987/enswam-support-for-wildlife-analysis-and-monitoringfr
-
-- https://gccollab.ca/groups/profile/18873/enopen-governmentfrgouvernement-ouvert
-
-- https://gccollab.ca/groups/profile/7071541/endata-engineering-challenges-and-solutions (#GCData2021 conference workshop)
-
- 
-
-More GCcollab groups are listed at https://wiki.gccollab.ca/The_Square/GCcollab_Groups
-
- 
-
-### GCwiki (public):
-
-- https://wiki.gccollab.ca/The_Square/Data_Science
-
- 
-
-### GitHub (public):
-
-- https://github.com/open-data
-
-- https://github.com/canada-ca
-
-- https://github.com/PatLittle
-
- 
-
-### Other groups
-
-- https://code.open.canada.ca/en/open-source-softwares.html
-
-
-<!-- # Open R codes for GC: on GCcode and GitHub -->
 
 
 

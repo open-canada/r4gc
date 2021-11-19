@@ -4,6 +4,8 @@
 
 # Lunch and Learn series
 
+This is the scheduled agenda for the Lunch and Learn 'Data Science with R' series organized by  R4GC community. 
+Please see [Lunch and Learn](index.html#lunch-and-learn-meetups) page for details on how join us for these meetings
 
 12 Nov - 19 Nov 2021: 
 Text Analysis with R follow-up / Converting codes to Shiny App
