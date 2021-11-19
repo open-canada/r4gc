@@ -1,0 +1,254 @@
+
+
+# GCCode 101
+
+
+title: "gccode101: working with GCCode"   
+subtitle: (With focus on how to do it using RStudio)   
+date: September 2020
+
+
+> The information presented  here includes only  open public domain knowledge and does not include specific details related to operation of each GC department. Full tutorial and relatred Q&A are available at https://gccode.ssc-spc.gc.ca/r4gc/resources/gccode101
+
+
+
+
+
+## TL;DR
+
+
+  1. [One time action per life time] Make sure you have RStudio and git installed on your local machine: eg from Anaconda - Ask your IT to help you.
+  
+
+  2. [One time action per project] Go to GCCollab and create a new repo there (it can be left empty or just add README.md there) or select the existing one  where you want to work on: eg https://gccode.ssc-spc.gc.ca/r4gc/gc-packages/packages101
+  3. Generate Access Token (from Setting in left panel) or request one for a repo of which you are not the owner. It will look something like this: LNwVUF5YGnF-6x5fsnJ-
+  4. Open Windows PowerShell (or cmd), go to directory where you want to clone your repo (eg. cd C:\Users\gxd006\_CODES\gc_packages) and run this command: `git clone --progress https://oauth2:LNwVUF5YGnF-6x5fsnJ-@gccode.ssc-spc.gc.ca/r4gc/gc-packages/packages101 gc-packages101`. Close it - you wont need it again! You can check - your new directory contains .git/ folder ! (This is where your credentials for GCCollab are stored )
+  5. Open RStudio and create  New project there. You have two options. In both cases, You'll see the GIT button on top, once you finish and reload your project with RStudio, which means you are all set now and can start modifying / building your code!
+  
+  - Option A (To build a new R package):         Choose New project -> New Directory -> New Project (with Name of your package, eg caPSES). Leave "Create a git directory box UNCHECKED. Once it is created, MOVE the entire content of this new package folder to the directory that you cloned in previous step (which contains .git/ folder), or vise versa just move .git/ folder from the cloned directory to your new package directory)
+    
+  - Option B (for any other project):          Choose New project -> Existing directory -> point to your new cloned directory.  That's it.
+3. [Every time you make changes in project]
+  1. We recommend to always `pull` first (to avoid conflicts later)- from Git menu button
+  2. Make changes, open commit window, describe them, commit them, push them back to repo
+  3. Enjoy the rest of your  day !
+
+
+More details from our fRiday's Lunch and Learn discussions follow below.
+
+
+
+<!-- ## Connecting to GCCode  -->
+
+<!-- *NB: The following instructions were derived for folks working on CBSA network, which allows access to CRAN, and had Anaconda installed.  -->
+<!-- In OGD, installation process for these could be different. Please check with your IT.* -->
+
+
+
+## Step 00:  Connecting to GCCode and installing required soft.
+
+
+"Connecting" means being able to pull a repository to your local (gc-network connected) machine, modify code there (in RStudio is the easiest), commit your changes, and pull it back to GCCode.
+Before doing that you need  the following programs installed on your local (gc-network connected) machine,
+
+Below (*) indicates options that have been tested as most efficient
+<!-- imho (i.e. for Dmitry) -->
+
+- R: 
+    - from Anaconda 
+    <!-- (old version of 2017) -->
+    - from CRAN*: R version 4.0.2 (2020-06-22): As of Sept 2020, we have right to install packages directly from CRAN. So you can do   `library(installr);  updateR()`
+
+- RStudio:
+  - From Anaconda Prompt in new environment*: `conda create -n e2020.03.02-markdown_issues  mro-base rstudio`   (replace   mro-base rstudio`   (replace `e2020.03.02-markdown_issues` with `YOUR_NEW_ENVIRONMENT_NAME`)
+ (This will create a shortcut  (R) on desktop). - old:  Version 1.1.456 – © 2009-2018 RStudio, Inc.
+
+  <!-- - From RStudio.com - we can't seem to be able to use it. -->
+  <!--   - Version 1.2 or 1.3 - has integration with Python and terminal for doing git with command lines -->
+  <!--   - Version 1.4 (Daily builds) - has WYSWYG editor for RMarkdowb -->
+
+- Git: 
+  - From Anaconda Prompt*: `conda install git` (or you can install in new environment e2020.03.02-markdown_issues)
+  - From Anaconda Prompt: `conda install m2-git` (I installed in new environment e2020.07.21_mintty)
+    - Q: where is git.exe actually located in c: drive ? `cd \` . 
+    - A: C:\Users\gxd006\anaconda3\envs\e2020.07.21_mintty\Library
+  - Check with IT - from web: https://git-scm.com/download/win (Git for Windows Portable ("thumbdrive edition") -
+64-bit Git for Windows Portable. NB: it's not accessible from CBSA network)
+
+
+- Command windows (where you can run `git` commands):
+  
+  - Windows `cmd`  (it may or may not work there for your machine)
+  - Anaconda prompt: this does not take all shell commands)
+  - ` mintty`* ( from www.msys2.org), install:  `conda install m2-base` (creates ~/anaconda3/Library/mingw64 directory, git.exe installed with m2-git will be placed in /bin there). 
+    - You can then run it from conda terminal: `mintty` 
+    - Run `which git` (linux style from mintty) or `where git`(windows style from mintty) to find out path to `git.exe`
+    - Note how Linux-like file system is  mapped to Windows' one below:
+      - $ where git: C:\Users\gxd006\anaconda3\Library\usr\bin\git.exe
+      - $ which git: /usr/bin/git
+
+  - `Windows PowerShell`: works well but does not take all linux commands , e.g it does not know `which/where`, `ls -a`) 
+  - `RStudio Terminal` ** : it runs from git in your active environment from which you started RStudio. This allows to use different git.exe settings or executables.
+
+
+
+
+- There are additional recommended packages for efficient source control and collaborative code development, which however can be learnt later, such as :
+  - renv
+  - docker
+  - devtools
+ 
+
+
+
+## Step 0: Configuring  Windows, Git and GitLab (tokens)
+
+1: Edit environment variable for your account (Search “env”) and set `HOME` to `/c/users/gxd006/` (replace `gxd006` with your user id).  - This will become your home directory `~` for `mintty` and this is where your `.gitconfig` file will reside for `git` used in mintty! - needed for next step below
+
+- Test it: `$ echo $HOME: /c/Users/gxd006/`
+
+2:  Edit `.gitconfig` file as follows (note, it maybe invisable to your OS. The easiest way to open/edit it is using RStudio. )
+
+Alternatively, you can view/edit using build-in `vim` editor: `vim .gitconfig` or by running `git config --global -e`. 
+- Three `vim` main commands:
+    - ESC a: (insert text after cursor),     - ESC: wq (save and exit),     - ESC: q! (dont save and exit)
+
+NB: if you run terminal from RStudio (rather than from mintty), then `git config --global -e` will open .gitconfig file from where it is found using `where git`
+
+```
+[user]
+     name = Your Name
+     email = your.email@cbsa-asfc.gc.ca
+[http]
+     proxy = "http://proxy.omega.dce-eir.net:8080"
+```
+
+
+NB: *if  you do not do that, you'll be this getting error*:
+
+```
+fatal: unable to access 'https://gccode.ssc-spc.gc.ca/super-koalas/shared-code/': Failed to connect to gccode.ssc-spc.gc.ca port 443: Timed out
+```
+
+3: Decide  how/where you will organize your gccode on your machine. This is how I converged (after many iterations) to organize my projects  - see [file_structure.md]()
+
+4: If you dont want to be typing your login id/password everytime you connect to GCCode (which I'm sure you dont:), read this article: https://knasmueller.net/gitlab-authenticate-using-access-token, and create your new personal access token there (which will look something like tjxrg3GyUQJJDMaA6LfHA) 
+
+
+
+## Step 1: Find (or create) a GitLab project you want to contribute to.
+
+Lets say,  you want to contribute to this project: https://gccode.ssc-spc.gc.ca/r4gc/resources/gccode101
+
+1.1: Go to ~/_CODES/GCCodes (this where you keep all your GCCodes projects),   
+and run from `cmd` terminal, or Anaconda prompt, or `mintty`: 
+
+CORRECTION: 
+Q: Currently works from `conda` or `mintty` termminal only. How to make `git` calleable from Windows `cmd`? I changed PATH to add a directory to `C:\Users\gxd006\anaconda3\Library\bin` it did not help
+```
+(base) C:\Users\gxd006>which git
+/usr/bin/git
+```
+vs.
+```
+H:\>git
+'git' is not recognized as an internal or external command,
+operable program or batch file.
+```
+
+
+From Anaconda prompt, or `mintty`: 
+
+```
+git clone --progress https://gccode.ssc-spc.gc.ca/r4gc/resources/gccode101 r4gc_gccode101
+```
+or better (if you set a personal token - see Step 0.4 above)
+```
+git clone --progress https://oauth2:tjxrg3GyUQJJDMaA6LfHA@gccode.ssc-spc.gc.ca/r4gc/resources/gccode101 r4gc_gccode101
+```
+
+Now you can go to the created directory `r4gc_gccode101` and do something there, either from command line or directly from RStudio.
+
+### 1.2 Using Command Line 
+
+```
+Push a new file
+cd existing_folder
+touch README.md
+git add README.md
+git commit -m "add README"
+git push -u origin master
+
+Push an existing folder
+cd existing_folder
+git init
+git remote add origin https://gccode.ssc-spc.gc.ca/r4gc/resources/gccode101
+git add .
+git commit -m "Initial commit"
+git push -u origin master
+
+Push an existing Git repository
+cd existing_repo
+git remote rename origin old-origin
+git remote add origin https://gccode.ssc-spc.gc.ca/r4gc/resources/gccode101
+git push -u origin --all
+git push -u origin --tags
+
+```
+
+### 1.2 In RStudio
+
+Recommended - see below
+
+## Step 2: Using Branches (optional)
+
+It is recommended that you create your own branch for every project where you want to contribute (e.g. I made branch `ivi` for myself) and do everything there.
+NB: you can also do it from RStudio or command line.
+
+```
+git fetch
+git checkout ivi 
+git checkout master
+git init .
+touch some.txt
+git add some.txt
+git commit
+git log
+
+git status
+git push
+
+```
+
+* For the rest of the presentation, we focus on using RStudio to do everything you need with GitLab in GCCode
+
+<!-- * See tutorial of Alex Goncharov on learn more about what git it doing and how to use  if from command line  -->
+
+
+
+
+## Step 3: GCcoding from RStudio 
+
+- Configure git: in Global options
+
+- Create new Project from existing directory (point to directory where you cloned GCCode repo)
+
+You'll note that GIT button is visible now there ! (that's because it knows  that this directory is cloned from gitlab)
+
+- Make some changes
+
+- Click on GIT button menu -> commit
+
+- Check on file(s) you want to commit,  Describe you change, click Commit, click push - Voila! Done.
+
+
+
+## Related GC discussions and links:
+
+- https://gcconnex.gc.ca/discussion/view/64885627/downloading-r-packages-within-goc 
+- https://gcconnex.gc.ca/discussion/view/50817255/publishing-gc-code
+- https://github.com/canada-ca/open-source-logiciel-libre 
+- https://canada-ca.github.io/open-source-logiciel-libre/en/guides/publishing-open-source-code.html
+- https://isthisblockedinmydepartment.ca/
+
+- https://environments.rstudio.com/shared.html

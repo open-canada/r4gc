@@ -1,0 +1,252 @@
+
+
+
+
+# From Excel to R
+
+There was a keen interest expressed at last Friday meetup on transitioning from Excel to R. Incidentally, there was an RStudio Community Meet-up focused exactly on this topic:  Meetup: Making the Shift from Excel to R: Perspectives from the back-office
+
+<!-- ## 1 -->
+
+Many Q&A from this meetup are posted here:
+
+https://community.rstudio.com/t/meetup-making-the-shift-from-excel-to-r-perspectives-from-the-back-office/100467
+
+<!-- Below are listed some. There's also a link to a video-recording of it! (at link above) -->
+
+
+
+<!-- What was the most common problem when moving from Excel to R? [Excel -> R Meetup Q&A] -->
+<!-- R Markdown vs R Scripts in Enterprise Workflows [Excel -> R Meetup Q&A] -->
+<!-- What sort of packages did you use for reconciliation? [Excel -> R Meetup Q&A] -->
+<!-- What is the best way to share the results of an analysis that you’ve made in R? [Excel -> R Meetup Q&A] -->
+<!-- How do you get buy-in transitioning from Excel to R? [Excel -> R Meetup Q&A] -->
+<!-- How do you get buy-in from the IT team around R package security concerns? [Excel -> R Meetup Q&A] -->
+<!-- How do you move data from tricky worksheets into R? [Excel -> R Meetup Q&A] -->
+<!-- With so many ways of doing the same things, how do you find the best way to do something? [Excel -> R Meetup Q&A] -->
+
+
+
+<!-- ## 2 -->
+
+
+This dictionary of Excel/R equivalent was very useful is finding a starting point for common functions: https://paulvanderlaken.com/2018/07/31/transitioning-from-excel-to-r-dictionary-of-common-functions/  
+
+ 
+
+For people who are looking for something more comprehensive, this website is very useful: https://rstudio-conf-2020.github.io/r-for-excel/
+
+
+
+<!-- ## 3 -->
+
+Pour ma part, j'adhère à l'approche proposée par The [Carpentries](https://datacarpentry.org/spreadsheet-ecology-lesson/00-intro/index.html), soit l'utilisation d'Excel pour la saisie de données et une partie du contrôle de la qualité. Par la suite, les données sont exportées en csv pour être importées dans R.
+
+
+# data.table: your best fRiend
+
+<!-- for very fast and user friendly data processing -->
+
+
+The `data.table` package developed by Matt Dowle is a game changer for many data scientists
+
+Learn about it, Share your favourite `data.table` trick here
+
+ 
+
+ 
+
+https://github.com/Rdatatable/data.table
+
+https://github.com/chuvanan/rdatatable-cookbook
+
+ 
+
+http://r-datatable.com (https://rdatatable.gitlab.io/data.table/)
+https://www.datacamp.com/courses/time-series-with-datatable-in-r
+https://www.datacamp.com/courses/data-manipulation-in-r-with-datatable
+https://github.com/Rdatatable/data.table/wiki/Articles
+https://rpubs.com/josemz/SDbf - Making .SD your best friend
+ 
+
+
+
+## data.table vs. dplyr
+
+
+data.table (Computer language) way  vs. dplyr ("English language") way  
+
+A) The best: No wasted computations .No new memory allocations.
+dtLocations %>% .[WLOC == 4313, WLOC:=4312]
+B) No new memory allocations, but computations are done with ALL rows.
+dtLocations %>% .[, WLOC:=ifelse(WLOC==4313, 4312, WLOC)]
+A) The worst: Computations are done with ALL rows. Furthermore, the entire data is copied from  one memory location to another.  (Imagine if your data as in 1 million of cells, of which only 10 needs to be changed !)
+dtLocations <- dtLocations %>%   mutate(WLOC=ifelse(WLOC==4313, 4312, WLOC))
+NB:  dtLocations %>%  . [] is the same as dtLocations[]. so you can use it in pipes.
+
+ 
+
+Conclusion: Use data.table for speed and efficient coding instead of dplyr (i.e.tibbles)!
+
+
+<!-- Comment  -->
+
+<!-- je côtoie de nombreux scientifiques en environnement qui sont nouveaux dans le monde de la programmation et qui n'ont pas un gros volume de données. Pour eux, dplyr est plus « accessible » que data.table. -->
+
+<!-- Un jour, ils y viendront peut-être, mais en attendant, je vais continuer à enseigner les rudiments de R en proposant dplyr et en leur parlant brièvement du package data.table. -->
+
+
+## Extensions of data.table
+
+There's considerable effort to marry  data.table package with dplyr package. Here are  notable ones:
+
+- https://github.com/tidyverse/dtplyr (Version: 1.1.0, Published: 2021-02-20, From Hadley himself - I found it quite cumbersome still though...)
+- https://github.com/asardaes/table.express (Version: 0.3.1 Published: 2019-09-07 - somewhat easier?)
+- https://github.com/markfairbanks/tidytable (Version: 0.6.2 Published: 2021-05-18 - seems to be the best supported of the three?)
+
+
+# Reading various kinds of data in R
+
+## vroom
+
+My favourite methods for reading / writing "regular" .csv files has been 'data.table::fread() / fwrite()' - the fastest and automated in many ways.  Now there's another one - with package 'vroom' - https://cran.r-project.org/web/packages/vroom/vignettes/benchmarks.html
+
+ 
+
+Then, of course, there are other kinds of data you want to read - efficiently (meaning, automatically and fast):
+
+- bad data, badly formatted data, sparse data,
+
+- distributed  "big" data
+
+- just very large and very very large
+
+- from MS excel, MS Words
+
+- from clouds: AWS, MS Azure etc
+
+- from pdf, html
+
+- from zip files
+
+- from google docs, google sheets
+
+- from GCdocs and from other GC platforms (that was one of the questions at our Friday's R meetup), and,
+
+- and finally, from all other IoT and web-crawling
+
+
+## readxl and xlsx
+
+For reading Excel files, I used so far readxl. I would like nevertheless to be able to import a set of columns formed by non-contiguous columns of a sheet (something possible to select in the newer versions of Excel using data queries). 
+
+For writing Excel files, I used xlsx, as definitely, I need to be able to write multiple sheets in a file.
+
+
+## Discussion
+
+
+The analyst should, actually, never stick to one solution but rather adapt to the needs of the project. For every format that is good and efficient with big data, you gain either 1) get manipulation overhead that does not make sense when manipulating small datasets, and they can end up slower than even dataframes in that case on small data but hundreds of times faster in big data (e.g. feather), or 2) need to wait forever and lose storage space for nothing (parquet) if the data is not big enough. Yet, if you found the right solution for every size and need, it will make a world of difference.
+
+...
+
+The example below does a comparison of some popular formats when used with Pandas (Python). You will get similar results if you try the same experiment in R. https://towardsdatascience.com/the-best-format-to-save-pandas-data-414dca023e0d
+
+ 
+
+...
+
+One of the options that I recommend, if your are only playing locally and not in the cloud, is using the feather format with sql.
+
+ 
+
+If you need to extract data from a database and do more advanced data engineering without loading data in your RAM, you need SQL to prepare the extraction and do basic to advanced manipulation (SQL is Turing-complete, eh).
+
+For more advanced and permanent transformations to the data, you need stored procedures (SQL again).
+
+
+
+And if you play in the cloud, this is even more essential. For example, in AWS, you can create user-defined functions in Redshift using Python and Postgres SQL, but not R. All manipulation needs to be done in SQL, and Python can be used for other purposes such as calculations and fuzzy matching.
+
+
+
+You can still use R in the rebranded Jupyter notebooks (Sagemaker in AWS, Azure Notebooks in Azure), but R is not as widely compatible in other cloud applications as SQL and Python. - [ PD: But you can absolutely use R in AWS for ETL. In fact you could even set up API endpoints via plumbr, there's a whole AWS tutorial that deals with this issue]
+
+ 
+
+References:
+ 
+
+https://github.com/pingles/redshift-r/
+Provides a few functions to make it easier to access Amazon's Redshift service from R.
+http://www.rforge.net/RJDBC/index.html
+install.packages("RJDBC",dep=TRUE) 
+RJDBC is a package implementing DBI in R on the basis of JDBC. This allows the use of any DBMS in R through the JDBC interface. The only requirement is working Java and a JDBC driver for the database engine to be accessed. 
+feather  (for larger than gigb):
+https://blog.rstudio.com/2016/03/29/feather/
+parquet ( for verrrrry large files)
+https://campus.datacamp.com/courses/introduction-to-spark-with-sparklyr-in-r/case-study-learning-to-be-a-machine-running-machine-learning-models-on-spark?ex=4
+Conclusions: As a side note on size, speed, and performance : it all depends on what you do, the delays, and the cost.
+
+ 
+
+For example, if you use the cloud:
+
+-        If your data is going to be queried very often, so you have large volumes of data that would be scanned, move your processing to a runtime-billed tool (e.g. Redshift in AWS) rather than a data-billed tool (e.g. Athena in AWS). Otherwise, your cost may increase exponentially if users can survey data freely from, say, Tableau dashboards without caring for the actual amount of data that is queried. So if the data is queried 24/24h, your cost is stable and won’t increase with volume.
+
+-        If you may scan large volumes once or twice a day, then you would have to compare the costing options.
+
+-        If the costing model is incremental by runtime and you have very large amounts of data that you need to query quickly, then it would be best to use columnar formatted tables such as parquet. There is a cost and delay involved for the conversion, and you need much more storage because of the flattened structure, so storage will be more expensive (especially considering that you clone your original data and use at least twice the space then). However, queries will fly, and the cost of computation will be much smaller thereafter.
+
+-        For occasional queries, a data-billed tool would likely be the best option.
+
+ 
+
+If you want to prototype with small datasets, do not lose time with parquet… CSV is the worst format after Excel files (which need to be unpacked and repacked), in any scenario, but the time investment in time to convert data is not worth it at all. Data.table and DT will be your best friends in R.
+
+ 
+
+As for using SQL vs packages such as DPLYR, I mentioned a gain in performance, but be careful. If you use raw SQL, then you will see a big gain in performance. However, there are packages out there that translate SQL to R or Python interpretable code, and those will possibly be slower due to the interpretation layer. DPLYR, on the other hand, is quite efficient and well optimized. As usual, it depends on the packages. In R, the sqldf package should be good, if you want to try it out.
+
+
+
+# Efficient programming in R 
+<!-- (coding style, memory-efficient coding, collaboration-ready codes, source control) -->
+
+
+TBA
+
+## Debugging 
+
+TBA
+
+
+
+
+## RStudio tricks
+
+### Coding online
+
+TBA
+
+### Running multiple RStudio versions
+
+You want to be able to run  multiple versions of RStudio in Windows? You can do with the following executable .bat script.
+
+```
+# Run-RStudio-1.4.bat
+
+@echo off
+title Starting RStudio!
+echo Hello Dear,
+echo Starting RStudio 1.4 (from C:\Users\gxd006\Downloads\RStudio-1.4.1106\bin\) for you...
+
+C:\Users\abc123\Downloads\RStudio-1.4.1106\bin\rstudio.exe
+
+Set WshShell = CreateObject("WScript.Shell")
+WshShell.Run chr(34) & "C:\Users\gxd006\Downloads" & chr(34), 0
+Set WshShell = Nothing
+
+```
+
+

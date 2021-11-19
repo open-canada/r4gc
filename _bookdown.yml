@@ -1,0 +1,21 @@
+book_filename: "LL-book"
+# new_session: yes # Each chapter is knitted as its own Rmd file
+# repo: "https://github.com/gorodnichy/music"
+delete_merged_file: true
+
+rmd_files: [
+  "index.Rmd"
+]
+# view: https://github.com/gorodnichy/jobim/blob/master/%s
+# edit: https://github.com/gorodnichy/jobim/edit/master/%s
+output_dir: "docs"
+# clean: ["my-book.bbl", "R-packages.bib"]
+
+# language:
+#   ui:
+#     chapter_name: " "
+    # ✴ ✵  ✶ ✷  # 36l37,38,39,40  "&#10036; &#10037; &#10038; "
+        # chapter_name: "Созвездие " &#10036;     22-40
+
+
+
