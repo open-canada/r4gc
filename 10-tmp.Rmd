@@ -1,0 +1,32 @@
+```
+
+# report_generator.R
+
+mvndr_nm <- c('name1', 'name2', 'name3', 'name4', 'name5', 'name6')
+mvndr_nbr<- c('60031167', '60688509', '60074051', '60148060', '60086898', '60080204')
+
+for (i in seq_along(mvndr_nm)) {
+  rmarkdown::render("C:/Users/santi/Documents/R Scripts/Export_Data_CSV.Rmd",
+                    output_file = sprintf("MVNDR_%s.html", mvndr_nbr[i]),
+                    params = list(MVNDR_NBR = mvndr_nbr[i], MVNDR_NM = mvndr_nm[i]))
+}
+
+Export_Data_CSV.Rmd
+(remove # below)
+
+#---
+#title: "`r params$MVNDR_NBR`"
+#author: "Santiago Canon"
+#date: "5/26/2021"
+#output:
+#  html_document:
+#    highlight: monochrome
+#    theme: flatly
+#params:
+#  MVNDR_NBR: NA
+#  MVNDR_NM: NA
+#---
+
+#<font size="4"> This document will provide a summary of "`r params$MVNDR_NM`" performance within in QC: </font>
+```
+

@@ -1,0 +1,54 @@
+
+
+
+
+# Lunch and Learn series
+
+
+12 Nov - 19 Nov 2021: 
+Text Analysis with R follow-up / Converting codes to Shiny App
+
+8 Oct 2021: 
+Text Analysis with R. Part 1: identifying near-duplicate documents
+
+1 Oct 2021: 
+Shiny App to summarize very large, high-dimensional tables (code & app provided)
+
+30 Jul - 17 Sep 2021: 
+Geo/Spatial coding and visualization with R. (code provided)
+
+16 Jul 2021: 
+Dual Coding - Python and R unite ! (code provided)
+
+9 Jul 2021: 
+Exploring ggplots (recording, code provided)
+
+2 Jul 2021: 
+Parsing GC Tables (code provided)
+
+
+
+25 Jun 2021: 
+Using the Open Government Portal API within R (recording, code on github.com/open-canada)
+
+21 Apr 2021: 
+Analyzing PSES results using R and Shiny
+
+16 Apr - 15 May 2021: 
+Building R packages (recording, codes provided)
+
+
+## Discussed  RStudio Webinars
+
+Webinars at RStudio - https://www.rstudio.com/resources/webinars/ (codes at https://github.com/rstudio/webinars)
+The new insights from these webinars and other R-related blogs and events are discussed at R4GC community meetups
+
+
+
+<!-- # (PART) Q & A -->
+
+
+<!-- # (APPENDIX) Appendix {-} -->
+
+<!-- ##  Video recordings -->
+

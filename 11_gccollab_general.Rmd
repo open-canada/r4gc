@@ -1,0 +1,214 @@
+
+
+
+<!-- # (PART) GCcollab discussions {.unnumbered} -->
+
+
+
+
+# Why R? 
+
+This is the question many ask. - Why should I use/learn R? 
+
+R is one of the fastest growing programming languages and environment for data science, visualization and processing. 
+R integrates well with Python and other free and commercial Data Science tools. It can also do something that other tools cannot and is very well  supported by growing international community. I
+t also comes with RStudio - a free Integrated Development Environment (IDE)  that is now supported by most GC Agencies and Departments, and that is becoming one of the main tools  for data related problems worldwide. For Microsoft data users, anything you do with  Excel, Access, Power BI, you can also do with R and RStudio.
+
+
+ 
+
+### 10 main reasons to use R for Data Science 
+
+ 
+ 
+Below are our own top 10 reasons to use R for Data Science - filtered and refined over the past two years by the members of this community, with links. 
+
+ 
+
+
+1. Advanced graphics with ggplot2 and its extensions
+2. Automated report/tutorials/textbooks generation with RMarkdown
+3. Streamlined package development with devtools
+4. Streamlined Interactive interfaces and dashboards development and deployment with Shiny
+5. “Best for geocomputation”*
+6. Common tidy design shared across packages
+7. Curated peer-tested  repo of packages at CRAN
+8. RStudio IDE (Integrated Development Environment) on desktop and cloud (rstudio.cloud)
+9. Full support and inter-operability with Python from the same IDE
+10. Global RStudio**-led movement for R education and advancement (rstudio.com)
+ 
+* https://geocompr.robinlovelace.net/intro.html#why-use-r-for-geocomputation (also https://geocompr.robinlovelace.net/preface.html#why-r)
+
+* RStudio  is a free suit of tools and education resources to program in R developed by a Public Benefit Corporation, which also provides free on-cloud IDE for coding data science projects in R and other languages
+ 
+
+
+<!-- R advantages: -->
+
+<!-- Thousands of free curated peer-tested ready to use packages - including several for Natural Language Processing, record linking, Web Crawling, geocoding used in this App - from CRAN: https://cran.r-project.org -->
+<!-- Global RStudio-led movement for R education and advancement - in contrast to “Wild West” development of Python. Latest rstudio::global(2021) counted over 10,000 attendees and lists over 50 free tutorials and presentations accessible from https://rstudio.com/conference/ -->
+<!-- Free on-cloud IDE (Integrated Development Environment) to start learning and coding in R in no time: https://rstudio.cloud -->
+<!-- Fast in-place processing of data tables: -->
+<!-- Full Python - R support and f inter-operabilityvfrom the same RStudio IDE -->
+<!-- Common tidy design shared across packages, -->
+<!-- Advanced declarative graphics, -->
+<!-- Streamlined package development, -->
+<!-- Pipelining and other code optimizations, -->
+<!-- Interactive interfaces for reports and dashboards, -->
+<!-- Self-learning tools and free text books on all R subjects: from https://education.rstudio.com/ and https://bookdown.org/ -->
+<!-- Professional publication suit that incorporates LaTeX and HTML, -->
+<!-- Easy web-publishing of data reports and deployment of web-applications -->
+
+
+# R and Python 
+
+
+Main references:
+
+- https://docs.rstudio.com/tutorials/user/using-python-with-rstudio-and-reticulate/
+- https://www.datacamp.com/community/tutorials/using-both-python-r
+
+ The latter has also a nice summary of PROs vs. CONs for both languages, subjectively summarized by myself below:
+
+
+
+Python's PROs:
+
+- Object-oriented language (this is a big one for me)  
+- General Purpose , i.e. you can use elsewhere (e.g. with raspberry pi  - www.raspberrypi.org, as I did for one of my daughters' projects)   
+- Simple and easy to understand and learn  (this could be subjective, but I would generally agree that  R is not taught they way I personally would teach it, i.e.  based on computer science principles, rather than on  memorizing a collection of various heuristic tools and functions.)   
+- Efficient (fast) packages for advanced machine learning activities, e.g. tensorflow or keras (which you can use from R too, but it could be less efficient), also a large collection of audio manipulation / recognition (some of whicg I played with for  one of my biometrics projects)
+
+Python CONs:
+
+- Not really designed for advanced manipulation or visualization of data
+
+
+R's PRO's:
+
+- It is designed specifically for data tasks
+- CRAN provides >10K peer-tested (!) packages for any data task you may think of . (I would also add - It also provides much great tools to get you OWN work be tested and featured one day in CRAN - which is what we are doing now at our Learn R Meet-ups!)
+- ggplot2 graphics is unbeatable
+- Capable of standalone analyses with built-in packages. (Anyone knows what it means??)
+
+R's CON's:
+
+- Not the fastest or memory efficient (Hey- That's without `data.table` package! I don't think so,if you use `data.table`,properly)
+- Object-oriented programming is not native or as easy in R, compared to Python. - Actually, I added this one. To me, this  is one of main motivations to see how to use both Python and R, instead of R by itself. But for someone else, this could be not tie-breaker though
+
+
+## Python and R unite!
+
+Check out our latest Lunch and Learn Meetup  : 
+'Lunch and Learn' Meetup: Dual Coding - Python and R unite! : GCcollab
+
+ 
+
+It shows how to Execute R from Python and Vice Versa, inspired by this blog: this https://www.kdnuggets.com/2015/10/integrating-python-r-executing-part2.html
+
+ 
+
+The used code is available from GCCode:  https://gccode.ssc-spc.gc.ca/r4gc/resources/howto
+
+
+
+# Best way to learn R
+
+
+The number of resources and ways to learn R is enormous.
+Some of us had tried many of them until we found the ones that we believe are the best ones.
+
+Here are some:  https://ivi-m.github.io/R-Ottawa/resources.html
+
+
+And of course, don't ever shy to ask questions (or seek for already many answers) at https://stackoverflow.com/.
+In fact, what a great option for you to save all the knowledgebase you acquire !!
+Helping yourself, you also help others, and contribute to further improvement of many R packages !) 
+
+
+
+<!-- # Ways to continue improving your R skills -->
+
+
+
+<!-- ## "Great bookdown books" -->
+
+
+
+```{r Great-bookdown-books, child = 'Great-bookdown-books.Rmd'}
+```
+
+
+
+# Events and Forums for R users
+
+
+### RStudio-Enterprise-Community-Meetup
+
+Another great meetup opportunity:
+
+https://www.meetup.com/RStudio-Enterprise-Community-Meetup
+
+NB: you may have to access it from your personal device
+
+ 
+
+Each meetup is dedicated to a specific topic, following which they post many Q&A at https://community.rstudio.com/
+
+ 
+
+###  from rviews.rstudio.com
+
+Other R conferences
+
+(from https://rviews.rstudio.com/2021/03/03/2021-r-conferences)
+
+ 
+
+CascadiaRConf 2021 (June 4 - 5), a jewel of a regional R conference for its first three years, was canceled in 2020. It is back this year as a virtual event. The Call for Presentations is open.
+useR! 2021 (July 5 - 9) has an outstanding lineup of keynote speakers. The program is very likely to make US based attendees night-owls
+EARL Conference 2021 (September 6 - 10), the premier R in industry event, will be online this year. The call for abstracts is already open.
+ 
+
+ 
+
+Other venues for submitting your R / Data Science work:
+
+ 
+
+https://peerj.com/articles/?q=data
+rpubs.com
+https://earlconf.com/#about: The Enterprise Applications of the R Language Conference (EARL)
+https://odsc.com/boston/: Data Science Conference & Expo
+ 
+https://journals.plos.org/plosone/search?filterJournals=PLoSONE&q=data+science
+(research by the US Department of Homeland Security is published there)
+ 
+See also: from http://charteredabs.org/academic-journal-guide-2015-view/  (Rank 4-3)
+Management Science
+ IEEE Transactions on Systems, Man, and Cybernetics: Systems (formerly "IEEE Transactions on Systems, Man and Cybernetics - Part A: Systems and Humans")
+Annals of Operations Research
+Operations Research
+EEE Transactions on Cybernetics (formerly "IEEE Transactions on Systems Man and Cybernetics Part C (Applications and Reviews)")
+INFORMS Journal on Computing
+OR Spectrum
+Transportation Science
+Computational Statistics & Data Analysis  
+
+
+Academic Conferences:
+
+ 
+Canadian AI Conference  - https://www.caiac.ca/en/conferences
+Academic Journals:
+ 
+Operations Research (Informs): https://pubsonline.informs.org/journal/opre
+https://www.scirp.org/journal/jdaip/ - Journal of Data Analysis and Information Processing
+
+
+IEEE Conferences:
+ 
+IEEE BigData 
+IEEE International Conference on Technologies for Homeland Security HST 
+
+
