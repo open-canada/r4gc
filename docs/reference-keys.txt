@@ -2,11 +2,11 @@ why-r
 main-reasons-to-use-r-for-data-science
 r-vs.-python
 python-and-r-unite
-other-resources
-best-way-to-learn-r
-great-bookdown-textbooks
-great-three-column-bookdown-format
-great-two-column-books
+open-source-policies
+best-way-to-start-learning-r
+open-textbooks
+in-three-column-bookdown-format
+in-two-column-format
 events-and-forums-for-r-users
 other-r-communities-in-gc
 gcconnex-gc-only
@@ -17,7 +17,7 @@ github-public
 other-groups
 rstudio-enterprise-community-meetup
 r-conferences
-other-venues-for-submitting-your-r-data-science-work
+other-venues-for-submitting-r-data-science-work
 academic-conferences
 ieee-conferences
 from-excel-to-r
@@ -29,7 +29,8 @@ vroom
 readxl-and-xlsx
 discussion
 efficient-programming-in-r
-debugging
+object-oriented-programming-in-r
+debugging-tricks
 rstudio-tricks
 coding-online
 running-multiple-rstudio-versions

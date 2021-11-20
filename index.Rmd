@@ -3,7 +3,7 @@ knit: "bookdown::render_book" # This lines needs to be FIRST, if you file is not
 site: bookdown::bookdown_site
 documentclass: book
 
-# title: "The R4GC Book"
+# title: "The R4GC Textbook"
 # title: "R for Government of Canada"
 title: "Learn Data Science with R (The R4GC Book)" # Use R in GC
 
@@ -43,21 +43,21 @@ output:
           <!-- <li><a href="index.html"> "R4GC workbook"</a> </li> -->
           <li><a href="index.html"> <img width="100%" src="images/r4gc-banner.png"> </a>      </li>
         after: |
-          <li> This book is built using <a href="https://bookdown.org"> bookdown</a>. </li>
+          <li> This book is built using <a href="https://bookdown.org"> bookdown</a> </li>
       download: [epub,pdf]
       sharing:
         facebook: yes
         linkedin: yes
    
     
-  bookdown::html_document2:  # I need compile it from here By clicking "knit" NOT from Build menu!
-    toc: yes
-    toc_depth: 2
-    toc_float: yes
-    collapsed: yes # no
-    number_sections: false
-
-  bookdown::epub_book: default
+  # bookdown::html_document2:  # I need compile it from here By clicking "knit" NOT from Build menu!
+  #   toc: yes
+  #   toc_depth: 2
+  #   toc_float: yes
+  #   collapsed: yes # no
+  #   number_sections: false
+  # 
+  # bookdown::epub_book: default
 ---
 
 <!-- <a href="https://www.bookdown.org" target="blank">bookdown</a> -->
@@ -261,68 +261,10 @@ This platform is used for wider audience forums and conferences. A number of pol
 
 <!-- ## Lead and moderator -->
 
-<!-- # Book overview and other resources -->
 
-# Book structure {-}
+# A propos {-}
 
-
-The book is organized in several parts. 
-
-Part I is dedicated to General discussions, which includes the following:
-
-1 Why R?
-2 R and Python
-3 Best way to learn R
-4 Other resources and bookdown textbooks
-5 Events and Forums for R users
-
-
-Part II is dedicated to the Best Practices and Efficient Coding in R and includes the following:
-
-6 From Excel to R
-7 data.table: your best fRiend
-8 Reading various kinds of data in R
-9 Efficient programming in R
-
-Part III is dedicated to Visualization and Reporting and includes the following: 
-
-10 R Markdown for literate programming and automated reports
-11 ggplot2 and its extensions for data visualization
-12 Shiny for Interactive Data Visualization, Analysis and Web App development
-13 Using R with GC data infrastructure (gcdocs, AWS, etc)
-14 Interactive Outputs in R: 'plotly', 'Datatable', 'reactable'
-
-Part IV is dedicated advanced use of Data Science, Machine Learning,  and AI. It includes:
-
-15 Record Linking and other Data Engineering tasks in R
-16 Geo/Spatial coding and visualization in R
-17 Text Analysis in R
-18 Machine Learning and Modeling in R
-
-
-Part V contains the Tutorials developed by and for the community. This are: 
-
-19 GCCode 101
-20 Packages 101
-21 R101: Building COVID-19 Tracker App from scratch
-
-22.1 Geo/Spatial coding and visualization with R. Part 1:
-22.2 Text Analysis with R. Part 1:
-
-and a number of short "How To: tutorials such as:
-
-22.3 Dual Coding - Python and R unite !
-22.4 Working with ggtables
-22.5 Automate common look and feel of your ggplot graphs
-and others
-
-
-Part VI presents the outputs of the community development such as  Shiny Web Apps and other codes and libraries developed by community members.
-
-Finally, Appendix includes schedule and agendas for the R4GC community "Lunch and Learn" meetups, Release Notes, plans and  invitation for collaboration, in particular to make this knowledgebase bilingual - in support of bilingualism in Canada and as an another opportunity for applying data science skills for public good.
-
-
-## About this book {-}
+<!-- ## About this book {-} -->
 
 This is book is built using the [`bookdown`](https://bookdown.org) R package in RStudio.
 It is hosted at Open Canada GitHub repo https://open-canada.github.io/r4gc.
@@ -330,25 +272,87 @@ The source code of it located at https://github.com/open-canada/r4gc.
 
 <!-- - similar to many great data science textbooks that have been already published and made freely available on github and bookdown.org and other online platforms -->
 Thus built, the book enables easy collaboration, transparency and peer-reviewing.
-Additionally, as with any markdown file, in addtion to the output visible in the final compiled html file, it also allows one to gather and save  discussion comments and  draft  ideas that are visible inside the source Rmd file.
+Additionally, as with any markdown file, in addition to the compiled html file, it also allows one to gather and save  discussion comments and  draft  ideas inside the source Rmd file.
 
 <!-- , while generating the output that contains only those ideas that are presently print-ready, while keeping all other, not print-ready yet, ideas still available for interested reader withing the source .Rmd file. Thus looking insde the .Rmd source files, the may not only see the actual codes that generated this book, but also all othe draft ideas or future plans hidden as comments within the same Rmd files. -->
 
 
 
 
+### Other formats {-}
 
-<!-- This book is built using R and Rmarkdown in RStudio. -->
+One of the beauties of the `bookdown` R package is that it allows one to generate multiple type of outputs  from the same source .Rmd files.
+, such as pdf, epub, and various hmtl formats (single page html, multiple-page two-column and multiple-page three-column formats, with and without interactive menus).
+The alternative formats of this R4GC book will be placed here  https://open-canada.github.io/r4gc/alt.
 
-## Other formats {-}
+<!-- - epub:  -->
+<!-- - pdf: -->
+<!-- - one-page html -->
+<!-- - mulpi-page three-colummn website:  -->
 
-One of the beauties of the `bookdown` R package is that it allows one to generate multiple kinds of outputs  from the same source .Rmd files, such as pdf, epub, and various hmtl formats (single page html, multiple-page two-column and multiple-page three-column formats, with and without interactive menus)
-The alternative formats of this R4GC book are available here  https://open-canada.github.io/r4gc/alt: 
 
-- epub: 
-- pdf:
-- one-page html
-- mulpi-page three-colummn website: 
+
+
+## Book structure {-}
+
+
+The book is organized in several parts. 
+Part I is dedicated to General discussions, which includes the following:
+
+1. Why R?
+2. R and Python
+3. Best way to learn R
+4. Great bookdown textbooks
+5. Events and forums for R users
+
+
+Part II is dedicated to the Best Practices and Efficient Coding in R and includes the following:
+
+6. From Excel to R
+7. data.table: your best fRiend
+8. Reading various kinds of data in R
+9. Efficient programming in R
+
+Part III is dedicated to Visualization and Reporting and includes the following: 
+
+10. R Markdown for literate programming and automated reports
+11. ggplot2 and its extensions for data visualization
+12. Shiny for Interactive Data Visualization, Analysis and Web App development
+13. Using R with GC data infrastructure (gcdocs, AWS, etc)
+14. Interactive Outputs in R: 'plotly', 'Datatable', 'reactable'
+
+Part IV is dedicated advanced use of Data Science, Machine Learning,  and AI. It includes:
+
+15. Record Linking and other Data Engineering tasks in R
+16. Geo/Spatial coding and visualization in R
+17. Text Analysis in R
+18. Machine Learning and Modeling in R
+
+
+Part V contains the Tutorials developed by and for the community. This are: 
+
+19. GCCode 101
+20. Packages 101
+21. R101: Building COVID-19 Tracker App from scratch
+
+22. Geo/Spatial coding and visualization with R. Part 1:
+22. Text Analysis with R. Part 1:
+
+and a number of short "How To: tutorials such as:
+
+22. Dual Coding - Python and R unite !
+22. Working with ggtables
+22. Automate common look and feel of your ggplot graphs
+and others
+
+
+Part VI presents the outputs of the community development. 
+This includes a variety of
+ Shiny Web Apps and other codes and libraries developed by community members.
+
+Finally, Appendix includes agendas for the R4GC community "Lunch and Learn" meetups, Future Plans and Release Notes.
+<!-- , plans and  invitation for collaboration, in particular to make this knowledgebase bilingual - in support of bilingualism in Canada and as an another opportunity for applying data science skills for public good. -->
+
 
 
 
@@ -379,9 +383,25 @@ Alternatively, you can always contact the R4GC group lead at the contact listed 
 
 
 
-## Contacts and feedback  {-}
+## Contacts {-}
 
 For questions and feedback, please contact the group lead and moderator Dmitry Gorodnichy: <dmitry.gorodnichy@cbsa-asfc.gc.ca> or <dmitry@gorodnichy.ca>
+
+
+# Français {-}
+
+Pour l'instant, ce livre est développé seulement en anglais. Cependant, plusieurs de commentaires et trucs  qu'on partage dans notre communauté proviens également dans la langue française aussi. 
+
+On espère qu'un moment donné 
+on peut
+d'avoir ce livre dans le deux langues officielles: en anglais et en français.
+<!-- traduire ce livre  -->
+On même peux se servir des outils automatisés  et intelligence artificielle - car nous sommes les scientifiques de données, n'est pas ? - pour automatiser le traduction de contexte de ce livre!
+
+
+Si vous êtes intéressé de contribuer à nos efforts de traduire ce livre dans le langue de votre choix, 
+veuillez contacter [modérateur de groupe](index.html#contacts).
+
 
 
 
@@ -517,25 +537,7 @@ TBD
 
 
 
-
-
-# Français {-}
-
-Pour l'instant, ce livre est développé seulement en anglais. Cependant, plusieurs de commentaires et trucs  qu'on partage dans notre communauté proviens également dans la langue française aussi. 
-
-On espère qu'un moment donné 
-on peut
-d'avoir de ce livre dans le deux langues officielles: en anglais en français
-<!-- traduire ce livre  -->
-
-On même peux se servir des outils automatisés  et intelligence artificielle - car nous sommes les scientifiques de données, n'est pas ? - pour automatiser le traduction de contexte de ce livre!
-
-
-Si vous êtes intéressé de contribuer à nos efforts de traduire ce livre dans le langue de votre choix, 
-veuillez contacter Dmitry Gorodnichy.
-
-
-```{r}
+```{r include=FALSE}
 knitr::knit_exit()
 ```
 

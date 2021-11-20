@@ -1,17 +1,18 @@
 
 
 
-## Great bookdown textbooks
+# Open textbooks
 
 This book is prepared using bookdown R package.
 
 It is inspired by many other  
 open source codes and examples.
+
 Below are listed those of particular value in developing  this book.
 
 See also textbook reference for each of the community discussion topics later in the book.
 
-### Great three-column bookdown format:
+### In three-column bookdown format:
 
 On Shiny:
 
@@ -27,7 +28,7 @@ From Hadley:
 
 - https://geocompr.robinlovelace.net/
 
-### Great two-column books:
+### In two-column format:
 
 - https://www.bigbookofr.com/
 - https://bookdown.org/

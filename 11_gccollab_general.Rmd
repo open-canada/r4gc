@@ -111,19 +111,21 @@ It shows how to Execute R from Python and Vice Versa, inspired by this blog: thi
 The used code is available from GCCode:  https://gccode.ssc-spc.gc.ca/r4gc/resources/howto
 
 
-
-# Other resources
-
+# Open source policies
 
 
 
-## Best way to learn R
+
+
+# Best way to start learning R
+
+<!-- and continue learning R -->
 
 
 The number of resources and ways to learn R is enormous.
 Some of us had tried many of them until we found the ones that we believe are the best ones.
 
-Here are some:  https://ivi-m.github.io/R-Ottawa/resources.html
+Here are some:  https://open-canada.github.io/UseR/resources.html
 
 
 And of course, don't ever shy to ask questions (or seek for already many answers) at https://stackoverflow.com/.
@@ -138,6 +140,8 @@ Helping yourself, you also help others, and contribute to further improvement of
 <!-- ## "Great bookdown books" -->
 
 
+<!-- # Other resources -->
+
 
 ```{r Great-bookdown-books, child = 'Great-bookdown-books.Rmd'}
 ```
@@ -145,7 +149,7 @@ Helping yourself, you also help others, and contribute to further improvement of
 
 
 
-## Events and Forums for R users
+# Events and Forums for R users
 
 
 ## Other R communities in GC
@@ -255,7 +259,7 @@ Each meetup is dedicated to a specific topic, following which they post many Q&A
 
  
 
-###   R conferences
+##   R conferences
 
 
 
@@ -272,7 +276,7 @@ EARL Conference 2021 (September 6 - 10), the premier R in industry event, will b
 
  
 
-### Other venues for submitting your R / Data Science work:
+## Other venues for submitting  R / Data Science work:
 
  
 
@@ -288,8 +292,8 @@ https://journals.plos.org/plosone/search?filterJournals=PLoSONE&q=data+science
  
 See also: from http://charteredabs.org/academic-journal-guide-2015-view/  (Rank 4-3)
 
-Management Science
-
+Management Science
+
  IEEE Transactions on Systems, Man, and Cybernetics: Systems (formerly "IEEE Transactions on Systems, Man and Cybernetics - Part A: Systems and Humans")
  
 Annals of Operations Research
@@ -319,6 +323,7 @@ https://www.scirp.org/journal/jdaip/ - Journal of Data Analysis and Information 
 ### IEEE Conferences:
  
 IEEE BigData 
+
 IEEE International Conference on Technologies for Homeland Security HST 
 
 

@@ -213,10 +213,12 @@ As for using SQL vs packages such as DPLYR, I mentioned a gain in performance, b
 # Efficient programming in R 
 <!-- (coding style, memory-efficient coding, collaboration-ready codes, source control) -->
 
+## Object oriented programming in R
+
 
 TBA
 
-## Debugging 
+## Debugging tricks
 
 TBA
 
