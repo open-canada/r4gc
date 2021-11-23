@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>5 Open source policies | The R4GC Book</title>
+  <title>10 Other tips and tricks | The R4GC Book</title>
   <meta name="description" content="Notes and tutorials from ‘Lunch and Learn Data Science with R’ weekly meetups organized by the R4GC Community" />
   <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="5 Open source policies | The R4GC Book" />
+  <meta property="og:title" content="10 Other tips and tricks | The R4GC Book" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="https://open-canada.github.io/r4gc" />
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="open-canada/r4gc" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="5 Open source policies | The R4GC Book" />
+  <meta name="twitter:title" content="10 Other tips and tricks | The R4GC Book" />
   
   <meta name="twitter:description" content="Notes and tutorials from ‘Lunch and Learn Data Science with R’ weekly meetups organized by the R4GC Community" />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="events-and-forums-for-r-users.html"/>
-<link rel="next" href="use-r-efficiently-with-data-table.html"/>
+<link rel="prev" href="reading-various-kinds-of-data-in-r.html"/>
+<link rel="next" href="r-markdown-for-literate-programming-and-automated-reports.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -368,10 +368,45 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="open-source-policies" class="section level1" number="5">
-<h1><span class="header-section-number">5</span> Open source policies</h1>
-<p>“Directive on Service and Digital” – Appendix A: <a href="https://www.tbs-sct.gc.ca/pol/doc-eng.aspx?id=32602" class="uri">https://www.tbs-sct.gc.ca/pol/doc-eng.aspx?id=32602</a>.</p>
-<!-- # (PART) Efficient R coding {-} -->
+<div id="other-tips-and-tricks" class="section level1" number="10">
+<h1><span class="header-section-number">10</span> Other tips and tricks</h1>
+<div id="efficient-programming-in-r" class="section level2" number="10.1">
+<h2><span class="header-section-number">10.1</span> Efficient programming in R</h2>
+<!-- (coding style, memory-efficient coding, collaboration-ready codes, source control) -->
+<p>TBA</p>
+</div>
+<div id="object-oriented-programming-in-r" class="section level2" number="10.2">
+<h2><span class="header-section-number">10.2</span> Object oriented programming in R</h2>
+<p>TBA</p>
+</div>
+<div id="debugging-tricks" class="section level2" number="10.3">
+<h2><span class="header-section-number">10.3</span> Debugging tricks</h2>
+<p>TBA</p>
+</div>
+<div id="rstudio-tricks" class="section level2" number="10.4">
+<h2><span class="header-section-number">10.4</span> RStudio tricks</h2>
+<div id="coding-online" class="section level3" number="10.4.1">
+<h3><span class="header-section-number">10.4.1</span> Coding online</h3>
+<p>TBA</p>
+</div>
+<div id="running-multiple-rstudio-versions" class="section level3" number="10.4.2">
+<h3><span class="header-section-number">10.4.2</span> Running multiple RStudio versions</h3>
+<p>You want to be able to run multiple versions of RStudio in Windows? You can do with the following executable .bat script.</p>
+<pre><code># Run-RStudio-1.4.bat
+
+@echo off
+title Starting RStudio!
+echo Hello Dear,
+echo Starting RStudio 1.4 (from C:\Users\gxd006\Downloads\RStudio-1.4.1106\bin\) for you...
+
+C:\Users\abc123\Downloads\RStudio-1.4.1106\bin\rstudio.exe
+
+Set WshShell = CreateObject(&quot;WScript.Shell&quot;)
+WshShell.Run chr(34) &amp; &quot;C:\Users\gxd006\Downloads&quot; &amp; chr(34), 0
+Set WshShell = Nothing
+</code></pre>
+</div>
+</div>
 </div>
 
 
@@ -381,8 +416,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="events-and-forums-for-r-users.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="use-r-efficiently-with-data-table.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="reading-various-kinds-of-data-in-r.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="r-markdown-for-literate-programming-and-automated-reports.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

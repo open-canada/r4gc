@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>5 Open source policies | The R4GC Book</title>
+  <title>6 Use R efficiently with data.table! | The R4GC Book</title>
   <meta name="description" content="Notes and tutorials from ‘Lunch and Learn Data Science with R’ weekly meetups organized by the R4GC Community" />
   <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="5 Open source policies | The R4GC Book" />
+  <meta property="og:title" content="6 Use R efficiently with data.table! | The R4GC Book" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="https://open-canada.github.io/r4gc" />
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="open-canada/r4gc" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="5 Open source policies | The R4GC Book" />
+  <meta name="twitter:title" content="6 Use R efficiently with data.table! | The R4GC Book" />
   
   <meta name="twitter:description" content="Notes and tutorials from ‘Lunch and Learn Data Science with R’ weekly meetups organized by the R4GC Community" />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="events-and-forums-for-r-users.html"/>
-<link rel="next" href="use-r-efficiently-with-data-table.html"/>
+<link rel="prev" href="open-source-policies.html"/>
+<link rel="next" href="python-and-r-unite.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -368,21 +368,52 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="open-source-policies" class="section level1" number="5">
-<h1><span class="header-section-number">5</span> Open source policies</h1>
-<p>“Directive on Service and Digital” – Appendix A: <a href="https://www.tbs-sct.gc.ca/pol/doc-eng.aspx?id=32602" class="uri">https://www.tbs-sct.gc.ca/pol/doc-eng.aspx?id=32602</a>.</p>
-<!-- # (PART) Efficient R coding {-} -->
+<div id="use-r-efficiently-with-data.table" class="section level1" number="6">
+<h1><span class="header-section-number">6</span> Use R efficiently with data.table!</h1>
+<!-- for very fast and user friendly data processing -->
+<p>The <code>data.table</code> package developed by Matt Dowle is a game changer for many data scientists</p>
+<p>Learn about it, Share your favourite <code>data.table</code> trick here</p>
+<p><a href="https://github.com/Rdatatable/data.table" class="uri">https://github.com/Rdatatable/data.table</a></p>
+<p><a href="https://github.com/chuvanan/rdatatable-cookbook" class="uri">https://github.com/chuvanan/rdatatable-cookbook</a></p>
+<p><a href="http://r-datatable.com" class="uri">http://r-datatable.com</a> (<a href="https://rdatatable.gitlab.io/data.table/" class="uri">https://rdatatable.gitlab.io/data.table/</a>)
+<a href="https://www.datacamp.com/courses/time-series-with-datatable-in-r" class="uri">https://www.datacamp.com/courses/time-series-with-datatable-in-r</a>
+<a href="https://www.datacamp.com/courses/data-manipulation-in-r-with-datatable" class="uri">https://www.datacamp.com/courses/data-manipulation-in-r-with-datatable</a>
+<a href="https://github.com/Rdatatable/data.table/wiki/Articles" class="uri">https://github.com/Rdatatable/data.table/wiki/Articles</a>
+<a href="https://rpubs.com/josemz/SDbf" class="uri">https://rpubs.com/josemz/SDbf</a> - Making .SD your best friend</p>
+<div id="data.table-vs.-dplyr" class="section level2" number="6.1">
+<h2><span class="header-section-number">6.1</span> data.table vs. dplyr</h2>
+<p>data.table (Computer language) way vs. dplyr (“English language”) way</p>
+<ol style="list-style-type: upper-alpha">
+<li>The best: No wasted computations .No new memory allocations.
+dtLocations %&gt;% .[WLOC == 4313, WLOC:=4312]</li>
+<li>No new memory allocations, but computations are done with ALL rows.
+dtLocations %&gt;% .[, WLOC:=ifelse(WLOC==4313, 4312, WLOC)]</li>
+<li>The worst: Computations are done with ALL rows. Furthermore, the entire data is copied from one memory location to another. (Imagine if your data as in 1 million of cells, of which only 10 needs to be changed !)
+dtLocations &lt;- dtLocations %&gt;% mutate(WLOC=ifelse(WLOC==4313, 4312, WLOC))
+NB: dtLocations %&gt;% . [] is the same as dtLocations[]. so you can use it in pipes.</li>
+</ol>
+<p>Conclusion: Use data.table for speed and efficient coding instead of dplyr (i.e.tibbles)!</p>
+<!-- Comment  -->
+<!-- je côtoie de nombreux scientifiques en environnement qui sont nouveaux dans le monde de la programmation et qui n'ont pas un gros volume de données. Pour eux, dplyr est plus « accessible » que data.table. -->
+<!-- Un jour, ils y viendront peut-être, mais en attendant, je vais continuer à enseigner les rudiments de R en proposant dplyr et en leur parlant brièvement du package data.table. -->
 </div>
-
-
-
+<div id="extensions-of-data.table" class="section level2" number="6.2">
+<h2><span class="header-section-number">6.2</span> Extensions of data.table</h2>
+<p>There’s considerable effort to marry data.table package with dplyr package. Here are notable ones:</p>
+<ul>
+<li><a href="https://github.com/tidyverse/dtplyr" class="uri">https://github.com/tidyverse/dtplyr</a> (Version: 1.1.0, Published: 2021-02-20, From Hadley himself - I found it quite cumbersome still though…)</li>
+<li><a href="https://github.com/asardaes/table.express" class="uri">https://github.com/asardaes/table.express</a> (Version: 0.3.1 Published: 2019-09-07 - somewhat easier?)</li>
+<li><a href="https://github.com/markfairbanks/tidytable" class="uri">https://github.com/markfairbanks/tidytable</a> (Version: 0.6.2 Published: 2021-05-18 - seems to be the best supported of the three?)</li>
+</ul>
+</div>
+</div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="events-and-forums-for-r-users.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="use-r-efficiently-with-data-table.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="open-source-policies.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="python-and-r-unite.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

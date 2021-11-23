@@ -1,50 +1,5 @@
 
-
-
-
-# From Excel to R
-
-There was a keen interest expressed at last Friday meetup on transitioning from Excel to R. Incidentally, there was an RStudio Community Meet-up focused exactly on this topic:  Meetup: Making the Shift from Excel to R: Perspectives from the back-office
-
-<!-- ## 1 -->
-
-Many Q&A from this meetup are posted here:
-
-https://community.rstudio.com/t/meetup-making-the-shift-from-excel-to-r-perspectives-from-the-back-office/100467
-
-<!-- Below are listed some. There's also a link to a video-recording of it! (at link above) -->
-
-
-
-<!-- What was the most common problem when moving from Excel to R? [Excel -> R Meetup Q&A] -->
-<!-- R Markdown vs R Scripts in Enterprise Workflows [Excel -> R Meetup Q&A] -->
-<!-- What sort of packages did you use for reconciliation? [Excel -> R Meetup Q&A] -->
-<!-- What is the best way to share the results of an analysis that you’ve made in R? [Excel -> R Meetup Q&A] -->
-<!-- How do you get buy-in transitioning from Excel to R? [Excel -> R Meetup Q&A] -->
-<!-- How do you get buy-in from the IT team around R package security concerns? [Excel -> R Meetup Q&A] -->
-<!-- How do you move data from tricky worksheets into R? [Excel -> R Meetup Q&A] -->
-<!-- With so many ways of doing the same things, how do you find the best way to do something? [Excel -> R Meetup Q&A] -->
-
-
-
-<!-- ## 2 -->
-
-
-This dictionary of Excel/R equivalent was very useful is finding a starting point for common functions: https://paulvanderlaken.com/2018/07/31/transitioning-from-excel-to-r-dictionary-of-common-functions/  
-
- 
-
-For people who are looking for something more comprehensive, this website is very useful: https://rstudio-conf-2020.github.io/r-for-excel/
-
-
-
-<!-- ## 3 -->
-
-Pour ma part, j'adhère à l'approche proposée par The [Carpentries](https://datacarpentry.org/spreadsheet-ecology-lesson/00-intro/index.html), soit l'utilisation d'Excel pour la saisie de données et une partie du contrôle de la qualité. Par la suite, les données sont exportées en csv pour être importées dans R.
-
-
-# data.table: your best fRiend
-
+# Use R efficiently with data.table!
 <!-- for very fast and user friendly data processing -->
 
 
@@ -103,6 +58,67 @@ There's considerable effort to marry  data.table package with dplyr package. Her
 - https://github.com/tidyverse/dtplyr (Version: 1.1.0, Published: 2021-02-20, From Hadley himself - I found it quite cumbersome still though...)
 - https://github.com/asardaes/table.express (Version: 0.3.1 Published: 2019-09-07 - somewhat easier?)
 - https://github.com/markfairbanks/tidytable (Version: 0.6.2 Published: 2021-05-18 - seems to be the best supported of the three?)
+
+
+
+
+
+# Python and R unite!
+
+Check out our latest Lunch and Learn Meetup  : 
+'Lunch and Learn' Meetup: Dual Coding - Python and R unite! : GCcollab
+
+ 
+
+It shows how to Execute R from Python and Vice Versa, inspired by this blog: this https://www.kdnuggets.com/2015/10/integrating-python-r-executing-part2.html
+
+ 
+
+The used code is available from GCCode:  https://gccode.ssc-spc.gc.ca/r4gc/resources/howto
+
+
+
+
+# From Excel to R
+
+There was a keen interest expressed at last Friday meetup on transitioning from Excel to R. Incidentally, there was an RStudio Community Meet-up focused exactly on this topic:  Meetup: Making the Shift from Excel to R: Perspectives from the back-office
+
+<!-- ## 1 -->
+
+Many Q&A from this meetup are posted here:
+
+https://community.rstudio.com/t/meetup-making-the-shift-from-excel-to-r-perspectives-from-the-back-office/100467
+
+<!-- Below are listed some. There's also a link to a video-recording of it! (at link above) -->
+
+
+
+<!-- What was the most common problem when moving from Excel to R? [Excel -> R Meetup Q&A] -->
+<!-- R Markdown vs R Scripts in Enterprise Workflows [Excel -> R Meetup Q&A] -->
+<!-- What sort of packages did you use for reconciliation? [Excel -> R Meetup Q&A] -->
+<!-- What is the best way to share the results of an analysis that you’ve made in R? [Excel -> R Meetup Q&A] -->
+<!-- How do you get buy-in transitioning from Excel to R? [Excel -> R Meetup Q&A] -->
+<!-- How do you get buy-in from the IT team around R package security concerns? [Excel -> R Meetup Q&A] -->
+<!-- How do you move data from tricky worksheets into R? [Excel -> R Meetup Q&A] -->
+<!-- With so many ways of doing the same things, how do you find the best way to do something? [Excel -> R Meetup Q&A] -->
+
+
+
+<!-- ## 2 -->
+
+
+This dictionary of Excel/R equivalent was very useful is finding a starting point for common functions: https://paulvanderlaken.com/2018/07/31/transitioning-from-excel-to-r-dictionary-of-common-functions/  
+
+ 
+
+For people who are looking for something more comprehensive, this website is very useful: https://rstudio-conf-2020.github.io/r-for-excel/
+
+
+
+<!-- ## 3 -->
+
+Pour ma part, j'adhère à l'approche proposée par The [Carpentries](https://datacarpentry.org/spreadsheet-ecology-lesson/00-intro/index.html), soit l'utilisation d'Excel pour la saisie de données et une partie du contrôle de la qualité. Par la suite, les données sont exportées en csv pour être importées dans R.
+
 
 
 # Reading various kinds of data in R
@@ -209,9 +225,12 @@ If you want to prototype with small datasets, do not lose time with parquet… C
 As for using SQL vs packages such as DPLYR, I mentioned a gain in performance, but be careful. If you use raw SQL, then you will see a big gain in performance. However, there are packages out there that translate SQL to R or Python interpretable code, and those will possibly be slower due to the interpretation layer. DPLYR, on the other hand, is quite efficient and well optimized. As usual, it depends on the packages. In R, the sqldf package should be good, if you want to try it out.
 
 
+# Other tips and tricks
 
-# Efficient programming in R 
+## Efficient programming in R 
 <!-- (coding style, memory-efficient coding, collaboration-ready codes, source control) -->
+
+TBA
 
 ## Object oriented programming in R
 

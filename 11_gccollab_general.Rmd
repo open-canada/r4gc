@@ -60,7 +60,7 @@ There was much discussion around this topic, and below are our own top 10 reason
 <!-- Easy web-publishing of data reports and deployment of web-applications -->
 
 
-# R vs. Python 
+## R vs. Python 
 
 
 Main references:
@@ -96,28 +96,7 @@ R's CON's:
 - Not the fastest or memory efficient (Hey- That's without `data.table` package! I don't think so,if you use `data.table`,properly)
 - Object-oriented programming is not native or as easy in R, compared to Python. - Actually, I added this one. To me, this  is one of main motivations to see how to use both Python and R, instead of R by itself. But for someone else, this could be not tie-breaker though
 
-
-## Python and R unite!
-
-Check out our latest Lunch and Learn Meetup  : 
-'Lunch and Learn' Meetup: Dual Coding - Python and R unite! : GCcollab
-
- 
-
-It shows how to Execute R from Python and Vice Versa, inspired by this blog: this https://www.kdnuggets.com/2015/10/integrating-python-r-executing-part2.html
-
- 
-
-The used code is available from GCCode:  https://gccode.ssc-spc.gc.ca/r4gc/resources/howto
-
-
-# Open source policies
-
-
-
-
-
-# Best way to start learning R
+# Learn R: *R*ight way!
 
 <!-- and continue learning R -->
 
@@ -149,10 +128,10 @@ Helping yourself, you also help others, and contribute to further improvement of
 
 
 
-# Events and Forums for R users
+# Events and forums for R users
 
 
-## Other R communities in GC
+##  R communities in GC
 
 
 Roughly sorted by the level of group activity
@@ -235,7 +214,7 @@ More GCcollab groups are listed at https://wiki.gccollab.ca/The_Square/GCcollab_
 
  
 
-## Other groups
+## Other related groups
 
 - https://code.open.canada.ca/en/open-source-softwares.html
 
@@ -325,5 +304,11 @@ https://www.scirp.org/journal/jdaip/ - Journal of Data Analysis and Information 
 IEEE BigData 
 
 IEEE International Conference on Technologies for Homeland Security HST 
+
+
+
+# Open source policies
+
+“Directive on Service and Digital” – Appendix A:  https://www.tbs-sct.gc.ca/pol/doc-eng.aspx?id=32602.
 
 
