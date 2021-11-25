@@ -2,9 +2,9 @@
 
 
 
-# Lunch and Learn series
+# Lunch and Learn notes
 
-Agenda and notes from  the Lunch and Learn 'Data Science with R' series organized by  R4GC community. 
+These are the draft notes from  the Lunch and Learn 'Data Science with R' series organized by  R4GC community. 
 Please see [Lunch and Learn](index.html#lunch-and-learn-meetups) page for details on how to join these meetings.
 
 For video-recordings and additional notes, please join [Lunch and Learn 'Data Science with R' GCcollab group](https://gccollab.ca/groups/about/7855030) 
@@ -13,8 +13,7 @@ For video-recordings and additional notes, please join [Lunch and Learn 'Data Sc
 
 ### Interactive Outputs in R without Shiny {-}
 
-26 Nov 2021
-
+26 Nov 2021 - 
 This meeting will be dedicated to tools to generate interactive graphs, tables, and other content without Shiny (which, as you know, requires a server to host your Shiny application and which for this reason cannot be easily shared with your clients, e.g. by email)
 
 

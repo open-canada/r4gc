@@ -1,3 +1,6 @@
+disclaimer
+international-methodology-symposium-october-2021
+gc-data-conference-february-2021-gcdata2021
 why-r
 main-reasons-to-use-r-for-data-science
 r-vs.-python
@@ -19,6 +22,10 @@ other-venues-for-submitting-r-data-science-work
 academic-conferences
 ieee-conferences
 open-source-policies
+open-source
+oopen-government
+open-science
+scientific-integrity
 use-r-efficiently-with-data.table
 data.table-vs.-dplyr
 extensions-of-data.table
@@ -114,14 +121,14 @@ automate-common-look-and-feel-of-your-ggplot-graphs
 automated-generation-of-report-cards
 shiny-apps
 pses-results-interactive-analysis-and-visualization
-automated-municipal-level-covid-19-tracker
+other-tools-and-dashboards
 automated-atip-requests-topic-extraction
+automated-municipal-level-covid-19-tracker
 geo-mapped-current-historical-and-predicted-border-wait-times
 demo-and-tool-for-linking-noisy-data-records
 html-pages-comparator
 large-table-summarizer
-lunch-and-learn-series
-interactive-outputs-in-r-without-shiny
+lunch-and-learn-notes
 discussed-rstudio-webinars
 technical-information
 colophone

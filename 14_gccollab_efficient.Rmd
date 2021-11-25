@@ -5,23 +5,28 @@
 
 The `data.table` package developed by Matt Dowle is a game changer for many data scientists
 
-Learn about it, Share your favourite `data.table` trick here
+Learn about it...  and use it always, 
+by default:
+```{r}
+library(data.table)
+dtIris <- data.table(iris) # or
+df <- iris; dtIris <- setDT(df)
+```
+
+
+Where to learn: 
+
+- https://github.com/Rdatatable/data.table
+
+- https://github.com/chuvanan/rdatatable-cookbook
 
  
 
- 
-
-https://github.com/Rdatatable/data.table
-
-https://github.com/chuvanan/rdatatable-cookbook
-
- 
-
-http://r-datatable.com (https://rdatatable.gitlab.io/data.table/)
-https://www.datacamp.com/courses/time-series-with-datatable-in-r
-https://www.datacamp.com/courses/data-manipulation-in-r-with-datatable
-https://github.com/Rdatatable/data.table/wiki/Articles
-https://rpubs.com/josemz/SDbf - Making .SD your best friend
+- http://r-datatable.com (https://rdatatable.gitlab.io/data.table/)
+- https://www.datacamp.com/courses/time-series-with-datatable-in-r
+- https://www.datacamp.com/courses/data-manipulation-in-r-with-datatable
+- https://github.com/Rdatatable/data.table/wiki/Articles
+- https://rpubs.com/josemz/SDbf - Making .SD your best friend
  
 
 
@@ -41,7 +46,7 @@ NB:  dtLocations %>%  . [] is the same as dtLocations[]. so you can use it in pi
 
  
 
-Conclusion: Use data.table for speed and efficient coding instead of dplyr (i.e.tibbles)!
+<!-- Conclusion: Use data.table for speed and efficient coding instead of dplyr (i.e.tibbles)! -->
 
 
 <!-- Comment  -->
@@ -89,29 +94,31 @@ Many Q&A from this meetup are posted here:
 
 https://community.rstudio.com/t/meetup-making-the-shift-from-excel-to-r-perspectives-from-the-back-office/100467
 
-<!-- Below are listed some. There's also a link to a video-recording of it! (at link above) -->
+Below are listed some. There's also a link to a video-recording of it! (at link above)
 
 
-
-<!-- What was the most common problem when moving from Excel to R? [Excel -> R Meetup Q&A] -->
-<!-- R Markdown vs R Scripts in Enterprise Workflows [Excel -> R Meetup Q&A] -->
-<!-- What sort of packages did you use for reconciliation? [Excel -> R Meetup Q&A] -->
-<!-- What is the best way to share the results of an analysis that you’ve made in R? [Excel -> R Meetup Q&A] -->
-<!-- How do you get buy-in transitioning from Excel to R? [Excel -> R Meetup Q&A] -->
-<!-- How do you get buy-in from the IT team around R package security concerns? [Excel -> R Meetup Q&A] -->
-<!-- How do you move data from tricky worksheets into R? [Excel -> R Meetup Q&A] -->
-<!-- With so many ways of doing the same things, how do you find the best way to do something? [Excel -> R Meetup Q&A] -->
-
+```
+What was the most common problem when moving from Excel to R? [Excel -> R Meetup Q&A]
+R Markdown vs R Scripts in Enterprise Workflows [Excel -> R Meetup Q&A]
+What sort of packages did you use for reconciliation? [Excel -> R Meetup Q&A]
+What is the best way to share the results of an analysis that you’ve made in R? [Excel -> R Meetup Q&A]
+How do you get buy-in transitioning from Excel to R? [Excel -> R Meetup Q&A]
+How do you get buy-in from the IT team around R package security concerns? [Excel -> R Meetup Q&A]
+How do you move data from tricky worksheets into R? [Excel -> R Meetup Q&A]
+With so many ways of doing the same things, how do you find the best way to do something? [Excel -> R Meetup Q&A]
+```
 
 
 <!-- ## 2 -->
 
 
-This dictionary of Excel/R equivalent was very useful is finding a starting point for common functions: https://paulvanderlaken.com/2018/07/31/transitioning-from-excel-to-r-dictionary-of-common-functions/  
+This dictionary of Excel/R equivalent was very useful is finding a starting point for common functions:     
+https://paulvanderlaken.com/2018/07/31/transitioning-from-excel-to-r-dictionary-of-common-functions/  
 
  
 
-For people who are looking for something more comprehensive, this website is very useful: https://rstudio-conf-2020.github.io/r-for-excel/
+For people who are looking for something more comprehensive, this website is very useful:   
+https://rstudio-conf-2020.github.io/r-for-excel/
 
 
 
@@ -125,13 +132,14 @@ Pour ma part, j'adhère à l'approche proposée par The [Carpentries](https://da
 
 ## vroom
 
-My favourite methods for reading / writing "regular" .csv files has been 'data.table::fread() / fwrite()' - the fastest and automated in many ways.  Now there's another one - with package 'vroom' - https://cran.r-project.org/web/packages/vroom/vignettes/benchmarks.html
+Our  favourite methods for reading / writing "regular" .csv files has been 'data.table::fread() / fwrite()' - the fastest and automated in many ways.  
+Now there's another one - with package 'vroom' - https://cran.r-project.org/web/packages/vroom/vignettes/benchmarks.html
 
  
 
-Then, of course, there are other kinds of data you want to read - efficiently (meaning, automatically and fast):
+Then, of course, there are other kinds of data you want to read - efficiently (i.e. , automatically and fast):
 
-- bad data, badly formatted data, sparse data,
+- badly formatted data, sparse data,
 
 - distributed  "big" data
 
@@ -166,13 +174,15 @@ The analyst should, actually, never stick to one solution but rather adapt to th
 
 ...
 
-The example below does a comparison of some popular formats when used with Pandas (Python). You will get similar results if you try the same experiment in R. https://towardsdatascience.com/the-best-format-to-save-pandas-data-414dca023e0d
+The example below does a comparison of some popular formats when used with Pandas (Python). You will get similar results in R
+
+https://towardsdatascience.com/the-best-format-to-save-pandas-data-414dca023e0d
 
  
 
 ...
 
-One of the options that I recommend, if your are only playing locally and not in the cloud, is using the feather format with sql.
+One of the options,  if your are only playing locally and not in the cloud, is using the 'feather' format with 'sql.'
 
  
 
@@ -195,13 +205,17 @@ References:
 
 https://github.com/pingles/redshift-r/
 Provides a few functions to make it easier to access Amazon's Redshift service from R.
+
 http://www.rforge.net/RJDBC/index.html
 install.packages("RJDBC",dep=TRUE) 
 RJDBC is a package implementing DBI in R on the basis of JDBC. This allows the use of any DBMS in R through the JDBC interface. The only requirement is working Java and a JDBC driver for the database engine to be accessed. 
 feather  (for larger than gigb):
 https://blog.rstudio.com/2016/03/29/feather/
+
 parquet ( for verrrrry large files)
 https://campus.datacamp.com/courses/introduction-to-spark-with-sparklyr-in-r/case-study-learning-to-be-a-machine-running-machine-learning-models-on-spark?ex=4
+
+
 Conclusions: As a side note on size, speed, and performance : it all depends on what you do, the delays, and the cost.
 
  

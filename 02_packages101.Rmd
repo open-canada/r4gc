@@ -34,7 +34,7 @@ Taken from: https://gccode.ssc-spc.gc.ca/r4gc/gc-packages/packages101/-/blob/mas
 
 
 
-## How to contribute
+### How to contribute
 
 1. Anyone: Fork  Packages101 repo - modify - commit changes - push - submit request to merge
 
@@ -50,7 +50,7 @@ git clone --progress https://oauth2:tjxrg3GyUQJJDMaA6LfHA@gccode.ssc-spc.gc.ca/r
 =======
 
 
-## * R script to start:
+### * R script to start:
 
 ```{r eval=FALSE, include=T}
 

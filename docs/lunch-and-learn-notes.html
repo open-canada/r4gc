@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>21 Packages 101 | The R4GC Book</title>
+  <title>A Lunch and Learn notes | The R4GC Book</title>
   <meta name="description" content="Notes and tutorials from ‘Lunch and Learn Data Science with R’ weekly meetups organized by the R4GC Community" />
   <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="21 Packages 101 | The R4GC Book" />
+  <meta property="og:title" content="A Lunch and Learn notes | The R4GC Book" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="https://open-canada.github.io/r4gc" />
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="open-canada/r4gc" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="21 Packages 101 | The R4GC Book" />
+  <meta name="twitter:title" content="A Lunch and Learn notes | The R4GC Book" />
   
   <meta name="twitter:description" content="Notes and tutorials from ‘Lunch and Learn Data Science with R’ weekly meetups organized by the R4GC Community" />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="gccode-101.html"/>
-<link rel="next" href="r101-building-covid-19-tracker-app-from-scratch.html"/>
+<link rel="prev" href="shiny-apps.html"/>
+<link rel="next" href="technical-information.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -385,398 +385,48 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="packages-101" class="section level1" number="21">
-<h1><span class="header-section-number">21</span> Packages 101</h1>
-<p>title: “How to convert your functions to package(s)”</p>
-<!-- title: "Making your codes re-usable using R packages " -->
-<p>subtitle: “GC Lunch and Learn: R packages 101”
-author: Dmitry Gorodnichy and Joseph Stinziano
-gitlab: <a href="https://gccode.ssc-spc.gc.ca/r4gc/gc-packages/packages101" class="uri">https://gccode.ssc-spc.gc.ca/r4gc/gc-packages/packages101</a>
-date: “March -June 2021”
-Taken from: <a href="https://gccode.ssc-spc.gc.ca/r4gc/gc-packages/packages101/-/blob/master/packages101.Rmd" class="uri">https://gccode.ssc-spc.gc.ca/r4gc/gc-packages/packages101/-/blob/master/packages101.Rmd</a></p>
-<div id="resources-5" class="section level2" number="21.1">
-<h2><span class="header-section-number">21.1</span> Resources</h2>
-<div id="gc-groups-and-repos" class="section level3" number="21.1.1">
-<h3><span class="header-section-number">21.1.1</span> GC groups and repos</h3>
-<ul>
-<li>Discussions:
-<ul>
-<li><a href="https://gccollab.ca/groups/profile/7391537/enuse-rfruse-r" class="uri">https://gccollab.ca/groups/profile/7391537/enuse-rfruse-r</a></li>
-<li><a href="https://gccollab.ca/groups/profile/7855030/enfriday-lunch-and-learn-r-meet-upsfr" class="uri">https://gccollab.ca/groups/profile/7855030/enfriday-lunch-and-learn-r-meet-upsfr</a></li>
-</ul></li>
-<li>Codes:
-<ul>
-<li>Packages101 repo: <a href="https://gccode.ssc-spc.gc.ca/r4gc/gc-packages/packages101" class="uri">https://gccode.ssc-spc.gc.ca/r4gc/gc-packages/packages101</a></li>
-<li>Related codes and resources: <a href="https://gccode.ssc-spc.gc.ca/r4gc" class="uri">https://gccode.ssc-spc.gc.ca/r4gc</a></li>
-</ul></li>
-</ul>
+<div id="lunch-and-learn-notes" class="section level1" number="25">
+<h1><span class="header-section-number">A</span> Lunch and Learn notes</h1>
+<p>These are the draft notes from the Lunch and Learn ‘Data Science with R’ series organized by R4GC community.
+Please see <a href="index.html#lunch-and-learn-meetups">Lunch and Learn</a> page for details on how to join these meetings.</p>
+<p>For video-recordings and additional notes, please join <a href="https://gccollab.ca/groups/about/7855030">Lunch and Learn ‘Data Science with R’ GCcollab group</a></p>
+<div id="interactive-outputs-in-r-without-shiny" class="section level3 unnumbered" number="">
+<h3>Interactive Outputs in R without Shiny</h3>
+<p>26 Nov 2021 -
+This meeting will be dedicated to tools to generate interactive graphs, tables, and other content without Shiny (which, as you know, requires a server to host your Shiny application and which for this reason cannot be easily shared with your clients, e.g. by email)</p>
+<p>Here are the most popular ones:</p>
+<p><a href="https://rstudio.github.io/DT/" class="uri">https://rstudio.github.io/DT/</a>
+<a href="https://plotly.com/r/" class="uri">https://plotly.com/r/</a> and
+<a href="https://glin.github.io/reactable" class="uri">https://glin.github.io/reactable</a>.
+Many worked with plotly and DT, but reactable is another great package, which will make your outputs loved by your clients.</p>
+<p>12 Nov - 19 Nov 2021:
+Text Analysis with R follow-up / Converting codes to Shiny App</p>
+<p>8 Oct 2021:
+Text Analysis with R. Part 1: identifying near-duplicate documents</p>
+<p>1 Oct 2021:
+Shiny App to summarize very large, high-dimensional tables (code &amp; app provided)</p>
+<p>30 Jul - 17 Sep 2021:
+Geo/Spatial coding and visualization with R. (code provided)</p>
+<p>16 Jul 2021:
+Dual Coding - Python and R unite ! (code provided)</p>
+<p>9 Jul 2021:
+Exploring ggplots (recording, code provided)</p>
+<p>2 Jul 2021:
+Parsing GC Tables (code provided)</p>
+<p>25 Jun 2021:
+Using the Open Government Portal API within R (recording, code on github.com/open-canada)</p>
+<p>21 Apr 2021:
+Analyzing PSES results using R and Shiny</p>
+<p>16 Apr - 15 May 2021:
+Building R packages (recording, codes provided)</p>
 </div>
-<div id="related-tutorials" class="section level3" number="21.1.2">
-<h3><span class="header-section-number">21.1.2</span> Related tutorials</h3>
-<ul>
-<li><a href="https://r-pkgs.org/" class="uri">https://r-pkgs.org/</a>
-<ul>
-<li><a href="https://r-pkgs.org/vignettes.html" class="uri">https://r-pkgs.org/vignettes.html</a></li>
-</ul></li>
-<li><a href="https://fanwangecon.github.io/R4Econ/support/development/fs_packaging.pdf" class="uri">https://fanwangecon.github.io/R4Econ/support/development/fs_packaging.pdf</a></li>
-<li><a href="https://rstudio4edu.github.io/rstudio4edu-book/data-pkg.html" class="uri">https://rstudio4edu.github.io/rstudio4edu-book/data-pkg.html</a> - <a href="https://github.com/rstudio4edu/rstudio4edu-book" class="uri">https://github.com/rstudio4edu/rstudio4edu-book</a></li>
-<li><a href="http://www.danieldsjoberg.com/writing-R-packages" class="uri">http://www.danieldsjoberg.com/writing-R-packages</a> - github.com/ddsjoberg/writing-R-packages</li>
-</ul>
-</div>
-</div>
-<div id="how-to-contribute-1" class="section level2" number="21.2">
-<h2><span class="header-section-number">21.2</span> How to contribute</h2>
-<ol style="list-style-type: decimal">
-<li><p>Anyone: Fork Packages101 repo - modify - commit changes - push - submit request to merge</p></li>
-<li><p>Members of r4gc group:</p></li>
-</ol>
-<p>A token is generated to allow you to push/pull Packages101 repo.<br />
-Use this line to push/pull from Packages101 repo:</p>
-<pre><code>git clone --progress https://oauth2:tjxrg3GyUQJJDMaA6LfHA@gccode.ssc-spc.gc.ca/r4gc/gc-packages/packages101 r4gc_packages101</code></pre>
-<p>=======</p>
-</div>
-<div id="r-script-to-start" class="section level2" number="21.3">
-<h2><span class="header-section-number">21.3</span> * R script to start:</h2>
-<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="packages-101.html#cb17-1" aria-hidden="true"></a><span class="kw">library</span>(devtools)</span>
-<span id="cb17-2"><a href="packages-101.html#cb17-2" aria-hidden="true"></a></span>
-<span id="cb17-3"><a href="packages-101.html#cb17-3" aria-hidden="true"></a>devtools<span class="op">::</span><span class="kw">create</span>(<span class="st">&quot;rCanada&quot;</span>) <span class="co">## if you are  in /my_package</span></span>
-<span id="cb17-4"><a href="packages-101.html#cb17-4" aria-hidden="true"></a>devtools<span class="op">::</span><span class="kw">create</span>(<span class="st">&quot;../../rCanada&quot;</span>) <span class="co">## will it erase it,if I lready have it?</span></span>
-<span id="cb17-5"><a href="packages-101.html#cb17-5" aria-hidden="true"></a><span class="op">&gt;</span><span class="st"> </span><span class="co">#or usethis::create_package(&quot;../r4gc/packages/rCanada2&quot;)</span></span>
-<span id="cb17-6"><a href="packages-101.html#cb17-6" aria-hidden="true"></a></span>
-<span id="cb17-7"><a href="packages-101.html#cb17-7" aria-hidden="true"></a><span class="kw">library</span>(roxygen2)</span>
-<span id="cb17-8"><a href="packages-101.html#cb17-8" aria-hidden="true"></a><span class="co">## library(testthis).&lt;- we dont use this!Dont confuse it with library(testthat) ??</span></span>
-<span id="cb17-9"><a href="packages-101.html#cb17-9" aria-hidden="true"></a></span>
-<span id="cb17-10"><a href="packages-101.html#cb17-10" aria-hidden="true"></a><span class="kw">library</span>(testthat) <span class="co">## do we need it?</span></span>
-<span id="cb17-11"><a href="packages-101.html#cb17-11" aria-hidden="true"></a></span>
-<span id="cb17-12"><a href="packages-101.html#cb17-12" aria-hidden="true"></a><span class="kw">library</span>(usethis)</span>
-<span id="cb17-13"><a href="packages-101.html#cb17-13" aria-hidden="true"></a><span class="co">## https://github.com/r-lib/usethis</span></span>
-<span id="cb17-14"><a href="packages-101.html#cb17-14" aria-hidden="true"></a></span>
-<span id="cb17-15"><a href="packages-101.html#cb17-15" aria-hidden="true"></a>usethis<span class="op">::</span><span class="kw">use_testthat</span>()</span>
-<span id="cb17-16"><a href="packages-101.html#cb17-16" aria-hidden="true"></a><span class="co">## use_testthat()</span></span>
-<span id="cb17-17"><a href="packages-101.html#cb17-17" aria-hidden="true"></a></span>
-<span id="cb17-18"><a href="packages-101.html#cb17-18" aria-hidden="true"></a><span class="kw">use_news_md</span>()</span>
-<span id="cb17-19"><a href="packages-101.html#cb17-19" aria-hidden="true"></a></span>
-<span id="cb17-20"><a href="packages-101.html#cb17-20" aria-hidden="true"></a><span class="kw">use_test</span>(<span class="st">&quot;iviDT&quot;</span>)</span>
-<span id="cb17-21"><a href="packages-101.html#cb17-21" aria-hidden="true"></a></span>
-<span id="cb17-22"><a href="packages-101.html#cb17-22" aria-hidden="true"></a>x &lt;-<span class="st"> </span><span class="dv">1</span></span>
-<span id="cb17-23"><a href="packages-101.html#cb17-23" aria-hidden="true"></a>y &lt;-<span class="st"> </span><span class="dv">2</span></span>
-<span id="cb17-24"><a href="packages-101.html#cb17-24" aria-hidden="true"></a><span class="kw">use_data</span>(x, y)</span>
-<span id="cb17-25"><a href="packages-101.html#cb17-25" aria-hidden="true"></a></span>
-<span id="cb17-26"><a href="packages-101.html#cb17-26" aria-hidden="true"></a></span>
-<span id="cb17-27"><a href="packages-101.html#cb17-27" aria-hidden="true"></a><span class="kw">use_vignette</span>(<span class="dt">name=</span><span class="st">&quot;my_vignettes&quot;</span>) <span class="co">#</span></span>
-<span id="cb17-28"><a href="packages-101.html#cb17-28" aria-hidden="true"></a><span class="kw">use_vignette</span>(<span class="dt">name=</span><span class="st">&quot;data_linking&quot;</span>)</span>
-<span id="cb17-29"><a href="packages-101.html#cb17-29" aria-hidden="true"></a></span>
-<span id="cb17-30"><a href="packages-101.html#cb17-30" aria-hidden="true"></a></span>
-<span id="cb17-31"><a href="packages-101.html#cb17-31" aria-hidden="true"></a><span class="kw">use_package</span>(<span class="st">&quot;data.table&quot;</span>)</span>
-<span id="cb17-32"><a href="packages-101.html#cb17-32" aria-hidden="true"></a><span class="co">## &gt; use_package(&quot;data.table&quot;)</span></span>
-<span id="cb17-33"><a href="packages-101.html#cb17-33" aria-hidden="true"></a><span class="co">## √ Adding &#39;data.table&#39; to Imports field in DESCRIPTION</span></span>
-<span id="cb17-34"><a href="packages-101.html#cb17-34" aria-hidden="true"></a><span class="co">## * Refer to functions with `data.table::fun()`</span></span>
-<span id="cb17-35"><a href="packages-101.html#cb17-35" aria-hidden="true"></a></span>
-<span id="cb17-36"><a href="packages-101.html#cb17-36" aria-hidden="true"></a></span>
-<span id="cb17-37"><a href="packages-101.html#cb17-37" aria-hidden="true"></a>  </span>
-<span id="cb17-38"><a href="packages-101.html#cb17-38" aria-hidden="true"></a>  </span>
-<span id="cb17-39"><a href="packages-101.html#cb17-39" aria-hidden="true"></a></span>
-<span id="cb17-40"><a href="packages-101.html#cb17-40" aria-hidden="true"></a><span class="kw">use_package</span>(<span class="st">&quot;magrittr&quot;</span>)</span>
-<span id="cb17-41"><a href="packages-101.html#cb17-41" aria-hidden="true"></a><span class="kw">use_package</span>(<span class="st">&quot;data.table&quot;</span>)</span>
-<span id="cb17-42"><a href="packages-101.html#cb17-42" aria-hidden="true"></a><span class="kw">use_package</span>(<span class="st">&quot;lubridate&quot;</span>, <span class="dt">type=</span><span class="st">&quot;Imports&quot;</span>)  <span class="co">## how about order ?! lubridate must be after data.table !</span></span>
-<span id="cb17-43"><a href="packages-101.html#cb17-43" aria-hidden="true"></a><span class="kw">use_package</span>(<span class="st">&quot;stringr&quot;</span>)</span>
-<span id="cb17-44"><a href="packages-101.html#cb17-44" aria-hidden="true"></a></span>
-<span id="cb17-45"><a href="packages-101.html#cb17-45" aria-hidden="true"></a><span class="kw">use_package</span>(<span class="st">&quot;IVIM&quot;</span>)</span>
-<span id="cb17-46"><a href="packages-101.html#cb17-46" aria-hidden="true"></a></span>
-<span id="cb17-47"><a href="packages-101.html#cb17-47" aria-hidden="true"></a><span class="co">## To update .Rd files in ./man, run:</span></span>
-<span id="cb17-48"><a href="packages-101.html#cb17-48" aria-hidden="true"></a>devtools<span class="op">::</span><span class="kw">document</span>()</span>
-<span id="cb17-49"><a href="packages-101.html#cb17-49" aria-hidden="true"></a><span class="co">## Warning: The existing &#39;NAMESPACE&#39; file was not generated by roxygen2, and will not be overwritten.</span></span>
-<span id="cb17-50"><a href="packages-101.html#cb17-50" aria-hidden="true"></a><span class="co">## So delete it, and then it will be created</span></span></code></pre></div>
-<div id="to-be-discussed" class="section level4" number="21.3.0.1">
-<h4><span class="header-section-number">21.3.0.1</span> To be discussed</h4>
-<p>Q:
-When I Clean and Rebuid:
-????!
-** testing if installed package can be loaded from final location</p>
-<p>?????? C:/Users/gxd006/DOWNLO<sub>1/R-40</sub>1.2 /etc/Renviron.site ?? May 12 19:25:09
-Warning: replacing previous import ‘data.table::month’ by ‘lubridate::month’ when loading ‘IVIM’</p>
-</div>
-</div>
-<div id="setup" class="section level2" number="21.4">
-<h2><span class="header-section-number">21.4</span> * Setup</h2>
-<p><em>This is what you already have: </em><br />
-- “Original”" folder, with no specific structure,
-with R and Rmd files that contain:
-a) functions that that you want to be re-used by others (and yourself many months later!).<br />
-- They are tested and test codes are included in <code>if(F)</code> or in separate .Rmd, or, even better, in interactive Shiny App (eg <a href="https://rCanada.shinyapp.io/covid" class="uri">https://rCanada.shinyapp.io/covid</a>)
-- Good idea to be have them in form that can be sourced: <code>source("caCovid.R"); source("iviBase.R")</code></p>
-<ol start="2" style="list-style-type: lower-alpha">
-<li>functions and other codes that are not (yet) ready for re-use.</li>
-</ol>
-<p><a href="https://gccode.ssc-spc.gc.ca/r4gc/codes/tracking-covid-data" class="uri">https://gccode.ssc-spc.gc.ca/r4gc/codes/tracking-covid-data</a>
-- caCovid.R
-- iviBase.R
-- … common.R, plot.R, etc</p>
-<p><em>This is what you want to get:</em>
-- Package folder (or several folders).
-- GCCode/r4gc/packages/rCanada
-- GCCode/r4gc/packages/IVI
-<a href="https://gccode.ssc-spc.gc.ca/gorodnichy/rCanada" class="uri">https://gccode.ssc-spc.gc.ca/gorodnichy/rCanada</a></p>
-<div id="ways-to-do-it" class="section level4" number="21.4.0.1">
-<h4><span class="header-section-number">21.4.0.1</span> Ways to do it:</h4>
-<p>You can create it in two ways:</p>
-<div id="from-new-project" class="section level6" number="21.4.0.1.0.1">
-<h6><span class="header-section-number">21.4.0.1.0.1</span> From New Project</h6>
-<p>Either way RStudio will initialize and launch your new project.
-In the second way, it also puts .gitignore</p>
-<ol style="list-style-type: decimal">
-<li>In RStudio -&gt; New Project -&gt; New Direcory -&gt;R package -&gt; package name: caPSES</li>
-</ol>
-<p>NB: there are many templates. Choose basic (“R package) and create in folder /my_packages
-NB: If you have .R codes that are already source-able, attached them with”Add"button (one at a time), or you can copy them into /R folder later</p>
-<p>note from Hadley: <a href="https://r-pkgs.org/workflows101.html" class="uri">https://r-pkgs.org/workflows101.html</a></p>
-<p>Call usethis::create_package(“path/to/package/pkgname”).
-Or, In RStudio, do File &gt; New Project &gt; New Directory &gt; R Package. This ultimately calls usethis::create_package(), so really there’s just one way.</p>
-<p>Don’t use package.skeleton() to create a package. Because this function comes with R, you might be tempted to use it, but it creates a package that immediately throws errors with R CMD build.</p>
-</div>
-<div id="from-script" class="section level6" number="21.4.0.1.0.2">
-<h6><span class="header-section-number">21.4.0.1.0.2</span> From script</h6>
-<ol start="2" style="list-style-type: decimal">
-<li>Run from any R, Rmd window or R console the command below</li>
-</ol>
-<p>NB: output from</p>
-<pre><code>&gt; devtools::create(&quot;../r4gc/packages/rCanada&quot;)
-&gt; #or usethis::create_package(&quot;../r4gc/packages/rCanada2&quot;)
-
-New project &#39;rCanada&#39; is nested inside an existing project &#39;../r4gc/packages/&#39;, which is rarely a good idea.
-If this is unexpected, the here package has a function, `here::dr_here()` that reveals why &#39;../r4gc/packages/&#39; is regarded as a project.
-Do you want to create anyway?
-
-1: Yes
-2: Absolutely not
-3: Nope
-
-Selection: 1
-√ Creating &#39;../r4gc/packages/rCanada/&#39;
-√ Setting active project to &#39;C:/Users/gxd006/Downloads/_CODES/GCCode/r4gc/packages/rCanada&#39;
-√ Creating &#39;R/&#39;
-√ Writing &#39;DESCRIPTION&#39;
-Package: rCanada
-Title: What the Package Does (One Line, Title Case)
-Version: 0.0.0.9000
-Authors@R (parsed):
-    * First Last &lt;first.last@example.com&gt; [aut, cre] (YOUR-ORCID-ID)
-Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to
-    pick a license
-Encoding: UTF-8
-LazyData: true
-Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.1.1
-√ Writing &#39;NAMESPACE&#39;
-√ Writing &#39;rCanada.Rproj&#39;
-√ Adding &#39;^rCanada\\.Rproj$&#39; to &#39;.Rbuildignore&#39;
-√ Adding &#39;.Rproj.user&#39; to &#39;.gitignore&#39;
-√ Adding &#39;^\\.Rproj\\.user$&#39; to &#39;.Rbuildignore&#39;
-√ Opening &#39;C:/Users/gxd006/Downloads/_CODES/GCCode/r4gc/packages/rCanada/&#39; in new RStudio session
-√ Setting active project to &#39;&lt;no active project&gt;&#39;</code></pre>
-</div>
-</div>
-</div>
-<div id="overall-workflow" class="section level2" number="21.5">
-<h2><span class="header-section-number">21.5</span> * Overall Workflow</h2>
-<div id="copy-needed-codes-from-my_codes-to-r-directory" class="section level4" number="21.5.0.1">
-<h4><span class="header-section-number">21.5.0.1</span> .. Copy needed codes from MY_CODES to R directory</h4>
-<ul>
-<li>Copy a function</li>
-</ul>
-<pre><code>dt.replaceAwithB &lt;- function(dt, col, a, b) {
-  dt[get(col)==a, (col):=b]; 
-}</code></pre>
-<ul>
-<li>Insert roxigen skeleton (from magic wand menu) and add description
-NB: you may need to manually insert @ import and @ export</li>
-</ul>
-</div>
-<div id="section" class="section level3" number="21.5.1">
-<h3><span class="header-section-number">21.5.1</span> </h3>
-<p>no need to Load All?
-Always start from “Clean and rebuild”
-Then Check</p>
-</div>
-</div>
-<div id="rbuildignore" class="section level2" number="21.6">
-<h2><span class="header-section-number">21.6</span> * .Rbuildignore</h2>
-<p>^.*.Rproj$
-^.Rproj.user$
-MY_CODES incorrect
-^MY_CODES$ correct
-^MY_DATASETS$
-^LICENSE.md$</p>
-</div>
-<div id="license-use_mit_license" class="section level2" number="21.7">
-<h2><span class="header-section-number">21.7</span> * License: <code>use_mit_license()</code></h2>
-<p>License: MIT + file LICENSE</p>
-</div>
-<div id="description" class="section level2" number="21.8">
-<h2><span class="header-section-number">21.8</span> * DESCRIPTION</h2>
-</div>
-<div id="namespace" class="section level2" number="21.9">
-<h2><span class="header-section-number">21.9</span> * NAMESPACE</h2>
-<p><a href="https://r-pkgs.org/namespace.html" class="uri">https://r-pkgs.org/namespace.html</a></p>
-<pre><code>use_package(&quot;data.table&quot;)
-## &gt; use_package(&quot;data.table&quot;)
-## √ Adding &#39;data.table&#39; to Imports field in DESCRIPTION
-## * Refer to functions with `data.table::fun()`</code></pre>
-<p>However this does notchange NAMESPACE ! Who changes is it?
-is that devtools::document() ???</p>
-<p>Generated by roxygen2: do not edit by hand</p>
-<pre><code>export()
-export(addDerivatives)
-export(extractMostInfectedToday)
-export(readCovidUofT.csv)
-importFrom(lubridate,dmy)
-importFrom(stringr,str_replace)</code></pre>
-<p>I deleted NAMESPACE so that roxigen can generate it!
-then added manually there . Not sure that’s theway to do it !</p>
-<pre><code>import(data.table)
-import(ggplot2)
-import(lubridate)
-import(magrittr)
-import(IVIM)</code></pre>
-<p>It Worked !</p>
-<p>If you are using just a few functions from another package, the recommended option is to note the package name in the Imports: field of the DESCRIPTION file and call the function(s) explicitly using ::, e.g., pkg::fun(). Alternatively, though no longer recommended due to its poorer readability, use <span class="citation">@importFrom</span>, e.g., <span class="citation">@importFrom</span> pgk fun, and call the function(s) without ::.</p>
-</div>
-<div id="examples-and-tests" class="section level2" number="21.10">
-<h2><span class="header-section-number">21.10</span> * Examples and tests</h2>
-<div id="in-main-file-in-r-folder" class="section level4" number="21.10.0.1">
-<h4><span class="header-section-number">21.10.0.1</span> .. In main file in /R folder</h4>
-<pre><code>#&#39; @examples</code></pre>
-<p>Some could be such :</p>
-<pre><code>#&#39; \dontrun{}</code></pre>
-</div>
-<div id="in-tests-folder" class="section level4" number="21.10.0.2">
-<h4><span class="header-section-number">21.10.0.2</span> .. In /tests folder</h4>
-<pre><code>&gt; use_testthat()
-
-√ Setting active project to &#39;C:/Users/gxd006/Downloads/_CODES/GCCode/r4gc/packages/IVIM&#39;
-√ Adding &#39;testthat&#39; to Suggests field in DESCRIPTION
-√ Setting Config/testthat/edition field in DESCRIPTION to &#39;3&#39;
-√ Creating &#39;tests/testthat/&#39;
-√ Writing &#39;tests/testthat.R&#39;
-* Call `use_test()` to initialize a basic test file and open it for editing.
-Warning messages:
-1: In readLines(f, n) :
-  incomplete final line found on &#39;C:/Users/gxd006/Downloads/_CODES/GCCode/r4gc/packages/IVIM/DESCRIPTION&#39;
-...
-  incomplete final line found on &#39;C:/Users/gxd006/Downloads/_CODES/GCCode/r4gc/packages/IVIM/DESCRIPTION&#39;
-&gt; use_vignette()
-Error in check_vignette_name(name) : 
-  argument &quot;name&quot; is missing, with no default</code></pre>
-</div>
-</div>
-<div id="in-my_codes" class="section level2" number="21.11">
-<h2><span class="header-section-number">21.11</span> .. in MY_CODES</h2>
-<p>Provide as .R, Rmd or shiny</p>
-</div>
-<div id="testthat" class="section level2" number="21.12">
-<h2><span class="header-section-number">21.12</span> * testthat</h2>
-<p><a href="https://testthat.r-lib.org/" class="uri">https://testthat.r-lib.org/</a></p>
-</div>
-<div id="documentation" class="section level2" number="21.13">
-<h2><span class="header-section-number">21.13</span> * Documentation</h2>
-<p>devtools::document()</p>
-<p><a href="https://kbroman.org/pkg_primer/pages/docs.html" class="uri">https://kbroman.org/pkg_primer/pages/docs.html</a></p>
-<pre><code>#&#39; For more details see the help vignette:
-#&#39; \code{vignette(&quot;help&quot;, package = &quot;mypkg&quot;)}
-
-or 
-
-\href{../doc/help.html}{\code{vignette(&quot;help&quot;, package = &quot;mypkg&quot;)}}
-</code></pre>
-</div>
-<div id="vignettes" class="section level2" number="21.14">
-<h2><span class="header-section-number">21.14</span> * Vignettes</h2>
-<pre><code>&gt; use_vignette(name=&quot;my_vignettes&quot;)
-
-√ Adding &#39;knitr&#39; to Suggests field in DESCRIPTION
-√ Setting VignetteBuilder field in DESCRIPTION to &#39;knitr&#39;
-√ Adding &#39;inst/doc&#39; to &#39;.gitignore&#39;
-√ Creating &#39;vignettes/&#39;
-√ Adding &#39;*.html&#39;, &#39;*.R&#39; to &#39;vignettes/.gitignore&#39;
-√ Adding &#39;rmarkdown&#39; to Suggests field in DESCRIPTION
-√ Writing &#39;vignettes/my_vignettes.Rmd&#39;
-* Modify &#39;vignettes/my_vignettes.Rmd&#39;</code></pre>
-<p>I later renamed my first vignette to intro.Rmd - manually</p>
-<p><a href="https://bookdown.org/yihui/rmarkdown-cookbook/package-vignette.html" class="uri">https://bookdown.org/yihui/rmarkdown-cookbook/package-vignette.html</a></p>
-</div>
-<div id="delivering-package" class="section level2" number="21.15">
-<h2><span class="header-section-number">21.15</span> Delivering package</h2>
-<ul>
-<li>[Easiest way] Put binary in package repo. Then you can install it simply using <code>install.packages("IVIM", repos = "https://gccode.ssc-spc.gc.ca/r4gc/gc-packages/IVIM/-/blob/master/versions/IVIM_0.0.0.9000.tar.gz")</code>
-<ul>
-<li>this .tar ball is obtained by running <code>devtools::build()</code> or <code>devtools::check()</code> which will place it in “../yourRPackageProject” directory.</li>
-</ul></li>
-<li>[CONFIRM THIS!] Put source in github. Then people will be able to install using <code>devtools::install_github("https://gccode.ssc-spc.gc.ca/r4gc/gc-packages/IVIM")</code></li>
-</ul>
-</div>
-<div id="packaging-and-publishing-w.-pkgdown" class="section level2" number="21.16">
-<h2><span class="header-section-number">21.16</span> Packaging and publishing w. <code>pkgdown</code></h2>
-<p><a href="https://fanwangecon.github.io/R4Econ/support/development/fs_packaging.pdf" class="uri">https://fanwangecon.github.io/R4Econ/support/development/fs_packaging.pdf</a></p>
-<div id="appendix-various-possible-errors-and-problems" class="section level4" number="21.16.0.1">
-<h4><span class="header-section-number">21.16.0.1</span> Appendix: Various possible Errors and problems</h4>
-<div id="errors-in-using-usethisuse_testthat" class="section level6" number="21.16.0.1.0.1">
-<h6><span class="header-section-number">21.16.0.1.0.1</span> Errors in using usethis::use_testthat()</h6>
-<p>Problem:</p>
-<pre><code>
-&gt; usethis::use_vignette(name=&quot;howtoCovid&quot;)
-Error in read.dcf(con) : 
-  Line starting &#39;analyze and visualiz ...&#39; is malformed!
-&gt; </code></pre>
-<p>Solution:<br />
-<a href="https://stackoverflow.com/questions/59303030/devtools-error-in-read-dcfpath-desc-line-starting-this-corresponds-to" class="uri">https://stackoverflow.com/questions/59303030/devtools-error-in-read-dcfpath-desc-line-starting-this-corresponds-to</a></p>
-<p>Corrections from <a href="https://gccode.ssc-spc.gc.ca/r4gc/gc-packages/IVIM/-/tree/useR-dev/" class="uri">https://gccode.ssc-spc.gc.ca/r4gc/gc-packages/IVIM/-/tree/useR-dev/</a></p>
-</div>
-</div>
-</div>
-<div id="optional-rtools" class="section level2" number="21.17">
-<h2><span class="header-section-number">21.17</span> (optional) Rtools</h2>
-<p>NBL This is not required</p>
-<p><a href="https://cran.r-project.org/bin/windows/Rtools/" class="uri">https://cran.r-project.org/bin/windows/Rtools/</a></p>
-<p><a href="http://web.mit.edu/insong/www/pdf/rpackage_instructions.pdf" class="uri">http://web.mit.edu/insong/www/pdf/rpackage_instructions.pdf</a></p>
-<div id="package_initialization_script.r" class="section level4" number="21.17.0.1">
-<h4><span class="header-section-number">21.17.0.1</span> package_initialization_script.R</h4>
-<pre><code>
- ## package_initialization_script.R
- 
- library(devtools)
-
-devtools::create(&quot;rCanada&quot;) ## if you are  in /my_package
-devtools::create(&quot;../../rCanada&quot;) ## will it erase it,if I lready have it?
-&gt; #or usethis::create_package(&quot;../r4gc/packages/rCanada2&quot;)
-
-library(roxygen2)
-## library(testthis). What&#39;s the difference from library(testthat) ??
-library(testthat) ## do we need it?
-## Attaching package: ‘testthat’
-#
-## The following object is masked from ‘package:devtools’:
-#
-##   test_file
-#
-## The following objects are masked from ‘package:magrittr’:
-#
-##   equals, is_less_than, not
-
-
-usethis::use_testthat() ## from usethis, which is callsed from devtools
-
-
-use_vignette(name=&quot;my_vignettes&quot;) #
-use_vignette(name=&quot;data_linking&quot;)
-
-
-use_package(&quot;data.table&quot;)
-use_package(&quot;magrittr&quot;)
-use_package(&quot;data.table&quot;)
-use_package(&quot;lubridate&quot;, type=&quot;Imports&quot;)  ## how about order ?! lubridate must be after data.table !
-use_package(&quot;stringr&quot;)</code></pre>
-</div>
+<div id="discussed-rstudio-webinars" class="section level2" number="25.1">
+<h2><span class="header-section-number">A.1</span> Discussed RStudio Webinars</h2>
+<p>Webinars at RStudio - <a href="https://www.rstudio.com/resources/webinars/" class="uri">https://www.rstudio.com/resources/webinars/</a> (codes at <a href="https://github.com/rstudio/webinars" class="uri">https://github.com/rstudio/webinars</a>)
+The new insights from these webinars and other R-related blogs and events are discussed at R4GC community meetups</p>
+<!-- # (PART) Q & A -->
+<!-- # (APPENDIX) Appendix {-} -->
+<!-- ##  Video recordings -->
 </div>
 </div>
             </section>
@@ -784,8 +434,8 @@ use_package(&quot;stringr&quot;)</code></pre>
           </div>
         </div>
       </div>
-<a href="gccode-101.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="r101-building-covid-19-tracker-app-from-scratch.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="shiny-apps.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="technical-information.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

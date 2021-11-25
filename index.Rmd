@@ -22,7 +22,8 @@ author: |
   
 description: "Notes and tutorials from 'Lunch and Learn Data Science with R' weekly meetups organized by the R4GC Community"
 
-date: "`r format(Sys.time(), '%d %B %Y')`"
+date: "22 November 2021"
+# date: "`r format(Sys.time(), '%d %B %Y')`"
 # 
 # date: |
 #   `r format(Sys.time(), '%d %B %Y')`   
@@ -42,7 +43,7 @@ output:
     #   before_body: assets/header.html
     config:
       toc:
-        collapse: section # subsection # none
+        collapse: subsection # subsection # none
         before: |
           <!-- <li><a href="index.html"> "R4GC workbook"</a> </li> -->
           <li><a href="index.html"> <img width="100%" src="images/r4gc-banner.png"> </a>      </li>
@@ -63,6 +64,11 @@ output:
   # 
   # bookdown::epub_book: default
 ---
+
+<!-- https://bookdown.org/yihui/rmarkdown-cookbook/toc-unlisted.html - Note that this feature requires at least Pandoc 2.10. -->
+
+#### Disclaimer:
+The views and opinions expressed in this book are those of the book authors and contributors and do not necessarily reflect the official policy or position of any agency of the Government of Canada. {.unlisted .unnumbered}
 
 <!-- <a href="https://www.bookdown.org" target="blank">bookdown</a> -->
 
@@ -108,14 +114,17 @@ Everyone is welcome to join, whether you are an advanced R user, just starting l
 
 <!-- ### History -->
 
-The idea to create this group came after the [GC Data2021 Conference](https://www.csps-efpc.gc.ca/events/data-conference2021) [Data Literacy Fest workshop on Data Engineering Challenges and Solutions: Demonstration of Shiny](#gcdata2021).   The highest voted question during the discussion there was : _"How can I get more help for our members to enhance their knowledge and "spread the word" and raise more awareness regard to this tool?"_ The creation of this community group is the answer to this question.
+The idea to create this group came during the [GC Data2021 Conference](https://www.csps-efpc.gc.ca/events/data-conference2021) workshop on [Data Engineering Challenges and Solutions: Demonstration of Shiny](#gcdata2021) [^gcdata2021].    The highest voted question during the discussion there was : _"How can I get more help for our members to enhance their knowledge and "spread the word" and raise more awareness regard to this tool?"_ The creation of this community group is the answer to this question.
+
+[^gcdata2021] The full recording of this workshop 
+was made  by conference organizers and is available on [YouTube](). 
  
 By November 2021, the  R4GC  GCCollab group has been become one of the largest active data science practitioners groups in Canada, counting over a quarter  thousand of members. The weekly "Lunch and Learn Data Science with R" meetups organized by the R4GC Community have been attended by data practitioners from over twenty government departments,  and generated
 hundreds of questions/answers, a dozen of tutorials, multiple open to use applications, and  thousands of line of open code. 
 
 <!-- On October 29, 2021, the work of this group was presented at the  [2021 International Methodology Symposium](https://www.statcan.gc.ca/en/conferences/symposium2021/index). -->
 
-This book aims at consolidating all knowledgebase gathered by the R4GC Community at its  portals and meetups
+<!-- This book aims at consolidating all knowledgebase gathered by the R4GC Community at its  portals and meetups -->
 
 ## "Lunch and Learn Data Science with R" meetups {-} 
 
@@ -134,7 +143,7 @@ For Agenda and Dial-in MS Teams numbers please see Group Events page at https://
  
 ## Community portals {-}
 
-The R4GC community makes used of the following colloaborative platforms provided by Share Services Canada.
+The R4GC community makes used of the following collaborative platforms provided by Shared Services Canada.
 
 <!-- This book aims at consolidating the knowledge spread across various R4GC community portals, described below. -->
 
@@ -194,11 +203,18 @@ Inline with the GC policies of open science and open data \ref{#policies}, since
 
 ## Community presentations {-}
 
+
+### International Methodology Symposium (October 2021)
+
+
 The work of the R4GC community was presented at the 
 2021 International Methodology Symposium organized by Statistics Canada in October 2021.
-The slides for this presentation made available  by conference organizers here: [in English](https://docs.google.com/presentation/d/19zu27vrNfgtGKdOjjpqsGkhFnh8a7Ca2/) and [en français](https://docs.google.com/presentation/d/1GaY0bttRUIm67t16XludgCbJMZ_WyO8E/).
+The slides for this presentation are available  here: 
+[in English](https://docs.google.com/presentation/d/19zu27vrNfgtGKdOjjpqsGkhFnh8a7Ca2/) and [en français](https://docs.google.com/presentation/d/1GaY0bttRUIm67t16XludgCbJMZ_WyO8E/).
 
-The data engineering work was also presented for the 2021 GC Data Conference Data Literacy Fest Workshop “Data Engineering Challenges and Solutions: Demo of Shiny” in February 2021. The video-recording of this workshop was made available by conference organizers and is available on  [YouTube](https://youtu.be/QWv6E3e7bek). 
+### GC Data Conference (February, 2021) {gcdata2021}
+
+The earlier work of community members was also presented at the 2021 GC Data Conference Data Literacy Fest Workshop “Data Engineering Challenges and Solutions: Demo of Shiny” in February 2021. The video-recording of this workshop was made available by conference organizers and is available on  [YouTube](https://youtu.be/QWv6E3e7bek). 
 
 
 ## Français {-}

@@ -34,6 +34,25 @@ URL: <https://open-canada.github.io/Apps/pses>
 Source: https://gccode.ssc-spc.gc.ca/r4gc/codes/pses
 
 
+<!-- It illustrates the power of Data Science and Visualization (when implemented for the purpose). It uses the concept of concept of Vertical vs. Horizontal comparison of results, which is most insightful when one needs to find out where (or when) exactly the problem is (or was) in an Organization. -->
+
+
+No other Open Canada data is of as much common interest across the government as the PSES results [^11]. These data contain the information about all GC departments, their organizational structure and performance. A Shiny App prototype is developed to perform three most desired tasks one wished to do with these data (see Figure):
+
+[^11] https://www.canada.ca/en/treasury-board-secretariat/services/innovation/public-service-employee-survey.html
+
+1. Vertical result tracking: results comparison across an organization, automated detection and visualization of the performance variation across the organization - for any given PSES question.
+2. Horizontal results tracking:  results comparison over time - for any given unit,  in comparison to the organization and Public Service averages
+3. Performance summary by theme:  automated generation of report cards that show the performance at each level of the organization for each of theme and in relation to the rest of the organization and Public Service average.
+4. Automated generation of full report with detailed comparative analysis and recommendations: for each unit and each level of organization
+
+
+<img height="300" src="https://github.com/open-canada/Apps/blob/main/docs/images/pses-eccc-st.png?raw=true">
+<img height="300" src="https://github.com/open-canada/Apps/blob/main/docs/images/pses-eccc-st-vs-themes.png?raw=true">
+<img height="300" src="https://github.com/open-canada/Apps/blob/main/docs/images/pses-cbsa-se-over-time.png?raw=true">
+<img height="300" src="https://github.com/open-canada/Apps/blob/main/docs/images/pses-cbsa-se-autoreport.png?raw=true">
+
+
 
 <!-- ```{r, echo=FALSE, out.width="100%", fig.align = "center"} -->
 <!-- knitr::include_graphics( -->
@@ -43,20 +62,22 @@ Source: https://gccode.ssc-spc.gc.ca/r4gc/codes/pses
 
 <!-- ``` -->
 
+Figure. Key functionalities of the PSES App prototype: a) vertical results tracking - for any question over entire organization, b) horizontal results tracking - for any unit over time, and c)  performance report summary - for each unit, by theme, and in comparison to the Public Service average (shown as crosses) and other units within organization (shown as small dots). The results can be displayed filtered and sorted by score, ranking percentile, org. structure, number of responses, by theme or question.
 
 
 
-<img height="300" src="https://github.com/open-canada/Apps/blob/main/docs/images/pses-eccc-st.png?raw=true">
-<img height="300" src="https://github.com/open-canada/Apps/blob/main/docs/images/pses-eccc-st-vs-themes.png?raw=true">
-<img height="300" src="https://github.com/open-canada/Apps/blob/main/docs/images/pses-cbsa-se-over-time.png?raw=true">
-<img height="300" src="https://github.com/open-canada/Apps/blob/main/docs/images/pses-cbsa-se-autoreport.png?raw=true">
+### Other tools and dashboards
 
-## Automated municipal level COVID-19 tracker: 
-URL: <https://open-canada.github.io/Apps/covid> (See also: <https://itrack.shinyapps.io/covid/us.Rmd>).   
-Source: https://gccode.ssc-spc.gc.ca/r4gc/codes/covid 
+TBS Official PSES Results viewer (developed in PowerBI): 
+https://hranalytics-analytiquerh.tbs-sct.gc.ca/Home/ReportList/2019?GoCTemplateCulture=en-CA    
+Direct link to PowerBI here: https://hranalytics-analytiquerh.tbs-sct.gc.ca/Home/EmbedReport/6?GoCTemplateCulture=en-CA
 
-<img height="300" src="https://github.com/open-canada/Apps/blob/main/docs/images/itrack-covid2.png?raw=true">
-<img height="300" src="https://github.com/open-canada/Apps/blob/main/docs/images/covid-us-geo.png?raw=true">
+
+​
+
+<!-- Example Using Tableau -->
+<!-- https://publicservicesr.blogspot.com/p/500-vizelement.html -->
+
 
 
 
@@ -64,20 +85,51 @@ Source: https://gccode.ssc-spc.gc.ca/r4gc/codes/covid
 <!-- URL: <https://open-canada.github.io/Apps/atip> (mirror: https://rcanada.shinyapps.io/TBS-ATI-NLP/).    -->
 Source: <https://gccode.ssc-spc.gc.ca/r4gc/codes/atip>
 
+
+Another Open Canada dataset that relates to the performance of many GC departments is the ATIP requests dataset [^22]. An interactive Natural Language Processing (NLP) application has been developed to enable the analysis and visualization  of these requests for each participating department  (see Figure 2). Its functionalities include: statistics summary,  automated key-words and topic extraction using N-grams, document term matrix and Latent Dirichlet Allocation. The topics can be visualized as word-clouds or as graphs that connect the related words.
+
+ [^22] https://open.canada.ca/en/search/ati.
+ See “Text Mining with R!” by Julia Silge and David Robinson (https://www.tidytextmining.com) for definitions of the terms.
+
 <img height="300" src="https://github.com/open-canada/Apps/blob/main/docs/images/NLP-ATIP1.png?raw=true">
 <img height="300" src="https://github.com/open-canada/Apps/blob/main/docs/images/NLP-ATIP2.png?raw=true">
+
+
+Figure 2. Key functionalities of the ATIP App: a) department specific bi-variable statics (such as dispositions by year, shown in the image), b) department specific key topics, visualized as correlated terms graphs , c) key topics for each participating department, visualized as N-gram frequency bars (such as 2-gram, or two-word combination, shown in the image).
+
+
+## Automated municipal level COVID-19 tracker: 
+URL: <https://open-canada.github.io/Apps/covid> (See also: <https://itrack.shinyapps.io/covid/us.Rmd>).   
+Source: https://gccode.ssc-spc.gc.ca/r4gc/codes/covid 
+
+This App was built at the beginning of the pandemic. It uses open COVID-19 data for Canada and US to allow one to summarize, search and sort the results by geographical proximity using a variety of criteria (see Figure 3). More details about it and a tutorial on how to build it are provided at https://open-canada.github.io/UseR/learn2020 
+
+<img height="300" src="https://github.com/open-canada/Apps/blob/main/docs/images/itrack-covid2.png?raw=true">
+<img height="300" src="https://github.com/open-canada/Apps/blob/main/docs/images/covid-us-geo.png?raw=true">
+
 
  
 ## Geo-mapped current, historical and predicted border wait times:    
 URL: <https://open-canada.github.io/Apps/border> (redirect to [open.canada.ca](https://open.canada.ca/en/app/border-wait-time-interactive-tracker-itrack-border)).   
 Source: https://gccode.ssc-spc.gc.ca/gorodnichy/simborder
 
+This App (shown in Figure 4) combines Open geo-spatial data with Open historical and current border wait times data to predict and visualize delays at Canadian land border crossings. The App is included  (entitled iTrack-Border) in the Open Canada Apps Gallery at https://open.canada.ca/en/apps,  where more information about it can be found.
+
 <img height="300" src="https://github.com/open-canada/Apps/blob/main/docs/images/itrack-border1.png?raw=true">
 <img height="300" src="https://github.com/open-canada/Apps/blob/main/docs/images/itrack-border2.png?raw=true">
 
+
+
 ## Demo and tool for linking noisy data records: 
 URL: https://rcanada.shinyapps.io/demo/ (presented at the [#GC Data2021 Conference](https://wiki.gccollab.ca/2021_Data_Conference/Agenda) )    
-Source: https://gccode.ssc-spc.gc.ca/gorodnichy/iviLink
+<!-- Source: https://gccode.ssc-spc.gc.ca/gorodnichy/iviLink -->
+
+This App was demonstrated and used  for training in the “Data Engineering Challenges and Solutions: Demo of Shiny” workshop at 2021 GC Data Conference, Data Literacy Fest \ref{#gcdata2021}. Its key functionalities include:
+
+1. Single variable cleaning tasks (demo mode): automated extraction of date and timestamps from arbitrarily typed strings (as shown in Figure 5.a); rectification and correction of Canadian postal codes; fuzzy matching of names.
+2. Multi-variable linking tasks (demo mode): city names deduplication; deduplication and linking of name records.
+3. Use cases (live Web crawling mode): automated extraction of name variants and important dates from Web.
+4. “Test it!” mode: fuzzy linking and deduplication of user-uploaded multi-variable data records, using a variety of string similarity metrics and thresholds (as shown in Figure 5.b).
 
 <img width="400" src="https://github.com/open-canada/Apps/blob/main/docs/images/data-eng-record-linking1.png?raw=true">
 
