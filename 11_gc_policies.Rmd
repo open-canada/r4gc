@@ -1,0 +1,32 @@
+Open government policies
+========================
+
+Open Source
+-----------
+
+-   "Directive on Service and Digital" -- Appendix A: <https://www.tbs-sct.gc.ca/pol/doc-eng.aspx?id=32602>.
+
+-   Open Sourcing GC Code <https://canada-ca.github.io/ofd-joep/assets/pdf/Open%20Source%20Code%20Calvin%20Rodo.pdf>
+
+-   <https://github.com/canada-ca/Open_First_Whitepaper/blob/master/en/4_Open_Source_Software_Contribution.md#releasing-open-source-software-code>
+
+-   <https://code.open.canada.ca/open-source-code.html> \<-- broken link
+
+-   Government of Canada Strategic Plan for Information Management and Information Technology 2017 to 2021 <https://www.canada.ca/en/treasury-board-secretariat/services/information-technology/strategic-plan-2017-2021.html#toc6-2>
+
+-   Guidance: When code should be open or closed <https://www.gov.uk/government/publications/open-source-guidance/when-code-should-be-open-or-closed>
+
+### Open government
+
+-   A Framework for Implementing Open-by-Default with Federal Government Science January 4, 2021 <https://www.ic.gc.ca/eic/site/063.nsf/eng/h_98201.html>
+
+-   Directive on Open Government <https://www.tbs-sct.gc.ca/pol/doc-eng.aspx?id=28108>
+
+Open Science
+------------
+
+-   Roadmap for Open Science <https://www.ic.gc.ca/eic/site/063.nsf/eng/h_97992.html>
+
+### Scientific Integrity
+
+-   Model Policy on Scientific Integrity <https://www.ic.gc.ca/eic/site/063.nsf/eng/h_97643.html>

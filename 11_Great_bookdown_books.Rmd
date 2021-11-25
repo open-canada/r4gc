@@ -1,0 +1,101 @@
+Open source textbooks
+==============
+
+The R4GC book is inspired by many great open-source textbooks built using bookdown R package. These are listed below. Some of these are forked into https://github.com/open-canada/ to allow further testing and editing of the codes there
+
+
+For textbooks specific to each discussion topic in The R4GC book,please see the corresponding discussion topic chapters.
+For a much larger collection of bookdown books see:
+
+-   <https://www.bigbookofr.com/>. Source: https://github.com/open-canada/BigBookofR
+
+-   <https://bookdown.org/>
+
+In two-column format
+--------------------
+
+
+-   <https://bookdown.org/yihui/bookdown/> (<https://bookdown.org/yihui/rmarkdown/bookdown-output.html#bookdown-output>)
+-   <https://bookdown.org/yihui/rmarkdown-cookbook/>
+
+- https://rstudio4edu.github.io/rstudio4edu-book/. Source: https://github.com/open-canada/rstudio4edu-book
+
+- https://clauswilke.com/dataviz. Source: https://github.com/open-canada/dataviz
+
+-   <https://csgillespie.github.io/efficientR/>
+
+-   <https://www.datascienceatthecommandline.com/1e/>
+
+- https://moderndive.com/ -  https://github.com/moderndive/ModernDive_book
+
+
+-   <https://smltar.com/> Supervised Machine Learning for Text Analysis in R EMIL HVITFELDT AND JULIA SILGE 2021-10-17
+
+
+
+-   <https://bookdown.org/ejvanholm/Textbook/>
+
+-   <https://bookdown.org/igisc/EnvDataSci/> Introduction to Environmental Data Science
+
+-   <https://bookdown.org/sunboklee/intror_ewha/> R for Solving Social Problems Sunbok Lee
+
+<!-- Ewha Womans University, 2021-2) 2021-09-03 -->
+
+<https://bookdown.org/aclark/chess/>
+
+<!-- https://bookdown.org/jerome_m_levesque/branchingAppUserGuide/ -->
+
+<!-- A policy tool for COVID-19 workplace mitigation strategies -->
+
+<!-- Jerome Levesque and David Maybury -->
+
+<!-- https://bookdown.org/selesnow/build_telegram_bot_using_r/ -->
+
+<!-- Разработка telegram ботов на языке R -->
+
+<!-- Алексей Селезнёв -->
+
+<!-- 2021-08-26 -->
+
+<!-- https://bookdown.org/f_pianzola/Korean_literature/ -->
+
+In three-column format
+----------------------
+
+On Shiny:
+
+-   <https://mastering-shiny.org/preface.html>
+-   <https://engineering-shiny.org/>
+-   <https://unleash-shiny.rinterface.com/>
+
+From Hadley:
+
+-   <https://r4ds.had.co.nz/>
+
+-   <https://adv-r.hadley.nz/>
+
+-   <https://r-pkgs.org/>
+
+-   <https://geocompr.robinlovelace.net/>
+
+<!-- ## #Multi-language support -->
+
+<!-- 🇨🇦     U+1F1E8 U+1F1E6  -->
+
+<!-- CA -->
+
+<!-- &#127464 &#127462 -->
+
+<!-- FR -->
+
+<!-- &#127467 &#127479  -->
+
+<!-- EN &#127468 &#127463 -->
+
+<!-- RU -->
+
+<!-- &#127479 &#127482 -->
+
+<!-- UA -->
+
+<!-- &#127482 &#127462 -->

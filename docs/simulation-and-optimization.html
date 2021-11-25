@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Introduction | The R4GC Book</title>
+  <title>21 Simulation and Optimization | The R4GC Book</title>
   <meta name="description" content="Notes and tutorials from ‘Lunch and Learn Data Science with R’ weekly meetups organized by the R4GC Community" />
   <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Introduction | The R4GC Book" />
+  <meta property="og:title" content="21 Simulation and Optimization | The R4GC Book" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="https://open-canada.github.io/r4gc" />
   <meta property="og:image" content="https://open-canada.github.io/r4gc/images/r4gc-banner.png" />
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="open-canada/r4gc" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Introduction | The R4GC Book" />
+  <meta name="twitter:title" content="21 Simulation and Optimization | The R4GC Book" />
   
   <meta name="twitter:description" content="Notes and tutorials from ‘Lunch and Learn Data Science with R’ weekly meetups organized by the R4GC Community" />
   <meta name="twitter:image" content="https://open-canada.github.io/r4gc/images/r4gc-banner.png" />
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="images/R4GC.ico" type="image/x-icon" />
-<link rel="prev" href="a-propos.html"/>
-<link rel="next" href="why-r.html"/>
+<link rel="prev" href="deep-learning-and-computer-vision.html"/>
+<link rel="next" href="gccode-101.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -143,29 +143,31 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#community-portals"><i class="fa fa-check"></i>Community portals</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#community-presentations"><i class="fa fa-check"></i>Community presentations</a>
 <ul>
-<li class="chapter" data-level="0.0.1" data-path="index.html"><a href="index.html#international-methodology-symposium-october-2021"><i class="fa fa-check"></i><b>0.0.1</b> International Methodology Symposium (October 2021)</a></li>
-<li class="chapter" data-level="0.0.2" data-path="index.html"><a href="index.html#gc-data-conference-february-2021-gcdata2021"><i class="fa fa-check"></i><b>0.0.2</b> GC Data Conference (February, 2021) {gcdata2021}</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#gcIMS2021"><i class="fa fa-check"></i>International Methodology Symposium (October 2021)</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#gcdata2021"><i class="fa fa-check"></i>GC Data Conference (February, 2021)</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#français"><i class="fa fa-check"></i>Français</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="a-propos.html"><a href="a-propos.html"><i class="fa fa-check"></i>A propos</a>
+<li class="chapter" data-level="" data-path="about-this-book.html"><a href="about-this-book.html"><i class="fa fa-check"></i>About this book</a>
 <ul>
-<li class="chapter" data-level="" data-path="a-propos.html"><a href="a-propos.html#disclaimer-1"><i class="fa fa-check"></i>Disclaimer</a></li>
-<li class="chapter" data-level="" data-path="a-propos.html"><a href="a-propos.html#contributors"><i class="fa fa-check"></i>Contributors</a></li>
-<li class="chapter" data-level="" data-path="a-propos.html"><a href="a-propos.html#key-principles"><i class="fa fa-check"></i>Key principles</a>
+<li class="chapter" data-level="" data-path="about-this-book.html"><a href="about-this-book.html#book-source-code"><i class="fa fa-check"></i>Book source code</a></li>
+<li class="chapter" data-level="" data-path="about-this-book.html"><a href="about-this-book.html#disclaimer-1"><i class="fa fa-check"></i>Disclaimer</a></li>
+<li class="chapter" data-level="" data-path="about-this-book.html"><a href="about-this-book.html#contributors"><i class="fa fa-check"></i>Contributors</a></li>
+<li class="chapter" data-level="" data-path="about-this-book.html"><a href="about-this-book.html#key-principles"><i class="fa fa-check"></i>Key principles</a>
 <ul>
-<li class="chapter" data-level="" data-path="a-propos.html"><a href="a-propos.html#open-data-open-source-open-science"><i class="fa fa-check"></i>Open data, open source, open science</a></li>
-<li class="chapter" data-level="" data-path="a-propos.html"><a href="a-propos.html#chatham-house-rule"><i class="fa fa-check"></i>Chatham House Rule</a></li>
+<li class="chapter" data-level="" data-path="about-this-book.html"><a href="about-this-book.html#open-data-open-source-open-science"><i class="fa fa-check"></i>Open data, open source, open science</a></li>
+<li class="chapter" data-level="" data-path="about-this-book.html"><a href="about-this-book.html#chatham-house-rule"><i class="fa fa-check"></i>Chatham House Rule</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="a-propos.html"><a href="a-propos.html#how-to-contribute"><i class="fa fa-check"></i>How to contribute</a></li>
-<li class="chapter" data-level="" data-path="a-propos.html"><a href="a-propos.html#about-authors"><i class="fa fa-check"></i>About authors</a>
+<li class="chapter" data-level="" data-path="about-this-book.html"><a href="about-this-book.html#how-to-contribute"><i class="fa fa-check"></i>How to contribute</a></li>
+<li class="chapter" data-level="" data-path="about-this-book.html"><a href="about-this-book.html#about-authors"><i class="fa fa-check"></i>About authors</a>
 <ul>
-<li class="chapter" data-level="" data-path="a-propos.html"><a href="a-propos.html#contacts"><i class="fa fa-check"></i>Contacts</a></li>
+<li class="chapter" data-level="" data-path="about-this-book.html"><a href="about-this-book.html#contacts"><i class="fa fa-check"></i>Contacts</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i>Introduction</a>
+<li class="chapter" data-level="" data-path="book-outline.html"><a href="book-outline.html"><i class="fa fa-check"></i>Book outline</a>
 <ul>
-<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#book-structure"><i class="fa fa-check"></i>Book structure</a></li>
+<li class="chapter" data-level="" data-path="book-outline.html"><a href="book-outline.html#introduction"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="chapter" data-level="" data-path="book-outline.html"><a href="book-outline.html#book-structure"><i class="fa fa-check"></i>Book structure</a></li>
 </ul></li>
 <li class="part"><span><b>I General discussions</b></span></li>
 <li class="chapter" data-level="1" data-path="why-r.html"><a href="why-r.html"><i class="fa fa-check"></i><b>1</b> Why R?</a>
@@ -308,71 +310,72 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="19.2" data-path="machine-learning-and-modeling-in-r.html"><a href="machine-learning-and-modeling-in-r.html#additional-references"><i class="fa fa-check"></i><b>19.2</b> Additional references</a></li>
 </ul></li>
 <li class="chapter" data-level="20" data-path="deep-learning-and-computer-vision.html"><a href="deep-learning-and-computer-vision.html"><i class="fa fa-check"></i><b>20</b> Deep Learning and Computer vision</a></li>
+<li class="chapter" data-level="21" data-path="simulation-and-optimization.html"><a href="simulation-and-optimization.html"><i class="fa fa-check"></i><b>21</b> Simulation and Optimization</a></li>
 <li class="part"><span><b>V Community Tutorials</b></span></li>
-<li class="chapter" data-level="21" data-path="gccode-101.html"><a href="gccode-101.html"><i class="fa fa-check"></i><b>21</b> GCCode 101</a>
+<li class="chapter" data-level="22" data-path="gccode-101.html"><a href="gccode-101.html"><i class="fa fa-check"></i><b>22</b> GCCode 101</a>
 <ul>
-<li class="chapter" data-level="21.1" data-path="gccode-101.html"><a href="gccode-101.html#tldr"><i class="fa fa-check"></i><b>21.1</b> TL;DR</a></li>
-<li class="chapter" data-level="21.2" data-path="gccode-101.html"><a href="gccode-101.html#step-00-connecting-to-gccode-and-installing-required-soft."><i class="fa fa-check"></i><b>21.2</b> Step 00: Connecting to GCCode and installing required soft.</a></li>
-<li class="chapter" data-level="21.3" data-path="gccode-101.html"><a href="gccode-101.html#step-0-configuring-windows-git-and-gitlab-tokens"><i class="fa fa-check"></i><b>21.3</b> Step 0: Configuring Windows, Git and GitLab (tokens)</a></li>
-<li class="chapter" data-level="21.4" data-path="gccode-101.html"><a href="gccode-101.html#step-1-find-or-create-a-gitlab-project-you-want-to-contribute-to."><i class="fa fa-check"></i><b>21.4</b> Step 1: Find (or create) a GitLab project you want to contribute to.</a>
+<li class="chapter" data-level="22.1" data-path="gccode-101.html"><a href="gccode-101.html#tldr"><i class="fa fa-check"></i><b>22.1</b> TL;DR</a></li>
+<li class="chapter" data-level="22.2" data-path="gccode-101.html"><a href="gccode-101.html#step-00-connecting-to-gccode-and-installing-required-soft."><i class="fa fa-check"></i><b>22.2</b> Step 00: Connecting to GCCode and installing required soft.</a></li>
+<li class="chapter" data-level="22.3" data-path="gccode-101.html"><a href="gccode-101.html#step-0-configuring-windows-git-and-gitlab-tokens"><i class="fa fa-check"></i><b>22.3</b> Step 0: Configuring Windows, Git and GitLab (tokens)</a></li>
+<li class="chapter" data-level="22.4" data-path="gccode-101.html"><a href="gccode-101.html#step-1-find-or-create-a-gitlab-project-you-want-to-contribute-to."><i class="fa fa-check"></i><b>22.4</b> Step 1: Find (or create) a GitLab project you want to contribute to.</a>
 <ul>
-<li class="chapter" data-level="21.4.1" data-path="gccode-101.html"><a href="gccode-101.html#using-command-line"><i class="fa fa-check"></i><b>21.4.1</b> 1.2 Using Command Line</a></li>
-<li class="chapter" data-level="21.4.2" data-path="gccode-101.html"><a href="gccode-101.html#in-rstudio"><i class="fa fa-check"></i><b>21.4.2</b> 1.2 In RStudio</a></li>
+<li class="chapter" data-level="22.4.1" data-path="gccode-101.html"><a href="gccode-101.html#using-command-line"><i class="fa fa-check"></i><b>22.4.1</b> 1.2 Using Command Line</a></li>
+<li class="chapter" data-level="22.4.2" data-path="gccode-101.html"><a href="gccode-101.html#in-rstudio"><i class="fa fa-check"></i><b>22.4.2</b> 1.2 In RStudio</a></li>
 </ul></li>
-<li class="chapter" data-level="21.5" data-path="gccode-101.html"><a href="gccode-101.html#step-2-using-branches-optional"><i class="fa fa-check"></i><b>21.5</b> Step 2: Using Branches (optional)</a></li>
-<li class="chapter" data-level="21.6" data-path="gccode-101.html"><a href="gccode-101.html#step-3-gccoding-from-rstudio"><i class="fa fa-check"></i><b>21.6</b> Step 3: GCcoding from RStudio</a></li>
-<li class="chapter" data-level="21.7" data-path="gccode-101.html"><a href="gccode-101.html#related-gc-discussions-and-links"><i class="fa fa-check"></i><b>21.7</b> Related GC discussions and links:</a></li>
+<li class="chapter" data-level="22.5" data-path="gccode-101.html"><a href="gccode-101.html#step-2-using-branches-optional"><i class="fa fa-check"></i><b>22.5</b> Step 2: Using Branches (optional)</a></li>
+<li class="chapter" data-level="22.6" data-path="gccode-101.html"><a href="gccode-101.html#step-3-gccoding-from-rstudio"><i class="fa fa-check"></i><b>22.6</b> Step 3: GCcoding from RStudio</a></li>
+<li class="chapter" data-level="22.7" data-path="gccode-101.html"><a href="gccode-101.html#related-gc-discussions-and-links"><i class="fa fa-check"></i><b>22.7</b> Related GC discussions and links:</a></li>
 </ul></li>
-<li class="chapter" data-level="22" data-path="packages-101.html"><a href="packages-101.html"><i class="fa fa-check"></i><b>22</b> Packages 101</a>
+<li class="chapter" data-level="23" data-path="packages-101.html"><a href="packages-101.html"><i class="fa fa-check"></i><b>23</b> Packages 101</a>
 <ul>
-<li class="chapter" data-level="22.1" data-path="packages-101.html"><a href="packages-101.html#resources-5"><i class="fa fa-check"></i><b>22.1</b> Resources</a>
+<li class="chapter" data-level="23.1" data-path="packages-101.html"><a href="packages-101.html#resources-5"><i class="fa fa-check"></i><b>23.1</b> Resources</a>
 <ul>
-<li class="chapter" data-level="22.1.1" data-path="packages-101.html"><a href="packages-101.html#gc-groups-and-repos"><i class="fa fa-check"></i><b>22.1.1</b> GC groups and repos</a></li>
-<li class="chapter" data-level="22.1.2" data-path="packages-101.html"><a href="packages-101.html#related-tutorials"><i class="fa fa-check"></i><b>22.1.2</b> Related tutorials</a></li>
-<li class="chapter" data-level="22.1.3" data-path="packages-101.html"><a href="packages-101.html#how-to-contribute-1"><i class="fa fa-check"></i><b>22.1.3</b> How to contribute</a></li>
-<li class="chapter" data-level="22.1.4" data-path="packages-101.html"><a href="packages-101.html#r-script-to-start"><i class="fa fa-check"></i><b>22.1.4</b> * R script to start:</a></li>
+<li class="chapter" data-level="23.1.1" data-path="packages-101.html"><a href="packages-101.html#gc-groups-and-repos"><i class="fa fa-check"></i><b>23.1.1</b> GC groups and repos</a></li>
+<li class="chapter" data-level="23.1.2" data-path="packages-101.html"><a href="packages-101.html#related-tutorials"><i class="fa fa-check"></i><b>23.1.2</b> Related tutorials</a></li>
+<li class="chapter" data-level="23.1.3" data-path="packages-101.html"><a href="packages-101.html#how-to-contribute-1"><i class="fa fa-check"></i><b>23.1.3</b> How to contribute</a></li>
+<li class="chapter" data-level="23.1.4" data-path="packages-101.html"><a href="packages-101.html#r-script-to-start"><i class="fa fa-check"></i><b>23.1.4</b> * R script to start:</a></li>
 </ul></li>
-<li class="chapter" data-level="22.2" data-path="packages-101.html"><a href="packages-101.html#setup"><i class="fa fa-check"></i><b>22.2</b> * Setup</a></li>
-<li class="chapter" data-level="22.3" data-path="packages-101.html"><a href="packages-101.html#overall-workflow"><i class="fa fa-check"></i><b>22.3</b> * Overall Workflow</a>
+<li class="chapter" data-level="23.2" data-path="packages-101.html"><a href="packages-101.html#setup"><i class="fa fa-check"></i><b>23.2</b> * Setup</a></li>
+<li class="chapter" data-level="23.3" data-path="packages-101.html"><a href="packages-101.html#overall-workflow"><i class="fa fa-check"></i><b>23.3</b> * Overall Workflow</a>
 <ul>
-<li class="chapter" data-level="22.3.1" data-path="packages-101.html"><a href="packages-101.html#section"><i class="fa fa-check"></i><b>22.3.1</b> </a></li>
+<li class="chapter" data-level="23.3.1" data-path="packages-101.html"><a href="packages-101.html#section"><i class="fa fa-check"></i><b>23.3.1</b> </a></li>
 </ul></li>
-<li class="chapter" data-level="22.4" data-path="packages-101.html"><a href="packages-101.html#rbuildignore"><i class="fa fa-check"></i><b>22.4</b> * .Rbuildignore</a></li>
-<li class="chapter" data-level="22.5" data-path="packages-101.html"><a href="packages-101.html#license-use_mit_license"><i class="fa fa-check"></i><b>22.5</b> * License: <code>use_mit_license()</code></a></li>
-<li class="chapter" data-level="22.6" data-path="packages-101.html"><a href="packages-101.html#description"><i class="fa fa-check"></i><b>22.6</b> * DESCRIPTION</a></li>
-<li class="chapter" data-level="22.7" data-path="packages-101.html"><a href="packages-101.html#namespace"><i class="fa fa-check"></i><b>22.7</b> * NAMESPACE</a></li>
-<li class="chapter" data-level="22.8" data-path="packages-101.html"><a href="packages-101.html#examples-and-tests"><i class="fa fa-check"></i><b>22.8</b> * Examples and tests</a></li>
-<li class="chapter" data-level="22.9" data-path="packages-101.html"><a href="packages-101.html#in-my_codes"><i class="fa fa-check"></i><b>22.9</b> .. in MY_CODES</a></li>
-<li class="chapter" data-level="22.10" data-path="packages-101.html"><a href="packages-101.html#testthat"><i class="fa fa-check"></i><b>22.10</b> * testthat</a></li>
-<li class="chapter" data-level="22.11" data-path="packages-101.html"><a href="packages-101.html#documentation"><i class="fa fa-check"></i><b>22.11</b> * Documentation</a></li>
-<li class="chapter" data-level="22.12" data-path="packages-101.html"><a href="packages-101.html#vignettes"><i class="fa fa-check"></i><b>22.12</b> * Vignettes</a></li>
-<li class="chapter" data-level="22.13" data-path="packages-101.html"><a href="packages-101.html#delivering-package"><i class="fa fa-check"></i><b>22.13</b> Delivering package</a></li>
-<li class="chapter" data-level="22.14" data-path="packages-101.html"><a href="packages-101.html#packaging-and-publishing-w.-pkgdown"><i class="fa fa-check"></i><b>22.14</b> Packaging and publishing w. <code>pkgdown</code></a></li>
-<li class="chapter" data-level="22.15" data-path="packages-101.html"><a href="packages-101.html#optional-rtools"><i class="fa fa-check"></i><b>22.15</b> (optional) Rtools</a></li>
+<li class="chapter" data-level="23.4" data-path="packages-101.html"><a href="packages-101.html#rbuildignore"><i class="fa fa-check"></i><b>23.4</b> * .Rbuildignore</a></li>
+<li class="chapter" data-level="23.5" data-path="packages-101.html"><a href="packages-101.html#license-use_mit_license"><i class="fa fa-check"></i><b>23.5</b> * License: <code>use_mit_license()</code></a></li>
+<li class="chapter" data-level="23.6" data-path="packages-101.html"><a href="packages-101.html#description"><i class="fa fa-check"></i><b>23.6</b> * DESCRIPTION</a></li>
+<li class="chapter" data-level="23.7" data-path="packages-101.html"><a href="packages-101.html#namespace"><i class="fa fa-check"></i><b>23.7</b> * NAMESPACE</a></li>
+<li class="chapter" data-level="23.8" data-path="packages-101.html"><a href="packages-101.html#examples-and-tests"><i class="fa fa-check"></i><b>23.8</b> * Examples and tests</a></li>
+<li class="chapter" data-level="23.9" data-path="packages-101.html"><a href="packages-101.html#in-my_codes"><i class="fa fa-check"></i><b>23.9</b> .. in MY_CODES</a></li>
+<li class="chapter" data-level="23.10" data-path="packages-101.html"><a href="packages-101.html#testthat"><i class="fa fa-check"></i><b>23.10</b> * testthat</a></li>
+<li class="chapter" data-level="23.11" data-path="packages-101.html"><a href="packages-101.html#documentation"><i class="fa fa-check"></i><b>23.11</b> * Documentation</a></li>
+<li class="chapter" data-level="23.12" data-path="packages-101.html"><a href="packages-101.html#vignettes"><i class="fa fa-check"></i><b>23.12</b> * Vignettes</a></li>
+<li class="chapter" data-level="23.13" data-path="packages-101.html"><a href="packages-101.html#delivering-package"><i class="fa fa-check"></i><b>23.13</b> Delivering package</a></li>
+<li class="chapter" data-level="23.14" data-path="packages-101.html"><a href="packages-101.html#packaging-and-publishing-w.-pkgdown"><i class="fa fa-check"></i><b>23.14</b> Packaging and publishing w. <code>pkgdown</code></a></li>
+<li class="chapter" data-level="23.15" data-path="packages-101.html"><a href="packages-101.html#optional-rtools"><i class="fa fa-check"></i><b>23.15</b> (optional) Rtools</a></li>
 </ul></li>
-<li class="chapter" data-level="23" data-path="r101-building-covid-19-tracker-app-from-scratch.html"><a href="r101-building-covid-19-tracker-app-from-scratch.html"><i class="fa fa-check"></i><b>23</b> R101: Building COVID-19 Tracker App from scratch</a></li>
-<li class="chapter" data-level="24" data-path="short-tutorials.html"><a href="short-tutorials.html"><i class="fa fa-check"></i><b>24</b> Short tutorials</a>
+<li class="chapter" data-level="24" data-path="r101-building-covid-19-tracker-app-from-scratch.html"><a href="r101-building-covid-19-tracker-app-from-scratch.html"><i class="fa fa-check"></i><b>24</b> R101: Building COVID-19 Tracker App from scratch</a></li>
+<li class="chapter" data-level="25" data-path="short-tutorials.html"><a href="short-tutorials.html"><i class="fa fa-check"></i><b>25</b> Short tutorials</a>
 <ul>
-<li class="chapter" data-level="24.1" data-path="short-tutorials.html"><a href="short-tutorials.html#geospatial-coding-and-visualization-with-r.-part-1"><i class="fa fa-check"></i><b>24.1</b> Geo/Spatial coding and visualization with R. Part 1:</a></li>
-<li class="chapter" data-level="24.2" data-path="short-tutorials.html"><a href="short-tutorials.html#text-analysis-with-r.-part-1"><i class="fa fa-check"></i><b>24.2</b> Text Analysis with R. Part 1:</a></li>
-<li class="chapter" data-level="24.3" data-path="short-tutorials.html"><a href="short-tutorials.html#dual-coding---python-and-r-unite"><i class="fa fa-check"></i><b>24.3</b> Dual Coding - Python and R unite !</a></li>
-<li class="chapter" data-level="24.4" data-path="short-tutorials.html"><a href="short-tutorials.html#working-with-ggtables"><i class="fa fa-check"></i><b>24.4</b> Working with ggtables</a></li>
-<li class="chapter" data-level="24.5" data-path="short-tutorials.html"><a href="short-tutorials.html#automate-common-look-and-feel-of-your-ggplot-graphs"><i class="fa fa-check"></i><b>24.5</b> Automate common look and feel of your ggplot graphs</a></li>
-<li class="chapter" data-level="24.6" data-path="short-tutorials.html"><a href="short-tutorials.html#automated-generation-of-report-cards"><i class="fa fa-check"></i><b>24.6</b> Automated generation of report cards</a></li>
+<li class="chapter" data-level="25.1" data-path="short-tutorials.html"><a href="short-tutorials.html#geospatial-coding-and-visualization-with-r.-part-1"><i class="fa fa-check"></i><b>25.1</b> Geo/Spatial coding and visualization with R. Part 1:</a></li>
+<li class="chapter" data-level="25.2" data-path="short-tutorials.html"><a href="short-tutorials.html#text-analysis-with-r.-part-1"><i class="fa fa-check"></i><b>25.2</b> Text Analysis with R. Part 1:</a></li>
+<li class="chapter" data-level="25.3" data-path="short-tutorials.html"><a href="short-tutorials.html#dual-coding---python-and-r-unite"><i class="fa fa-check"></i><b>25.3</b> Dual Coding - Python and R unite !</a></li>
+<li class="chapter" data-level="25.4" data-path="short-tutorials.html"><a href="short-tutorials.html#working-with-ggtables"><i class="fa fa-check"></i><b>25.4</b> Working with ggtables</a></li>
+<li class="chapter" data-level="25.5" data-path="short-tutorials.html"><a href="short-tutorials.html#automate-common-look-and-feel-of-your-ggplot-graphs"><i class="fa fa-check"></i><b>25.5</b> Automate common look and feel of your ggplot graphs</a></li>
+<li class="chapter" data-level="25.6" data-path="short-tutorials.html"><a href="short-tutorials.html#automated-generation-of-report-cards"><i class="fa fa-check"></i><b>25.6</b> Automated generation of report cards</a></li>
 </ul></li>
 <li class="part"><span><b>VI Community Development</b></span></li>
-<li class="chapter" data-level="25" data-path="shiny-apps.html"><a href="shiny-apps.html"><i class="fa fa-check"></i><b>25</b> Shiny Apps</a>
+<li class="chapter" data-level="26" data-path="shiny-apps.html"><a href="shiny-apps.html"><i class="fa fa-check"></i><b>26</b> Shiny Apps</a>
 <ul>
-<li class="chapter" data-level="25.1" data-path="shiny-apps.html"><a href="shiny-apps.html#pses-results-interactive-analysis-and-visualization"><i class="fa fa-check"></i><b>25.1</b> PSES Results interactive analysis and visualization:</a>
+<li class="chapter" data-level="26.1" data-path="shiny-apps.html"><a href="shiny-apps.html#pses-results-interactive-analysis-and-visualization"><i class="fa fa-check"></i><b>26.1</b> PSES Results interactive analysis and visualization:</a>
 <ul>
-<li class="chapter" data-level="25.1.1" data-path="shiny-apps.html"><a href="shiny-apps.html#other-tools-and-dashboards"><i class="fa fa-check"></i><b>25.1.1</b> Other tools and dashboards</a></li>
+<li class="chapter" data-level="26.1.1" data-path="shiny-apps.html"><a href="shiny-apps.html#other-tools-and-dashboards"><i class="fa fa-check"></i><b>26.1.1</b> Other tools and dashboards</a></li>
 </ul></li>
-<li class="chapter" data-level="25.2" data-path="shiny-apps.html"><a href="shiny-apps.html#automated-atip-requests-topic-extraction"><i class="fa fa-check"></i><b>25.2</b> Automated ATIP requests topic extraction:</a></li>
-<li class="chapter" data-level="25.3" data-path="shiny-apps.html"><a href="shiny-apps.html#automated-municipal-level-covid-19-tracker"><i class="fa fa-check"></i><b>25.3</b> Automated municipal level COVID-19 tracker:</a></li>
-<li class="chapter" data-level="25.4" data-path="shiny-apps.html"><a href="shiny-apps.html#geo-mapped-current-historical-and-predicted-border-wait-times"><i class="fa fa-check"></i><b>25.4</b> Geo-mapped current, historical and predicted border wait times:</a></li>
-<li class="chapter" data-level="25.5" data-path="shiny-apps.html"><a href="shiny-apps.html#demo-and-tool-for-linking-noisy-data-records"><i class="fa fa-check"></i><b>25.5</b> Demo and tool for linking noisy data records:</a></li>
-<li class="chapter" data-level="25.6" data-path="shiny-apps.html"><a href="shiny-apps.html#html-pages-comparator"><i class="fa fa-check"></i><b>25.6</b> Html pages comparator:</a></li>
-<li class="chapter" data-level="25.7" data-path="shiny-apps.html"><a href="shiny-apps.html#large-table-summarizer"><i class="fa fa-check"></i><b>25.7</b> Large table summarizer:</a></li>
+<li class="chapter" data-level="26.2" data-path="shiny-apps.html"><a href="shiny-apps.html#automated-atip-requests-topic-extraction"><i class="fa fa-check"></i><b>26.2</b> Automated ATIP requests topic extraction:</a></li>
+<li class="chapter" data-level="26.3" data-path="shiny-apps.html"><a href="shiny-apps.html#automated-municipal-level-covid-19-tracker"><i class="fa fa-check"></i><b>26.3</b> Automated municipal level COVID-19 tracker:</a></li>
+<li class="chapter" data-level="26.4" data-path="shiny-apps.html"><a href="shiny-apps.html#geo-mapped-current-historical-and-predicted-border-wait-times"><i class="fa fa-check"></i><b>26.4</b> Geo-mapped current, historical and predicted border wait times:</a></li>
+<li class="chapter" data-level="26.5" data-path="shiny-apps.html"><a href="shiny-apps.html#demo-and-tool-for-linking-noisy-data-records"><i class="fa fa-check"></i><b>26.5</b> Demo and tool for linking noisy data records:</a></li>
+<li class="chapter" data-level="26.6" data-path="shiny-apps.html"><a href="shiny-apps.html#html-pages-comparator"><i class="fa fa-check"></i><b>26.6</b> Html pages comparator:</a></li>
+<li class="chapter" data-level="26.7" data-path="shiny-apps.html"><a href="shiny-apps.html#large-table-summarizer"><i class="fa fa-check"></i><b>26.7</b> Large table summarizer:</a></li>
 </ul></li>
 <li class="appendix"><span><b>Appendices</b></span></li>
 <li class="chapter" data-level="A" data-path="lunch-and-learn-notes.html"><a href="lunch-and-learn-notes.html"><i class="fa fa-check"></i><b>A</b> Lunch and Learn notes</a>
@@ -386,9 +389,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="B.2" data-path="canada-related-open-source-r-codes-and-packages.html"><a href="canada-related-open-source-r-codes-and-packages.html#packages-not-on-cran"><i class="fa fa-check"></i><b>B.2</b> Packages not on CRAN</a></li>
 <li class="chapter" data-level="B.3" data-path="canada-related-open-source-r-codes-and-packages.html"><a href="canada-related-open-source-r-codes-and-packages.html#codes-on-github"><i class="fa fa-check"></i><b>B.3</b> Codes on GitHub</a>
 <ul>
-<li class="chapter" data-level="B.3.1" data-path="canada-related-open-source-r-codes-and-packages.html"><a href="canada-related-open-source-r-codes-and-packages.html#elections"><i class="fa fa-check"></i><b>B.3.1</b> Elections</a></li>
-<li class="chapter" data-level="B.3.2" data-path="canada-related-open-source-r-codes-and-packages.html"><a href="canada-related-open-source-r-codes-and-packages.html#ottawa"><i class="fa fa-check"></i><b>B.3.2</b> Ottawa</a></li>
-<li class="chapter" data-level="B.3.3" data-path="canada-related-open-source-r-codes-and-packages.html"><a href="canada-related-open-source-r-codes-and-packages.html#httpsgithub.comlchskiottawa-fire-stations"><i class="fa fa-check"></i><b>B.3.3</b> <span>https://github.com/lchski/ottawa-fire-stations</span></a></li>
+<li class="chapter" data-level="B.3.1" data-path="canada-related-open-source-r-codes-and-packages.html"><a href="canada-related-open-source-r-codes-and-packages.html#expenditures-and-procurement"><i class="fa fa-check"></i><b>B.3.1</b> Expenditures and procurement</a></li>
+<li class="chapter" data-level="B.3.2" data-path="canada-related-open-source-r-codes-and-packages.html"><a href="canada-related-open-source-r-codes-and-packages.html#health-and-environment"><i class="fa fa-check"></i><b>B.3.2</b> Health and Environment</a></li>
+<li class="chapter" data-level="B.3.3" data-path="canada-related-open-source-r-codes-and-packages.html"><a href="canada-related-open-source-r-codes-and-packages.html#elections"><i class="fa fa-check"></i><b>B.3.3</b> Elections</a></li>
+<li class="chapter" data-level="B.3.4" data-path="canada-related-open-source-r-codes-and-packages.html"><a href="canada-related-open-source-r-codes-and-packages.html#ottawa"><i class="fa fa-check"></i><b>B.3.4</b> Ottawa</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="C" data-path="technical-information.html"><a href="technical-information.html"><i class="fa fa-check"></i><b>C</b> Technical information</a>
@@ -397,7 +401,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="C.2" data-path="technical-information.html"><a href="technical-information.html#release-notes"><i class="fa fa-check"></i><b>C.2</b> Release Notes</a></li>
 </ul></li>
 <li class="divider"></li>
-<li> This book is built using <a href="https://bookdown.org"> bookdown</a> </li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
 </ul>
 
@@ -416,115 +420,23 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="introduction" class="section level1 unnumbered" number="">
-<h1>Introduction</h1>
-<!-- Abstract -->
-<p>Many Government of Canada groups are developing codes to process and visualize various kinds data, often duplicating each other’s efforts, with sub-optimal efficiency and limited level of code quality reviewing.
-This book
-<!-- This paper  -->
-presents a pan-government initiative to address this problem. The idea is to collaboratively build a common repository of code and knowledgebase for use by anyone in the government to perform many common data science tasks, and, in doing that, help each other to master both the data science coding skills and the industry standard collaborative practices. The book explains why R language is used as the language of choice for collaborative data science code development. It summaries R advantages and addresses its limitations, establishes the taxonomy of discussion topics of highest interested to the GC data scientists working with R, provides an overview of used collaborative platforms, and presents the results obtained to date. Even though the code knowledgebase is developed mainly in R, it is meant to be valuable also for data scientists coding in Python and other development environments.</p>
-<div id="need-for-collaboration" class="section level4 unnumbered" number="">
-<h4>Need for collaboration</h4>
-<!-- ### Data  as 'electricity' of the 21st century {-} -->
-<p>Data is the ‘electricity’ of the 21st century. It is everywhere. Everybody is using it, and one may not need special training or certification to work with data. However, in contrast to working with electricity, working with data relies on the use of data processing tools (codes), the number and complexity of which increases daily, and which are developed by other data practitioners. In other words, data science - by its nature - is the science that is fueled by collaboration of data scientists and that heavily relies on the quality of the shared data processing codes.</p>
-<p>Globally, and in the Government of Canada (GC) in particular, data practitioners come from many different backgrounds and may not have equal level of code programming training, which hinders the development of high-quality (efficient, scalable and re-usable) codes for data science problems. This gap and the need for collaboration for data scientists, specifically those coding in R language, has been raised at the 2021 GC Data Conference Workshop on Data Engineering in February 2021.
-This book addresses this need.</p>
-<!-- This presentation describes a pan-government collaborative approach that has started following this workshop in order to address the identified need. -->
-<!-- First (in Section 2), we review one the main challenges in data science, which is data engineering and which triggered the creation of the R4GC community of practice - the community that brings together data practitioners interested in using (or learning) the R language. The reasons why R is chosen as the language of choice for building the data science collaboration are explained in Section 3. Then (in Section 4), we describe the collaboration portals that have been set in support of the R4GC community activities and knowledgebase and overview key repositories and discussion threads that have been created there. Finally (in Section 5 and Appendix), we summarize the main outputs produced by the community to date. Whereas this paper serves as an introduction to the R4GC community efforts, the complete collection of the community knowledgebase is maintained as a shareable, free to use and collaboratively edited book (The R4GC Book) hosted at https://open-canada.github.io/r4gc. Feedback and contributions to this book are welcome, noting that only unclassified public domain knowledge is archived there. -->
-</div>
-<div id="data-engineering-challenge" class="section level4 unnumbered" number="">
-<h4>Data Engineering challenge</h4>
-<p>This effort has started from addressing the problem of data engineering, where it is understood - in analogy with the definition of software engineering by IEEE [2] - as the field of science and technology that deals with “developing scientific and technological knowledge, methods, and experience to the design, implementation, testing, and documentation” of data-driven systems and solutions; or - in analogy with the definition of software engineering at Google [3] - as the field that “encompasses not just the act of writing code [for data analysis, in our case], but all of the tools and processes an organization uses to build and maintain that code over time”.</p>
-</div>
-<div id="towards-open-source-and-open-science" class="section level4 unnumbered" number="">
-<h4>Towards open source and open science</h4>
-<!-- Whereas -->
-<p>The spectacular growth of data science tools development is overwhelmingly attributed to the collaborative open nature of the current data science code development practices. Consequently, Canadian government is also
-<!-- at the early stages of  -->
-adopting open source industry standards for data coding and reporting. Major shift towards enabling and promoting such practices within the government has started recently, when Government of Canada adopted a number of policies in support of Digital, Open Science, and Open Government [4], when Shared Services of Canada deployed a number of collaboration platforms that are now available to all GC organizations, and when IT Security of most GC departments approved the use of open-source data science tools such as R and R Studio.</p>
-</div>
-<div id="book-structure" class="section level2 unnumbered" number="">
-<h2>Book structure</h2>
-<p>The book is organized in several parts, according to
-the topics of interest discussed in the GCcollab R4GC group.
-Discussions around these topics are reviewed and updated regularly, commonly as part of weekly community meetups.</p>
-<!-- Some contain more content, some less -->
-<p>Part I is dedicated to <em>General discussions</em>, which includes the following:</p>
-<ol style="list-style-type: decimal">
-<li>Why R?</li>
-<li>Learn R: <em>R</em>ight way!</li>
-<li>Great open-source textbooks</li>
-<li>Events and forums for R users</li>
-<li>Using R with GC data infrastructure</li>
-<li>Open source policies and guidelines
-<!-- (gcdocs, AWS, etc) --></li>
-</ol>
-<p>Part II is dedicated to the <em>Best Practices and Efficient Coding in R</em> and includes the following:</p>
-<ol start="7" style="list-style-type: decimal">
-<li>Use R efficiently with data.table!</li>
-<li>R and Python, Unite!</li>
-<li>From Excel to R</li>
-<li>Reading various kinds of data in R</li>
-<li>Object oriented programming in R</li>
-<li>Other tips and tricks</li>
-</ol>
-<p>Part III is dedicated to <em>Visualization and Reporting </em>and includes the following:</p>
-<ol start="11" style="list-style-type: decimal">
-<li>Literate programming and automated reports with ‘rmarkdown’</li>
-<li>Data visualization with ‘ggplot2’ and its extensions</li>
-<li>Interactive interfaces, applications and dashboards with ‘shiny’</li>
-<li>Interactive html with ‘plotly’, ‘Datatable’, ‘reactable’</li>
-<li>Geo/Spatial coding and visualization in R</li>
-</ol>
-<p>Part IV is dedicated <em>Advanced use of Data Science, Machine Learning, and AI</em> and includes:</p>
-<ol start="15" style="list-style-type: decimal">
-<li>Entity resolution and record linking in R</li>
-<li>Text Analysis in R</li>
-<li>Machine Learning and Modeling in R</li>
-<li>Simulation and Optimization in R</li>
-<li>Computer vision and Deep learning in R</li>
-<li>Operationalizing in-house built tools and models</li>
-</ol>
-<p>Part V contains the <em>Tutorials</em> developed by and for the community. These are:</p>
-<ol start="19" style="list-style-type: decimal">
-<li><p>GCCode 101</p></li>
-<li><p>Packages 101</p></li>
-<li><p>R101: Building COVID-19 Tracker App from scratch</p></li>
-<li><p>Geo/Spatial coding and visualization with R. Part 1:</p></li>
-<li><p>Text Analysis with R. Part 1:</p></li>
-</ol>
-<p>and a number of short "How To: tutorials such as:</p>
-<ol start="22" style="list-style-type: decimal">
-<li>Dual Coding - Python and R unite !</li>
-<li>Working with ggtables</li>
-<li>Automate common look and feel of your ggplot graphs
-and others</li>
-</ol>
-<p>Part VI provides information about
-<!-- the outputs of the community development.  This includes a variety of -->
-Shiny Web Apps
-<!-- and other codes and libraries -->
-developed by the community members.
-<!-- All codes are made data-agnostic and do not contain any internal information --></p>
-<p>Finally, <em>Appendix</em> includes agendas for the R4GC community “Lunch and Learn” meetups, Future Plans and Release Notes.
-<!-- , plans and  invitation for collaboration, in particular to make this knowledgebase bilingual - in support of bilingualism in Canada and as an another opportunity for applying data science skills for public good. --></p>
-<!-- # (PART) Community discussions {-} -->
-</div>
+<div id="simulation-and-optimization" class="section level1" number="21">
+<h1><span class="header-section-number">21</span> Simulation and Optimization</h1>
+<p>There are a number of R packages developed for complex processes simulations and optimization problems, including simulation of queueing processes and resource or performance optimization problems</p>
+<p>They were used in the research on predicting and optimizing Border Wait Time at Canadian border.
+The codes for it and the research article are available at GCcode (search “border”) or by contacting <a href="index.html#contact">Dmitry Gorodnichy</a>.</p>
 </div>
 
 
 
-<!-- # (PART) GCcollab discussions {-} -->
-<!-- # (PART) General Discussion: General tips {-} -->
-<!-- # (PART) GCcollab discussions {.unnumbered} -->
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="a-propos.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="why-r.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="deep-learning-and-computer-vision.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="gccode-101.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -540,7 +452,7 @@ developed by the community members.
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
 "sharing": {
-"github": false,
+"github": true,
 "facebook": true,
 "twitter": true,
 "linkedin": true,
