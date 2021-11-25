@@ -102,33 +102,68 @@ R's CON's:
 
 
 The number of resources and ways to learn R is enormous.
-Some of us had tried many of them until we found the ones that we believe are the best ones.
+Some of us had tried many of them until we found the ones that we believe are the best ones. They are listed here
+
+
+And of course, don't ever shy to ask questions (or seek for already many answers) at https://stackoverflow.com/.
+In fact, what a great option for you to save all the knowledgebase you acquire --
+Helping yourself, you also help others, and contribute to further improvement of many R packages ! 
+
+
+## The way we teach at R4GC Lunch and Learn
+
+
 
 Here are some:  https://open-canada.github.io/UseR/resources.html
 
 
-And of course, don't ever shy to ask questions (or seek for already many answers) at https://stackoverflow.com/.
-In fact, what a great option for you to save all the knowledgebase you acquire !!
-Helping yourself, you also help others, and contribute to further improvement of many R packages !) 
+
+
+## From RStudio 
+
+"Data Science Course in a Box" course:
+https://github.com/rstudio-education/datascience-box
+
+Data-sets: https://github.com/rstudio-education/dsbox)
+
+R for Data Science Instructor's Guide
+https://github.com/rstudio-education/r4ds-instructors
 
 
 
-<!-- # Ways to continue improving your R skills -->
-
-
-<!-- ## "Great bookdown books" -->
-
-
-<!-- # Other resources -->
-
-
-```{r Great-bookdown-books, child = 'Great-bookdown-books.Rmd'}
-```
+A guide to some of the most useful R Packages that we know about, organized by their role in data science. - https://github.com/rstudio/RStartHere
 
 
 
+https://github.com/rstudio/cheatsheets
 
-# Events and forums for R users
+##  Ways to continue growing your R skills 
+
+Apart from reading and contributing to this R4GC Book and participating in our R4GC community meetups (which is naturally the best way :), you can :
+
+- browse and play with many  open-source books (See next section)
+
+- browse and play with many R blogs
+
+- attend free RStudio monthly organized webinars: https://github.com/rstudio/webinars
+
+- RStudio-Enterprise-Community-Meetup: 
+https://www.meetup.com/RStudio-Enterprise-Community-Meetup - 
+
+(NB: you may have to access it from your personal device)
+
+ 
+
+
+
+
+
+- attend free annual RStudio organized conferences rstudio::conf
+
+https://resources.rstudio.com/rstudio-conf-2019 , 2020, 2021 etc
+
+
+
 
 
 ##  R communities in GC
@@ -214,7 +249,7 @@ More GCcollab groups are listed at https://wiki.gccollab.ca/The_Square/GCcollab_
 
  
 
-## Other related groups
+### Other related groups
 
 - https://code.open.canada.ca/en/open-source-softwares.html
 
@@ -222,128 +257,5 @@ More GCcollab groups are listed at https://wiki.gccollab.ca/The_Square/GCcollab_
 <!-- # Open R codes for GC: on GCcode and GitHub -->
 
 
-
-
-### RStudio-Enterprise-Community-Meetup
-
-Another great meetup opportunity:
-
-https://www.meetup.com/RStudio-Enterprise-Community-Meetup
-
-NB: you may have to access it from your personal device
-
- 
-
-Each meetup is dedicated to a specific topic, following which they post many Q&A at https://community.rstudio.com/
-
- 
-
-##   R conferences
-
-
-
-(from https://rviews.rstudio.com/2021/03/03/2021-r-conferences)
-
- 
-
-Cascadia RConf 2021 (June 4 - 5), a jewel of a regional R conference for its first three years, was canceled in 2020. It is back this year as a virtual event. The Call for Presentations is open.
-
-useR! 2021 (July 5 - 9) has an outstanding lineup of keynote speakers. The program is very likely to make US based attendees night-owls
-
-EARL Conference 2021 (September 6 - 10), the premier R in industry event, will be online this year. The call for abstracts is already open.
- 
-
- 
-
-## Other venues for submitting  R / Data Science work:
-
- 
-
-https://peerj.com/articles/?q=data
-rpubs.com
-
-https://earlconf.com/#about: The Enterprise Applications of the R Language Conference (EARL)
-
-https://odsc.com/boston/: Data Science Conference & Expo
- 
-https://journals.plos.org/plosone/search?filterJournals=PLoSONE&q=data+science
-(research by the US Department of Homeland Security is published there)
- 
-See also: from http://charteredabs.org/academic-journal-guide-2015-view/  (Rank 4-3)
-
-Management Science
-
- IEEE Transactions on Systems, Man, and Cybernetics: Systems (formerly "IEEE Transactions on Systems, Man and Cybernetics - Part A: Systems and Humans")
- 
-Annals of Operations Research
-
-Operations Research
-
-IEEE Transactions on Cybernetics (formerly "IEEE Transactions on Systems Man and Cybernetics Part C (Applications and Reviews)")
-
-INFORMS Journal on Computing
-OR Spectrum
-
-Transportation Science
-
-Computational Statistics & Data Analysis  
-
-
-### Academic Conferences:
-
- 
-Canadian AI Conference  - https://www.caiac.ca/en/conferences
-Academic Journals:
- 
-Operations Research (Informs): https://pubsonline.informs.org/journal/opre
-https://www.scirp.org/journal/jdaip/ - Journal of Data Analysis and Information Processing
-
-
-### IEEE Conferences:
- 
-IEEE BigData 
-
-IEEE International Conference on Technologies for Homeland Security HST 
-
-
-
-# Open source policies
-
-## Open Source
-
-“Directive on Service and Digital” – Appendix A:  https://www.tbs-sct.gc.ca/pol/doc-eng.aspx?id=32602.
-
-
-
-Open Sourcing GC Code
-https://canada-ca.github.io/ofd-joep/assets/pdf/Open%20Source%20Code%20Calvin%20Rodo.pdf
-
-https://github.com/canada-ca/Open_First_Whitepaper/blob/master/en/4_Open_Source_Software_Contribution.md#releasing-open-source-software-code
-
-
-https://code.open.canada.ca/open-source-code.html <-- broken link
-
-Government of Canada Strategic Plan for Information Management and Information Technology 2017 to 2021
-https://www.canada.ca/en/treasury-board-secretariat/services/information-technology/strategic-plan-2017-2021.html#toc6-2
-
-
-Guidance: When code should be open or closed https://www.gov.uk/government/publications/open-source-guidance/when-code-should-be-open-or-closed
-
-### Oopen government
-
-A Framework for Implementing Open-by-Default with Federal Government Science January 4, 2021 https://www.ic.gc.ca/eic/site/063.nsf/eng/h_98201.html
-
-Directive on Open Government
-https://www.tbs-sct.gc.ca/pol/doc-eng.aspx?id=28108
-
-## Open Science
-
-Roadmap for Open Science
-https://www.ic.gc.ca/eic/site/063.nsf/eng/h_97992.html
-
-### Scientific Integrity 
-
-Model Policy on Scientific Integrity
-https://www.ic.gc.ca/eic/site/063.nsf/eng/h_97643.html
 
 

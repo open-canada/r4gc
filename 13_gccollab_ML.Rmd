@@ -85,13 +85,13 @@ From https://mountainmath.ca
 
 https://gccollab.ca/discussion/view/7404441/text-analysis-in-r
 
-## Good place to start:
+## Open source textbook
 
 https://smltar.com/ 
 https://www.tidytextmining.com/
 https://slcladal.github.io/topicmodels.html, https://slcladal.github.io/textanalysis.html
  
-Also, a list of related resources and codes for text mining (including Web Scraping)  on github:https://github.com/gorodnichy/LA-R-text
+Also, a list of related resources and codes for text mining (including Web Scraping)  are collected here: https://github.com/gorodnichy/LA-R-text
 
 
 ## Plagiarism detection
@@ -134,7 +134,7 @@ You can  find their decks here: https://drive.google.com/drive/folders/1TfuNmG3V
 ## Resources
 
 Below are most popular textbooks for Machine Learning and Modeling in R.  
-
+Also see Discussion on Text Mining (https://smltar.com/ and https://www.tidytextmining.com/)
  
 
 This one is used in many University Machine Learning courses (e.g. in University of Arizona and many others in USA):
@@ -156,25 +156,40 @@ https://bookdown.org/max/FES - Feature Engineering & Selection
 https://moderndive.com/. Statistical Inference via Data Science
 
  
-### Deep learning with Tensorflow 
-
-We can also have a separate discussion thread on Deep Learning with Tensorflow and Keras inR (https://tensorflow.rstudio.com/)
- 
-
-Also see Discussion on Text Mining (https://smltar.com/ and https://www.tidytextmining.com/)
 
 
+## Additional references
+
+References
+
+- https://www.cs.huji.ac.il/~shais/UnderstandingMachineLearning/understanding-machine-learning-theory-algorithms.pdf
+
+
+-http://www2.math.uu.se/~thulin/mm/breiman.pdf
 
 
 
-### Other
 
 
- https://www.cs.huji.ac.il/~shais/UnderstandingMachineLearning/understanding-machine-learning-theory-algorithms.pdf
- heart 1
+# Deep Learning and Computer vision 
 
-http://www2.math.uu.se/~thulin/mm/breiman.pdf
- heart 1
+<!-- with Tensorflow and Keras -->
+
+This discussion thread on Deep Learning with Tensorflow and Keras inR (https://tensorflow.rstudio.com/)
+
+<!-- A collection of tested codes and tutorials is here: -->
+
+
+Learn and Apply Artificial Neural Networks (aka Deep Learning) with Keras/Tensorflow in R/RStudio, 
+Using complete prewritten codes, your own data, and data.table package:
+
+https://github.com/gorodnichy/LA-R-KerasNN
+
+
+Deep Learning using the h2o package in R
+
+https://github.com/h2oai/Deep-Learning-with-h2o-in-R
+
 
 
 

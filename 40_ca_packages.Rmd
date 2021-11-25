@@ -1,0 +1,70 @@
+
+# Canada-related Open source R codes and packages
+
+
+
+
+## Packages on CRAN
+
+
+#### https://github.com/warint/statcanR
+statcanR
+Easily connect to Statistics Canada’s Web Data Service with R. Open economic data (formerly known as CANSIM tables, now identified by Product IDs (PID)) are accessible as a data frame, directly in the user’s R environment.
+
+
+
+## Packages not on CRAN
+
+#### https://github.com/VLucet/rgovcan 
+rgovcan
+Easy access to the Canadian Open Government Portal
+
+
+#### https://github.com/bcgov/canwqdata
+canwqdata
+An R package to download open water quality data from Environment and Climate Change Canada’s National Long-term Water Quality Monitoring Data.
+
+
+
+## Codes on GitHub
+
+#### https://github.com/nmarum/canadadefencespending
+
+Data wrangling and exploratory analysis of publicly available data about National Defence expenditures and defence procurement.
+
+
+
+#### https://github.com/dbuijs/HealthCanadaOpenData
+
+A project for importing open data from Health Canada's website into R.
+
+
+### Elections 
+
+
+#### https://github.com/thisismactan/Canada-2019
+
+This is the repository for the Election StatSheet 2019 Canadian election forecast. 
+
+
+#### https://github.com/lchski/canada-2015-federal-election-data
+2015 Canadian Election Data
+
+
+
+
+#### FPTP Election Strategizer 
+
+"FPTP Election Strategizer: A data-science driven tool to mitigate the political biases of the First Past The Post  electoral system in Canada" -
+Research article, with R code and visualizations in support of [Fair Vote Canada]("https://www.fairvote.ca)
+
+### Ottawa
+
+#### https://github.com/whipson/Ottawa_Bicycles
+
+Data and cleaning scripts for Ottawa Bicycle Counter shiny app.
+
+### https://github.com/lchski/ottawa-fire-stations
+
+Mapping Ottawa’s fire stations
+

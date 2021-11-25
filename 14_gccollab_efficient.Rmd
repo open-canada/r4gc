@@ -262,7 +262,10 @@ TBA
 
 ### Coding online
 
-TBA
+Platforms for coding R online   
+a) https://rextester.com/l/r_online_compiler
+b) https://repl.it/languages/rlang (no login required)
+c) https://rstudio.cloud/ (login required) - All in One place for learning and coding
 
 ### Running multiple RStudio versions
 

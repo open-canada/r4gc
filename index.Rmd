@@ -30,6 +30,8 @@ date: "22 November 2021"
 #   URL: [https\://open-canada.github.io/r4gc](https\://open-canada.github.io/r4gc)
 github-repo: "open-canada/r4gc"
 url: 'https\://open-canada.github.io/r4gc'
+cover-image: "images/r4gc-banner.png"
+favicon: "images/R4GC.ico"
 
 # https://github.com/rstudio/bookdown/blob/master/inst/templates/bs4_book.html.
 output:
@@ -116,8 +118,8 @@ Everyone is welcome to join, whether you are an advanced R user, just starting l
 
 The idea to create this group came during the [GC Data2021 Conference](https://www.csps-efpc.gc.ca/events/data-conference2021) workshop on [Data Engineering Challenges and Solutions: Demonstration of Shiny](#gcdata2021) [^gcdata2021].    The highest voted question during the discussion there was : _"How can I get more help for our members to enhance their knowledge and "spread the word" and raise more awareness regard to this tool?"_ The creation of this community group is the answer to this question.
 
-[^gcdata2021] The full recording of this workshop 
-was made  by conference organizers and is available on [YouTube](). 
+<!-- [^gcdata2021] The full recording of this workshop  -->
+<!-- was made  by conference organizers and is available on [YouTube]().  -->
  
 By November 2021, the  R4GC  GCCollab group has been become one of the largest active data science practitioners groups in Canada, counting over a quarter  thousand of members. The weekly "Lunch and Learn Data Science with R" meetups organized by the R4GC Community have been attended by data practitioners from over twenty government departments,  and generated
 hundreds of questions/answers, a dozen of tutorials, multiple open to use applications, and  thousands of line of open code. 
@@ -411,7 +413,7 @@ The spectacular growth of data science tools development is overwhelmingly attri
 adopting open source industry standards for data coding and reporting. Major shift towards enabling and promoting such practices within the government has started recently, when Government of Canada adopted a number of policies in support of Digital, Open Science, and Open Government [4], when Shared Services of Canada deployed a number of collaboration platforms that are now available to all GC organizations, and when IT Security of most  GC departments approved the use of open-source data science tools such as R and R Studio.
 
 
-## Book outline {-}
+## Book structure {-}
 
 
 
@@ -509,8 +511,30 @@ Finally, *Appendix* includes agendas for the R4GC community "Lunch and Learn" me
 
 
 
-```{r 11_gccollab_general, child = '11_gccollab_general.Rmd'}
+```{r 11_r_general, child = '11_r_general.Rmd'}
 ```
+
+
+
+<!-- ## "Great bookdown books" -->
+
+
+<!-- # Other resources -->
+
+
+```{r 11_Great_bookdown_books.Rmd, child = '11_Great_bookdown_books.Rmd'}
+```
+
+
+```{r 11_r_forums.Rmd, child = '11_r_forums.Rmd'}
+```
+
+
+```{r 11_gc_policies.Rmd, child = '11_gc_policies.Rmd'}
+```
+
+
+
 
 
 <!-- # (PART) Efficient R coding {-} -->
@@ -607,6 +631,12 @@ Contributed by:
 ```{r 30_gc_LL, child = '30_gc_LL.Rmd'}
 ```
 
+
+
+
+
+```{r 40_ca_packages, child = '40_ca_packages.Rmd'}
+```
 
 
 
