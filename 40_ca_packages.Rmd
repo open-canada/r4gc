@@ -28,13 +28,16 @@ An R package to download open water quality data from Environment and Climate Ch
 
 ## Codes on GitHub
 
+
 ### Expenditures and  procurement
 
 #### https://github.com/nmarum/canadadefencespending
 
 Data wrangling and exploratory analysis of publicly available data about National Defence expenditures and defence procurement.
 
+
 ### Health and Environment 
+
 
 #### https://github.com/dbuijs/HealthCanadaOpenData
 
@@ -46,9 +49,13 @@ A project for importing open data from Health Canada's website into R.
 
 #### 2019 Canadian election forecast
 
-https://github.com/thisismactan/Canada-2019
+
+
+#### https://github.com/thisismactan/Canada-2019
+
 
 This is the repository for the Election StatSheet 2019 Canadian election forecast. 
+
 
 
 #### 2015 Canadian Election Data
@@ -59,14 +66,20 @@ https://github.com/lchski/canada-2015-federal-election-data
 
 
 
-<!-- #### FPTP Election Strategizer  -->
+#### https://github.com/lchski/canada-2015-federal-election-data
+2015 Canadian Election Data
 
-<!-- "FPTP Election Strategizer: A data-science driven tool to mitigate the political biases of the First Past The Post  electoral system in Canada" - -->
-<!-- Research article, with R code and visualizations in support of [Fair Vote Canada]("https://www.fairvote.ca) -->
 
-<!-- https://github.com/ivi-m/election-strategizer/ -->
+
+
+#### FPTP Election Strategizer 
+
+"FPTP Election Strategizer: A data-science driven tool to mitigate the political biases of the First Past The Post  electoral system in Canada" -
+Research article, with R code and visualizations in support of [Fair Vote Canada]("https://www.fairvote.ca)
+
+https://github.com/ivi-m/election-strategizer/
+
 <!-- (https://ivi-m.github.io/election-strategizer/) -->
-
 ### Ottawa
 
 #### https://github.com/whipson/Ottawa_Bicycles
@@ -74,6 +87,7 @@ https://github.com/lchski/canada-2015-federal-election-data
 Data and cleaning scripts for Ottawa Bicycle Counter shiny app.
 
 #### https://github.com/lchski/ottawa-fire-stations
+
 
 Mapping Ottawa’s fire stations
 

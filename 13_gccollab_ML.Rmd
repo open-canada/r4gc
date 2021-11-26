@@ -177,6 +177,7 @@ References
 
 This discussion thread on Deep Learning with Tensorflow and Keras inR (https://tensorflow.rstudio.com/)
 
+
 <!-- A collection of tested codes and tutorials is here: -->
 
 
@@ -186,15 +187,17 @@ Using complete prewritten codes, your own data, and data.table package:
 https://github.com/gorodnichy/LA-R-KerasNN
 
 
-Deep Learning using the h2o package in R
+#### Deep Learning using the h2o package in R
 
 https://github.com/h2oai/Deep-Learning-with-h2o-in-R
+
 
 
 
 # Simulation and Optimization
 
 There are a number of R packages developed for complex processes simulations and  optimization problems, including   simulation of queueing processes and resource or performance optimization problems
+
 
 They were used in the research on predicting and optimizing Border Wait Time at Canadian border.
 The codes for it and the research article are available at GCcode (search "border") or by contacting [Dmitry Gorodnichy](index.html#contact).
