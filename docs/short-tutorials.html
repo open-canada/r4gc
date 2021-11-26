@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>22 Short tutorials | The R4GC Book</title>
+  <title>26 Short tutorials | The R4GC Book</title>
   <meta name="description" content="Notes and tutorials from ‘Lunch and Learn Data Science with R’ weekly meetups organized by the R4GC Community" />
   <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="22 Short tutorials | The R4GC Book" />
+  <meta property="og:title" content="26 Short tutorials | The R4GC Book" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="https://open-canada.github.io/r4gc" />
   <meta property="og:image" content="https://open-canada.github.io/r4gc/images/r4gc-banner.png" />
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="open-canada/r4gc" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="22 Short tutorials | The R4GC Book" />
+  <meta name="twitter:title" content="26 Short tutorials | The R4GC Book" />
   
   <meta name="twitter:description" content="Notes and tutorials from ‘Lunch and Learn Data Science with R’ weekly meetups organized by the R4GC Community" />
   <meta name="twitter:image" content="https://open-canada.github.io/r4gc/images/r4gc-banner.png" />
@@ -172,8 +172,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="part"><span><b>I General discussions</b></span></li>
 <li class="chapter" data-level="1" data-path="why-r.html"><a href="why-r.html"><i class="fa fa-check"></i><b>1</b> Why R?</a>
 <ul>
-<li class="chapter" data-level="1.1" data-path="why-r.html"><a href="why-r.html#main-reasons-to-use-r-for-data-science"><i class="fa fa-check"></i><b>1.1</b> 10 main reasons to use R for Data Science</a></li>
-<li class="chapter" data-level="1.2" data-path="why-r.html"><a href="why-r.html#r-vs.-python"><i class="fa fa-check"></i><b>1.2</b> R vs. Python</a></li>
+<li class="chapter" data-level="1.1" data-path="why-r.html"><a href="why-r.html#top-10-r-advantages-for-data-science"><i class="fa fa-check"></i><b>1.1</b> Top 10 R advantages for Data Science</a></li>
+<li class="chapter" data-level="1.2" data-path="why-r.html"><a href="why-r.html#tackling-the-limitations-of-r"><i class="fa fa-check"></i><b>1.2</b> Tackling the limitations of R</a></li>
+<li class="chapter" data-level="1.3" data-path="why-r.html"><a href="why-r.html#r-vs.-python"><i class="fa fa-check"></i><b>1.3</b> R vs. Python</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="learn-r-right-way.html"><a href="learn-r-right-way.html"><i class="fa fa-check"></i><b>2</b> Learn R: <em>R</em>ight way!</a>
 <ul>
@@ -194,144 +195,189 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="3.1" data-path="open-source-textbooks.html"><a href="open-source-textbooks.html#in-two-column-format"><i class="fa fa-check"></i><b>3.1</b> In two-column format</a></li>
 <li class="chapter" data-level="3.2" data-path="open-source-textbooks.html"><a href="open-source-textbooks.html#in-three-column-format"><i class="fa fa-check"></i><b>3.2</b> In three-column format</a></li>
-<li class="chapter" data-level="3.3" data-path="open-source-textbooks.html"><a href="open-source-textbooks.html#data.table-vs.-dplyr"><i class="fa fa-check"></i><b>3.3</b> data.table vs. dplyr</a></li>
-<li class="chapter" data-level="3.4" data-path="open-source-textbooks.html"><a href="open-source-textbooks.html#extensions-of-data.table"><i class="fa fa-check"></i><b>3.4</b> Extensions of data.table</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="python-and-r-unite.html"><a href="python-and-r-unite.html"><i class="fa fa-check"></i><b>4</b> Python and R unite!</a></li>
-<li class="chapter" data-level="5" data-path="from-excel-to-r.html"><a href="from-excel-to-r.html"><i class="fa fa-check"></i><b>5</b> From Excel to R</a></li>
-<li class="chapter" data-level="6" data-path="reading-various-kinds-of-data-in-r.html"><a href="reading-various-kinds-of-data-in-r.html"><i class="fa fa-check"></i><b>6</b> Reading various kinds of data in R</a>
+<li class="chapter" data-level="4" data-path="events-and-forums-for-r-users.html"><a href="events-and-forums-for-r-users.html"><i class="fa fa-check"></i><b>4</b> Events and forums for R users</a>
 <ul>
-<li class="chapter" data-level="6.1" data-path="reading-various-kinds-of-data-in-r.html"><a href="reading-various-kinds-of-data-in-r.html#vroom"><i class="fa fa-check"></i><b>6.1</b> vroom</a></li>
-<li class="chapter" data-level="6.2" data-path="reading-various-kinds-of-data-in-r.html"><a href="reading-various-kinds-of-data-in-r.html#readxl-and-xlsx"><i class="fa fa-check"></i><b>6.2</b> readxl and xlsx</a></li>
-<li class="chapter" data-level="6.3" data-path="reading-various-kinds-of-data-in-r.html"><a href="reading-various-kinds-of-data-in-r.html#discussion"><i class="fa fa-check"></i><b>6.3</b> Discussion</a></li>
+<li class="chapter" data-level="4.1" data-path="events-and-forums-for-r-users.html"><a href="events-and-forums-for-r-users.html#from-rstudio-1"><i class="fa fa-check"></i><b>4.1</b> From RStudio</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="events-and-forums-for-r-users.html"><a href="events-and-forums-for-r-users.html#httpsresources.rstudio.com."><i class="fa fa-check"></i><b>4.1.1</b> <span>https://resources.rstudio.com</span>.</a></li>
+<li class="chapter" data-level="4.1.2" data-path="events-and-forums-for-r-users.html"><a href="events-and-forums-for-r-users.html#rstudio-community-meetup"><i class="fa fa-check"></i><b>4.1.2</b> RStudio Community Meetup</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="other-tips-and-tricks.html"><a href="other-tips-and-tricks.html"><i class="fa fa-check"></i><b>7</b> Other tips and tricks</a>
+<li class="chapter" data-level="4.2" data-path="events-and-forums-for-r-users.html"><a href="events-and-forums-for-r-users.html#r-blogs"><i class="fa fa-check"></i><b>4.2</b> R blogs</a></li>
+<li class="chapter" data-level="4.3" data-path="events-and-forums-for-r-users.html"><a href="events-and-forums-for-r-users.html#r-conferences"><i class="fa fa-check"></i><b>4.3</b> R conferences</a></li>
+<li class="chapter" data-level="4.4" data-path="events-and-forums-for-r-users.html"><a href="events-and-forums-for-r-users.html#related-journals"><i class="fa fa-check"></i><b>4.4</b> Related journals:</a>
 <ul>
-<li class="chapter" data-level="7.1" data-path="other-tips-and-tricks.html"><a href="other-tips-and-tricks.html#efficient-programming-in-r"><i class="fa fa-check"></i><b>7.1</b> Efficient programming in R</a></li>
-<li class="chapter" data-level="7.2" data-path="other-tips-and-tricks.html"><a href="other-tips-and-tricks.html#object-oriented-programming-in-r"><i class="fa fa-check"></i><b>7.2</b> Object oriented programming in R</a></li>
-<li class="chapter" data-level="7.3" data-path="other-tips-and-tricks.html"><a href="other-tips-and-tricks.html#debugging-tricks"><i class="fa fa-check"></i><b>7.3</b> Debugging tricks</a></li>
-<li class="chapter" data-level="7.4" data-path="other-tips-and-tricks.html"><a href="other-tips-and-tricks.html#rstudio-tricks"><i class="fa fa-check"></i><b>7.4</b> RStudio tricks</a>
-<ul>
-<li class="chapter" data-level="7.4.1" data-path="other-tips-and-tricks.html"><a href="other-tips-and-tricks.html#coding-online"><i class="fa fa-check"></i><b>7.4.1</b> Coding online</a></li>
-<li class="chapter" data-level="7.4.2" data-path="other-tips-and-tricks.html"><a href="other-tips-and-tricks.html#running-multiple-rstudio-versions"><i class="fa fa-check"></i><b>7.4.2</b> Running multiple RStudio versions</a></li>
+<li class="chapter" data-level="4.4.1" data-path="events-and-forums-for-r-users.html"><a href="events-and-forums-for-r-users.html#academic-journals"><i class="fa fa-check"></i><b>4.4.1</b> Academic Journals:</a></li>
 </ul></li>
+<li class="chapter" data-level="4.5" data-path="events-and-forums-for-r-users.html"><a href="events-and-forums-for-r-users.html#related-conferences"><i class="fa fa-check"></i><b>4.5</b> RElated conferences</a>
+<ul>
+<li class="chapter" data-level="4.5.1" data-path="events-and-forums-for-r-users.html"><a href="events-and-forums-for-r-users.html#non-academic"><i class="fa fa-check"></i><b>4.5.1</b> Non-academic</a></li>
+<li class="chapter" data-level="4.5.2" data-path="events-and-forums-for-r-users.html"><a href="events-and-forums-for-r-users.html#academic-conferences"><i class="fa fa-check"></i><b>4.5.2</b> Academic Conferences:</a></li>
+<li class="chapter" data-level="4.5.3" data-path="events-and-forums-for-r-users.html"><a href="events-and-forums-for-r-users.html#ieee-conferences"><i class="fa fa-check"></i><b>4.5.3</b> IEEE Conferences</a></li>
 </ul></li>
-<li class="part"><span><b>II Visualization and Reporting</b></span></li>
-<li class="chapter" data-level="8" data-path="r-markdown-for-literate-programming-and-automated-reports.html"><a href="r-markdown-for-literate-programming-and-automated-reports.html"><i class="fa fa-check"></i><b>8</b> R Markdown for literate programming and automated reports</a>
+<li class="chapter" data-level="4.6" data-path="events-and-forums-for-r-users.html"><a href="events-and-forums-for-r-users.html#related-communities-in-gc"><i class="fa fa-check"></i><b>4.6</b> Related communities in GC</a>
 <ul>
-<li class="chapter" data-level="8.1" data-path="r-markdown-for-literate-programming-and-automated-reports.html"><a href="r-markdown-for-literate-programming-and-automated-reports.html#resources"><i class="fa fa-check"></i><b>8.1</b> Resources</a></li>
-<li class="chapter" data-level="8.2" data-path="r-markdown-for-literate-programming-and-automated-reports.html"><a href="r-markdown-for-literate-programming-and-automated-reports.html#automated-generation-of-multiple-pdf-files"><i class="fa fa-check"></i><b>8.2</b> Automated generation of multiple PDF files</a></li>
-</ul></li>
-<li class="chapter" data-level="9" data-path="ggplot2-and-its-extensions-for-data-visualization.html"><a href="ggplot2-and-its-extensions-for-data-visualization.html"><i class="fa fa-check"></i><b>9</b> ggplot2 and its extensions for data visualization</a>
-<ul>
-<li class="chapter" data-level="9.1" data-path="ggplot2-and-its-extensions-for-data-visualization.html"><a href="ggplot2-and-its-extensions-for-data-visualization.html#resources-1"><i class="fa fa-check"></i><b>9.1</b> Resources</a>
-<ul>
-<li class="chapter" data-level="9.1.1" data-path="ggplot2-and-its-extensions-for-data-visualization.html"><a href="ggplot2-and-its-extensions-for-data-visualization.html#plotly-r-shiny"><i class="fa fa-check"></i><b>9.1.1</b> Plotly + R Shiny</a></li>
+<li class="chapter" data-level="4.6.1" data-path="events-and-forums-for-r-users.html"><a href="events-and-forums-for-r-users.html#gcconnex-gc-only-1"><i class="fa fa-check"></i><b>4.6.1</b> GCConnex (GC only):</a></li>
+<li class="chapter" data-level="4.6.2" data-path="events-and-forums-for-r-users.html"><a href="events-and-forums-for-r-users.html#gccode-gc-only-1"><i class="fa fa-check"></i><b>4.6.2</b> GCcode (GC only):</a></li>
+<li class="chapter" data-level="4.6.3" data-path="events-and-forums-for-r-users.html"><a href="events-and-forums-for-r-users.html#gccollab-public-with-login-1"><i class="fa fa-check"></i><b>4.6.3</b> GCcollab (public with login):</a></li>
+<li class="chapter" data-level="4.6.4" data-path="events-and-forums-for-r-users.html"><a href="events-and-forums-for-r-users.html#gcwiki-public-1"><i class="fa fa-check"></i><b>4.6.4</b> GCwiki (public):</a></li>
+<li class="chapter" data-level="4.6.5" data-path="events-and-forums-for-r-users.html"><a href="events-and-forums-for-r-users.html#github-public-1"><i class="fa fa-check"></i><b>4.6.5</b> GitHub (public):</a></li>
+<li class="chapter" data-level="4.6.6" data-path="events-and-forums-for-r-users.html"><a href="events-and-forums-for-r-users.html#other-canada-groups"><i class="fa fa-check"></i><b>4.6.6</b> Other Canada groups</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="10" data-path="shiny-for-interactive-data-visualization-analysis-and-web-app-development.html"><a href="shiny-for-interactive-data-visualization-analysis-and-web-app-development.html"><i class="fa fa-check"></i><b>10</b> Shiny for Interactive Data Visualization, Analysis and Web App development</a>
+<li class="chapter" data-level="5" data-path="open-government-policies.html"><a href="open-government-policies.html"><i class="fa fa-check"></i><b>5</b> Open government policies</a>
 <ul>
-<li class="chapter" data-level="10.1" data-path="shiny-for-interactive-data-visualization-analysis-and-web-app-development.html"><a href="shiny-for-interactive-data-visualization-analysis-and-web-app-development.html#resources-2"><i class="fa fa-check"></i><b>10.1</b> Resources</a></li>
+<li class="chapter" data-level="5.1" data-path="open-government-policies.html"><a href="open-government-policies.html#open-source"><i class="fa fa-check"></i><b>5.1</b> Open Source</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="open-government-policies.html"><a href="open-government-policies.html#open-government"><i class="fa fa-check"></i><b>5.1.1</b> Open government</a></li>
 </ul></li>
-<li class="chapter" data-level="11" data-path="using-r-with-gc-data-infastructure-gcdocs-aws-etc.html"><a href="using-r-with-gc-data-infastructure-gcdocs-aws-etc.html"><i class="fa fa-check"></i><b>11</b> Using R with GC data infastructure (gcdocs, AWS, etc)</a>
+<li class="chapter" data-level="5.2" data-path="open-government-policies.html"><a href="open-government-policies.html#open-science"><i class="fa fa-check"></i><b>5.2</b> Open Science</a>
 <ul>
-<li class="chapter" data-level="11.1" data-path="using-r-with-gc-data-infastructure-gcdocs-aws-etc.html"><a href="using-r-with-gc-data-infastructure-gcdocs-aws-etc.html#gcdocs"><i class="fa fa-check"></i><b>11.1</b> gcdocs</a></li>
+<li class="chapter" data-level="5.2.1" data-path="open-government-policies.html"><a href="open-government-policies.html#scientific-integrity"><i class="fa fa-check"></i><b>5.2.1</b> Scientific Integrity</a></li>
 </ul></li>
-<li class="chapter" data-level="12" data-path="interactive-outputs-in-r-plotly-datatable-reactable.html"><a href="interactive-outputs-in-r-plotly-datatable-reactable.html"><i class="fa fa-check"></i><b>12</b> Interactive Outputs in R: plotly, Datatable, reactable</a>
-<ul>
-<li class="chapter" data-level="12.1" data-path="interactive-outputs-in-r-plotly-datatable-reactable.html"><a href="interactive-outputs-in-r-plotly-datatable-reactable.html#reactable"><i class="fa fa-check"></i><b>12.1</b> <code>reactable</code></a></li>
 </ul></li>
-<li class="part"><span><b>III Machine Learning and AI</b></span></li>
-<li class="chapter" data-level="13" data-path="record-linking-and-other-data-engineering-tasks-in-r.html"><a href="record-linking-and-other-data-engineering-tasks-in-r.html"><i class="fa fa-check"></i><b>13</b> Record Linking and other Data Engineering tasks in R</a>
+<li class="part"><span><b>II Art of R programming</b></span></li>
+<li class="chapter" data-level="6" data-path="use-r-efficiently-with-data-table.html"><a href="use-r-efficiently-with-data-table.html"><i class="fa fa-check"></i><b>6</b> Use R efficiently with data.table!</a>
 <ul>
-<li class="chapter" data-level="13.1" data-path="record-linking-and-other-data-engineering-tasks-in-r.html"><a href="record-linking-and-other-data-engineering-tasks-in-r.html#demo"><i class="fa fa-check"></i><b>13.1</b> demo</a></li>
+<li class="chapter" data-level="6.1" data-path="use-r-efficiently-with-data-table.html"><a href="use-r-efficiently-with-data-table.html#data.table-vs.-dplyr"><i class="fa fa-check"></i><b>6.1</b> data.table vs. dplyr</a></li>
+<li class="chapter" data-level="6.2" data-path="use-r-efficiently-with-data-table.html"><a href="use-r-efficiently-with-data-table.html#extensions-of-data.table"><i class="fa fa-check"></i><b>6.2</b> Extensions of data.table</a></li>
 </ul></li>
-<li class="chapter" data-level="14" data-path="geospatial-coding-and-visualization-in-r.html"><a href="geospatial-coding-and-visualization-in-r.html"><i class="fa fa-check"></i><b>14</b> Geo/Spatial coding and visualization in R</a>
+<li class="chapter" data-level="7" data-path="python-and-r-unite.html"><a href="python-and-r-unite.html"><i class="fa fa-check"></i><b>7</b> Python and R unite!</a></li>
+<li class="chapter" data-level="8" data-path="from-excel-to-r.html"><a href="from-excel-to-r.html"><i class="fa fa-check"></i><b>8</b> From Excel to R</a></li>
+<li class="chapter" data-level="9" data-path="reading-various-kinds-of-data-in-r.html"><a href="reading-various-kinds-of-data-in-r.html"><i class="fa fa-check"></i><b>9</b> Reading various kinds of data in R</a>
 <ul>
-<li class="chapter" data-level="14.1" data-path="geospatial-coding-and-visualization-in-r.html"><a href="geospatial-coding-and-visualization-in-r.html#resources-3"><i class="fa fa-check"></i><b>14.1</b> Resources</a></li>
-<li class="chapter" data-level="14.2" data-path="geospatial-coding-and-visualization-in-r.html"><a href="geospatial-coding-and-visualization-in-r.html#federal-geospatial-platform"><i class="fa fa-check"></i><b>14.2</b> Federal Geospatial Platform</a></li>
-<li class="chapter" data-level="14.3" data-path="geospatial-coding-and-visualization-in-r.html"><a href="geospatial-coding-and-visualization-in-r.html#tutorials"><i class="fa fa-check"></i><b>14.3</b> Tutorials</a></li>
-<li class="chapter" data-level="14.4" data-path="geospatial-coding-and-visualization-in-r.html"><a href="geospatial-coding-and-visualization-in-r.html#dealing-with-memory-issues"><i class="fa fa-check"></i><b>14.4</b> Dealing with memory issues</a></li>
-<li class="chapter" data-level="14.5" data-path="geospatial-coding-and-visualization-in-r.html"><a href="geospatial-coding-and-visualization-in-r.html#canadian-geo-data"><i class="fa fa-check"></i><b>14.5</b> Canadian geo-data</a></li>
+<li class="chapter" data-level="9.1" data-path="reading-various-kinds-of-data-in-r.html"><a href="reading-various-kinds-of-data-in-r.html#vroom"><i class="fa fa-check"></i><b>9.1</b> vroom</a></li>
+<li class="chapter" data-level="9.2" data-path="reading-various-kinds-of-data-in-r.html"><a href="reading-various-kinds-of-data-in-r.html#readxl-and-xlsx"><i class="fa fa-check"></i><b>9.2</b> readxl and xlsx</a></li>
+<li class="chapter" data-level="9.3" data-path="reading-various-kinds-of-data-in-r.html"><a href="reading-various-kinds-of-data-in-r.html#discussion"><i class="fa fa-check"></i><b>9.3</b> Discussion</a></li>
 </ul></li>
-<li class="chapter" data-level="15" data-path="text-analysis-in-r.html"><a href="text-analysis-in-r.html"><i class="fa fa-check"></i><b>15</b> Text Analysis in R</a>
+<li class="chapter" data-level="10" data-path="other-tips-and-tricks.html"><a href="other-tips-and-tricks.html"><i class="fa fa-check"></i><b>10</b> Other tips and tricks</a>
 <ul>
-<li class="chapter" data-level="15.1" data-path="text-analysis-in-r.html"><a href="text-analysis-in-r.html#open-source-textbook"><i class="fa fa-check"></i><b>15.1</b> Open source textbook</a></li>
-<li class="chapter" data-level="15.2" data-path="text-analysis-in-r.html"><a href="text-analysis-in-r.html#plagiarism-detection"><i class="fa fa-check"></i><b>15.2</b> Plagiarism detection</a></li>
-<li class="chapter" data-level="15.3" data-path="text-analysis-in-r.html"><a href="text-analysis-in-r.html#results-from-international-methodology-symposium"><i class="fa fa-check"></i><b>15.3</b> results from International Methodology Symposium</a></li>
+<li class="chapter" data-level="10.1" data-path="other-tips-and-tricks.html"><a href="other-tips-and-tricks.html#efficient-programming-in-r"><i class="fa fa-check"></i><b>10.1</b> Efficient programming in R</a></li>
+<li class="chapter" data-level="10.2" data-path="other-tips-and-tricks.html"><a href="other-tips-and-tricks.html#object-oriented-programming-in-r"><i class="fa fa-check"></i><b>10.2</b> Object oriented programming in R</a></li>
+<li class="chapter" data-level="10.3" data-path="other-tips-and-tricks.html"><a href="other-tips-and-tricks.html#debugging-tricks"><i class="fa fa-check"></i><b>10.3</b> Debugging tricks</a></li>
+<li class="chapter" data-level="10.4" data-path="other-tips-and-tricks.html"><a href="other-tips-and-tricks.html#rstudio-tricks"><i class="fa fa-check"></i><b>10.4</b> RStudio tricks</a>
+<ul>
+<li class="chapter" data-level="10.4.1" data-path="other-tips-and-tricks.html"><a href="other-tips-and-tricks.html#coding-online"><i class="fa fa-check"></i><b>10.4.1</b> Coding online</a></li>
+<li class="chapter" data-level="10.4.2" data-path="other-tips-and-tricks.html"><a href="other-tips-and-tricks.html#running-multiple-rstudio-versions"><i class="fa fa-check"></i><b>10.4.2</b> Running multiple RStudio versions</a></li>
 </ul></li>
-<li class="chapter" data-level="16" data-path="machine-learning-and-modeling-in-r.html"><a href="machine-learning-and-modeling-in-r.html"><i class="fa fa-check"></i><b>16</b> Machine Learning and Modeling in R</a>
-<ul>
-<li class="chapter" data-level="16.1" data-path="machine-learning-and-modeling-in-r.html"><a href="machine-learning-and-modeling-in-r.html#resources-4"><i class="fa fa-check"></i><b>16.1</b> Resources</a></li>
-<li class="chapter" data-level="16.2" data-path="machine-learning-and-modeling-in-r.html"><a href="machine-learning-and-modeling-in-r.html#additional-references"><i class="fa fa-check"></i><b>16.2</b> Additional references</a></li>
 </ul></li>
-<li class="chapter" data-level="17" data-path="deep-learning-and-computer-vision.html"><a href="deep-learning-and-computer-vision.html"><i class="fa fa-check"></i><b>17</b> Deep Learning and Computer vision</a></li>
-<li class="chapter" data-level="18" data-path="simulation-and-optimization.html"><a href="simulation-and-optimization.html"><i class="fa fa-check"></i><b>18</b> Simulation and Optimization</a></li>
-<li class="part"><span><b>IV Community Tutorials</b></span></li>
-<li class="chapter" data-level="19" data-path="gccode-101.html"><a href="gccode-101.html"><i class="fa fa-check"></i><b>19</b> GCCode 101</a>
+<li class="part"><span><b>III Visualization and Reporting</b></span></li>
+<li class="chapter" data-level="11" data-path="r-markdown-for-literate-programming-and-automated-reports.html"><a href="r-markdown-for-literate-programming-and-automated-reports.html"><i class="fa fa-check"></i><b>11</b> R Markdown for literate programming and automated reports</a>
 <ul>
-<li class="chapter" data-level="19.1" data-path="gccode-101.html"><a href="gccode-101.html#tldr"><i class="fa fa-check"></i><b>19.1</b> TL;DR</a></li>
-<li class="chapter" data-level="19.2" data-path="gccode-101.html"><a href="gccode-101.html#step-00-connecting-to-gccode-and-installing-required-soft."><i class="fa fa-check"></i><b>19.2</b> Step 00: Connecting to GCCode and installing required soft.</a></li>
-<li class="chapter" data-level="19.3" data-path="gccode-101.html"><a href="gccode-101.html#step-0-configuring-windows-git-and-gitlab-tokens"><i class="fa fa-check"></i><b>19.3</b> Step 0: Configuring Windows, Git and GitLab (tokens)</a></li>
-<li class="chapter" data-level="19.4" data-path="gccode-101.html"><a href="gccode-101.html#step-1-find-or-create-a-gitlab-project-you-want-to-contribute-to."><i class="fa fa-check"></i><b>19.4</b> Step 1: Find (or create) a GitLab project you want to contribute to.</a>
-<ul>
-<li class="chapter" data-level="19.4.1" data-path="gccode-101.html"><a href="gccode-101.html#using-command-line"><i class="fa fa-check"></i><b>19.4.1</b> 1.2 Using Command Line</a></li>
-<li class="chapter" data-level="19.4.2" data-path="gccode-101.html"><a href="gccode-101.html#in-rstudio"><i class="fa fa-check"></i><b>19.4.2</b> 1.2 In RStudio</a></li>
+<li class="chapter" data-level="11.1" data-path="r-markdown-for-literate-programming-and-automated-reports.html"><a href="r-markdown-for-literate-programming-and-automated-reports.html#resources"><i class="fa fa-check"></i><b>11.1</b> Resources</a></li>
+<li class="chapter" data-level="11.2" data-path="r-markdown-for-literate-programming-and-automated-reports.html"><a href="r-markdown-for-literate-programming-and-automated-reports.html#automated-generation-of-multiple-pdf-files"><i class="fa fa-check"></i><b>11.2</b> Automated generation of multiple PDF files</a></li>
 </ul></li>
-<li class="chapter" data-level="19.5" data-path="gccode-101.html"><a href="gccode-101.html#step-2-using-branches-optional"><i class="fa fa-check"></i><b>19.5</b> Step 2: Using Branches (optional)</a></li>
-<li class="chapter" data-level="19.6" data-path="gccode-101.html"><a href="gccode-101.html#step-3-gccoding-from-rstudio"><i class="fa fa-check"></i><b>19.6</b> Step 3: GCcoding from RStudio</a></li>
-<li class="chapter" data-level="19.7" data-path="gccode-101.html"><a href="gccode-101.html#related-gc-discussions-and-links"><i class="fa fa-check"></i><b>19.7</b> Related GC discussions and links:</a></li>
-</ul></li>
-<li class="chapter" data-level="20" data-path="packages-101.html"><a href="packages-101.html"><i class="fa fa-check"></i><b>20</b> Packages 101</a>
+<li class="chapter" data-level="12" data-path="ggplot2-and-its-extensions-for-data-visualization.html"><a href="ggplot2-and-its-extensions-for-data-visualization.html"><i class="fa fa-check"></i><b>12</b> ggplot2 and its extensions for data visualization</a>
 <ul>
-<li class="chapter" data-level="20.1" data-path="packages-101.html"><a href="packages-101.html#resources-5"><i class="fa fa-check"></i><b>20.1</b> Resources</a>
+<li class="chapter" data-level="12.1" data-path="ggplot2-and-its-extensions-for-data-visualization.html"><a href="ggplot2-and-its-extensions-for-data-visualization.html#resources-1"><i class="fa fa-check"></i><b>12.1</b> Resources</a>
 <ul>
-<li class="chapter" data-level="20.1.1" data-path="packages-101.html"><a href="packages-101.html#gc-groups-and-repos"><i class="fa fa-check"></i><b>20.1.1</b> GC groups and repos</a></li>
-<li class="chapter" data-level="20.1.2" data-path="packages-101.html"><a href="packages-101.html#related-tutorials"><i class="fa fa-check"></i><b>20.1.2</b> Related tutorials</a></li>
-<li class="chapter" data-level="20.1.3" data-path="packages-101.html"><a href="packages-101.html#how-to-contribute-1"><i class="fa fa-check"></i><b>20.1.3</b> How to contribute</a></li>
-<li class="chapter" data-level="20.1.4" data-path="packages-101.html"><a href="packages-101.html#r-script-to-start"><i class="fa fa-check"></i><b>20.1.4</b> * R script to start:</a></li>
+<li class="chapter" data-level="12.1.1" data-path="ggplot2-and-its-extensions-for-data-visualization.html"><a href="ggplot2-and-its-extensions-for-data-visualization.html#plotly-r-shiny"><i class="fa fa-check"></i><b>12.1.1</b> Plotly + R Shiny</a></li>
 </ul></li>
-<li class="chapter" data-level="20.2" data-path="packages-101.html"><a href="packages-101.html#setup"><i class="fa fa-check"></i><b>20.2</b> * Setup</a></li>
-<li class="chapter" data-level="20.3" data-path="packages-101.html"><a href="packages-101.html#overall-workflow"><i class="fa fa-check"></i><b>20.3</b> * Overall Workflow</a>
+</ul></li>
+<li class="chapter" data-level="13" data-path="shiny-for-interactive-data-visualization-analysis-and-web-app-development.html"><a href="shiny-for-interactive-data-visualization-analysis-and-web-app-development.html"><i class="fa fa-check"></i><b>13</b> Shiny for Interactive Data Visualization, Analysis and Web App development</a>
 <ul>
-<li class="chapter" data-level="20.3.1" data-path="packages-101.html"><a href="packages-101.html#section"><i class="fa fa-check"></i><b>20.3.1</b> </a></li>
+<li class="chapter" data-level="13.1" data-path="shiny-for-interactive-data-visualization-analysis-and-web-app-development.html"><a href="shiny-for-interactive-data-visualization-analysis-and-web-app-development.html#resources-2"><i class="fa fa-check"></i><b>13.1</b> Resources</a></li>
 </ul></li>
-<li class="chapter" data-level="20.4" data-path="packages-101.html"><a href="packages-101.html#rbuildignore"><i class="fa fa-check"></i><b>20.4</b> * .Rbuildignore</a></li>
-<li class="chapter" data-level="20.5" data-path="packages-101.html"><a href="packages-101.html#license-use_mit_license"><i class="fa fa-check"></i><b>20.5</b> * License: <code>use_mit_license()</code></a></li>
-<li class="chapter" data-level="20.6" data-path="packages-101.html"><a href="packages-101.html#description"><i class="fa fa-check"></i><b>20.6</b> * DESCRIPTION</a></li>
-<li class="chapter" data-level="20.7" data-path="packages-101.html"><a href="packages-101.html#namespace"><i class="fa fa-check"></i><b>20.7</b> * NAMESPACE</a></li>
-<li class="chapter" data-level="20.8" data-path="packages-101.html"><a href="packages-101.html#examples-and-tests"><i class="fa fa-check"></i><b>20.8</b> * Examples and tests</a></li>
-<li class="chapter" data-level="20.9" data-path="packages-101.html"><a href="packages-101.html#in-my_codes"><i class="fa fa-check"></i><b>20.9</b> .. in MY_CODES</a></li>
-<li class="chapter" data-level="20.10" data-path="packages-101.html"><a href="packages-101.html#testthat"><i class="fa fa-check"></i><b>20.10</b> * testthat</a></li>
-<li class="chapter" data-level="20.11" data-path="packages-101.html"><a href="packages-101.html#documentation"><i class="fa fa-check"></i><b>20.11</b> * Documentation</a></li>
-<li class="chapter" data-level="20.12" data-path="packages-101.html"><a href="packages-101.html#vignettes"><i class="fa fa-check"></i><b>20.12</b> * Vignettes</a></li>
-<li class="chapter" data-level="20.13" data-path="packages-101.html"><a href="packages-101.html#delivering-package"><i class="fa fa-check"></i><b>20.13</b> Delivering package</a></li>
-<li class="chapter" data-level="20.14" data-path="packages-101.html"><a href="packages-101.html#packaging-and-publishing-w.-pkgdown"><i class="fa fa-check"></i><b>20.14</b> Packaging and publishing w. <code>pkgdown</code></a></li>
-<li class="chapter" data-level="20.15" data-path="packages-101.html"><a href="packages-101.html#optional-rtools"><i class="fa fa-check"></i><b>20.15</b> (optional) Rtools</a></li>
-</ul></li>
-<li class="chapter" data-level="21" data-path="r101-building-covid-19-tracker-app-from-scratch.html"><a href="r101-building-covid-19-tracker-app-from-scratch.html"><i class="fa fa-check"></i><b>21</b> R101: Building COVID-19 Tracker App from scratch</a></li>
-<li class="chapter" data-level="22" data-path="short-tutorials.html"><a href="short-tutorials.html"><i class="fa fa-check"></i><b>22</b> Short tutorials</a>
+<li class="chapter" data-level="14" data-path="interactive-outputs-in-r-plotly-datatable-reactable.html"><a href="interactive-outputs-in-r-plotly-datatable-reactable.html"><i class="fa fa-check"></i><b>14</b> Interactive Outputs in R: plotly, Datatable, reactable</a>
 <ul>
-<li class="chapter" data-level="22.1" data-path="short-tutorials.html"><a href="short-tutorials.html#geospatial-coding-and-visualization-with-r.-part-1"><i class="fa fa-check"></i><b>22.1</b> Geo/Spatial coding and visualization with R. Part 1:</a></li>
-<li class="chapter" data-level="22.2" data-path="short-tutorials.html"><a href="short-tutorials.html#text-analysis-with-r.-part-1"><i class="fa fa-check"></i><b>22.2</b> Text Analysis with R. Part 1:</a></li>
-<li class="chapter" data-level="22.3" data-path="short-tutorials.html"><a href="short-tutorials.html#dual-coding---python-and-r-unite"><i class="fa fa-check"></i><b>22.3</b> Dual Coding - Python and R unite !</a></li>
-<li class="chapter" data-level="22.4" data-path="short-tutorials.html"><a href="short-tutorials.html#working-with-ggtables"><i class="fa fa-check"></i><b>22.4</b> Working with ggtables</a></li>
-<li class="chapter" data-level="22.5" data-path="short-tutorials.html"><a href="short-tutorials.html#automate-common-look-and-feel-of-your-ggplot-graphs"><i class="fa fa-check"></i><b>22.5</b> Automate common look and feel of your ggplot graphs</a></li>
-<li class="chapter" data-level="22.6" data-path="short-tutorials.html"><a href="short-tutorials.html#automated-generation-of-report-cards"><i class="fa fa-check"></i><b>22.6</b> Automated generation of report cards</a></li>
+<li class="chapter" data-level="14.1" data-path="interactive-outputs-in-r-plotly-datatable-reactable.html"><a href="interactive-outputs-in-r-plotly-datatable-reactable.html#reactable"><i class="fa fa-check"></i><b>14.1</b> <code>reactable</code></a></li>
 </ul></li>
-<li class="part"><span><b>V Community Development</b></span></li>
-<li class="chapter" data-level="23" data-path="shiny-apps.html"><a href="shiny-apps.html"><i class="fa fa-check"></i><b>23</b> Shiny Apps</a>
+<li class="chapter" data-level="15" data-path="geospatial-coding-and-visualization-in-r.html"><a href="geospatial-coding-and-visualization-in-r.html"><i class="fa fa-check"></i><b>15</b> Geo/Spatial coding and visualization in R</a>
 <ul>
-<li class="chapter" data-level="23.1" data-path="shiny-apps.html"><a href="shiny-apps.html#pses-results-interactive-analysis-and-visualization"><i class="fa fa-check"></i><b>23.1</b> PSES Results interactive analysis and visualization:</a>
-<ul>
-<li class="chapter" data-level="23.1.1" data-path="shiny-apps.html"><a href="shiny-apps.html#other-tools-and-dashboards"><i class="fa fa-check"></i><b>23.1.1</b> Other tools and dashboards</a></li>
+<li class="chapter" data-level="15.1" data-path="geospatial-coding-and-visualization-in-r.html"><a href="geospatial-coding-and-visualization-in-r.html#resources-3"><i class="fa fa-check"></i><b>15.1</b> Resources</a></li>
+<li class="chapter" data-level="15.2" data-path="geospatial-coding-and-visualization-in-r.html"><a href="geospatial-coding-and-visualization-in-r.html#federal-geospatial-platform"><i class="fa fa-check"></i><b>15.2</b> Federal Geospatial Platform</a></li>
+<li class="chapter" data-level="15.3" data-path="geospatial-coding-and-visualization-in-r.html"><a href="geospatial-coding-and-visualization-in-r.html#tutorials"><i class="fa fa-check"></i><b>15.3</b> Tutorials</a></li>
+<li class="chapter" data-level="15.4" data-path="geospatial-coding-and-visualization-in-r.html"><a href="geospatial-coding-and-visualization-in-r.html#dealing-with-memory-issues"><i class="fa fa-check"></i><b>15.4</b> Dealing with memory issues</a></li>
+<li class="chapter" data-level="15.5" data-path="geospatial-coding-and-visualization-in-r.html"><a href="geospatial-coding-and-visualization-in-r.html#canadian-geo-data"><i class="fa fa-check"></i><b>15.5</b> Canadian geo-data</a></li>
 </ul></li>
-<li class="chapter" data-level="23.2" data-path="shiny-apps.html"><a href="shiny-apps.html#automated-atip-requests-topic-extraction"><i class="fa fa-check"></i><b>23.2</b> Automated ATIP requests topic extraction:</a></li>
-<li class="chapter" data-level="23.3" data-path="shiny-apps.html"><a href="shiny-apps.html#automated-municipal-level-covid-19-tracker"><i class="fa fa-check"></i><b>23.3</b> Automated municipal level COVID-19 tracker:</a></li>
-<li class="chapter" data-level="23.4" data-path="shiny-apps.html"><a href="shiny-apps.html#geo-mapped-current-historical-and-predicted-border-wait-times"><i class="fa fa-check"></i><b>23.4</b> Geo-mapped current, historical and predicted border wait times:</a></li>
-<li class="chapter" data-level="23.5" data-path="shiny-apps.html"><a href="shiny-apps.html#demo-and-tool-for-linking-noisy-data-records"><i class="fa fa-check"></i><b>23.5</b> Demo and tool for linking noisy data records:</a></li>
-<li class="chapter" data-level="23.6" data-path="shiny-apps.html"><a href="shiny-apps.html#html-pages-comparator"><i class="fa fa-check"></i><b>23.6</b> Html pages comparator:</a></li>
-<li class="chapter" data-level="23.7" data-path="shiny-apps.html"><a href="shiny-apps.html#large-table-summarizer"><i class="fa fa-check"></i><b>23.7</b> Large table summarizer:</a></li>
+<li class="chapter" data-level="16" data-path="using-r-with-gc-data-infastructure-gcdocs-aws-etc.html"><a href="using-r-with-gc-data-infastructure-gcdocs-aws-etc.html"><i class="fa fa-check"></i><b>16</b> Using R with GC data infastructure (gcdocs, AWS, etc)</a>
+<ul>
+<li class="chapter" data-level="16.1" data-path="using-r-with-gc-data-infastructure-gcdocs-aws-etc.html"><a href="using-r-with-gc-data-infastructure-gcdocs-aws-etc.html#gcdocs"><i class="fa fa-check"></i><b>16.1</b> gcdocs</a></li>
+</ul></li>
+<li class="part"><span><b>IV Machine Learning and AI</b></span></li>
+<li class="chapter" data-level="17" data-path="record-linking-and-other-data-engineering-tasks-in-r.html"><a href="record-linking-and-other-data-engineering-tasks-in-r.html"><i class="fa fa-check"></i><b>17</b> Record Linking and other Data Engineering tasks in R</a>
+<ul>
+<li class="chapter" data-level="17.1" data-path="record-linking-and-other-data-engineering-tasks-in-r.html"><a href="record-linking-and-other-data-engineering-tasks-in-r.html#demo"><i class="fa fa-check"></i><b>17.1</b> demo</a></li>
+</ul></li>
+<li class="chapter" data-level="18" data-path="statistical-tests-and-mixed-effects-analysis.html"><a href="statistical-tests-and-mixed-effects-analysis.html"><i class="fa fa-check"></i><b>18</b> Statistical tests and mixed-effects analysis</a></li>
+<li class="chapter" data-level="19" data-path="text-analysis-in-r.html"><a href="text-analysis-in-r.html"><i class="fa fa-check"></i><b>19</b> Text Analysis in R</a>
+<ul>
+<li class="chapter" data-level="19.1" data-path="text-analysis-in-r.html"><a href="text-analysis-in-r.html#open-source-textbook"><i class="fa fa-check"></i><b>19.1</b> Open source textbook</a></li>
+<li class="chapter" data-level="19.2" data-path="text-analysis-in-r.html"><a href="text-analysis-in-r.html#plagiarism-detection"><i class="fa fa-check"></i><b>19.2</b> Plagiarism detection</a></li>
+<li class="chapter" data-level="19.3" data-path="text-analysis-in-r.html"><a href="text-analysis-in-r.html#results-from-international-methodology-symposium"><i class="fa fa-check"></i><b>19.3</b> results from International Methodology Symposium</a></li>
+</ul></li>
+<li class="chapter" data-level="20" data-path="machine-learning-and-modeling-in-r.html"><a href="machine-learning-and-modeling-in-r.html"><i class="fa fa-check"></i><b>20</b> Machine Learning and Modeling in R</a>
+<ul>
+<li class="chapter" data-level="20.1" data-path="machine-learning-and-modeling-in-r.html"><a href="machine-learning-and-modeling-in-r.html#resources-4"><i class="fa fa-check"></i><b>20.1</b> Resources</a></li>
+<li class="chapter" data-level="20.2" data-path="machine-learning-and-modeling-in-r.html"><a href="machine-learning-and-modeling-in-r.html#additional-references"><i class="fa fa-check"></i><b>20.2</b> Additional references</a></li>
+</ul></li>
+<li class="chapter" data-level="21" data-path="deep-learning-and-computer-vision.html"><a href="deep-learning-and-computer-vision.html"><i class="fa fa-check"></i><b>21</b> Deep Learning and Computer vision</a></li>
+<li class="chapter" data-level="22" data-path="simulation-and-optimization.html"><a href="simulation-and-optimization.html"><i class="fa fa-check"></i><b>22</b> Simulation and Optimization</a></li>
+<li class="part"><span><b>V Community Tutorials</b></span></li>
+<li class="chapter" data-level="23" data-path="gccode-101.html"><a href="gccode-101.html"><i class="fa fa-check"></i><b>23</b> GCCode 101</a>
+<ul>
+<li class="chapter" data-level="23.1" data-path="gccode-101.html"><a href="gccode-101.html#tldr"><i class="fa fa-check"></i><b>23.1</b> TL;DR</a></li>
+<li class="chapter" data-level="23.2" data-path="gccode-101.html"><a href="gccode-101.html#step-00-connecting-to-gccode-and-installing-required-soft."><i class="fa fa-check"></i><b>23.2</b> Step 00: Connecting to GCCode and installing required soft.</a></li>
+<li class="chapter" data-level="23.3" data-path="gccode-101.html"><a href="gccode-101.html#step-0-configuring-windows-git-and-gitlab-tokens"><i class="fa fa-check"></i><b>23.3</b> Step 0: Configuring Windows, Git and GitLab (tokens)</a></li>
+<li class="chapter" data-level="23.4" data-path="gccode-101.html"><a href="gccode-101.html#step-1-find-or-create-a-gitlab-project-you-want-to-contribute-to."><i class="fa fa-check"></i><b>23.4</b> Step 1: Find (or create) a GitLab project you want to contribute to.</a>
+<ul>
+<li class="chapter" data-level="23.4.1" data-path="gccode-101.html"><a href="gccode-101.html#using-command-line"><i class="fa fa-check"></i><b>23.4.1</b> 1.2 Using Command Line</a></li>
+<li class="chapter" data-level="23.4.2" data-path="gccode-101.html"><a href="gccode-101.html#in-rstudio"><i class="fa fa-check"></i><b>23.4.2</b> 1.2 In RStudio</a></li>
+</ul></li>
+<li class="chapter" data-level="23.5" data-path="gccode-101.html"><a href="gccode-101.html#step-2-using-branches-optional"><i class="fa fa-check"></i><b>23.5</b> Step 2: Using Branches (optional)</a></li>
+<li class="chapter" data-level="23.6" data-path="gccode-101.html"><a href="gccode-101.html#step-3-gccoding-from-rstudio"><i class="fa fa-check"></i><b>23.6</b> Step 3: GCcoding from RStudio</a></li>
+<li class="chapter" data-level="23.7" data-path="gccode-101.html"><a href="gccode-101.html#related-gc-discussions-and-links"><i class="fa fa-check"></i><b>23.7</b> Related GC discussions and links:</a></li>
+</ul></li>
+<li class="chapter" data-level="24" data-path="packages-101.html"><a href="packages-101.html"><i class="fa fa-check"></i><b>24</b> Packages 101</a>
+<ul>
+<li class="chapter" data-level="24.1" data-path="packages-101.html"><a href="packages-101.html#resources-5"><i class="fa fa-check"></i><b>24.1</b> Resources</a>
+<ul>
+<li class="chapter" data-level="24.1.1" data-path="packages-101.html"><a href="packages-101.html#gc-groups-and-repos"><i class="fa fa-check"></i><b>24.1.1</b> GC groups and repos</a></li>
+<li class="chapter" data-level="24.1.2" data-path="packages-101.html"><a href="packages-101.html#related-tutorials"><i class="fa fa-check"></i><b>24.1.2</b> Related tutorials</a></li>
+<li class="chapter" data-level="24.1.3" data-path="packages-101.html"><a href="packages-101.html#how-to-contribute-1"><i class="fa fa-check"></i><b>24.1.3</b> How to contribute</a></li>
+<li class="chapter" data-level="24.1.4" data-path="packages-101.html"><a href="packages-101.html#r-script-to-start"><i class="fa fa-check"></i><b>24.1.4</b> * R script to start:</a></li>
+</ul></li>
+<li class="chapter" data-level="24.2" data-path="packages-101.html"><a href="packages-101.html#setup"><i class="fa fa-check"></i><b>24.2</b> * Setup</a></li>
+<li class="chapter" data-level="24.3" data-path="packages-101.html"><a href="packages-101.html#overall-workflow"><i class="fa fa-check"></i><b>24.3</b> * Overall Workflow</a>
+<ul>
+<li class="chapter" data-level="24.3.1" data-path="packages-101.html"><a href="packages-101.html#section"><i class="fa fa-check"></i><b>24.3.1</b> </a></li>
+</ul></li>
+<li class="chapter" data-level="24.4" data-path="packages-101.html"><a href="packages-101.html#rbuildignore"><i class="fa fa-check"></i><b>24.4</b> * .Rbuildignore</a></li>
+<li class="chapter" data-level="24.5" data-path="packages-101.html"><a href="packages-101.html#license-use_mit_license"><i class="fa fa-check"></i><b>24.5</b> * License: <code>use_mit_license()</code></a></li>
+<li class="chapter" data-level="24.6" data-path="packages-101.html"><a href="packages-101.html#description"><i class="fa fa-check"></i><b>24.6</b> * DESCRIPTION</a></li>
+<li class="chapter" data-level="24.7" data-path="packages-101.html"><a href="packages-101.html#namespace"><i class="fa fa-check"></i><b>24.7</b> * NAMESPACE</a></li>
+<li class="chapter" data-level="24.8" data-path="packages-101.html"><a href="packages-101.html#examples-and-tests"><i class="fa fa-check"></i><b>24.8</b> * Examples and tests</a></li>
+<li class="chapter" data-level="24.9" data-path="packages-101.html"><a href="packages-101.html#in-my_codes"><i class="fa fa-check"></i><b>24.9</b> .. in MY_CODES</a></li>
+<li class="chapter" data-level="24.10" data-path="packages-101.html"><a href="packages-101.html#testthat"><i class="fa fa-check"></i><b>24.10</b> * testthat</a></li>
+<li class="chapter" data-level="24.11" data-path="packages-101.html"><a href="packages-101.html#documentation"><i class="fa fa-check"></i><b>24.11</b> * Documentation</a></li>
+<li class="chapter" data-level="24.12" data-path="packages-101.html"><a href="packages-101.html#vignettes"><i class="fa fa-check"></i><b>24.12</b> * Vignettes</a></li>
+<li class="chapter" data-level="24.13" data-path="packages-101.html"><a href="packages-101.html#delivering-package"><i class="fa fa-check"></i><b>24.13</b> Delivering package</a></li>
+<li class="chapter" data-level="24.14" data-path="packages-101.html"><a href="packages-101.html#packaging-and-publishing-w.-pkgdown"><i class="fa fa-check"></i><b>24.14</b> Packaging and publishing w. <code>pkgdown</code></a></li>
+<li class="chapter" data-level="24.15" data-path="packages-101.html"><a href="packages-101.html#optional-rtools"><i class="fa fa-check"></i><b>24.15</b> (optional) Rtools</a></li>
+</ul></li>
+<li class="chapter" data-level="25" data-path="r101-building-covid-19-tracker-app-from-scratch.html"><a href="r101-building-covid-19-tracker-app-from-scratch.html"><i class="fa fa-check"></i><b>25</b> R101: Building COVID-19 Tracker App from scratch</a></li>
+<li class="chapter" data-level="26" data-path="short-tutorials.html"><a href="short-tutorials.html"><i class="fa fa-check"></i><b>26</b> Short tutorials</a>
+<ul>
+<li class="chapter" data-level="26.1" data-path="short-tutorials.html"><a href="short-tutorials.html#geospatial-coding-and-visualization-with-r.-part-1"><i class="fa fa-check"></i><b>26.1</b> Geo/Spatial coding and visualization with R. Part 1:</a></li>
+<li class="chapter" data-level="26.2" data-path="short-tutorials.html"><a href="short-tutorials.html#text-analysis-with-r.-part-1"><i class="fa fa-check"></i><b>26.2</b> Text Analysis with R. Part 1:</a></li>
+<li class="chapter" data-level="26.3" data-path="short-tutorials.html"><a href="short-tutorials.html#dual-coding---python-and-r-unite"><i class="fa fa-check"></i><b>26.3</b> Dual Coding - Python and R unite !</a></li>
+<li class="chapter" data-level="26.4" data-path="short-tutorials.html"><a href="short-tutorials.html#working-with-ggtables"><i class="fa fa-check"></i><b>26.4</b> Working with ggtables</a></li>
+<li class="chapter" data-level="26.5" data-path="short-tutorials.html"><a href="short-tutorials.html#automate-common-look-and-feel-of-your-ggplot-graphs"><i class="fa fa-check"></i><b>26.5</b> Automate common look and feel of your ggplot graphs</a></li>
+<li class="chapter" data-level="26.6" data-path="short-tutorials.html"><a href="short-tutorials.html#automated-generation-of-report-cards"><i class="fa fa-check"></i><b>26.6</b> Automated generation of report cards</a></li>
+</ul></li>
+<li class="part"><span><b>VI Community Development</b></span></li>
+<li class="chapter" data-level="27" data-path="shiny-apps.html"><a href="shiny-apps.html"><i class="fa fa-check"></i><b>27</b> Shiny Apps</a>
+<ul>
+<li class="chapter" data-level="27.1" data-path="shiny-apps.html"><a href="shiny-apps.html#pses-results-interactive-analysis-and-visualization"><i class="fa fa-check"></i><b>27.1</b> PSES Results interactive analysis and visualization:</a>
+<ul>
+<li class="chapter" data-level="27.1.1" data-path="shiny-apps.html"><a href="shiny-apps.html#other-tools-and-dashboards"><i class="fa fa-check"></i><b>27.1.1</b> Other tools and dashboards</a></li>
+</ul></li>
+<li class="chapter" data-level="27.2" data-path="shiny-apps.html"><a href="shiny-apps.html#automated-atip-requests-topic-extraction"><i class="fa fa-check"></i><b>27.2</b> Automated ATIP requests topic extraction:</a></li>
+<li class="chapter" data-level="27.3" data-path="shiny-apps.html"><a href="shiny-apps.html#automated-municipal-level-covid-19-tracker"><i class="fa fa-check"></i><b>27.3</b> Automated municipal level COVID-19 tracker:</a></li>
+<li class="chapter" data-level="27.4" data-path="shiny-apps.html"><a href="shiny-apps.html#geo-mapped-current-historical-and-predicted-border-wait-times"><i class="fa fa-check"></i><b>27.4</b> Geo-mapped current, historical and predicted border wait times:</a></li>
+<li class="chapter" data-level="27.5" data-path="shiny-apps.html"><a href="shiny-apps.html#demo-and-tool-for-linking-noisy-data-records"><i class="fa fa-check"></i><b>27.5</b> Demo and tool for linking noisy data records:</a></li>
+<li class="chapter" data-level="27.6" data-path="shiny-apps.html"><a href="shiny-apps.html#html-pages-comparator"><i class="fa fa-check"></i><b>27.6</b> Html pages comparator:</a></li>
+<li class="chapter" data-level="27.7" data-path="shiny-apps.html"><a href="shiny-apps.html#large-table-summarizer"><i class="fa fa-check"></i><b>27.7</b> Large table summarizer:</a></li>
 </ul></li>
 <li class="appendix"><span><b>Appendices</b></span></li>
 <li class="chapter" data-level="A" data-path="lunch-and-learn-notes.html"><a href="lunch-and-learn-notes.html"><i class="fa fa-check"></i><b>A</b> Lunch and Learn notes</a>
@@ -376,30 +422,30 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="short-tutorials" class="section level1" number="22">
-<h1><span class="header-section-number">22</span> Short tutorials</h1>
-<div id="geospatial-coding-and-visualization-with-r.-part-1" class="section level2" number="22.1">
-<h2><span class="header-section-number">22.1</span> Geo/Spatial coding and visualization with R. Part 1:</h2>
+<div id="short-tutorials" class="section level1" number="26">
+<h1><span class="header-section-number">26</span> Short tutorials</h1>
+<div id="geospatial-coding-and-visualization-with-r.-part-1" class="section level2" number="26.1">
+<h2><span class="header-section-number">26.1</span> Geo/Spatial coding and visualization with R. Part 1:</h2>
 <p>Contributed by:</p>
 </div>
-<div id="text-analysis-with-r.-part-1" class="section level2" number="22.2">
-<h2><span class="header-section-number">22.2</span> Text Analysis with R. Part 1:</h2>
+<div id="text-analysis-with-r.-part-1" class="section level2" number="26.2">
+<h2><span class="header-section-number">26.2</span> Text Analysis with R. Part 1:</h2>
 <p>Contributed by:</p>
 </div>
-<div id="dual-coding---python-and-r-unite" class="section level2" number="22.3">
-<h2><span class="header-section-number">22.3</span> Dual Coding - Python and R unite !</h2>
+<div id="dual-coding---python-and-r-unite" class="section level2" number="26.3">
+<h2><span class="header-section-number">26.3</span> Dual Coding - Python and R unite !</h2>
 <p>Contributed by:</p>
 </div>
-<div id="working-with-ggtables" class="section level2" number="22.4">
-<h2><span class="header-section-number">22.4</span> Working with ggtables</h2>
+<div id="working-with-ggtables" class="section level2" number="26.4">
+<h2><span class="header-section-number">26.4</span> Working with ggtables</h2>
 <p>Contributed by:</p>
 </div>
-<div id="automate-common-look-and-feel-of-your-ggplot-graphs" class="section level2" number="22.5">
-<h2><span class="header-section-number">22.5</span> Automate common look and feel of your ggplot graphs</h2>
+<div id="automate-common-look-and-feel-of-your-ggplot-graphs" class="section level2" number="26.5">
+<h2><span class="header-section-number">26.5</span> Automate common look and feel of your ggplot graphs</h2>
 <p>Contributed by:</p>
 </div>
-<div id="automated-generation-of-report-cards" class="section level2" number="22.6">
-<h2><span class="header-section-number">22.6</span> Automated generation of report cards</h2>
+<div id="automated-generation-of-report-cards" class="section level2" number="26.6">
+<h2><span class="header-section-number">26.6</span> Automated generation of report cards</h2>
 <p>Contributed by:</p>
 </div>
 </div>

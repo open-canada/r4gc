@@ -1,6 +1,95 @@
 Events and forums for R users
 =============================
 
+
+From RStudio 
+-------------------------
+
+### https://resources.rstudio.com.
+
+Webinars
+
+
+
+### RStudio Community Meetup
+
+Another great meetup opportunity:
+
+<https://www.meetup.com/RStudio-Enterprise-Community-Meetup>
+
+NB: you may be able to access it from GC network.
+
+Each meetup is dedicated to a specific topic, following which they post many Q&A at <https://community.rstudio.com/>
+
+R blogs
+-------
+
+- https://rpubs.com
+
+
+R conferences
+-------------
+
+(from <https://rviews.rstudio.com/2021/03/03/2021-r-conferences>)
+
+-   Cascadia RConf 2021 (June 4 - 5), a jewel of a regional R conference for its first three years, was canceled in 2020. It is back this year as a virtual event. The Call for Presentations is open.
+
+-   useR! 2021 (July 5 - 9) has an outstanding lineup of keynote speakers. The program is very likely to make US based attendees night-owls
+
+-   EARL Conference 2021 (September 6 - 10), the premier R in industry event, will be online this year. The call for abstracts is already open.
+
+Related journals:
+----------------
+
+This is where you can submit or present your data science work.
+
+-   <https://peerj.com/articles/?q=data>
+
+-   <https://earlconf.com/#about>: The Enterprise Applications of the R Language Conference (EARL)
+
+-   <https://odsc.com/boston/>: Data Science Conference & Expo
+
+-   <https://journals.plos.org/plosone/search?filterJournals=PLoSONE&q=data+science> (research by the US Department of Homeland Security is published there)
+
+See also (from <http://charteredabs.org/academic-journal-guide-2015-view/> (Rank 4-3))
+
+-   Management Science
+
+-   IEEE Transactions on Systems, Man, and Cybernetics: Systems (formerly "IEEE Transactions on Systems, Man and Cybernetics - Part A: Systems and Humans")
+
+-   Annals of Operations Research
+
+-   IEEE Transactions on Cybernetics (formerly "IEEE Transactions on Systems Man and Cybernetics Part C (Applications and Reviews)")
+
+-   INFORMS Journal on Computing OR Spectrum
+
+-   Transportation Science
+
+Computational Statistics & Data Analysis
+
+### Academic Journals:
+
+-   Operations Research (Informs): <https://pubsonline.informs.org/journal/opre> <https://www.scirp.org/journal/jdaip/> - Journal of Data Analysis and Information Processing
+
+RElated conferences
+-----------
+
+### Non-academic
+
+### Academic Conferences:
+
+-   Canadian AI Conference - <https://www.caiac.ca/en/conferences>
+
+- Otheer AI conferences
+
+### IEEE Conferences
+
+-   IEEE BigData
+-   IEEE International Conference on Technologies for Homeland Security HST
+
+
+
+
 Related communities in GC
 -------------------------
 
@@ -48,92 +137,8 @@ More GCcollab groups are listed at <https://wiki.gccollab.ca/The_Square/GCcollab
 -   <https://github.com/canada-ca>
 -   <https://github.com/PatLittle>
 
-### Other related groups in Canada
+### Other Canada groups
 
 -   <https://code.open.canada.ca/en/open-source-softwares.html>
 
 <!-- # Open R codes for GC: on GCcode and GitHub -->
-
-From RStudio 
--------------------------
-
-### https://resources.rstudio.com.
-
-Webinars
-
-
-
-### RStudio Community Meetup
-
-Another great meetup opportunity:
-
-<https://www.meetup.com/RStudio-Enterprise-Community-Meetup>
-
-NB: you may be able to access it from GC network
-
-Each meetup is dedicated to a specific topic, following which they post many Q&A at <https://community.rstudio.com/>
-
-R blogs
--------
-
-rpubs.com
-
-R conferences
--------------
-
-(from <https://rviews.rstudio.com/2021/03/03/2021-r-conferences>)
-
--   Cascadia RConf 2021 (June 4 - 5), a jewel of a regional R conference for its first three years, was canceled in 2020. It is back this year as a virtual event. The Call for Presentations is open.
-
--   useR! 2021 (July 5 - 9) has an outstanding lineup of keynote speakers. The program is very likely to make US based attendees night-owls
-
--   EARL Conference 2021 (September 6 - 10), the premier R in industry event, will be online this year. The call for abstracts is already open.
-
-Related jounals:
-----------------
-
-This is where you can submit or present your data science work.
-
--   <https://peerj.com/articles/?q=data>
-
--   <https://earlconf.com/#about>: The Enterprise Applications of the R Language Conference (EARL)
-
--   <https://odsc.com/boston/>: Data Science Conference & Expo
-
--   <https://journals.plos.org/plosone/search?filterJournals=PLoSONE&q=data+science> (research by the US Department of Homeland Security is published there)
-
-See also (from <http://charteredabs.org/academic-journal-guide-2015-view/> (Rank 4-3))
-
--   Management Science
-
--   IEEE Transactions on Systems, Man, and Cybernetics: Systems (formerly "IEEE Transactions on Systems, Man and Cybernetics - Part A: Systems and Humans")
-
--   Annals of Operations Research
-
--   IEEE Transactions on Cybernetics (formerly "IEEE Transactions on Systems Man and Cybernetics Part C (Applications and Reviews)")
-
--   INFORMS Journal on Computing OR Spectrum
-
--   Transportation Science
-
-Computational Statistics & Data Analysis
-
-### Academic Journals:
-
--   Operations Research (Informs): <https://pubsonline.informs.org/journal/opre> <https://www.scirp.org/journal/jdaip/> - Journal of Data Analysis and Information Processing
-
-Conferences
------------
-
-### Non-academic
-
-### Academic Conferences:
-
--   Canadian AI Conference - <https://www.caiac.ca/en/conferences>
-
-- Otheer AI conferences
-
-### IEEE Conferences:
-
--   IEEE BigData
--   IEEE International Conference on Technologies for Homeland Security HST

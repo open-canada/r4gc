@@ -226,37 +226,13 @@ Finally, *Appendix* includes agendas for the R4GC community "Lunch and Learn" me
 
 
 ```{r 11_r_general, child = '11_r_general.Rmd'}
-<<<<<<< HEAD
 ```
-
-
-
-<!-- ## "Great bookdown books" -->
-
-
-<!-- # Other resources -->
 
 
 ```{r 11_Great_bookdown_books.Rmd, child = '11_Great_bookdown_books.Rmd'}
 ```
 
 
-=======
-```
-
-
-
-<!-- ## "Great bookdown books" -->
-
-
-<!-- # Other resources -->
-
-
-```{r 11_Great_bookdown_books.Rmd, child = '11_Great_bookdown_books.Rmd'}
-```
-
-
->>>>>>> f0f4070e6e449a9b83883c8ff37364db503de16c
 ```{r 11_r_forums.Rmd, child = '11_r_forums.Rmd'}
 ```
 

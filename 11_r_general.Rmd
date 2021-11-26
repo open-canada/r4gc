@@ -18,10 +18,16 @@ It also comes with RStudio - a free Integrated Development Environment (IDE)  th
 
  
 
-## 10 main reasons to use R for Data Science 
+## Top 10  R advantages for Data Science 
 
- 
-There was much discussion around this topic, and below are our own top 10 reasons to use R for Data Science - filtered and refined  by the members of this community. 
+A quick review of the presentations made at the 2021 International Methodology Symposium showed that about one third of projects presented at the symposium were done using R and RStudio. If counting the percentage of projects dealing with data visualization, including geo/spatial mapping, then this number becomes close to two thirds of all presented projects. Clearly, even though Python remains the most frequently used language for machine learning and complex data analysis tasks, R has become de-facto the language of choice in many government departments when it comes to developing interactive reports, web applications and complex visualizations, thanks to such its popular packages as “rmarkdown”, “ggplot” and “shiny”.
+
+Other advantages of R highlighted at the Symposium include: common tidy data approach shared across all R packages; peer-reviewing and curation of packages by CRAN (Comprehensive R Archive Network), which is facilitated through the “devtool” R package that is specifically designed for this purpose; and RStudio-led movement for R education and deployment. All of these are in contrast to the ‘wild-west’ development of Python packages (which is a popular expression even among Python users), and are very important for enabling collaborative development of data science codes and knowledgebase. 
+
+To summarize, 
+<!-- Table 1 presents the Top 10, most quoted by the R4GC community,  reasons to use R for data science. -->
+<!-- There was much discussion around this topic, and  -->
+below are our own Top 10 reasons to use R for Data Science - filtered and refined  by the members of this community. 
 
  
 
@@ -58,6 +64,13 @@ There was much discussion around this topic, and below are our own top 10 reason
 <!-- Self-learning tools and free text books on all R subjects: from https://education.rstudio.com/ and https://bookdown.org/ -->
 <!-- Professional publication suit that incorporates LaTeX and HTML, -->
 <!-- Easy web-publishing of data reports and deployment of web-applications -->
+
+
+## Tackling the limitations of R
+
+The main deficiency of R (in particular, when compared to Python) is that many R functions and packages are not developed to be memory- or processing time- efficient, and "by default", i.e., unless special care is taken in developing the code, most codes written in R are very slow and consume prohibitively large amount of memory, making it often impossible to run data processing codes on ordinarily laptops (with not more than 16 GB of RAM) such as those used by majority of GC employees. This is because all variables in R, including data array and data frame variables (which are naturally very large) are passed to a function by copying the entire variable content from one memory location to another , and then copying it back after the function completes its operation. In other programming languages, such as Python, C++, or Java, such operations normally are not done by passing the entire object to a function, but rather by pasing only a pointer to (or memory address of) an object that needs to be processed by the function, which is much faster and does not consume a lot of memory. This deficiency however can be practically entirely eliminated, should the R code be developed using the "efficiency-by-design" methodology that is offered by the 'data.table' R package. This is why much emphasis in the R4GC community discussions is put on encouraging the community members to use 'data.table'  class by default (or always) instead of base 'data.frame' class. 
+
+Another deficiency of R is that object-oriented programming (OOP) is not native in R. There are a number of ways to implement an object in R - using S3, S4 and R6 classes, however each of them has its own limitations. This deficiency however is not critical, because fast and memory-efficient codes can still be developed with and without OOP, and, if needed, a portion of the OOP code can be also built in Python (or C++) and then used from within R using 'Rcpp' and 'reticulate' packages. 
 
 
 ## R vs. Python 

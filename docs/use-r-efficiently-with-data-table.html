@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>B Canada-related Open source R codes and packages | The R4GC Book</title>
+  <title>6 Use R efficiently with data.table! | The R4GC Book</title>
   <meta name="description" content="Notes and tutorials from ‘Lunch and Learn Data Science with R’ weekly meetups organized by the R4GC Community" />
   <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="B Canada-related Open source R codes and packages | The R4GC Book" />
+  <meta property="og:title" content="6 Use R efficiently with data.table! | The R4GC Book" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="https://open-canada.github.io/r4gc" />
   <meta property="og:image" content="https://open-canada.github.io/r4gc/images/r4gc-banner.png" />
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="open-canada/r4gc" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="B Canada-related Open source R codes and packages | The R4GC Book" />
+  <meta name="twitter:title" content="6 Use R efficiently with data.table! | The R4GC Book" />
   
   <meta name="twitter:description" content="Notes and tutorials from ‘Lunch and Learn Data Science with R’ weekly meetups organized by the R4GC Community" />
   <meta name="twitter:image" content="https://open-canada.github.io/r4gc/images/r4gc-banner.png" />
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="images/R4GC.ico" type="image/x-icon" />
-<link rel="prev" href="lunch-and-learn-notes.html"/>
-<link rel="next" href="technical-information.html"/>
+<link rel="prev" href="open-government-policies.html"/>
+<link rel="next" href="python-and-r-unite.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -422,81 +422,50 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="canada-related-open-source-r-codes-and-packages" class="section level1" number="29">
-<h1><span class="header-section-number">B</span> Canada-related Open source R codes and packages</h1>
-<div id="packages-on-cran" class="section level2" number="29.1">
-<h2><span class="header-section-number">B.1</span> Packages on CRAN</h2>
-<div id="httpsgithub.comwarintstatcanr" class="section level4" number="29.1.0.1">
-<h4><span class="header-section-number">B.1.0.1</span> <a href="https://github.com/warint/statcanR" class="uri">https://github.com/warint/statcanR</a></h4>
-<p>statcanR
-Easily connect to Statistics Canada’s Web Data Service with R. Open economic data (formerly known as CANSIM tables, now identified by Product IDs (PID)) are accessible as a data frame, directly in the user’s R environment.</p>
+<div id="use-r-efficiently-with-data.table" class="section level1" number="6">
+<h1><span class="header-section-number">6</span> Use R efficiently with data.table!</h1>
+<!-- for very fast and user friendly data processing -->
+<p>The <code>data.table</code> package developed by Matt Dowle is a game changer for many data scientists</p>
+<p>Learn about it… and use it always,
+by default:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="use-r-efficiently-with-data-table.html#cb1-1" aria-hidden="true"></a><span class="kw">library</span>(data.table)</span>
+<span id="cb1-2"><a href="use-r-efficiently-with-data-table.html#cb1-2" aria-hidden="true"></a>dtIris &lt;-<span class="st"> </span><span class="kw">data.table</span>(iris) <span class="co"># or</span></span>
+<span id="cb1-3"><a href="use-r-efficiently-with-data-table.html#cb1-3" aria-hidden="true"></a>df &lt;-<span class="st"> </span>iris; dtIris &lt;-<span class="st"> </span><span class="kw">setDT</span>(df)</span></code></pre></div>
+<p>Where to learn:</p>
+<ul>
+<li><p><a href="https://github.com/Rdatatable/data.table" class="uri">https://github.com/Rdatatable/data.table</a></p></li>
+<li><p><a href="https://github.com/chuvanan/rdatatable-cookbook" class="uri">https://github.com/chuvanan/rdatatable-cookbook</a></p></li>
+<li><p><a href="http://r-datatable.com" class="uri">http://r-datatable.com</a> (<a href="https://rdatatable.gitlab.io/data.table/" class="uri">https://rdatatable.gitlab.io/data.table/</a>)</p></li>
+<li><p><a href="https://www.datacamp.com/courses/time-series-with-datatable-in-r" class="uri">https://www.datacamp.com/courses/time-series-with-datatable-in-r</a></p></li>
+<li><p><a href="https://www.datacamp.com/courses/data-manipulation-in-r-with-datatable" class="uri">https://www.datacamp.com/courses/data-manipulation-in-r-with-datatable</a></p></li>
+<li><p><a href="https://github.com/Rdatatable/data.table/wiki/Articles" class="uri">https://github.com/Rdatatable/data.table/wiki/Articles</a></p></li>
+<li><p><a href="https://rpubs.com/josemz/SDbf" class="uri">https://rpubs.com/josemz/SDbf</a> - Making .SD your best friend</p></li>
+</ul>
+<div id="data.table-vs.-dplyr" class="section level2" number="6.1">
+<h2><span class="header-section-number">6.1</span> data.table vs. dplyr</h2>
+<p>data.table (Computer language) way vs. dplyr (“English language”) way</p>
+<ol style="list-style-type: upper-alpha">
+<li>The best: No wasted computations .No new memory allocations.
+dtLocations %&gt;% .[WLOC == 4313, WLOC:=4312]</li>
+<li>No new memory allocations, but computations are done with ALL rows.
+dtLocations %&gt;% .[, WLOC:=ifelse(WLOC==4313, 4312, WLOC)]</li>
+<li>The worst: Computations are done with ALL rows. Furthermore, the entire data is copied from one memory location to another. (Imagine if your data as in 1 million of cells, of which only 10 needs to be changed !)
+dtLocations &lt;- dtLocations %&gt;% mutate(WLOC=ifelse(WLOC==4313, 4312, WLOC))
+NB: dtLocations %&gt;% . [] is the same as dtLocations[]. so you can use it in pipes.</li>
+</ol>
+<!-- Conclusion: Use data.table for speed and efficient coding instead of dplyr (i.e.tibbles)! -->
+<!-- Comment  -->
+<!-- je côtoie de nombreux scientifiques en environnement qui sont nouveaux dans le monde de la programmation et qui n'ont pas un gros volume de données. Pour eux, dplyr est plus « accessible » que data.table. -->
+<!-- Un jour, ils y viendront peut-être, mais en attendant, je vais continuer à enseigner les rudiments de R en proposant dplyr et en leur parlant brièvement du package data.table. -->
 </div>
-</div>
-<div id="packages-not-on-cran" class="section level2" number="29.2">
-<h2><span class="header-section-number">B.2</span> Packages not on CRAN</h2>
-<div id="httpsgithub.comvlucetrgovcan" class="section level4" number="29.2.0.1">
-<h4><span class="header-section-number">B.2.0.1</span> <a href="https://github.com/VLucet/rgovcan" class="uri">https://github.com/VLucet/rgovcan</a></h4>
-<p>rgovcan
-Easy access to the Canadian Open Government Portal</p>
-</div>
-<div id="httpsgithub.combcgovcanwqdata" class="section level4" number="29.2.0.2">
-<h4><span class="header-section-number">B.2.0.2</span> <a href="https://github.com/bcgov/canwqdata" class="uri">https://github.com/bcgov/canwqdata</a></h4>
-<p>canwqdata
-An R package to download open water quality data from Environment and Climate Change Canada’s National Long-term Water Quality Monitoring Data.</p>
-</div>
-</div>
-<div id="codes-on-github" class="section level2" number="29.3">
-<h2><span class="header-section-number">B.3</span> Codes on GitHub</h2>
-<div id="expenditures-and-procurement" class="section level3" number="29.3.1">
-<h3><span class="header-section-number">B.3.1</span> Expenditures and procurement</h3>
-<div id="httpsgithub.comnmarumcanadadefencespending" class="section level4" number="29.3.1.1">
-<h4><span class="header-section-number">B.3.1.1</span> <a href="https://github.com/nmarum/canadadefencespending" class="uri">https://github.com/nmarum/canadadefencespending</a></h4>
-<p>Data wrangling and exploratory analysis of publicly available data about National Defence expenditures and defence procurement.</p>
-</div>
-</div>
-<div id="health-and-environment" class="section level3" number="29.3.2">
-<h3><span class="header-section-number">B.3.2</span> Health and Environment</h3>
-<div id="httpsgithub.comdbuijshealthcanadaopendata" class="section level4" number="29.3.2.1">
-<h4><span class="header-section-number">B.3.2.1</span> <a href="https://github.com/dbuijs/HealthCanadaOpenData" class="uri">https://github.com/dbuijs/HealthCanadaOpenData</a></h4>
-<p>A project for importing open data from Health Canada’s website into R.</p>
-</div>
-</div>
-<div id="elections" class="section level3" number="29.3.3">
-<h3><span class="header-section-number">B.3.3</span> Elections</h3>
-<div id="canadian-election-forecast" class="section level4" number="29.3.3.1">
-<h4><span class="header-section-number">B.3.3.1</span> 2019 Canadian election forecast</h4>
-</div>
-<div id="httpsgithub.comthisismactancanada-2019" class="section level4" number="29.3.3.2">
-<h4><span class="header-section-number">B.3.3.2</span> <a href="https://github.com/thisismactan/Canada-2019" class="uri">https://github.com/thisismactan/Canada-2019</a></h4>
-<p>This is the repository for the Election StatSheet 2019 Canadian election forecast.</p>
-</div>
-<div id="canadian-election-data" class="section level4" number="29.3.3.3">
-<h4><span class="header-section-number">B.3.3.3</span> 2015 Canadian Election Data</h4>
-<p><a href="https://github.com/lchski/canada-2015-federal-election-data" class="uri">https://github.com/lchski/canada-2015-federal-election-data</a></p>
-</div>
-<div id="httpsgithub.comlchskicanada-2015-federal-election-data" class="section level4" number="29.3.3.4">
-<h4><span class="header-section-number">B.3.3.4</span> <a href="https://github.com/lchski/canada-2015-federal-election-data" class="uri">https://github.com/lchski/canada-2015-federal-election-data</a></h4>
-<p>2015 Canadian Election Data</p>
-</div>
-<div id="fptp-election-strategizer" class="section level4" number="29.3.3.5">
-<h4><span class="header-section-number">B.3.3.5</span> FPTP Election Strategizer</h4>
-<p>“FPTP Election Strategizer: A data-science driven tool to mitigate the political biases of the First Past The Post electoral system in Canada” -
-Research article, with R code and visualizations in support of <a href="%22https://www.fairvote.ca">Fair Vote Canada</a></p>
-<p><a href="https://github.com/ivi-m/election-strategizer/" class="uri">https://github.com/ivi-m/election-strategizer/</a></p>
-<!-- (https://ivi-m.github.io/election-strategizer/) -->
-</div>
-</div>
-<div id="ottawa" class="section level3" number="29.3.4">
-<h3><span class="header-section-number">B.3.4</span> Ottawa</h3>
-<div id="httpsgithub.comwhipsonottawa_bicycles" class="section level4" number="29.3.4.1">
-<h4><span class="header-section-number">B.3.4.1</span> <a href="https://github.com/whipson/Ottawa_Bicycles" class="uri">https://github.com/whipson/Ottawa_Bicycles</a></h4>
-<p>Data and cleaning scripts for Ottawa Bicycle Counter shiny app.</p>
-</div>
-<div id="httpsgithub.comlchskiottawa-fire-stations" class="section level4" number="29.3.4.2">
-<h4><span class="header-section-number">B.3.4.2</span> <a href="https://github.com/lchski/ottawa-fire-stations" class="uri">https://github.com/lchski/ottawa-fire-stations</a></h4>
-<p>Mapping Ottawa’s fire stations</p>
-</div>
-</div>
+<div id="extensions-of-data.table" class="section level2" number="6.2">
+<h2><span class="header-section-number">6.2</span> Extensions of data.table</h2>
+<p>There’s considerable effort to marry data.table package with dplyr package. Here are notable ones:</p>
+<ul>
+<li><a href="https://github.com/tidyverse/dtplyr" class="uri">https://github.com/tidyverse/dtplyr</a> (Version: 1.1.0, Published: 2021-02-20, From Hadley himself - I found it quite cumbersome still though…)</li>
+<li><a href="https://github.com/asardaes/table.express" class="uri">https://github.com/asardaes/table.express</a> (Version: 0.3.1 Published: 2019-09-07 - somewhat easier?)</li>
+<li><a href="https://github.com/markfairbanks/tidytable" class="uri">https://github.com/markfairbanks/tidytable</a> (Version: 0.6.2 Published: 2021-05-18 - seems to be the best supported of the three?)</li>
+</ul>
 </div>
 </div>
             </section>
@@ -504,8 +473,8 @@ Research article, with R code and visualizations in support of <a href="%22https
           </div>
         </div>
       </div>
-<a href="lunch-and-learn-notes.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="technical-information.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="open-government-policies.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="python-and-r-unite.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
