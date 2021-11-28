@@ -3,6 +3,15 @@
 <!-- for very fast and user friendly data processing -->
 
 
+ ## TL;DR
+ 
+ 1. For any code you do (ie, by default) your first lines of code should be:
+ ```{r}
+ 
+ 
+ ```
+ 
+
 The `data.table` package developed by Matt Dowle is a game changer for many data scientists
 
 Learn about it...  and use it always, 
@@ -130,34 +139,45 @@ Pour ma part, j'adhère à l'approche proposée par The [Carpentries](https://da
 
 # Reading various kinds of data in R
 
-## vroom
 
-Our  favourite methods for reading / writing "regular" .csv files has been 'data.table::fread() / fwrite()' - the fastest and automated in many ways.  
-Now there's another one - with package 'vroom' - https://cran.r-project.org/web/packages/vroom/vignettes/benchmarks.html
+There are many kinds of data you want to read - and you want to them efficiently (i.e. , automatically and fast):
 
- 
 
-Then, of course, there are other kinds of data you want to read - efficiently (i.e. , automatically and fast):
-
-- badly formatted data, sparse data,
+- badly formatted data, 
+- sparse data,
 
 - distributed  "big" data
 
 - just very large and very very large
 
-- from MS excel, MS Words
+-  MS excel, MS Words
 
 - from clouds: AWS, MS Azure etc
 
-- from pdf, html
+-  pdf, html
 
-- from zip files
+-  zip files
 
-- from google docs, google sheets
+-  google docs, google sheets
 
-- from GCdocs and from other GC platforms (that was one of the questions at our Friday's R meetup), and,
+-  GCdocs and from other GC platforms (that was one of the questions at our Friday's R meetup), and,
 
-- and finally, from all other IoT and web-crawling
+- from web pre-formated
+
+- other IoT and web-crawling
+
+
+### fread
+
+Our  favourite methods for reading / writing "regular" .csv files has been 'data.table::fread() / fwrite()' - the fastest and automated in many ways. 
+
+### vroom
+
+ 
+
+Now there's another one - with package 'vroom' - https://cran.r-project.org/web/packages/vroom/vignettes/benchmarks.html
+
+ 
 
 
 ## readxl and xlsx
@@ -239,35 +259,136 @@ If you want to prototype with small datasets, do not lose time with parquet… C
 As for using SQL vs packages such as DPLYR, I mentioned a gain in performance, but be careful. If you use raw SQL, then you will see a big gain in performance. However, there are packages out there that translate SQL to R or Python interpretable code, and those will possibly be slower due to the interpretation layer. DPLYR, on the other hand, is quite efficient and well optimized. As usual, it depends on the packages. In R, the sqldf package should be good, if you want to try it out.
 
 
-# Other tips and tricks
 
-## Efficient programming in R 
+
+
+
+# Other tips for  Efficient coding in R 
 <!-- (coding style, memory-efficient coding, collaboration-ready codes, source control) -->
 
+<!-- TBA -->
+
+<!-- ## Debugging tricks -->
+
+<!-- TBA -->
+
+## Variable names !
+
+Variable names  need to help you every time you see them! 
+
+Examples:
+```{r}
+
+
+```
+
+
+
+### Code formating
+
+Install 'slyler' package to have RStudio addin to automate formatting your code
+
+
+
+
+## Code starter tricks
+
+
+### Most important / useful libraries
+
+These are libraries / codes that one could use by default when starting  a new code.
+
+```{r}
+
+# 0. General libraries and functions ----
+
+# options(digits = 3); # 7
+# options(max.print = 100) # 1000
+# options(scipen=999); #remove scientific notation
+
+library(magrittr)
+# library(readxl)
+# library(readr)
+# library(stringr)
+
+## library(tidyverse) # includes:  readr ggplot2 stringr (which we use), dplyr tidyr tibble forcats purrr (may use later) and others - https://www.tidyverse.org/packages/
+
+# library(dplyr) # or
+#library(dtplyr)
+
+# library(ggplot2) 
+# library(lubridate,  quietly=T) # to work work times and dates
+# options(lubridate.week.start =  1)
+
+library(data.table) # needs to be AFTER lubridate
+options(datatable.print.class=TRUE)
+
+# library(dygraphs)
+# library(plotly)
+# library(DT)
+
+`%ni%` = Negate(`%in%`)
+```
+
+## Efficient workflows
+
+
+<!-- Commonly, there are two possible  -->
+
+### Workflow: Data-first approach
+
+<!-- ### Starting with new Data set -->
+
+
+So, you found a new
+<!-- previously not seen  -->
+Open Data
+dataset. Great - now you can do something with it!  This is how you  start .
+
+```{r}
+
+```
+
+
+
+
+### Workflow: Task/needs/algorithm-first approach
+
 TBA
+
 
 ## Object oriented programming in R
 
 
-TBA
 
-## Debugging tricks
+https://techvidvan.com/tutorials/r-object-oriented-programming/
 
-TBA
+
+### S3
+
+
+### R6 
+
+
+
 
 
 
 
 ## RStudio tricks
 
+
+
 ### Coding online
 
 Platforms for coding R online   
-a) https://rextester.com/l/r_online_compiler
-b) https://repl.it/languages/rlang (no login required)
-c) https://rstudio.cloud/ (login required) - All in One place for learning and coding
+<!-- a) https://rextester.com/l/r_online_compiler -->
+<!-- b) https://repl.it/languages/rlang (no login required) -->
+ https://rstudio.cloud/ (login required) - All in One place for learning and coding
 
-### Running multiple RStudio versions
+
+
+#### Running multiple RStudio versions
 
 You want to be able to run  multiple versions of RStudio in Windows? You can do with the following executable .bat script.
 

@@ -22,8 +22,9 @@ author: |
   
 description: "Notes and tutorials from 'Lunch and Learn Data Science with R' weekly meetups organized by the R4GC Community"
 
-date: "22 November 2021"
+# date: "22 November 2021"
 # date: "`r format(Sys.time(), '%d %B %Y')`"
+date: "`r format(Sys.time(), '%B %Y')`"
 
 
 github-repo: "open-canada/r4gc"
@@ -43,13 +44,15 @@ output:
     #   before_body: assets/header.html
     # split_by: section
     config:
+      edit: https://github.com/open-canada/r4gc/edit/main/%s
       toc:
         collapse: subsection # subsection # none
         before: |
           <!-- <li><a href="index.html"> "R4GC workbook"</a> </li> -->
           <li><a href="index.html"> <img width="100%" src="images/r4gc-banner.png"> </a>      </li>
         after: |
-          <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+          <li><center><a   href="https://bookdown.org/yihui/bookdown/">
+          Published with bookdown</a></center></li>
       download: [epub,pdf]
       sharing:
         facebook: yes
@@ -156,9 +159,8 @@ Part II is dedicated to the *Best Practices and Efficient Coding in R* and inclu
 2. R and Python, Unite!
 6. From Excel to R
 8. Reading various kinds of data in R
-9. Object oriented programming in R
-9. Other tips and tricks
-
+9. Other tips and rules for coding well in R
+<!-- 9. Object oriented programming in R -->
 Part III is dedicated to *Visualization and Reporting *and includes the following: 
 
 11. Literate programming and automated reports with ‘rmarkdown’

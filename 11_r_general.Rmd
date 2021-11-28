@@ -66,7 +66,7 @@ below are our own Top 10 reasons to use R for Data Science - filtered and refine
 <!-- Easy web-publishing of data reports and deployment of web-applications -->
 
 
-## Tackling the limitations of R
+## Tackling the limitations of R {#r_limitations}
 
 The main deficiency of R (in particular, when compared to Python) is that many R functions and packages are not developed to be memory- or processing time- efficient, and "by default", i.e., unless special care is taken in developing the code, most codes written in R are very slow and consume prohibitively large amount of memory, making it often impossible to run data processing codes on ordinarily laptops (with not more than 16 GB of RAM) such as those used by majority of GC employees. This is because all variables in R, including data array and data frame variables (which are naturally very large) are passed to a function by copying the entire variable content from one memory location to another , and then copying it back after the function completes its operation. In other programming languages, such as Python, C++, or Java, such operations normally are not done by passing the entire object to a function, but rather by pasing only a pointer to (or memory address of) an object that needs to be processed by the function, which is much faster and does not consume a lot of memory. This deficiency however can be practically entirely eliminated, should the R code be developed using the "efficiency-by-design" methodology that is offered by the 'data.table' R package. This is why much emphasis in the R4GC community discussions is put on encouraging the community members to use 'data.table'  class by default (or always) instead of base 'data.frame' class. 
 

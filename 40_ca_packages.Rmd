@@ -8,8 +8,13 @@
 
 
 #### https://github.com/warint/statcanR
+
 statcanR
 Easily connect to Statistics Canada’s Web Data Service with R. Open economic data (formerly known as CANSIM tables, now identified by Product IDs (PID)) are accessible as a data frame, directly in the user’s R environment.
+
+
+
+
 
 
 
@@ -88,6 +93,22 @@ Data and cleaning scripts for Ottawa Bicycle Counter shiny app.
 
 #### https://github.com/lchski/ottawa-fire-stations
 
-
 Mapping Ottawa’s fire stations
+
+
+### Vancouver 
+
+Many  codes, packages, and blogs related to Vancouver and Canada, and other utility functions, are developed by  
+[MountainMath (Jens von Bergman)](https://mountainmath.ca/) - Source: https://github.com/mountainMath
+
+
+This includes
+
+on CRAN:
+
+- cancensus: https://github.com/mountainMath/cancensus
+<!-- - censusmapper -->
+- CANSIM: https://github.com/mountainMath/cansim
+- https://github.com/mountainMath/tongfen
+- https://github.com/mountainMath/statcanXtabs
 
