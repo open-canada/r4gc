@@ -123,13 +123,12 @@ Some of us have tried many of them until we found the ones that we believe are t
 It could be suggested to start learning (or re-learning "Right way") R from the one listed below.
 
 
-## The way we teach R at our R4GC Lunch and Learn
-
+## The way  R is tought at R4GC Lunch and Learn
 
 
 Recommendations for R101 home-work:  https://open-canada.github.io/UseR/resources.html
 
-The starters (from students coming from Physics and Statistics):  https://gorodnichy.github.io/r101/
+The starters (for students coming from non computer science backgrounds):  https://gorodnichy.github.io/r101/
 
 
 
