@@ -3,7 +3,7 @@ knit: "bookdown::render_book" # This lines needs to be FIRST, if you file is not
 site: bookdown::bookdown_site
 documentclass: book
 
-title: "The R4GC Book"
+title: "The R4GC Book" # "Open R4GC Book"
 # title: "R for Government of Canada"
 # title: "Learn Data Science with R (The R4GC Book)" # Use R in GC
 
@@ -355,7 +355,10 @@ This book is written in R Markdown and R, with the use of 'bookdown' package, an
 
 ## Colophone
 
-TBD
+When archiving an article that was generated from R code, it's a good practice to include the information about the system where the code was run, the way it is done here:
+```{r}
+sessionInfo()
+```
 
 
 ```{r 00-releaseNotes.Rmd, child = '00-releaseNotes.Rmd'}
