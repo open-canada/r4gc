@@ -113,21 +113,23 @@ R's CON's:
 
 <!-- and continue learning R -->
 
+## Disclaimer {-} 
+Ok, perhaps the word "Right" is not  right here - What is right for us, may not be right for someone else who learnt R another way. 
+So, Let's call it "Diffe*R*ent" or "Non-t*R*aditional" way. It is  right for us.  The hope is that, even  if it is not the right "right" for you, it will still be "right" fro further extending (or changing!) your R programming skills
 
+## Intro 
 The number of resources and ways to learn R is enormous.
-Some of us had tried many of them until we found the ones that we believe are the best ones. They are listed here
+Some of us have tried many of them until we found the ones that we believe are the best ones. 
+It could be suggested to start learning (or re-learning "Right way") R from the one listed below.
 
 
-And of course, don't ever shy to ask questions (or seek for already many answers) at https://stackoverflow.com/.
-In fact, what a great option for you to save all the knowledgebase you acquire --
-Helping yourself, you also help others, and contribute to further improvement of many R packages ! 
-
-
-## The way we teach at R4GC Lunch and Learn
+## The way we teach R at our R4GC Lunch and Learn
 
 
 
-Here are some:  https://open-canada.github.io/UseR/resources.html
+Recommendations for R101 home-work:  https://open-canada.github.io/UseR/resources.html
+
+
 
 
 
@@ -154,6 +156,11 @@ https://github.com/rstudio/cheatsheets
 
 Apart from reading and contributing to this R4GC Book and participating in our R4GC community meetups (which is naturally the best way :), you can :
 
+-  Ask questions (or seek for already many answers) at https://stackoverflow.com/.
+In fact, what a great option for you to save all the knowledgebase you acquire --
+Helping yourself, you also help others, and contribute to further improvement of many R packages ! 
+
+
 - browse and play with many  open-source books (See next section)
 
 - browse and play with many R blogs
@@ -178,96 +185,6 @@ https://resources.rstudio.com/rstudio-conf-2019 , 2020, 2021 etc
 
 
 
-
-##  R communities in GC
-
-
-Roughly sorted by the level of group activity
-
- 
-
-### GCConnex (GC only):
-
-- https://gcconnex.gc.ca/groups/profile/5394852/data-science-goc
-
-- https://gcconnex.gc.ca/groups/profile/56632124/statcan-data-science-communities-of-practice-hub
-
-- https://gcconnex.gc.ca/groups/profile/53857931/applied-machine-learning-ml-for-text-analysis-community-of-practice-cop
-
-- https://gcconnex.gc.ca/groups/profile/22346843/big-data-community
-
-- https://gcconnex.gc.ca/groups/profile/39621554/data-visualization-resources
-
-- https://gcconnex.gc.ca/groups/profile/24345174/data-visualization
-
-- https://gcconnex.gc.ca/groups/profile/47035648/machine-learning-in-remote-sensing-cop
-
-- https://gcconnex.gc.ca/groups/profile/24825105/data-analytics-coalition
-
-- https://gcconnex.gc.ca/groups/profile/47035648/machine-learning-in-remote-sensing-cop
-
-- https://gcconnex.gc.ca/groups/profile/19758048/analytics-mining-and-hypothesis-testing
-
-- https://gcconnex.gc.ca/groups/profile/62219803/artificial-intelligence-and-data-science-group
-
-- https://gcconnex.gc.ca/groups/profile/30787891/digital-academy
-
-- https://gcconnex.gc.ca/groups/profile/36236376/candev-data-challenge-
-
-- https://gcconnex.gc.ca/groups/profile/4474153/data-analytics-working-group-dawg
-
-- https://gcconnex.gc.ca/groups/profile/34024870/welcome-to-r-canadian-government (not active)
-
- 
-
- 
-
-### GCcode (GC only):
-
-- https://gccode.ssc-spc.gc.ca/r4gc
-
-- https://gccode.ssc-spc.gc.ca/DSCV
-
- 
-
-### GCcollab (public with login):
-
-- https://gccollab.ca/groups/profile/778815/eneccc-network-of-experts-and-researchers-in-data-science-nerdsfrlabo-de-donnu00e9es
-
-- https://gccollab.ca/groups/profile/3465987/enswam-support-for-wildlife-analysis-and-monitoringfr
-
-- https://gccollab.ca/groups/profile/18873/enopen-governmentfrgouvernement-ouvert
-
-- https://gccollab.ca/groups/profile/7071541/endata-engineering-challenges-and-solutions (#GCData2021 conference workshop)
-
- 
-
-More GCcollab groups are listed at https://wiki.gccollab.ca/The_Square/GCcollab_Groups
-
- 
-
-### GCwiki (public):
-
-- https://wiki.gccollab.ca/The_Square/Data_Science
-
- 
-
-### GitHub (public):
-
-- https://github.com/open-data
-
-- https://github.com/canada-ca
-
-- https://github.com/PatLittle
-
- 
-
-### Other related groups
-
-- https://code.open.canada.ca/en/open-source-softwares.html
-
-
-<!-- # Open R codes for GC: on GCcode and GitHub -->
 
 
 
