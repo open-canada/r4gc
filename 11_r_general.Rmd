@@ -113,9 +113,9 @@ R's CON's:
 
 <!-- and continue learning R -->
 
-## Disclaimer {-} 
-Ok, perhaps the word "Right" is not  right here - What is right for us, may not be right for someone else who learnt R another way. 
-So, Let's call it "Diffe*R*ent" or "Non-t*R*aditional" way. It is  right for us.  The hope is that, even  if it is not the right "right" for you, it will still be "right" fro further extending (or changing!) your R programming skills
+## In which sense 'right'? 
+Ok, perhaps the word "Right" is not  right here... - What is right for someone, may not be right for someone else who learnt R another way. 
+So, Let's call it "Diffe*R*ent" or "Non-t*R*aditional" way. It is indeed the best and right for us.  And we hope hope  that, even  if it is not the right "right" for you, it is still "right" for you to help you further improve your R  codings kills
 
 ## Intro 
 The number of resources and ways to learn R is enormous.
@@ -129,7 +129,7 @@ It could be suggested to start learning (or re-learning "Right way") R from the 
 
 Recommendations for R101 home-work:  https://open-canada.github.io/UseR/resources.html
 
-
+The starters (from students coming from Physics and Statistics):  https://gorodnichy.github.io/r101/
 
 
 
