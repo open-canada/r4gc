@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>17 Record Linking and other Data Engineering tasks in R | The R4GC Book</title>
+  <title>6 Use R efficiently with data.table! | The R4GC Book</title>
   <meta name="description" content="Notes and tutorials from ‘Lunch and Learn Data Science with R’ weekly meetups organized by the R4GC Community" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="17 Record Linking and other Data Engineering tasks in R | The R4GC Book" />
+  <meta property="og:title" content="6 Use R efficiently with data.table! | The R4GC Book" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="https://open-canada.github.io/r4gc" />
   <meta property="og:image" content="https://open-canada.github.io/r4gc/images/r4gc-banner.png" />
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="open-canada/r4gc" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="17 Record Linking and other Data Engineering tasks in R | The R4GC Book" />
+  <meta name="twitter:title" content="6 Use R efficiently with data.table! | The R4GC Book" />
   
   <meta name="twitter:description" content="Notes and tutorials from ‘Lunch and Learn Data Science with R’ weekly meetups organized by the R4GC Community" />
   <meta name="twitter:image" content="https://open-canada.github.io/r4gc/images/r4gc-banner.png" />
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="images/R4GC.ico" type="image/x-icon" />
-<link rel="prev" href="using-r-with-gc-data-infastructure-gcdocs-aws-etc.html"/>
-<link rel="next" href="statistical-tests-and-mixed-effects-analysis.html"/>
+<link rel="prev" href="open-policies.html"/>
+<link rel="next" href="python-and-r-unite.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -433,12 +433,54 @@ Published with bookdown</a></center></li>
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="record-linking-and-other-data-engineering-tasks-in-r" class="section level1" number="17">
-<h1><span class="header-section-number">17</span> Record Linking and other Data Engineering tasks in R</h1>
-<div id="demo" class="section level2" number="17.1">
-<h2><span class="header-section-number">17.1</span> demo</h2>
-<p>See <a href="http://rcanada.shinyapps.io/demo" class="uri">http://rcanada.shinyapps.io/demo</a> and the #GCData2021 Data Engineering workshop presentation -
-for the backgrounder and the demonstration of various DE tasks and solutions.</p>
+<div id="use-r-efficiently-with-data.table" class="section level1" number="6">
+<h1><span class="header-section-number">6</span> Use R efficiently with data.table!</h1>
+<!-- for very fast and user friendly data processing -->
+<p>## TL;DR</p>
+<ol style="list-style-type: decimal">
+<li>For any code you do (ie, by default) your first lines of code should be:</li>
+</ol>
+<p>The <code>data.table</code> package developed by Matt Dowle is a game changer for many data scientists</p>
+<p>Learn about it… and use it always,
+by default:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="use-r-efficiently-with-data.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(data.table)</span>
+<span id="cb1-2"><a href="use-r-efficiently-with-data.html#cb1-2" aria-hidden="true" tabindex="-1"></a>dtIris <span class="ot">&lt;-</span> <span class="fu">data.table</span>(iris) <span class="co"># or</span></span>
+<span id="cb1-3"><a href="use-r-efficiently-with-data.html#cb1-3" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> iris; dtIris <span class="ot">&lt;-</span> <span class="fu">setDT</span>(df)</span></code></pre></div>
+<p>Where to learn:</p>
+<ul>
+<li><p><a href="https://github.com/Rdatatable/data.table" class="uri">https://github.com/Rdatatable/data.table</a></p></li>
+<li><p><a href="https://github.com/chuvanan/rdatatable-cookbook" class="uri">https://github.com/chuvanan/rdatatable-cookbook</a></p></li>
+<li><p><a href="http://r-datatable.com" class="uri">http://r-datatable.com</a> (<a href="https://rdatatable.gitlab.io/data.table/" class="uri">https://rdatatable.gitlab.io/data.table/</a>)</p></li>
+<li><p><a href="https://www.datacamp.com/courses/time-series-with-datatable-in-r" class="uri">https://www.datacamp.com/courses/time-series-with-datatable-in-r</a></p></li>
+<li><p><a href="https://www.datacamp.com/courses/data-manipulation-in-r-with-datatable" class="uri">https://www.datacamp.com/courses/data-manipulation-in-r-with-datatable</a></p></li>
+<li><p><a href="https://github.com/Rdatatable/data.table/wiki/Articles" class="uri">https://github.com/Rdatatable/data.table/wiki/Articles</a></p></li>
+<li><p><a href="https://rpubs.com/josemz/SDbf" class="uri">https://rpubs.com/josemz/SDbf</a> - Making .SD your best friend</p></li>
+</ul>
+<div id="data.table-vs.-dplyr" class="section level2" number="6.1">
+<h2><span class="header-section-number">6.1</span> data.table vs. dplyr</h2>
+<p>data.table (Computer language) way vs. dplyr (“English language”) way</p>
+<ol style="list-style-type: upper-alpha">
+<li>The best: No wasted computations .No new memory allocations.
+dtLocations %&gt;% .[WLOC == 4313, WLOC:=4312]</li>
+<li>No new memory allocations, but computations are done with ALL rows.
+dtLocations %&gt;% .[, WLOC:=ifelse(WLOC==4313, 4312, WLOC)]</li>
+<li>The worst: Computations are done with ALL rows. Furthermore, the entire data is copied from one memory location to another. (Imagine if your data as in 1 million of cells, of which only 10 needs to be changed !)
+dtLocations &lt;- dtLocations %&gt;% mutate(WLOC=ifelse(WLOC==4313, 4312, WLOC))
+NB: dtLocations %&gt;% . [] is the same as dtLocations[]. so you can use it in pipes.</li>
+</ol>
+<!-- Conclusion: Use data.table for speed and efficient coding instead of dplyr (i.e.tibbles)! -->
+<!-- Comment  -->
+<!-- je côtoie de nombreux scientifiques en environnement qui sont nouveaux dans le monde de la programmation et qui n'ont pas un gros volume de données. Pour eux, dplyr est plus « accessible » que data.table. -->
+<!-- Un jour, ils y viendront peut-être, mais en attendant, je vais continuer à enseigner les rudiments de R en proposant dplyr et en leur parlant brièvement du package data.table. -->
+</div>
+<div id="extensions-of-data.table" class="section level2" number="6.2">
+<h2><span class="header-section-number">6.2</span> Extensions of data.table</h2>
+<p>There’s considerable effort to marry data.table package with dplyr package. Here are notable ones:</p>
+<ul>
+<li><a href="https://github.com/tidyverse/dtplyr" class="uri">https://github.com/tidyverse/dtplyr</a> (Version: 1.1.0, Published: 2021-02-20, From Hadley himself - I found it quite cumbersome still though…)</li>
+<li><a href="https://github.com/asardaes/table.express" class="uri">https://github.com/asardaes/table.express</a> (Version: 0.3.1 Published: 2019-09-07 - somewhat easier?)</li>
+<li><a href="https://github.com/markfairbanks/tidytable" class="uri">https://github.com/markfairbanks/tidytable</a> (Version: 0.6.2 Published: 2021-05-18 - seems to be the best supported of the three?)</li>
+</ul>
 </div>
 </div>
             </section>
@@ -446,8 +488,8 @@ for the backgrounder and the demonstration of various DE tasks and solutions.</p
           </div>
         </div>
       </div>
-<a href="using-r-with-gc-data-infastructure-gcdocs-aws-etc.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="statistical-tests-and-mixed-effects-analysis.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="open-policies.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="python-and-r-unite.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

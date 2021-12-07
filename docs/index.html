@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>The R4GC Book</title>
   <meta name="description" content="Notes and tutorials from ‘Lunch and Learn Data Science with R’ weekly meetups organized by the R4GC Community" />
-  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
   <meta property="og:title" content="The R4GC Book" />
   <meta property="og:type" content="book" />
@@ -30,9 +30,10 @@
   
   <link rel="shortcut icon" href="images/R4GC.ico" type="image/x-icon" />
 
-<link rel="next" href="a-propos.html"/>
+<link rel="next" href="français.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -48,8 +49,6 @@
 
 
 
-
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 <link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
 
@@ -58,6 +57,7 @@
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
@@ -137,37 +137,38 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Raison d’être</a>
 <ul>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#r4gc-community"><i class="fa fa-check"></i>R4GC Community</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#r4gc-community"><i class="fa fa-check"></i>R4GC Community</a>
+<ul>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#lunch-and-learn-data-science-with-r-meetups"><i class="fa fa-check"></i>“Lunch and Learn Data Science with R” meetups</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#community-portals"><i class="fa fa-check"></i>Community portals</a></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#community-presentations"><i class="fa fa-check"></i>Community presentations</a>
-<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#community-presentations"><i class="fa fa-check"></i>Community presentations</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#gcIMS2021"><i class="fa fa-check"></i>International Methodology Symposium (October 2021)</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#gcdata2021"><i class="fa fa-check"></i>GC Data Conference (February, 2021)</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#français"><i class="fa fa-check"></i>Français</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#book-source-code"><i class="fa fa-check"></i>Book source code</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#disclaimer-1"><i class="fa fa-check"></i>Disclaimer</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#contributors"><i class="fa fa-check"></i>Contributors</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#licenses"><i class="fa fa-check"></i>Licenses</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#key-principles"><i class="fa fa-check"></i>Key principles</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#open-data-open-source-open-science"><i class="fa fa-check"></i>Open data, open source, open science</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#chatham-house-rule"><i class="fa fa-check"></i>Chatham House Rule</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="a-propos.html"><a href="a-propos.html"><i class="fa fa-check"></i>A propos</a>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#how-to-contribute"><i class="fa fa-check"></i>How to contribute</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#about-authors"><i class="fa fa-check"></i>About authors</a>
 <ul>
-<li class="chapter" data-level="" data-path="a-propos.html"><a href="a-propos.html#book-source-code"><i class="fa fa-check"></i>Book source code</a></li>
-<li class="chapter" data-level="" data-path="a-propos.html"><a href="a-propos.html#disclaimer-1"><i class="fa fa-check"></i>Disclaimer</a></li>
-<li class="chapter" data-level="" data-path="a-propos.html"><a href="a-propos.html#pedagogical-approach"><i class="fa fa-check"></i>Pedagogical approach</a></li>
-<li class="chapter" data-level="" data-path="a-propos.html"><a href="a-propos.html#contributors"><i class="fa fa-check"></i>Contributors</a></li>
-<li class="chapter" data-level="" data-path="a-propos.html"><a href="a-propos.html#key-principles"><i class="fa fa-check"></i>Key principles</a>
-<ul>
-<li class="chapter" data-level="" data-path="a-propos.html"><a href="a-propos.html#open-data-open-source-open-science"><i class="fa fa-check"></i>Open data, open source, open science</a></li>
-<li class="chapter" data-level="" data-path="a-propos.html"><a href="a-propos.html#chatham-house-rule"><i class="fa fa-check"></i>Chatham House Rule</a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="a-propos.html"><a href="a-propos.html#how-to-contribute"><i class="fa fa-check"></i>How to contribute</a></li>
-<li class="chapter" data-level="" data-path="a-propos.html"><a href="a-propos.html#about-authors"><i class="fa fa-check"></i>About authors</a>
-<ul>
-<li class="chapter" data-level="" data-path="a-propos.html"><a href="a-propos.html#contacts"><i class="fa fa-check"></i>Contacts</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#contacts"><i class="fa fa-check"></i>Contacts</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="book-outline.html"><a href="book-outline.html"><i class="fa fa-check"></i>Book outline</a>
+<li class="chapter" data-level="" data-path="français.html"><a href="français.html"><i class="fa fa-check"></i>Français</a></li>
+<li class="chapter" data-level="" data-path="preface.html"><a href="preface.html"><i class="fa fa-check"></i>Preface</a>
 <ul>
-<li class="chapter" data-level="" data-path="book-outline.html"><a href="book-outline.html#introduction"><i class="fa fa-check"></i>Introduction</a></li>
-<li class="chapter" data-level="" data-path="book-outline.html"><a href="book-outline.html#book-structure"><i class="fa fa-check"></i>Book structure</a></li>
+<li class="chapter" data-level="" data-path="preface.html"><a href="preface.html#introduction"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="chapter" data-level="" data-path="preface.html"><a href="preface.html#data-as-electricity-of-the-21st-century"><i class="fa fa-check"></i>Data as ‘electricity’ of the 21st century</a></li>
+<li class="chapter" data-level="" data-path="preface.html"><a href="preface.html#data-engineering-challenge"><i class="fa fa-check"></i>Data Engineering challenge</a></li>
+<li class="chapter" data-level="" data-path="preface.html"><a href="preface.html#towards-open-source-and-open-science"><i class="fa fa-check"></i>Towards open source and open science</a></li>
+<li class="chapter" data-level="" data-path="preface.html"><a href="preface.html#pedagogical-approach"><i class="fa fa-check"></i>Pedagogical approach</a></li>
+<li class="chapter" data-level="" data-path="preface.html"><a href="preface.html#book-structure"><i class="fa fa-check"></i>Book structure</a></li>
 </ul></li>
 <li class="part"><span><b>I General discussions</b></span></li>
 <li class="chapter" data-level="1" data-path="why-r.html"><a href="why-r.html"><i class="fa fa-check"></i><b>1</b> Why R?</a>
@@ -178,18 +179,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="2" data-path="learn-r-right-way.html"><a href="learn-r-right-way.html"><i class="fa fa-check"></i><b>2</b> Learn R: <em>R</em>ight way!</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="learn-r-right-way.html"><a href="learn-r-right-way.html#the-way-we-teach-at-r4gc-lunch-and-learn"><i class="fa fa-check"></i><b>2.1</b> The way we teach at R4GC Lunch and Learn</a></li>
-<li class="chapter" data-level="2.2" data-path="learn-r-right-way.html"><a href="learn-r-right-way.html#from-rstudio"><i class="fa fa-check"></i><b>2.2</b> From RStudio</a></li>
-<li class="chapter" data-level="2.3" data-path="learn-r-right-way.html"><a href="learn-r-right-way.html#ways-to-continue-growing-your-r-skills"><i class="fa fa-check"></i><b>2.3</b> Ways to continue growing your R skills</a></li>
-<li class="chapter" data-level="2.4" data-path="learn-r-right-way.html"><a href="learn-r-right-way.html#r-communities-in-gc"><i class="fa fa-check"></i><b>2.4</b> R communities in GC</a>
-<ul>
-<li class="chapter" data-level="2.4.1" data-path="learn-r-right-way.html"><a href="learn-r-right-way.html#gcconnex-gc-only"><i class="fa fa-check"></i><b>2.4.1</b> GCConnex (GC only):</a></li>
-<li class="chapter" data-level="2.4.2" data-path="learn-r-right-way.html"><a href="learn-r-right-way.html#gccode-gc-only"><i class="fa fa-check"></i><b>2.4.2</b> GCcode (GC only):</a></li>
-<li class="chapter" data-level="2.4.3" data-path="learn-r-right-way.html"><a href="learn-r-right-way.html#gccollab-public-with-login"><i class="fa fa-check"></i><b>2.4.3</b> GCcollab (public with login):</a></li>
-<li class="chapter" data-level="2.4.4" data-path="learn-r-right-way.html"><a href="learn-r-right-way.html#gcwiki-public"><i class="fa fa-check"></i><b>2.4.4</b> GCwiki (public):</a></li>
-<li class="chapter" data-level="2.4.5" data-path="learn-r-right-way.html"><a href="learn-r-right-way.html#github-public"><i class="fa fa-check"></i><b>2.4.5</b> GitHub (public):</a></li>
-<li class="chapter" data-level="2.4.6" data-path="learn-r-right-way.html"><a href="learn-r-right-way.html#other-related-groups"><i class="fa fa-check"></i><b>2.4.6</b> Other related groups</a></li>
-</ul></li>
+<li class="chapter" data-level="2.1" data-path="learn-r-right-way.html"><a href="learn-r-right-way.html#in-which-sense-right"><i class="fa fa-check"></i><b>2.1</b> In which sense ‘right’?</a></li>
+<li class="chapter" data-level="2.2" data-path="learn-r-right-way.html"><a href="learn-r-right-way.html#intro"><i class="fa fa-check"></i><b>2.2</b> Intro</a></li>
+<li class="chapter" data-level="2.3" data-path="learn-r-right-way.html"><a href="learn-r-right-way.html#the-way-r-is-tought-at-r4gc-lunch-and-learn"><i class="fa fa-check"></i><b>2.3</b> The way R is tought at R4GC Lunch and Learn</a></li>
+<li class="chapter" data-level="2.4" data-path="learn-r-right-way.html"><a href="learn-r-right-way.html#from-rstudio"><i class="fa fa-check"></i><b>2.4</b> From RStudio</a></li>
+<li class="chapter" data-level="2.5" data-path="learn-r-right-way.html"><a href="learn-r-right-way.html#ways-to-continue-growing-your-r-skills"><i class="fa fa-check"></i><b>2.5</b> Ways to continue growing your R skills</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="open-source-textbooks.html"><a href="open-source-textbooks.html"><i class="fa fa-check"></i><b>3</b> Open source textbooks</a>
 <ul>
@@ -217,30 +211,30 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="4.6" data-path="events-and-forums-for-r-users.html"><a href="events-and-forums-for-r-users.html#related-communities-in-gc"><i class="fa fa-check"></i><b>4.6</b> Related communities in GC</a>
 <ul>
-<li class="chapter" data-level="4.6.1" data-path="events-and-forums-for-r-users.html"><a href="events-and-forums-for-r-users.html#gcconnex-gc-only-1"><i class="fa fa-check"></i><b>4.6.1</b> GCConnex (GC only):</a></li>
-<li class="chapter" data-level="4.6.2" data-path="events-and-forums-for-r-users.html"><a href="events-and-forums-for-r-users.html#gccode-gc-only-1"><i class="fa fa-check"></i><b>4.6.2</b> GCcode (GC only):</a></li>
-<li class="chapter" data-level="4.6.3" data-path="events-and-forums-for-r-users.html"><a href="events-and-forums-for-r-users.html#gccollab-public-with-login-1"><i class="fa fa-check"></i><b>4.6.3</b> GCcollab (public with login):</a></li>
-<li class="chapter" data-level="4.6.4" data-path="events-and-forums-for-r-users.html"><a href="events-and-forums-for-r-users.html#gcwiki-public-1"><i class="fa fa-check"></i><b>4.6.4</b> GCwiki (public):</a></li>
-<li class="chapter" data-level="4.6.5" data-path="events-and-forums-for-r-users.html"><a href="events-and-forums-for-r-users.html#github-public-1"><i class="fa fa-check"></i><b>4.6.5</b> GitHub (public):</a></li>
+<li class="chapter" data-level="4.6.1" data-path="events-and-forums-for-r-users.html"><a href="events-and-forums-for-r-users.html#gcconnex-gc-only"><i class="fa fa-check"></i><b>4.6.1</b> GCConnex (GC only):</a></li>
+<li class="chapter" data-level="4.6.2" data-path="events-and-forums-for-r-users.html"><a href="events-and-forums-for-r-users.html#gccode-gc-only"><i class="fa fa-check"></i><b>4.6.2</b> GCcode (GC only):</a></li>
+<li class="chapter" data-level="4.6.3" data-path="events-and-forums-for-r-users.html"><a href="events-and-forums-for-r-users.html#gccollab-public-with-login"><i class="fa fa-check"></i><b>4.6.3</b> GCcollab (public with login):</a></li>
+<li class="chapter" data-level="4.6.4" data-path="events-and-forums-for-r-users.html"><a href="events-and-forums-for-r-users.html#gcwiki-public"><i class="fa fa-check"></i><b>4.6.4</b> GCwiki (public):</a></li>
+<li class="chapter" data-level="4.6.5" data-path="events-and-forums-for-r-users.html"><a href="events-and-forums-for-r-users.html#github-public"><i class="fa fa-check"></i><b>4.6.5</b> GitHub (public):</a></li>
 <li class="chapter" data-level="4.6.6" data-path="events-and-forums-for-r-users.html"><a href="events-and-forums-for-r-users.html#other-canada-groups"><i class="fa fa-check"></i><b>4.6.6</b> Other Canada groups</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="open-government-policies.html"><a href="open-government-policies.html"><i class="fa fa-check"></i><b>5</b> Open government policies</a>
+<li class="chapter" data-level="5" data-path="open-policies.html"><a href="open-policies.html"><i class="fa fa-check"></i><b>5</b> Open government policies</a>
 <ul>
-<li class="chapter" data-level="5.1" data-path="open-government-policies.html"><a href="open-government-policies.html#open-source"><i class="fa fa-check"></i><b>5.1</b> Open Source</a>
+<li class="chapter" data-level="5.1" data-path="open-policies.html"><a href="open-policies.html#open-source"><i class="fa fa-check"></i><b>5.1</b> Open Source</a>
 <ul>
-<li class="chapter" data-level="5.1.1" data-path="open-government-policies.html"><a href="open-government-policies.html#open-government"><i class="fa fa-check"></i><b>5.1.1</b> Open government</a></li>
+<li class="chapter" data-level="5.1.1" data-path="open-policies.html"><a href="open-policies.html#open-government"><i class="fa fa-check"></i><b>5.1.1</b> Open government</a></li>
 </ul></li>
-<li class="chapter" data-level="5.2" data-path="open-government-policies.html"><a href="open-government-policies.html#open-science"><i class="fa fa-check"></i><b>5.2</b> Open Science</a>
+<li class="chapter" data-level="5.2" data-path="open-policies.html"><a href="open-policies.html#open-science"><i class="fa fa-check"></i><b>5.2</b> Open Science</a>
 <ul>
-<li class="chapter" data-level="5.2.1" data-path="open-government-policies.html"><a href="open-government-policies.html#scientific-integrity"><i class="fa fa-check"></i><b>5.2.1</b> Scientific Integrity</a></li>
+<li class="chapter" data-level="5.2.1" data-path="open-policies.html"><a href="open-policies.html#scientific-integrity"><i class="fa fa-check"></i><b>5.2.1</b> Scientific Integrity</a></li>
 </ul></li>
 </ul></li>
 <li class="part"><span><b>II Art of R programming</b></span></li>
-<li class="chapter" data-level="6" data-path="use-r-efficiently-with-data-table.html"><a href="use-r-efficiently-with-data-table.html"><i class="fa fa-check"></i><b>6</b> Use R efficiently with data.table!</a>
+<li class="chapter" data-level="6" data-path="use-r-efficiently-with-data.html"><a href="use-r-efficiently-with-data.html"><i class="fa fa-check"></i><b>6</b> Use R efficiently with data.table!</a>
 <ul>
-<li class="chapter" data-level="6.1" data-path="use-r-efficiently-with-data-table.html"><a href="use-r-efficiently-with-data-table.html#data.table-vs.-dplyr"><i class="fa fa-check"></i><b>6.1</b> data.table vs. dplyr</a></li>
-<li class="chapter" data-level="6.2" data-path="use-r-efficiently-with-data-table.html"><a href="use-r-efficiently-with-data-table.html#extensions-of-data.table"><i class="fa fa-check"></i><b>6.2</b> Extensions of data.table</a></li>
+<li class="chapter" data-level="6.1" data-path="use-r-efficiently-with-data.html"><a href="use-r-efficiently-with-data.html#data.table-vs.-dplyr"><i class="fa fa-check"></i><b>6.1</b> data.table vs. dplyr</a></li>
+<li class="chapter" data-level="6.2" data-path="use-r-efficiently-with-data.html"><a href="use-r-efficiently-with-data.html#extensions-of-data.table"><i class="fa fa-check"></i><b>6.2</b> Extensions of data.table</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="python-and-r-unite.html"><a href="python-and-r-unite.html"><i class="fa fa-check"></i><b>7</b> Python and R unite!</a></li>
 <li class="chapter" data-level="8" data-path="from-excel-to-r.html"><a href="from-excel-to-r.html"><i class="fa fa-check"></i><b>8</b> From Excel to R</a></li>
@@ -443,10 +437,10 @@ Published with bookdown</a></center></li>
 <h1 class="title">The R4GC Book</h1>
 <h2 class="subtitle"><em>Learn Data Science with R: Notes and tutorials from the R4GC Community ‘Lunch and Learn’ meetups</em></h2>
 <p class="author"><em><p>Dmitry Gorodnichy and Patrick Little<br />
-URL: <a href="https://open-canada.github.io/r4gc">https://open-canada.github.io/r4gc</a></p></em></p>
-<p class="date" style="margin-top: 1.5em;"><em>November 2021</em></p>
+<a href="https://open-canada.github.io/r4gc">https://open-canada.github.io/r4gc</a> (License: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>)</p></em></p>
+<p class="date"><em>December 2021</em></p>
 </div>
-<div id="index" class="section level1 unnumbered" number="">
+<div id="index" class="section level1 unnumbered">
 <h1>Raison d’être</h1>
 <p><a href="https://gccollab.ca/groups/profile/7391537/r4gc-use-r-community-use-r"><img src="images/r4gc-banner.png" class="cover" style="width:100.0%" alt="GCcollab logo" /></a></p>
 <!-- This is the workbook of the _R4GC (Use R!) Community_. -->
@@ -458,23 +452,22 @@ features of R, which is
 <!-- the capability to collaboratively develop data science codes and reports using RMarkdown. -->
 the collaborative peer-reviewed development of data science codes and reports using <a href="https://rmarkdown.rstudio.com/">R Markdown</a>.</p>
 <!-- ## History & portals {-} -->
-<div id="r4gc-community" class="section level2 unnumbered" number="">
+<div id="r4gc-community" class="section level2 unnumbered">
 <h2>R4GC Community</h2>
 <p>R4GC Community (formerly called “Use R!” GCCollab community)
 was created in March 2021 to bring together the R users across the Government of Canada.
 Here we gather and curate the knowledgebase related to the use of R within the Government of Canada.
 Everyone is welcome to join, whether you are an advanced R user, just starting learning it, or simply want to learn more about data science and how it is done.</p>
 <!-- ### History -->
-<p>The idea to create this group came during the <a href="https://www.csps-efpc.gc.ca/events/data-conference2021">GC Data2021 Conference</a> workshop on <a href="index.html#gcdata2021">Data Engineering Challenges and Solutions: Demonstration of Shiny</a> [^gcdata2021]. The highest voted question during the discussion there was : <em>“How can I get more help for our members to enhance their knowledge and”spread the word" and raise more awareness regard to this tool?"</em> The creation of this community group is the answer to this question.</p>
+<p>The idea to create this group came during the <a href="https://www.csps-efpc.gc.ca/events/data-conference2021">GC Data2021 Conference</a> workshop on <a href="index.html#gcdata2021">Data Engineering Challenges and Solutions: Demonstration of Shiny</a> [^gcdata2021]. The highest voted question during the discussion there was : <em>“How can I get more help for our members to enhance their knowledge and”spread the word” and raise more awareness regard to this tool?“</em> The creation of this community group is the answer to this question.</p>
 <!-- [^gcdata2021] The full recording of this workshop  -->
 <!-- was made  by conference organizers and is available on [YouTube]().  -->
 <p>By November 2021, the R4GC GCCollab group has been become one of the largest active data science practitioners groups in Canada, counting over a quarter thousand of members. The weekly “Lunch and Learn Data Science with R” meetups organized by the R4GC Community have been attended by data practitioners from over twenty government departments, and generated
 hundreds of questions/answers, a dozen of tutorials, multiple open to use applications, and thousands of line of open code.</p>
 <!-- On October 29, 2021, the work of this group was presented at the  [2021 International Methodology Symposium](https://www.statcan.gc.ca/en/conferences/symposium2021/index). -->
 <!-- This book aims at consolidating all knowledgebase gathered by the R4GC Community at its  portals and meetups -->
-</div>
-<div id="lunch-and-learn-data-science-with-r-meetups" class="section level2 unnumbered" number="">
-<h2>“Lunch and Learn Data Science with R” meetups</h2>
+<div id="lunch-and-learn-data-science-with-r-meetups" class="section level3 unnumbered">
+<h3>“Lunch and Learn Data Science with R” meetups</h3>
 <p><em>“Building advanced Data Science skills using R, together - one meeting at a time!”</em></p>
 <p>These informal meetings are organized weekly during Friday lunch time (from 12:05 to 12:55).
 There data scientists wanting to upscale their knowledge of R and other Data Science related subjects get together to show and discuss their R codes and share their data coding tricks and methodologies.
@@ -482,11 +475,11 @@ Normally, each session is focused on a particular subject or project with the co
 <p>No registration is required to join the meeting. However, in order to view the notes and video-recordings from these meetups, you need to join this sub-group: <a href="https://gccollab.ca/groups/about/7855030" class="uri">https://gccollab.ca/groups/about/7855030</a>.
 For Agenda and Dial-in MS Teams numbers please see Group Events page at <a href="https://gccollab.ca/event_calendar/group/7391537" class="uri">https://gccollab.ca/event_calendar/group/7391537</a>.</p>
 </div>
-<div id="community-portals" class="section level2 unnumbered" number="">
-<h2>Community portals</h2>
+<div id="community-portals" class="section level3 unnumbered">
+<h3>Community portals</h3>
 <p>The R4GC community makes used of the following collaborative platforms provided by Shared Services Canada.</p>
 <!-- This book aims at consolidating the knowledge spread across various R4GC community portals, described below. -->
-<div id="gccode-group---r4gc" class="section level4 unnumbered" number="">
+<div id="gccode-group---r4gc" class="section level4 unnumbered">
 <h4>GCcode group - r4gc</h4>
 <p>URL: <a href="https://gccode.ssc-spc.gc.ca/r4gc" class="uri">https://gccode.ssc-spc.gc.ca/r4gc</a></p>
 <p>GCcode is the GitLab solution that is accessible from within the GC network. As such, it allows one to view and update (pull and push) codes and documentation with a single click of button on a GC laptop from an RStudio. The tutorial on how to do it is developed. The ‘r4gc’ group has been created within GCcodes, where the codes, tutorials and other resources are gathered. It contains three main folders:</p>
@@ -496,7 +489,7 @@ For Agenda and Dial-in MS Teams numbers please see Group Events page at <a href=
 <li><p>/resources. - This where the rest of knowledge-base is gathered, including the tutorials, slides, and codes presented at the community weekly ‘Lunch and Learn’ meetups.</p></li>
 </ul>
 </div>
-<div id="gccollab-r4gc-use-r" class="section level4 unnumbered" number="">
+<div id="gccollab-r4gc-use-r" class="section level4 unnumbered">
 <h4>GCcollab: R4GC (Use R)</h4>
 <p>URL:
 <a href="https://gccollab.ca/groups/profile/7391537/enuse-rfruse-r" class="uri">https://gccollab.ca/groups/profile/7391537/enuse-rfruse-r</a></p>
@@ -506,12 +499,12 @@ These are reviewed and updated regularly, commonly as part of community weekly m
 <!-- URL: https://gccollab.ca/groups/profile/7855030/enfridays-lunch-and-learn-r-meet-upsfr -->
 <!-- This subgroup is created for sharing minutes, notes and video-recordings from the community weekly meetups,  -->
 </div>
-<div id="gcwiki-user" class="section level4 unnumbered" number="">
+<div id="gcwiki-user" class="section level4 unnumbered">
 <h4>GCwiki: UseR!</h4>
 <p>URL: <a href="https://wiki.gccollab.ca/UseR" class="uri">https://wiki.gccollab.ca/UseR</a>!</p>
 <p>This platform is used to consolidate all discussion topics in one place and link them with other data science resources in the wiki space.</p>
 </div>
-<div id="github-open-canada" class="section level4 unnumbered" number="">
+<div id="github-open-canada" class="section level4 unnumbered">
 <h4>GitHub: open-canada</h4>
 <p>URL: <a href="https://open-canada.github.io/UseR/" class="uri">https://open-canada.github.io/UseR/</a></p>
 <p>Inline with the GC policies of open science and open data , since most information gathered by the R4GC community is unclassified and comes from public domain, a public facing organizational account has been created on GitHub (<a href="https://github.com/open-canada" class="uri">https://github.com/open-canada</a>) for sharing and growing the R4GC community knowledgebase. This is where public-facing community outputs are gathered, including the growing collection of Web Apps and codes that were built with contributions from GC data scientists using open source tools and data, located at <a href="https://github.com/open-canada/Apps" class="uri">https://github.com/open-canada/Apps</a></p>
@@ -520,30 +513,108 @@ These are reviewed and updated regularly, commonly as part of community weekly m
 <!-- This platform is used for wider audience forums and conferences. A number of polls have been conducted there, in a addition to opening and ranking new questions. -->
 </div>
 </div>
-<div id="community-presentations" class="section level2 unnumbered" number="">
-<h2>Community presentations</h2>
-<div id="gcIMS2021" class="section level3 unnumbered" number="">
+<div id="community-presentations" class="section level3 unnumbered">
+<h3>Community presentations</h3>
+</div>
+<div id="gcIMS2021" class="section level3 unnumbered">
 <h3>International Methodology Symposium (October 2021)</h3>
 <p>The work of the R4GC community was presented at the
 2021 International Methodology Symposium organized by Statistics Canada in October 2021.
 The slides for this presentation are available here:
 <a href="https://docs.google.com/presentation/d/19zu27vrNfgtGKdOjjpqsGkhFnh8a7Ca2/">in English</a> and <a href="https://docs.google.com/presentation/d/1GaY0bttRUIm67t16XludgCbJMZ_WyO8E/">en français</a>.</p>
 </div>
-<div id="gcdata2021" class="section level3 unnumbered" number="">
+<div id="gcdata2021" class="section level3 unnumbered">
 <h3>GC Data Conference (February, 2021)</h3>
 <p>The earlier work of community members was also presented at the 2021 GC Data Conference Data Literacy Fest Workshop “Data Engineering Challenges and Solutions: Demo of Shiny” in February 2021. The video-recording of this workshop was made available by conference organizers and is available on <a href="https://youtu.be/QWv6E3e7bek">YouTube</a>.</p>
+<!-- # A propos {-} -->
+<!-- # About this book {-} -->
 </div>
 </div>
-<div id="français" class="section level2 unnumbered" number="">
-<h2>Français</h2>
-<p>Pour l’instant, ce livre est développé seulement en anglais. Cependant, plusieurs de commentaires et trucs qu’on partage dans notre communauté proviens également dans la langue française aussi.</p>
-<p>On espère qu’un moment donné
-on peut
-d’avoir ce livre dans le deux langues officielles: en anglais et en français.
-<!-- traduire ce livre  -->
-On même peux se servir des outils automatisés et intelligence artificielle - car nous sommes les scientifiques de données, n’est pas ? - pour automatiser le traduction de contexte de ce livre!</p>
-<p>Si vous êtes intéressé de contribuer à nos efforts de traduire ce livre dans le langue de votre choix,
-veuillez contacter <a href="index.html#contacts">modérateur de groupe</a>.</p>
+<div id="book-source-code" class="section level2 unnumbered">
+<h2>Book source code</h2>
+<!-- ## About this book {-} -->
+<p>This is book is built using the <a href="https://bookdown.org">bookdown</a> R package in RStudio.
+It is hosted at Open Canada GitHub repo <a href="https://open-canada.github.io/r4gc" class="uri">https://open-canada.github.io/r4gc</a>.
+The source code of it located at <a href="https://github.com/open-canada/r4gc" class="uri">https://github.com/open-canada/r4gc</a>.</p>
+<!-- - similar to many great data science textbooks that have been already published and made freely available on github and bookdown.org and other online platforms -->
+<p>Thus built, the book enables easy collaboration, transparency and peer-reviewing.</p>
+<!-- Additionally, as with any markdown file, in addition to the compiled html file, it also allows one to gather and save  discussion comments and  draft  ideas inside the source Rmd file. -->
+</div>
+<div id="disclaimer-1" class="section level2 unnumbered">
+<h2>Disclaimer</h2>
+<p>The views and opinions expressed in this article are those of the authors and do not necessarily reflect the official policy or position of any agency of the Government of Canada.</p>
+<!-- ### Other formats {-} -->
+<!-- One of the beauties of the `bookdown` R package is that it allows one to generate multiple type of outputs  from the same source .Rmd files. -->
+<!-- , such as pdf, epub, and various hmtl formats (single page html, multiple-page two-column and multiple-page three-column formats, with and without interactive menus). -->
+<!-- The alternative formats of this R4GC book will be placed here  https://open-canada.github.io/r4gc/alt. -->
+<!-- - epub:  -->
+<!-- - pdf: -->
+<!-- - one-page html -->
+<!-- - mulpi-page three-colummn website:  -->
+</div>
+<div id="contributors" class="section level2 unnumbered">
+<h2>Contributors</h2>
+<!-- R4GC is a collaborative effort of many people who have contributed to the development of the codes and knowledgebase that is gathered in the R4GC portals and highlighted in this paper: Jonathan Dench, Joseph Stinziano, Henry Luan, Eric Littlewood, Philippe-Israel Morin, Tony Machado, Maxime Girouard, Martin Jean, Tim Roy, Dejan Pavlic, Utku Suleymanoglu. The support from wider international R community through stackoverflow.org portal and knowledge-sharing events ( conferences and webinars ) organized by the RStudio is also gratefully acknowledged. -->
+<p>R4GC is a collaborative effort of many people who have contributed to the development of the knowledgebase that is gathered in this book.
+They are listed below.</p>
+<blockquote>
+<p>Jonathan Dench, Joseph Stinziano, Henry Luan, Eric Littlewood, Philippe-Israel Morin, Tony Machado, Maxime Girouard, Martin Jean, Tim Roy, Mehrez Samaali, Sylvain Paquet, Dejan Pavlic, Utku Suleymanoglu,</p>
+</blockquote>
+<p>Additionally, much support has been also received from wider international R community through stackoverflow.org portal and knowledge-sharing events organized by the RStudio, as well as from several other Government of Canada employees who remained anonymous.</p>
+<p>Their help is greatly appreciated.
+<!-- and shows, once again, the power of open data science collaboration, where so much can be achieved when peers are help each other  --></p>
+</div>
+<div id="licenses" class="section level2 unnumbered">
+<h2>Licenses</h2>
+<p>This book is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0</a> License, and
+is (and will always be) <strong>free to use</strong>.</p>
+</div>
+<div id="key-principles" class="section level2 unnumbered">
+<h2>Key principles</h2>
+<div id="open-data-open-source-open-science" class="section level3 unnumbered">
+<h3>Open data, open source, open science</h3>
+<!-- open government open source , open knowledge -->
+<p>This book contains only the information and knowledge that was obtained from public domain, using the <a href="open-policies.html#open-policies">Open Government principles</a></p>
+<!-- It is licensed under the [Creative Commons Attribution-NonCommercial-NoDerivs 3.0](http://creativecommons.org/licenses/by-nc-nd/3.0/us/) License, and  -->
+<!-- is (and will always be) **free to use**. -->
+<!-- In concordance with Open Government principles,  -->
+</div>
+<div id="chatham-house-rule" class="section level3 unnumbered">
+<h3>Chatham House Rule</h3>
+<!-- Chatham House Rule for dialogue events {-} -->
+<p>This book is prepared using <a href="https://www.chathamhouse.org/about-us/chatham-house-rule">the Chatham House rule</a>.
+The Chatham House Rule helps create a trusted environment to understand and resolve complex problems through dialog and timely open communication.
+Its guiding spirit is: share the information you receive, but do not reveal the identity of who said it. Hence, no attributions are made and the identity of speakers
+and participants is not disclosed.
+It is based on the views and codes
+contributed by community members as part of ongoing community events interactions. Offered as
+a means to facilitate the discussion, the document does not constitute
+an analytical document, nor does it represent any formal position of any
+organization involved.</p>
+</div>
+</div>
+<div id="how-to-contribute" class="section level2 unnumbered">
+<h2>How to contribute</h2>
+<!-- ## Need help? Have idea? Want to contribute? {-} -->
+<p>Any chapter of this book can be edited by simply clicking on the “edit” button, which will lead to the corresponding source Rmd file in the book’s repo, where you can make a change in the document (in doing so, this repo will forked at your github account ) and submit ir to the book editor (by submitting the merge request).
+Alternatively, you can always contact the R4GC group lead at the contact listed below and attend R4GC weekly meetups.</p>
+</div>
+<div id="about-authors" class="section level2 unnumbered">
+<h2>About authors</h2>
+<p><a href="https://www.linkedin.com/in/dmitry-gorodnichy">Dmitry Gorodnichy</a> is Research Data Scientist with the Chief Data Office at the Canadian Border Services Agency.</p>
+<p><a href="https://www.linkedin.com/in/patrickjlittle/">Patrick Little</a> is Adviser on the Open Government systems team at the Treasury Board of Canada Secretariat.</p>
+<!-- He is passionate about making the government data and tools open to public -->
+<!-- ## Need  help? {-} -->
+<!-- - Check `Use R!` GCCollab group: https://gccollab.ca/groups/profile/7391537/ -->
+<!-- - Join us  for `Lunch and Learn` meet-up every Friday: https://gccollab.ca/groups/about/7855030 -->
+<!-- - Contact us: dmitry.gorodnichy@cbsa-asfc.gc.ca -->
+<div id="contacts" class="section level3 unnumbered">
+<h3>Contacts</h3>
+<p>For questions and feedback, please contact
+<!-- the group  moderator  -->
+Dmitry Gorodnichy: <a href="mailto:dmitry.gorodnichy@cbsa-asfc.gc.ca" class="email">dmitry.gorodnichy@cbsa-asfc.gc.ca</a>
+<!-- or <dmitry@gorodnichy.ca> --></p>
+</div>
 </div>
 </div>
             </section>
@@ -552,11 +623,10 @@ veuillez contacter <a href="index.html#contacts">modérateur de groupe</a>.</p>
         </div>
       </div>
 
-<a href="a-propos.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="français.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -596,6 +666,10 @@ gitbook.start({
 "text": null
 },
 "download": ["LL-book.epub", "LL-book.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "subsection"
 }

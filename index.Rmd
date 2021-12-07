@@ -11,14 +11,13 @@ title: "The R4GC Book" # "Open R4GC Book"
 subtitle: "Learn Data Science with R: Notes and tutorials from the R4GC Community 'Lunch and Learn' meetups"
 # subtitle: "Notes and tutorials from the R4GC Community meetups"
 
-# author: "Dmitry Gorodnichy and Patrick Little"
 # author:
 #   - Dmitry Gorodnichy
 #   - Patrick Little
 
 author: |
   Dmitry Gorodnichy and Patrick Little    
-  URL: [https\://open-canada.github.io/r4gc](https\://open-canada.github.io/r4gc)
+  [https\://open-canada.github.io/r4gc](https\://open-canada.github.io/r4gc) (License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/))
   
 description: "Notes and tutorials from 'Lunch and Learn Data Science with R' weekly meetups organized by the R4GC Community"
 
@@ -70,6 +69,8 @@ output:
   # bookdown::epub_book: default
 ---
 
+
+
 <!-- https://bookdown.org/yihui/rmarkdown-cookbook/toc-unlisted.html - Note that this feature requires at least Pandoc 2.10. -->
 
 #### Disclaimer:
@@ -87,8 +88,25 @@ knitr::opts_chunk$set(echo=T) # Set echo=T to use with "code_folding: hide"
 ```
 
 
+# Français {-}
 
-# Book outline {-}
+Pour l'instant, ce livre est développé seulement en anglais. Cependant, plusieurs de commentaires et trucs  qu'on partage dans notre communauté proviens également dans la langue française aussi. 
+
+On espère qu'un moment donné 
+on peut
+d'avoir ce livre dans le deux langues officielles: en anglais et en français.
+<!-- traduire ce livre  -->
+On même peux se servir des outils automatisés  et intelligence artificielle - car nous sommes les scientifiques de données, n'est pas ? - pour automatiser le traduction de contexte de ce livre!
+
+
+Si vous êtes intéressé de contribuer à nos efforts de traduire ce livre dans le langue de votre choix, 
+veuillez contacter [modérateur de groupe](index.html#contacts).
+
+
+
+
+
+# Preface {-}
 
 <!-- ## Introduction to First Edition {-} -->
 ## Introduction {-}
@@ -100,9 +118,9 @@ This book
 <!-- This paper  -->
 presents a pan-government  initiative to address this problem. The idea is to collaboratively build a common repository of code and knowledgebase for use by anyone in the government to perform many common data science tasks,  and, in doing that, help each other to master both the data science coding skills and the industry standard collaborative practices. The book explains why R language is used as the language of choice for collaborative data science code development. It summaries R advantages and addresses its limitations, establishes the taxonomy of  discussion topics of highest interested to the GC data scientists working with R,  provides an overview of used collaborative platforms, and presents the results obtained to date. Even though the code knowledgebase is developed mainly in R,  it is meant  to be valuable also for data scientists coding in Python and other development environments.
 
-#### Need for collaboration {-}
+<!-- #### Need for collaboration {-} -->
 
-<!-- ### Data  as 'electricity' of the 21st century {-} -->
+## Data  as 'electricity' of the 21st century {-}
 
 Data is the 'electricity' of the 21st century. It is everywhere. Everybody is using it, and one may not need special training or certification to work with data. However, in contrast to working with electricity, working with data relies on the use of data processing tools (codes), the number and complexity of which increases daily, and which are developed by other data practitioners. In other words, data science - by its nature - is the science that is fueled by collaboration of data scientists and that heavily relies on the quality of the shared data processing codes.
 
@@ -116,16 +134,70 @@ This book addresses this need.
 <!-- First (in Section 2), we review one the main challenges in data science, which is data engineering and which triggered the creation of the R4GC community of practice - the community that brings together data practitioners interested in using (or learning) the R language. The reasons why R is chosen as the language of choice for building the data science collaboration are explained in Section 3. Then (in Section 4), we describe the collaboration portals that have been set in support of the R4GC community activities and knowledgebase and overview key repositories and discussion threads that have been created there. Finally (in Section 5 and Appendix), we summarize the main outputs produced by the community to date. Whereas this paper serves as an introduction to the R4GC community efforts, the complete collection of the community knowledgebase is maintained as a shareable, free to use and collaboratively edited book (The R4GC Book) hosted at https://open-canada.github.io/r4gc. Feedback and contributions to this book are welcome, noting that only unclassified public domain knowledge is archived there. -->
 
 
-#### Data Engineering challenge {-}
+## Data Engineering challenge {-}
 
 This effort has started from addressing the problem of data engineering, where it is understood - in analogy with the definition of software engineering by IEEE [2] - as the field of science and technology that deals with "developing scientific and technological knowledge, methods, and experience to the design, implementation, testing, and documentation" of data-driven systems and solutions; or - in analogy with the definition of software engineering at Google [3] -  as the field that "encompasses not just the act of writing code [for data analysis, in our case], but all of the tools and processes an organization uses to build and maintain that code over time".
 
-#### Towards open source and open science {-}
+## Towards open source and open science {-}
 
 <!-- Whereas -->
 The spectacular growth of data science tools development is overwhelmingly attributed to the collaborative open nature of the current data science code development practices. Consequently, Canadian government is also 
 <!-- at the early stages of  -->
 adopting open source industry standards for data coding and reporting. Major shift towards enabling and promoting such practices within the government has started recently, when Government of Canada adopted a number of policies in support of Digital, Open Science, and Open Government [4], when Shared Services of Canada deployed a number of collaboration platforms that are now available to all GC organizations, and when IT Security of most  GC departments approved the use of open-source data science tools such as R and R Studio.
+
+
+
+<!-- ## Uniqueness of the approach  -->
+<!-- ## Presentation bias disclosure -->
+<!-- ## Authors' professional biases -->
+<!-- ## Authors' presentation biases -->
+<!-- ## Key differences from other books {-} -->
+<!-- ## What makes this book different from other books {-} -->
+
+## Pedagogical approach {-}
+
+
+The approach to teaching (mastering) R in this book is very different from that of what most (all?)  other open-source R tutorials one will find on the Web.
+
+It is driven by the personal professional backgrounds and experiences of the authors (one comes from Computing Science, the other from Open Government) working with R and open data. - 
+
+The consistent deliberate effort throughout this book, as throughout *all* meetups and discussion of  the authors in the R4GC community portal, is put into
+going away from judging the quality of your R skills by how good your outputs (graphs, reports etc) are , but *how good the code that generated your outputs  is*. 
+
+- Is it easy to understand (without having you to read comments or documentation)?
+- Is it easy to debug
+- Is it modular?
+- Is it as simple as possible?
+- Is it re-usable?
+- Is it scalable (to larger, or different data)?
+- Does it have least possible number of dependencies (packages), and those that he uses are the best (most effciient and robust, and best supported) for the purpose?
+
+
+We focus on 
+ensuring that from the *very first* lines of code, you code is written properly, i.e, it conforms to all above criteria.
+
+
+In order to achieve that, 
+in contrast to all other tutorials (such as those provided by fabulous RStudio team), the first package we always introduce is 'data.table', and not anything else.
+All other packages and codes will be added later and through the use of 'data.table' by default.
+
+Why? - Read the section on R limitations \@ref{r_limitations}.
+
+Importantly, you will soon see that you code will not only runs much faster  - so you can run it even no your regular 16 Gb RAM laptop, it also takes less screen space and is  easier to read!
+
+And ... you will never compare your code to Italian pasta dish ("spaghetti"), and it will get used and possibly further extended by others, and bring more joy to your life.
+
+<!-- And it may get used by others. -->
+
+<!-- (if you use data.table instead of dplyr functions), -->
+
+<!-- It will become easier, not harder, if you do it. -->
+
+
+
+
+<!-- breaking the stereotypical approach to teaching R, -->
+
 
 
 ## Book structure {-}

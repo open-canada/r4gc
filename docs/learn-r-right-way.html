@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>2 Learn R: Right way! | The R4GC Book</title>
   <meta name="description" content="Notes and tutorials from ‘Lunch and Learn Data Science with R’ weekly meetups organized by the R4GC Community" />
-  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
   <meta property="og:title" content="2 Learn R: Right way! | The R4GC Book" />
   <meta property="og:type" content="book" />
@@ -32,7 +32,8 @@
 <link rel="prev" href="why-r.html"/>
 <link rel="next" href="open-source-textbooks.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -48,8 +49,6 @@
 
 
 
-
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 <link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
 
@@ -58,6 +57,7 @@
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
@@ -137,37 +137,38 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Raison d’être</a>
 <ul>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#r4gc-community"><i class="fa fa-check"></i>R4GC Community</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#r4gc-community"><i class="fa fa-check"></i>R4GC Community</a>
+<ul>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#lunch-and-learn-data-science-with-r-meetups"><i class="fa fa-check"></i>“Lunch and Learn Data Science with R” meetups</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#community-portals"><i class="fa fa-check"></i>Community portals</a></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#community-presentations"><i class="fa fa-check"></i>Community presentations</a>
-<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#community-presentations"><i class="fa fa-check"></i>Community presentations</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#gcIMS2021"><i class="fa fa-check"></i>International Methodology Symposium (October 2021)</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#gcdata2021"><i class="fa fa-check"></i>GC Data Conference (February, 2021)</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#français"><i class="fa fa-check"></i>Français</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#book-source-code"><i class="fa fa-check"></i>Book source code</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#disclaimer-1"><i class="fa fa-check"></i>Disclaimer</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#contributors"><i class="fa fa-check"></i>Contributors</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#licenses"><i class="fa fa-check"></i>Licenses</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#key-principles"><i class="fa fa-check"></i>Key principles</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#open-data-open-source-open-science"><i class="fa fa-check"></i>Open data, open source, open science</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#chatham-house-rule"><i class="fa fa-check"></i>Chatham House Rule</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="a-propos.html"><a href="a-propos.html"><i class="fa fa-check"></i>A propos</a>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#how-to-contribute"><i class="fa fa-check"></i>How to contribute</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#about-authors"><i class="fa fa-check"></i>About authors</a>
 <ul>
-<li class="chapter" data-level="" data-path="a-propos.html"><a href="a-propos.html#book-source-code"><i class="fa fa-check"></i>Book source code</a></li>
-<li class="chapter" data-level="" data-path="a-propos.html"><a href="a-propos.html#disclaimer-1"><i class="fa fa-check"></i>Disclaimer</a></li>
-<li class="chapter" data-level="" data-path="a-propos.html"><a href="a-propos.html#pedagogical-approach"><i class="fa fa-check"></i>Pedagogical approach</a></li>
-<li class="chapter" data-level="" data-path="a-propos.html"><a href="a-propos.html#contributors"><i class="fa fa-check"></i>Contributors</a></li>
-<li class="chapter" data-level="" data-path="a-propos.html"><a href="a-propos.html#key-principles"><i class="fa fa-check"></i>Key principles</a>
-<ul>
-<li class="chapter" data-level="" data-path="a-propos.html"><a href="a-propos.html#open-data-open-source-open-science"><i class="fa fa-check"></i>Open data, open source, open science</a></li>
-<li class="chapter" data-level="" data-path="a-propos.html"><a href="a-propos.html#chatham-house-rule"><i class="fa fa-check"></i>Chatham House Rule</a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="a-propos.html"><a href="a-propos.html#how-to-contribute"><i class="fa fa-check"></i>How to contribute</a></li>
-<li class="chapter" data-level="" data-path="a-propos.html"><a href="a-propos.html#about-authors"><i class="fa fa-check"></i>About authors</a>
-<ul>
-<li class="chapter" data-level="" data-path="a-propos.html"><a href="a-propos.html#contacts"><i class="fa fa-check"></i>Contacts</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#contacts"><i class="fa fa-check"></i>Contacts</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="book-outline.html"><a href="book-outline.html"><i class="fa fa-check"></i>Book outline</a>
+<li class="chapter" data-level="" data-path="français.html"><a href="français.html"><i class="fa fa-check"></i>Français</a></li>
+<li class="chapter" data-level="" data-path="preface.html"><a href="preface.html"><i class="fa fa-check"></i>Preface</a>
 <ul>
-<li class="chapter" data-level="" data-path="book-outline.html"><a href="book-outline.html#introduction"><i class="fa fa-check"></i>Introduction</a></li>
-<li class="chapter" data-level="" data-path="book-outline.html"><a href="book-outline.html#book-structure"><i class="fa fa-check"></i>Book structure</a></li>
+<li class="chapter" data-level="" data-path="preface.html"><a href="preface.html#introduction"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="chapter" data-level="" data-path="preface.html"><a href="preface.html#data-as-electricity-of-the-21st-century"><i class="fa fa-check"></i>Data as ‘electricity’ of the 21st century</a></li>
+<li class="chapter" data-level="" data-path="preface.html"><a href="preface.html#data-engineering-challenge"><i class="fa fa-check"></i>Data Engineering challenge</a></li>
+<li class="chapter" data-level="" data-path="preface.html"><a href="preface.html#towards-open-source-and-open-science"><i class="fa fa-check"></i>Towards open source and open science</a></li>
+<li class="chapter" data-level="" data-path="preface.html"><a href="preface.html#pedagogical-approach"><i class="fa fa-check"></i>Pedagogical approach</a></li>
+<li class="chapter" data-level="" data-path="preface.html"><a href="preface.html#book-structure"><i class="fa fa-check"></i>Book structure</a></li>
 </ul></li>
 <li class="part"><span><b>I General discussions</b></span></li>
 <li class="chapter" data-level="1" data-path="why-r.html"><a href="why-r.html"><i class="fa fa-check"></i><b>1</b> Why R?</a>
@@ -178,18 +179,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="2" data-path="learn-r-right-way.html"><a href="learn-r-right-way.html"><i class="fa fa-check"></i><b>2</b> Learn R: <em>R</em>ight way!</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="learn-r-right-way.html"><a href="learn-r-right-way.html#the-way-we-teach-at-r4gc-lunch-and-learn"><i class="fa fa-check"></i><b>2.1</b> The way we teach at R4GC Lunch and Learn</a></li>
-<li class="chapter" data-level="2.2" data-path="learn-r-right-way.html"><a href="learn-r-right-way.html#from-rstudio"><i class="fa fa-check"></i><b>2.2</b> From RStudio</a></li>
-<li class="chapter" data-level="2.3" data-path="learn-r-right-way.html"><a href="learn-r-right-way.html#ways-to-continue-growing-your-r-skills"><i class="fa fa-check"></i><b>2.3</b> Ways to continue growing your R skills</a></li>
-<li class="chapter" data-level="2.4" data-path="learn-r-right-way.html"><a href="learn-r-right-way.html#r-communities-in-gc"><i class="fa fa-check"></i><b>2.4</b> R communities in GC</a>
-<ul>
-<li class="chapter" data-level="2.4.1" data-path="learn-r-right-way.html"><a href="learn-r-right-way.html#gcconnex-gc-only"><i class="fa fa-check"></i><b>2.4.1</b> GCConnex (GC only):</a></li>
-<li class="chapter" data-level="2.4.2" data-path="learn-r-right-way.html"><a href="learn-r-right-way.html#gccode-gc-only"><i class="fa fa-check"></i><b>2.4.2</b> GCcode (GC only):</a></li>
-<li class="chapter" data-level="2.4.3" data-path="learn-r-right-way.html"><a href="learn-r-right-way.html#gccollab-public-with-login"><i class="fa fa-check"></i><b>2.4.3</b> GCcollab (public with login):</a></li>
-<li class="chapter" data-level="2.4.4" data-path="learn-r-right-way.html"><a href="learn-r-right-way.html#gcwiki-public"><i class="fa fa-check"></i><b>2.4.4</b> GCwiki (public):</a></li>
-<li class="chapter" data-level="2.4.5" data-path="learn-r-right-way.html"><a href="learn-r-right-way.html#github-public"><i class="fa fa-check"></i><b>2.4.5</b> GitHub (public):</a></li>
-<li class="chapter" data-level="2.4.6" data-path="learn-r-right-way.html"><a href="learn-r-right-way.html#other-related-groups"><i class="fa fa-check"></i><b>2.4.6</b> Other related groups</a></li>
-</ul></li>
+<li class="chapter" data-level="2.1" data-path="learn-r-right-way.html"><a href="learn-r-right-way.html#in-which-sense-right"><i class="fa fa-check"></i><b>2.1</b> In which sense ‘right’?</a></li>
+<li class="chapter" data-level="2.2" data-path="learn-r-right-way.html"><a href="learn-r-right-way.html#intro"><i class="fa fa-check"></i><b>2.2</b> Intro</a></li>
+<li class="chapter" data-level="2.3" data-path="learn-r-right-way.html"><a href="learn-r-right-way.html#the-way-r-is-tought-at-r4gc-lunch-and-learn"><i class="fa fa-check"></i><b>2.3</b> The way R is tought at R4GC Lunch and Learn</a></li>
+<li class="chapter" data-level="2.4" data-path="learn-r-right-way.html"><a href="learn-r-right-way.html#from-rstudio"><i class="fa fa-check"></i><b>2.4</b> From RStudio</a></li>
+<li class="chapter" data-level="2.5" data-path="learn-r-right-way.html"><a href="learn-r-right-way.html#ways-to-continue-growing-your-r-skills"><i class="fa fa-check"></i><b>2.5</b> Ways to continue growing your R skills</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="open-source-textbooks.html"><a href="open-source-textbooks.html"><i class="fa fa-check"></i><b>3</b> Open source textbooks</a>
 <ul>
@@ -217,30 +211,30 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="4.6" data-path="events-and-forums-for-r-users.html"><a href="events-and-forums-for-r-users.html#related-communities-in-gc"><i class="fa fa-check"></i><b>4.6</b> Related communities in GC</a>
 <ul>
-<li class="chapter" data-level="4.6.1" data-path="events-and-forums-for-r-users.html"><a href="events-and-forums-for-r-users.html#gcconnex-gc-only-1"><i class="fa fa-check"></i><b>4.6.1</b> GCConnex (GC only):</a></li>
-<li class="chapter" data-level="4.6.2" data-path="events-and-forums-for-r-users.html"><a href="events-and-forums-for-r-users.html#gccode-gc-only-1"><i class="fa fa-check"></i><b>4.6.2</b> GCcode (GC only):</a></li>
-<li class="chapter" data-level="4.6.3" data-path="events-and-forums-for-r-users.html"><a href="events-and-forums-for-r-users.html#gccollab-public-with-login-1"><i class="fa fa-check"></i><b>4.6.3</b> GCcollab (public with login):</a></li>
-<li class="chapter" data-level="4.6.4" data-path="events-and-forums-for-r-users.html"><a href="events-and-forums-for-r-users.html#gcwiki-public-1"><i class="fa fa-check"></i><b>4.6.4</b> GCwiki (public):</a></li>
-<li class="chapter" data-level="4.6.5" data-path="events-and-forums-for-r-users.html"><a href="events-and-forums-for-r-users.html#github-public-1"><i class="fa fa-check"></i><b>4.6.5</b> GitHub (public):</a></li>
+<li class="chapter" data-level="4.6.1" data-path="events-and-forums-for-r-users.html"><a href="events-and-forums-for-r-users.html#gcconnex-gc-only"><i class="fa fa-check"></i><b>4.6.1</b> GCConnex (GC only):</a></li>
+<li class="chapter" data-level="4.6.2" data-path="events-and-forums-for-r-users.html"><a href="events-and-forums-for-r-users.html#gccode-gc-only"><i class="fa fa-check"></i><b>4.6.2</b> GCcode (GC only):</a></li>
+<li class="chapter" data-level="4.6.3" data-path="events-and-forums-for-r-users.html"><a href="events-and-forums-for-r-users.html#gccollab-public-with-login"><i class="fa fa-check"></i><b>4.6.3</b> GCcollab (public with login):</a></li>
+<li class="chapter" data-level="4.6.4" data-path="events-and-forums-for-r-users.html"><a href="events-and-forums-for-r-users.html#gcwiki-public"><i class="fa fa-check"></i><b>4.6.4</b> GCwiki (public):</a></li>
+<li class="chapter" data-level="4.6.5" data-path="events-and-forums-for-r-users.html"><a href="events-and-forums-for-r-users.html#github-public"><i class="fa fa-check"></i><b>4.6.5</b> GitHub (public):</a></li>
 <li class="chapter" data-level="4.6.6" data-path="events-and-forums-for-r-users.html"><a href="events-and-forums-for-r-users.html#other-canada-groups"><i class="fa fa-check"></i><b>4.6.6</b> Other Canada groups</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="open-government-policies.html"><a href="open-government-policies.html"><i class="fa fa-check"></i><b>5</b> Open government policies</a>
+<li class="chapter" data-level="5" data-path="open-policies.html"><a href="open-policies.html"><i class="fa fa-check"></i><b>5</b> Open government policies</a>
 <ul>
-<li class="chapter" data-level="5.1" data-path="open-government-policies.html"><a href="open-government-policies.html#open-source"><i class="fa fa-check"></i><b>5.1</b> Open Source</a>
+<li class="chapter" data-level="5.1" data-path="open-policies.html"><a href="open-policies.html#open-source"><i class="fa fa-check"></i><b>5.1</b> Open Source</a>
 <ul>
-<li class="chapter" data-level="5.1.1" data-path="open-government-policies.html"><a href="open-government-policies.html#open-government"><i class="fa fa-check"></i><b>5.1.1</b> Open government</a></li>
+<li class="chapter" data-level="5.1.1" data-path="open-policies.html"><a href="open-policies.html#open-government"><i class="fa fa-check"></i><b>5.1.1</b> Open government</a></li>
 </ul></li>
-<li class="chapter" data-level="5.2" data-path="open-government-policies.html"><a href="open-government-policies.html#open-science"><i class="fa fa-check"></i><b>5.2</b> Open Science</a>
+<li class="chapter" data-level="5.2" data-path="open-policies.html"><a href="open-policies.html#open-science"><i class="fa fa-check"></i><b>5.2</b> Open Science</a>
 <ul>
-<li class="chapter" data-level="5.2.1" data-path="open-government-policies.html"><a href="open-government-policies.html#scientific-integrity"><i class="fa fa-check"></i><b>5.2.1</b> Scientific Integrity</a></li>
+<li class="chapter" data-level="5.2.1" data-path="open-policies.html"><a href="open-policies.html#scientific-integrity"><i class="fa fa-check"></i><b>5.2.1</b> Scientific Integrity</a></li>
 </ul></li>
 </ul></li>
 <li class="part"><span><b>II Art of R programming</b></span></li>
-<li class="chapter" data-level="6" data-path="use-r-efficiently-with-data-table.html"><a href="use-r-efficiently-with-data-table.html"><i class="fa fa-check"></i><b>6</b> Use R efficiently with data.table!</a>
+<li class="chapter" data-level="6" data-path="use-r-efficiently-with-data.html"><a href="use-r-efficiently-with-data.html"><i class="fa fa-check"></i><b>6</b> Use R efficiently with data.table!</a>
 <ul>
-<li class="chapter" data-level="6.1" data-path="use-r-efficiently-with-data-table.html"><a href="use-r-efficiently-with-data-table.html#data.table-vs.-dplyr"><i class="fa fa-check"></i><b>6.1</b> data.table vs. dplyr</a></li>
-<li class="chapter" data-level="6.2" data-path="use-r-efficiently-with-data-table.html"><a href="use-r-efficiently-with-data-table.html#extensions-of-data.table"><i class="fa fa-check"></i><b>6.2</b> Extensions of data.table</a></li>
+<li class="chapter" data-level="6.1" data-path="use-r-efficiently-with-data.html"><a href="use-r-efficiently-with-data.html#data.table-vs.-dplyr"><i class="fa fa-check"></i><b>6.1</b> data.table vs. dplyr</a></li>
+<li class="chapter" data-level="6.2" data-path="use-r-efficiently-with-data.html"><a href="use-r-efficiently-with-data.html#extensions-of-data.table"><i class="fa fa-check"></i><b>6.2</b> Extensions of data.table</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="python-and-r-unite.html"><a href="python-and-r-unite.html"><i class="fa fa-check"></i><b>7</b> Python and R unite!</a></li>
 <li class="chapter" data-level="8" data-path="from-excel-to-r.html"><a href="from-excel-to-r.html"><i class="fa fa-check"></i><b>8</b> From Excel to R</a></li>
@@ -442,17 +436,24 @@ Published with bookdown</a></center></li>
 <div id="learn-r-right-way" class="section level1" number="2">
 <h1><span class="header-section-number">2</span> Learn R: <em>R</em>ight way!</h1>
 <!-- and continue learning R -->
-<p>The number of resources and ways to learn R is enormous.
-Some of us had tried many of them until we found the ones that we believe are the best ones. They are listed here</p>
-<p>And of course, don’t ever shy to ask questions (or seek for already many answers) at <a href="https://stackoverflow.com/" class="uri">https://stackoverflow.com/</a>.
-In fact, what a great option for you to save all the knowledgebase you acquire –
-Helping yourself, you also help others, and contribute to further improvement of many R packages !</p>
-<div id="the-way-we-teach-at-r4gc-lunch-and-learn" class="section level2" number="2.1">
-<h2><span class="header-section-number">2.1</span> The way we teach at R4GC Lunch and Learn</h2>
-<p>Here are some: <a href="https://open-canada.github.io/UseR/resources.html" class="uri">https://open-canada.github.io/UseR/resources.html</a></p>
+<div id="in-which-sense-right" class="section level2" number="2.1">
+<h2><span class="header-section-number">2.1</span> In which sense ‘right’?</h2>
+<p>Ok, perhaps the word “Right” is not right here… - What is right for someone, may not be right for someone else who learnt R another way.
+So, Let’s call it “Diffe<em>R</em>ent” or “Non-t<em>R</em>aditional” way. It is indeed the best and right for us. And we hope hope that, even if it is not the right “right” for you, it is still “right” for you to help you further improve your R codings kills</p>
 </div>
-<div id="from-rstudio" class="section level2" number="2.2">
-<h2><span class="header-section-number">2.2</span> From RStudio</h2>
+<div id="intro" class="section level2" number="2.2">
+<h2><span class="header-section-number">2.2</span> Intro</h2>
+<p>The number of resources and ways to learn R is enormous.
+Some of us have tried many of them until we found the ones that we believe are the best ones.
+It could be suggested to start learning (or re-learning “Right way”) R from the one listed below.</p>
+</div>
+<div id="the-way-r-is-tought-at-r4gc-lunch-and-learn" class="section level2" number="2.3">
+<h2><span class="header-section-number">2.3</span> The way R is tought at R4GC Lunch and Learn</h2>
+<p>Recommendations for R101 home-work: <a href="https://open-canada.github.io/UseR/resources.html" class="uri">https://open-canada.github.io/UseR/resources.html</a></p>
+<p>The starters (for students coming from non computer science backgrounds): <a href="https://gorodnichy.github.io/r101/" class="uri">https://gorodnichy.github.io/r101/</a></p>
+</div>
+<div id="from-rstudio" class="section level2" number="2.4">
+<h2><span class="header-section-number">2.4</span> From RStudio</h2>
 <p>“Data Science Course in a Box” course:
 <a href="https://github.com/rstudio-education/datascience-box" class="uri">https://github.com/rstudio-education/datascience-box</a></p>
 <p>Data-sets: <a href="https://github.com/rstudio-education/dsbox" class="uri">https://github.com/rstudio-education/dsbox</a>)</p>
@@ -461,10 +462,13 @@ Helping yourself, you also help others, and contribute to further improvement of
 <p>A guide to some of the most useful R Packages that we know about, organized by their role in data science. - <a href="https://github.com/rstudio/RStartHere" class="uri">https://github.com/rstudio/RStartHere</a></p>
 <p><a href="https://github.com/rstudio/cheatsheets" class="uri">https://github.com/rstudio/cheatsheets</a></p>
 </div>
-<div id="ways-to-continue-growing-your-r-skills" class="section level2" number="2.3">
-<h2><span class="header-section-number">2.3</span> Ways to continue growing your R skills</h2>
+<div id="ways-to-continue-growing-your-r-skills" class="section level2" number="2.5">
+<h2><span class="header-section-number">2.5</span> Ways to continue growing your R skills</h2>
 <p>Apart from reading and contributing to this R4GC Book and participating in our R4GC community meetups (which is naturally the best way :), you can :</p>
 <ul>
+<li><p>Ask questions (or seek for already many answers) at <a href="https://stackoverflow.com/" class="uri">https://stackoverflow.com/</a>.
+In fact, what a great option for you to save all the knowledgebase you acquire –
+Helping yourself, you also help others, and contribute to further improvement of many R packages !</p></li>
 <li><p>browse and play with many open-source books (See next section)</p></li>
 <li><p>browse and play with many R blogs</p></li>
 <li><p>attend free RStudio monthly organized webinars: <a href="https://github.com/rstudio/webinars" class="uri">https://github.com/rstudio/webinars</a></p></li>
@@ -477,68 +481,6 @@ Helping yourself, you also help others, and contribute to further improvement of
 </ul>
 <p><a href="https://resources.rstudio.com/rstudio-conf-2019" class="uri">https://resources.rstudio.com/rstudio-conf-2019</a> , 2020, 2021 etc</p>
 </div>
-<div id="r-communities-in-gc" class="section level2" number="2.4">
-<h2><span class="header-section-number">2.4</span> R communities in GC</h2>
-<p>Roughly sorted by the level of group activity</p>
-<div id="gcconnex-gc-only" class="section level3" number="2.4.1">
-<h3><span class="header-section-number">2.4.1</span> GCConnex (GC only):</h3>
-<ul>
-<li><p><a href="https://gcconnex.gc.ca/groups/profile/5394852/data-science-goc" class="uri">https://gcconnex.gc.ca/groups/profile/5394852/data-science-goc</a></p></li>
-<li><p><a href="https://gcconnex.gc.ca/groups/profile/56632124/statcan-data-science-communities-of-practice-hub" class="uri">https://gcconnex.gc.ca/groups/profile/56632124/statcan-data-science-communities-of-practice-hub</a></p></li>
-<li><p><a href="https://gcconnex.gc.ca/groups/profile/53857931/applied-machine-learning-ml-for-text-analysis-community-of-practice-cop" class="uri">https://gcconnex.gc.ca/groups/profile/53857931/applied-machine-learning-ml-for-text-analysis-community-of-practice-cop</a></p></li>
-<li><p><a href="https://gcconnex.gc.ca/groups/profile/22346843/big-data-community" class="uri">https://gcconnex.gc.ca/groups/profile/22346843/big-data-community</a></p></li>
-<li><p><a href="https://gcconnex.gc.ca/groups/profile/39621554/data-visualization-resources" class="uri">https://gcconnex.gc.ca/groups/profile/39621554/data-visualization-resources</a></p></li>
-<li><p><a href="https://gcconnex.gc.ca/groups/profile/24345174/data-visualization" class="uri">https://gcconnex.gc.ca/groups/profile/24345174/data-visualization</a></p></li>
-<li><p><a href="https://gcconnex.gc.ca/groups/profile/47035648/machine-learning-in-remote-sensing-cop" class="uri">https://gcconnex.gc.ca/groups/profile/47035648/machine-learning-in-remote-sensing-cop</a></p></li>
-<li><p><a href="https://gcconnex.gc.ca/groups/profile/24825105/data-analytics-coalition" class="uri">https://gcconnex.gc.ca/groups/profile/24825105/data-analytics-coalition</a></p></li>
-<li><p><a href="https://gcconnex.gc.ca/groups/profile/47035648/machine-learning-in-remote-sensing-cop" class="uri">https://gcconnex.gc.ca/groups/profile/47035648/machine-learning-in-remote-sensing-cop</a></p></li>
-<li><p><a href="https://gcconnex.gc.ca/groups/profile/19758048/analytics-mining-and-hypothesis-testing" class="uri">https://gcconnex.gc.ca/groups/profile/19758048/analytics-mining-and-hypothesis-testing</a></p></li>
-<li><p><a href="https://gcconnex.gc.ca/groups/profile/62219803/artificial-intelligence-and-data-science-group" class="uri">https://gcconnex.gc.ca/groups/profile/62219803/artificial-intelligence-and-data-science-group</a></p></li>
-<li><p><a href="https://gcconnex.gc.ca/groups/profile/30787891/digital-academy" class="uri">https://gcconnex.gc.ca/groups/profile/30787891/digital-academy</a></p></li>
-<li><p><a href="https://gcconnex.gc.ca/groups/profile/36236376/candev-data-challenge-" class="uri">https://gcconnex.gc.ca/groups/profile/36236376/candev-data-challenge-</a></p></li>
-<li><p><a href="https://gcconnex.gc.ca/groups/profile/4474153/data-analytics-working-group-dawg" class="uri">https://gcconnex.gc.ca/groups/profile/4474153/data-analytics-working-group-dawg</a></p></li>
-<li><p><a href="https://gcconnex.gc.ca/groups/profile/34024870/welcome-to-r-canadian-government" class="uri">https://gcconnex.gc.ca/groups/profile/34024870/welcome-to-r-canadian-government</a> (not active)</p></li>
-</ul>
-</div>
-<div id="gccode-gc-only" class="section level3" number="2.4.2">
-<h3><span class="header-section-number">2.4.2</span> GCcode (GC only):</h3>
-<ul>
-<li><p><a href="https://gccode.ssc-spc.gc.ca/r4gc" class="uri">https://gccode.ssc-spc.gc.ca/r4gc</a></p></li>
-<li><p><a href="https://gccode.ssc-spc.gc.ca/DSCV" class="uri">https://gccode.ssc-spc.gc.ca/DSCV</a></p></li>
-</ul>
-</div>
-<div id="gccollab-public-with-login" class="section level3" number="2.4.3">
-<h3><span class="header-section-number">2.4.3</span> GCcollab (public with login):</h3>
-<ul>
-<li><p><a href="https://gccollab.ca/groups/profile/778815/eneccc-network-of-experts-and-researchers-in-data-science-nerdsfrlabo-de-donnu00e9es" class="uri">https://gccollab.ca/groups/profile/778815/eneccc-network-of-experts-and-researchers-in-data-science-nerdsfrlabo-de-donnu00e9es</a></p></li>
-<li><p><a href="https://gccollab.ca/groups/profile/3465987/enswam-support-for-wildlife-analysis-and-monitoringfr" class="uri">https://gccollab.ca/groups/profile/3465987/enswam-support-for-wildlife-analysis-and-monitoringfr</a></p></li>
-<li><p><a href="https://gccollab.ca/groups/profile/18873/enopen-governmentfrgouvernement-ouvert" class="uri">https://gccollab.ca/groups/profile/18873/enopen-governmentfrgouvernement-ouvert</a></p></li>
-<li><p><a href="https://gccollab.ca/groups/profile/7071541/endata-engineering-challenges-and-solutions" class="uri">https://gccollab.ca/groups/profile/7071541/endata-engineering-challenges-and-solutions</a> (#GCData2021 conference workshop)</p></li>
-</ul>
-<p>More GCcollab groups are listed at <a href="https://wiki.gccollab.ca/The_Square/GCcollab_Groups" class="uri">https://wiki.gccollab.ca/The_Square/GCcollab_Groups</a></p>
-</div>
-<div id="gcwiki-public" class="section level3" number="2.4.4">
-<h3><span class="header-section-number">2.4.4</span> GCwiki (public):</h3>
-<ul>
-<li><a href="https://wiki.gccollab.ca/The_Square/Data_Science" class="uri">https://wiki.gccollab.ca/The_Square/Data_Science</a></li>
-</ul>
-</div>
-<div id="github-public" class="section level3" number="2.4.5">
-<h3><span class="header-section-number">2.4.5</span> GitHub (public):</h3>
-<ul>
-<li><p><a href="https://github.com/open-data" class="uri">https://github.com/open-data</a></p></li>
-<li><p><a href="https://github.com/canada-ca" class="uri">https://github.com/canada-ca</a></p></li>
-<li><p><a href="https://github.com/PatLittle" class="uri">https://github.com/PatLittle</a></p></li>
-</ul>
-</div>
-<div id="other-related-groups" class="section level3" number="2.4.6">
-<h3><span class="header-section-number">2.4.6</span> Other related groups</h3>
-<ul>
-<li><a href="https://code.open.canada.ca/en/open-source-softwares.html" class="uri">https://code.open.canada.ca/en/open-source-softwares.html</a></li>
-</ul>
-<!-- # Open R codes for GC: on GCcode and GitHub -->
-</div>
-</div>
 </div>
             </section>
 
@@ -550,7 +492,6 @@ Helping yourself, you also help others, and contribute to further improvement of
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -590,6 +531,10 @@ gitbook.start({
 "text": null
 },
 "download": ["LL-book.epub", "LL-book.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "subsection"
 }
