@@ -105,8 +105,8 @@ veuillez contacter [modérateur de groupe](index.html#contacts).
 
 
 
+# (PART) Preface {.unnumbered}
 
-# Preface {-}
 
 <!-- ## Introduction to First Edition {-} -->
 ## Introduction {-}
@@ -200,7 +200,7 @@ And ... you will never compare your code to Italian pasta dish ("spaghetti"), an
 
 
 
-## Book structure {-}
+## Book outline {-}
 
 
 
@@ -275,7 +275,10 @@ Part VI provides information about
  developed by the community members. 
  <!-- All codes are made data-agnostic and do not contain any internal information -->
 
-Finally, *Appendix* includes agendas for the R4GC community "Lunch and Learn" meetups, Future Plans and Release Notes.
+Finally, *Appendix* includes agendas, notes, and codes  from the R4GC community "Lunch and Learn" meetups.
+
+<!-- Future Plans and Release Notes will be posted there soon -->
+
 <!-- , plans and  invitation for collaboration, in particular to make this knowledgebase bilingual - in support of bilingualism in Canada and as an another opportunity for applying data science skills for public good. -->
 
 
@@ -366,34 +369,15 @@ https://open-canada.github.io/UseR/learn2020.html
 You can see the final result here: https://itrack.shinyapps.io/covid/us.Rmd
 
 
-# Short tutorials
 
-## Geo/Spatial coding and visualization with R. Part 1:
+<!-- # (PART) Community Development {-} -->
 
-Contributed by: 
-
-## Text Analysis with R. Part 1: 
-
-Contributed by: 
-
-## Dual Coding - Python and R unite !
-
-Contributed by: 
-
-## Working with ggtables
-
-Contributed by: 
-
-## Automate common look and feel of your ggplot graphs
-
-Contributed by: 
-
-## Automated generation of report cards
-
-Contributed by: 
+# (PART) Community Codes {-}
 
 
-# (PART) Community Development {-}
+
+```{r 21_gc_datasets, child = '21_gc_datasets.Rmd'}
+```
 
 ```{r 20_gc_apps, child = '20_gc_apps.Rmd'}
 ```
@@ -421,20 +405,20 @@ Contributed by:
 
 
 
-# Technical information
+<!-- # Technical information -->
 
-This book is written in R Markdown and R, with the use of 'bookdown' package, and compiled in R Studio.
+<!-- This book is written in R Markdown and R, with the use of 'bookdown' package, and compiled in R Studio. -->
 
-## Colophone
+<!-- ## Colophone -->
 
-When archiving an article that was generated from R code, it's a good practice to include the information about the system where the code was run, the way it is done here:
-```{r}
-sessionInfo()
-```
+<!-- When archiving an article that was generated from R code, it's a good practice to include the information about the system where the code was run, the way it is done here: -->
+<!-- ```{r} -->
+<!-- sessionInfo() -->
+<!-- ``` -->
 
 
-```{r 00-releaseNotes.Rmd, child = '00-releaseNotes.Rmd'}
-```
+<!-- ```{r 00-releaseNotes.Rmd, child = '00-releaseNotes.Rmd'} -->
+<!-- ``` -->
 
 
 

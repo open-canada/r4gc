@@ -1,18 +1,21 @@
-Open source textbooks
+Great Open Source Textbooks
 ==============
 
 The R4GC book is inspired by many great open-source textbooks built using bookdown R package. These are listed below. Some of these are forked into https://github.com/open-canada/ to allow further testing and editing of the codes there
 
 
-For textbooks specific to each discussion topic in The R4GC book,please see the corresponding discussion topic chapters.
+For textbooks specific to each discussion topic in The R4GC book, please see the corresponding discussion topic chapters.
+
 For a much larger collection of bookdown books see:
 
 -   <https://www.bigbookofr.com/>. Source: https://github.com/open-canada/BigBookofR
 
 -   <https://bookdown.org/>
 
-In two-column format
---------------------
+## By presentation
+
+### In two-column format
+
 
 
 -   <https://bookdown.org/yihui/bookdown/> (<https://bookdown.org/yihui/rmarkdown/bookdown-output.html#bookdown-output>)
@@ -32,12 +35,11 @@ In two-column format
 -   <https://smltar.com/> Supervised Machine Learning for Text Analysis in R EMIL HVITFELDT AND JULIA SILGE 2021-10-17
 
 
-
 -   <https://bookdown.org/ejvanholm/Textbook/>
 
 -   <https://bookdown.org/igisc/EnvDataSci/> Introduction to Environmental Data Science
 
--   <https://bookdown.org/sunboklee/intror_ewha/> R for Solving Social Problems Sunbok Lee
+-   <https://bookdown.org/sunboklee/intror_ewha/> R for Solving Social Problems 
 
 <!-- Ewha Womans University, 2021-2) 2021-09-03 -->
 
@@ -49,9 +51,10 @@ In two-column format
 
 <!-- Jerome Levesque and David Maybury -->
 
-<!-- https://bookdown.org/selesnow/build_telegram_bot_using_r/ -->
+- https://bookdown.org/selesnow/build_telegram_bot_using_r/
 
-<!-- Разработка telegram ботов на языке R -->
+Разработка telegram ботов на языке R / 
+Development of Bots in R (In Russian)
 
 <!-- Алексей Селезнёв -->
 
@@ -59,8 +62,8 @@ In two-column format
 
 <!-- https://bookdown.org/f_pianzola/Korean_literature/ -->
 
-In three-column format
-----------------------
+### In three-column format
+
 
 On Shiny:
 
@@ -71,31 +74,89 @@ On Shiny:
 From Hadley:
 
 -   <https://r4ds.had.co.nz/>
-
 -   <https://adv-r.hadley.nz/>
-
 -   <https://r-pkgs.org/>
-
 -   <https://geocompr.robinlovelace.net/>
 
-<!-- ## #Multi-language support -->
 
-<!-- 🇨🇦     U+1F1E8 U+1F1E6  -->
+## By Topic
 
-<!-- CA -->
+###  Introductory and General 
 
-<!-- &#127464 &#127462 -->
 
-<!-- FR -->
+TBA
 
-<!-- &#127467 &#127479  -->
+### Specialized 
 
-<!-- EN &#127468 &#127463 -->
+TBA
 
-<!-- RU -->
 
-<!-- &#127479 &#127482 -->
+# Great Open Source  Tutorials
 
-<!-- UA -->
 
-<!-- &#127482 &#127462 -->
+
+
+## From RStudio  
+
+
+- https://github.com/rstudio/webinars
+
+- "Data Science Course in a Box" course:
+https://github.com/rstudio-education/datascience-box
+
+- Data-sets: https://github.com/rstudio-education/dsbox)
+
+- R for Data Science Instructor's Guide
+https://github.com/rstudio-education/r4ds-instructors
+
+
+- A guide to some of the most useful R Packages that we know about, organized by their role in data science. - https://github.com/rstudio/RStartHere
+
+
+- https://github.com/rstudio/cheatsheets
+
+
+
+## From Data Carpentry
+
+Many free open source  Lessons and Workshops are developed by  
+[ Data Carpentry](https://datacarpentry.org/lessons). The sources for many of them can be found at
+https://github.com/search?q=topic%3Ar+org%3Adatacarpentry .
+Some are listed below.
+
+datacarpentry/R-ecology-lesson
+Data Analysis and Visualization in R for Ecologists
+
+datacarpentry/r-raster-vector-geospatial
+Introduction to Geospatial Raster and Vector Data with R
+
+datacarpentry/r-socialsci
+R for Social Scientists
+
+datacarpentry/semester-biology
+data-science r sql biology spatial-data teaching-materials data-carpentry
+
+datacarpentry/rr-organization1
+The Organization lesson for the Reproducible Science Curriculum
+
+r english on-hold lesson reproducibility data-carpentry carpentries project-organisation
+
+datacarpentry/r-intro-geospatial
+Introduction to R for Geospatial Data
+
+datacarpentry/rr-automation
+Resources for automation tutorials
+
+
+datacarpentry/genomics-r-intro
+Intro to R and RStudio for Genomics
+
+datacarpentry/rr-intro
+Introduction materials for Reproducible Research Curriculum
+
+
+datacarpentry/rr-literate-programming
+Repository for lesson materials on Literate Programming
+
+
+## More from GitHub

@@ -57,6 +57,34 @@ Analyzing PSES results using R and Shiny
 Building R packages (recording, codes provided)
 
 
+
+
+## Geo/Spatial coding and visualization with R. Part 1:
+
+Contributed by: 
+
+## Text Analysis with R. Part 1: 
+
+Contributed by: 
+
+## Dual Coding - Python and R unite !
+
+Contributed by: 
+
+## Working with ggtables
+
+Contributed by: 
+
+## Automate common look and feel of your ggplot graphs
+
+Contributed by: 
+
+## Automated generation of report cards
+
+Contributed by: 
+
+
+
 ## Discussed  RStudio Webinars
 
 Webinars at RStudio - https://www.rstudio.com/resources/webinars/ (codes at https://github.com/rstudio/webinars)

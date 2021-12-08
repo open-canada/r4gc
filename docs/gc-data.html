@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>15 Interactive Outputs in R: plotly, Datatable, reactable | The R4GC Book</title>
+  <title>27 GC Open Data use cases | The R4GC Book</title>
   <meta name="description" content="Notes and tutorials from ‘Lunch and Learn Data Science with R’ weekly meetups organized by the R4GC Community" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="15 Interactive Outputs in R: plotly, Datatable, reactable | The R4GC Book" />
+  <meta property="og:title" content="27 GC Open Data use cases | The R4GC Book" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="https://open-canada.github.io/r4gc" />
   <meta property="og:image" content="https://open-canada.github.io/r4gc/images/r4gc-banner.png" />
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="open-canada/r4gc" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="15 Interactive Outputs in R: plotly, Datatable, reactable | The R4GC Book" />
+  <meta name="twitter:title" content="27 GC Open Data use cases | The R4GC Book" />
   
   <meta name="twitter:description" content="Notes and tutorials from ‘Lunch and Learn Data Science with R’ weekly meetups organized by the R4GC Community" />
   <meta name="twitter:image" content="https://open-canada.github.io/r4gc/images/r4gc-banner.png" />
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="images/R4GC.ico" type="image/x-icon" />
-<link rel="prev" href="shiny-for-interactive-data-visualization-analysis-and-web-app-development.html"/>
-<link rel="next" href="geospatial-coding-and-visualization-in-r.html"/>
+<link rel="prev" href="r101-building-covid-19-tracker-app-from-scratch.html"/>
+<link rel="next" href="shiny-apps.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -453,19 +453,71 @@ Published with bookdown</a></center></li>
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="interactive-outputs-in-r-plotly-datatable-reactable" class="section level1" number="15">
-<h1><span class="header-section-number">15</span> Interactive Outputs in R: plotly, Datatable, reactable</h1>
-<p>This discussion is dedicated to tools to generate interactive graphs, tables, and other content without Shiny (which, as you know, requires a server to host your Shiny application and which for this reason cannot be easily shared with your clients, e.g. by email)</p>
-<p>Here are the most popular ones:</p>
-<p><a href="https://rstudio.github.io/DT/" class="uri">https://rstudio.github.io/DT/</a><br />
-<a href="https://plotly.com/r/" class="uri">https://plotly.com/r/</a> and<br />
-<a href="https://glin.github.io/reactable" class="uri">https://glin.github.io/reactable</a></p>
-<div id="reactable" class="section level2" number="15.1">
-<h2><span class="header-section-number">15.1</span> <code>reactable</code></h2>
-<!-- Your clients will love it -  -->
-<p>Check what kind of interactive coloured tables you can make with it:
-<!-- - it's like a coloured table inside your R generated report): -->
-<a href="https://glin.github.io/reactable/articles/womens-world-cup/womens-world-cup.html" class="uri">https://glin.github.io/reactable/articles/womens-world-cup/womens-world-cup.html</a></p>
+<div id="gc-data" class="section level1" number="27">
+<h1><span class="header-section-number">27</span> GC Open Data use cases</h1>
+<p>Additional codes are applications developed by the community are described in <a href="#gc-apps">Shiny Apps</a>
+and <a href="#L-L">“Lunch and Learn”</a></p>
+<div id="pses-results-interactive-analysis-and-visualization" class="section level2" number="27.1">
+<h2><span class="header-section-number">27.1</span> PSES Results interactive analysis and visualization:</h2>
+<p>URL: <a href="https://open-canada.github.io/Apps/pses" class="uri">https://open-canada.github.io/Apps/pses</a>
+<!-- (mirror:  https://itrack.shinyapps.io/PSES/, use case: https://itrack.shinyapps.io/PSES-CBSA-SE).   -->
+Source: <a href="https://gccode.ssc-spc.gc.ca/r4gc/codes/pses" class="uri">https://gccode.ssc-spc.gc.ca/r4gc/codes/pses</a></p>
+<!-- It illustrates the power of Data Science and Visualization (when implemented for the purpose). It uses the concept of concept of Vertical vs. Horizontal comparison of results, which is most insightful when one needs to find out where (or when) exactly the problem is (or was) in an Organization. -->
+<p>No other Open Canada data is of as much common interest across the government as the PSES results [^11]. These data contain the information about all GC departments, their organizational structure and performance. A Shiny App prototype is developed to perform three most desired tasks one wished to do with these data (see Figure):</p>
+<p>[^11] <a href="https://www.canada.ca/en/treasury-board-secretariat/services/innovation/public-service-employee-survey.html" class="uri">https://www.canada.ca/en/treasury-board-secretariat/services/innovation/public-service-employee-survey.html</a></p>
+<ol style="list-style-type: decimal">
+<li>Vertical result tracking: results comparison across an organization, automated detection and visualization of the performance variation across the organization - for any given PSES question.</li>
+<li>Horizontal results tracking: results comparison over time - for any given unit, in comparison to the organization and Public Service averages</li>
+<li>Performance summary by theme: automated generation of report cards that show the performance at each level of the organization for each of theme and in relation to the rest of the organization and Public Service average.</li>
+<li>Automated generation of full report with detailed comparative analysis and recommendations: for each unit and each level of organization</li>
+</ol>
+<p><img height="300" src="https://github.com/open-canada/Apps/blob/main/docs/images/pses-eccc-st.png?raw=true">
+<img height="300" src="https://github.com/open-canada/Apps/blob/main/docs/images/pses-eccc-st-vs-themes.png?raw=true">
+<img height="300" src="https://github.com/open-canada/Apps/blob/main/docs/images/pses-cbsa-se-over-time.png?raw=true">
+<img height="300" src="https://github.com/open-canada/Apps/blob/main/docs/images/pses-cbsa-se-autoreport.png?raw=true"></p>
+<!-- ```{r, echo=FALSE, out.width="100%", fig.align = "center"} -->
+<!-- knitr::include_graphics( -->
+<!--   c( -->
+<!--     paste0("images/frontpage/Screenshot_20211024-204851-with-trees-triangle.jpg") ) -->
+<!-- ) -->
+<!-- ``` -->
+<p>Figure. Key functionalities of the PSES App prototype: a) vertical results tracking - for any question over entire organization, b) horizontal results tracking - for any unit over time, and c) performance report summary - for each unit, by theme, and in comparison to the Public Service average (shown as crosses) and other units within organization (shown as small dots). The results can be displayed filtered and sorted by score, ranking percentile, org. structure, number of responses, by theme or question.</p>
+<div id="other-tools-and-dashboards" class="section level3" number="27.1.1">
+<h3><span class="header-section-number">27.1.1</span> Other tools and dashboards</h3>
+<p>TBS Official PSES Results viewer (developed in PowerBI):
+<a href="https://hranalytics-analytiquerh.tbs-sct.gc.ca/Home/ReportList/2019?GoCTemplateCulture=en-CA" class="uri">https://hranalytics-analytiquerh.tbs-sct.gc.ca/Home/ReportList/2019?GoCTemplateCulture=en-CA</a><br />
+Direct link to PowerBI here: <a href="https://hranalytics-analytiquerh.tbs-sct.gc.ca/Home/EmbedReport/6?GoCTemplateCulture=en-CA" class="uri">https://hranalytics-analytiquerh.tbs-sct.gc.ca/Home/EmbedReport/6?GoCTemplateCulture=en-CA</a></p>
+<p>​</p>
+<!-- Example Using Tableau -->
+<!-- https://publicservicesr.blogspot.com/p/500-vizelement.html -->
+</div>
+</div>
+<div id="automated-atip-requests-topic-extraction" class="section level2" number="27.2">
+<h2><span class="header-section-number">27.2</span> Automated ATIP requests topic extraction:</h2>
+<!-- URL: <https://open-canada.github.io/Apps/atip> (mirror: https://rcanada.shinyapps.io/TBS-ATI-NLP/).    -->
+<p>Source: <a href="https://gccode.ssc-spc.gc.ca/r4gc/codes/atip" class="uri">https://gccode.ssc-spc.gc.ca/r4gc/codes/atip</a></p>
+<p>Another Open Canada dataset that relates to the performance of many GC departments is the ATIP requests dataset [^22]. An interactive Natural Language Processing (NLP) application has been developed to enable the analysis and visualization of these requests for each participating department (see Figure 2). Its functionalities include: statistics summary, automated key-words and topic extraction using N-grams, document term matrix and Latent Dirichlet Allocation. The topics can be visualized as word-clouds or as graphs that connect the related words.</p>
+<p>[^22] <a href="https://open.canada.ca/en/search/ati" class="uri">https://open.canada.ca/en/search/ati</a>.
+See “Text Mining with R!” by Julia Silge and David Robinson (<a href="https://www.tidytextmining.com" class="uri">https://www.tidytextmining.com</a>) for definitions of the terms.</p>
+<p><img height="300" src="https://github.com/open-canada/Apps/blob/main/docs/images/NLP-ATIP1.png?raw=true">
+<img height="300" src="https://github.com/open-canada/Apps/blob/main/docs/images/NLP-ATIP2.png?raw=true"></p>
+<p>Figure 2. Key functionalities of the ATIP App: a) department specific bi-variable statics (such as dispositions by year, shown in the image), b) department specific key topics, visualized as correlated terms graphs , c) key topics for each participating department, visualized as N-gram frequency bars (such as 2-gram, or two-word combination, shown in the image).</p>
+</div>
+<div id="automated-municipal-level-covid-19-tracker" class="section level2" number="27.3">
+<h2><span class="header-section-number">27.3</span> Automated municipal level COVID-19 tracker:</h2>
+<p>URL: <a href="https://open-canada.github.io/Apps/covid" class="uri">https://open-canada.github.io/Apps/covid</a> (See also: <a href="https://itrack.shinyapps.io/covid/us.Rmd" class="uri">https://itrack.shinyapps.io/covid/us.Rmd</a>).<br />
+Source: <a href="https://gccode.ssc-spc.gc.ca/r4gc/codes/covid" class="uri">https://gccode.ssc-spc.gc.ca/r4gc/codes/covid</a></p>
+<p>This App was built at the beginning of the pandemic. It uses open COVID-19 data for Canada and US to allow one to summarize, search and sort the results by geographical proximity using a variety of criteria (see Figure 3). More details about it and a tutorial on how to build it are provided at <a href="https://open-canada.github.io/UseR/learn2020" class="uri">https://open-canada.github.io/UseR/learn2020</a></p>
+<p><img height="300" src="https://github.com/open-canada/Apps/blob/main/docs/images/itrack-covid2.png?raw=true">
+<img height="300" src="https://github.com/open-canada/Apps/blob/main/docs/images/covid-us-geo.png?raw=true"></p>
+</div>
+<div id="geo-mapped-current-historical-and-predicted-border-wait-times" class="section level2" number="27.4">
+<h2><span class="header-section-number">27.4</span> Geo-mapped current, historical and predicted border wait times:</h2>
+<p>URL: <a href="https://open-canada.github.io/Apps/border" class="uri">https://open-canada.github.io/Apps/border</a> (redirect to <a href="https://open.canada.ca/en/app/border-wait-time-interactive-tracker-itrack-border">open.canada.ca</a>).<br />
+Source: <a href="https://gccode.ssc-spc.gc.ca/gorodnichy/simborder" class="uri">https://gccode.ssc-spc.gc.ca/gorodnichy/simborder</a></p>
+<p>This App (shown in Figure 4) combines Open geo-spatial data with Open historical and current border wait times data to predict and visualize delays at Canadian land border crossings. The App is included (entitled iTrack-Border) in the Open Canada Apps Gallery at <a href="https://open.canada.ca/en/apps" class="uri">https://open.canada.ca/en/apps</a>, where more information about it can be found.</p>
+<p><img height="300" src="https://github.com/open-canada/Apps/blob/main/docs/images/itrack-border1.png?raw=true">
+<img height="300" src="https://github.com/open-canada/Apps/blob/main/docs/images/itrack-border2.png?raw=true"></p>
 </div>
 </div>
             </section>
@@ -473,8 +525,8 @@ Published with bookdown</a></center></li>
           </div>
         </div>
       </div>
-<a href="shiny-for-interactive-data-visualization-analysis-and-web-app-development.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="geospatial-coding-and-visualization-in-r.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="r101-building-covid-19-tracker-app-from-scratch.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="shiny-apps.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

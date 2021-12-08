@@ -109,21 +109,28 @@ R's CON's:
 - Not the fastest or memory efficient (Hey- That's without `data.table` package! I don't think so,if you use `data.table`,properly)
 - Object-oriented programming is not native or as easy in R, compared to Python. - Actually, I added this one. To me, this  is one of main motivations to see how to use both Python and R, instead of R by itself. But for someone else, this could be not tie-breaker though
 
+
 # Learn R: *R*ight way!
 
-<!-- and continue learning R -->
 
-## In which sense 'right'? 
+
+## Intro 
+
+The number of resources and ways to learn R is overwhelming.
+Some of us have tried many of them until we found 
+<!-- the ones that we believe are  -->
+the best and the right ones. These are shared here.
+
+It is  suggested to start learning  R the "*R*ight way", as discussed  below.
+
+
+## In which sense 'Right'? 
+
 Ok, perhaps the word "Right" is not  right here... - What is right for someone, may not be right for someone else who learnt R another way. 
 So, Let's call it "Diffe*R*ent" or "Non-t*R*aditional" way. It is indeed the best and right for us.  And we hope hope  that, even  if it is not the right "right" for you, it is still "right" for you to help you further improve your R  codings kills
 
-## Intro 
-The number of resources and ways to learn R is enormous.
-Some of us have tried many of them until we found the ones that we believe are the best ones. 
-It could be suggested to start learning (or re-learning "Right way") R from the one listed below.
 
-
-## The way  R is tought at R4GC Lunch and Learn
+## R101 from "R4GC Lunch and Learn" 
 
 
 Recommendations for R101 home-work:  https://open-canada.github.io/UseR/resources.html
@@ -132,26 +139,11 @@ The starters (for students coming from non computer science backgrounds):  https
 
 
 
+## Additional resources
 
-## From RStudio 
+### Ways to continue growing your R skills 
 
-"Data Science Course in a Box" course:
-https://github.com/rstudio-education/datascience-box
-
-Data-sets: https://github.com/rstudio-education/dsbox)
-
-R for Data Science Instructor's Guide
-https://github.com/rstudio-education/r4ds-instructors
-
-
-
-A guide to some of the most useful R Packages that we know about, organized by their role in data science. - https://github.com/rstudio/RStartHere
-
-
-
-https://github.com/rstudio/cheatsheets
-
-##  Ways to continue growing your R skills 
+#### Knowledge in
 
 Apart from reading and contributing to this R4GC Book and participating in our R4GC community meetups (which is naturally the best way :), you can :
 
@@ -182,9 +174,16 @@ https://www.meetup.com/RStudio-Enterprise-Community-Meetup -
 https://resources.rstudio.com/rstudio-conf-2019 , 2020, 2021 etc
 
 
+### Selected presentations
+
+- https://github.com/jennybc/debugging
+
+
+#### Knowledge out
 
 
 
+See next chapter for options wher you can submit or present your work, get it reviewed and published
 
 
 
