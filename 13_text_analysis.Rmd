@@ -1,0 +1,59 @@
+
+
+
+
+# Record Linking and other Data Engineering tasks in R
+
+
+## demo
+
+See http://rcanada.shinyapps.io/demo and the #GCData2021 Data Engineering workshop  presentation - 
+for the backgrounder and the demonstration of various DE tasks and solutions.
+
+
+
+# Text Analysis in R
+
+https://gccollab.ca/discussion/view/7404441/text-analysis-in-r
+
+## Open source textbook
+
+https://smltar.com/ 
+  https://www.tidytextmining.com/
+  https://slcladal.github.io/topicmodels.html, https://slcladal.github.io/textanalysis.html
+
+Also, a list of related resources and codes for text mining (including Web Scraping)  are collected here: https://github.com/gorodnichy/LA-R-text
+
+
+## Plagiarism detection
+
+Q:  Any ideas/packages/resources (in R) for plagiarism detection? 
+  
+  
+  A: 
+  A good  place to start is the "stylo" package (https://github.com/computationalstylistics/stylo - R package for stylometric analyses) which implements a wide variety of recent research in computational stylistics. Plagiarism detection is fraught (insert all of the usual ethical and computational caveats...), but stylo can help you identify passages that are stylistically unusual compared to the rest of the text. Unusualness definitely isn't a proxy for plagiarism, but it's a good place to start.
+
+
+Q: 
+  Is this focused on English language text? Are there lexicons or libraries for comparison within other languages (e.g., French)?
+  
+  A: Stylo works well with quite a few non-English languages. French, for example, is supported, as are a number of languages with non-Latin alphabets like Arabic and Korean.
+
+
+
+
+## results from International Methodology Symposium
+
+Two presentations  at [International Methodology Symposium](https://www.statcan.gc.ca/en/conferences/symposium2021/program) were about Text Analysis with R, with great ideas from both:
+  
+  
+  11B-4 by Andrew Stelmach from StatCan: used  `library(fastText)` -  a very powerful package from facebook AI team for  efficient learning of word representations and sentence classification. 
+
+
+
+11B-2 by Dave Campbell from Carleton U:  used the  approach  that we discussed at L&L on October 9 (based on bag of words cosine distance / correlation) for matching beer products description  - https://gccode.ssc-spc.gc.ca/r4gc/resources/text/),  but addtionally applied SVD (singular value decomposition) to reduce comparison to  the most imporant words, thus reducing significantly the dimension and speed.
+
+
+
+You can  find their decks here: https://drive.google.com/drive/folders/1TfuNmG3V8IEKDNNTcMZz7_YCKgqVVBju 
+

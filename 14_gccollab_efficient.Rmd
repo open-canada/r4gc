@@ -167,24 +167,31 @@ There are many kinds of data you want to read - and you want to them efficiently
 - other IoT and web-crawling
 
 
-### fread
+#### fread
 
-Our  favourite methods for reading / writing "regular" .csv files has been 'data.table::fread() / fwrite()' - the fastest and automated in many ways. 
+Our  favourite methods for reading / writing "regular" .csv files has been 'data.table::fread() and fwrite()' - the fastest and automated in many ways. 
 
-### vroom
+#### vroom
 
  
 
 Now there's another one - with package 'vroom' - https://cran.r-project.org/web/packages/vroom/vignettes/benchmarks.html
 
- 
+###  rio
 
+```
+library(rio)
+install_formats()
+```
+
+See:  https://www.computerworld.com/article/2497164/business-intelligence-beginner-s-guide-to-r-get-your-data-into-r.html
 
 ## readxl and xlsx
 
-For reading Excel files, I used so far readxl. I would like nevertheless to be able to import a set of columns formed by non-contiguous columns of a sheet (something possible to select in the newer versions of Excel using data queries). 
+For reading Excel files, you can use readxl. 
+You would like  to be able to import a set of columns formed by non-contiguous columns of a sheet (something possible to select in the newer versions of Excel using data queries). 
 
-For writing Excel files, I used xlsx, as definitely, I need to be able to write multiple sheets in a file.
+For writing Excel files, you can use xlsx, espcially, if you need to be able to write multiple sheets in a file.
 
 
 ## Discussion
@@ -407,5 +414,30 @@ WshShell.Run chr(34) & "C:\Users\gxd006\Downloads" & chr(34), 0
 Set WshShell = Nothing
 
 ```
+
+
+
+
+
+
+# Using R with GC data infastructure (gcdocs, AWS, etc)
+
+
+## gcdocs
+
+Q:
+
+I'm wondering if anyone has had any success accessing data from GCDocs in your respective departments ? I believe that GCDocs is implemented across most (if not all) departments so wondering if there are any existing solutions to read/write data from it.
+
+
+
+Also wondering about whether any of you have had any luck accessing Microsoft 365 via R as well? I've had success with Microsoft365R package (https://github.com/Azure/Microsoft365R) from a personal point of view but it doesn't play well with business accounts.
+
+
+<!-- A: -->
+<!--   I tried using the Microsoft365R package to access my departmental (ECCC) email without success. When I tried to access it, a window popped up allowing me to request access authorization so I clicked the "Submit" (or whatever) button. That was weeks ago. Never heard anything more about it. -->
+
+<!-- After trying many ways and weeks, I found this is NOT possible. -  It runs internal code on gcdoc end  that validates that you have right to access it and then, if you do, it also logs your action within the document's "Audit" attribute.  -->
+<!-- So we still have to always make a local copy of the data (manually!), and only then we can process it from R. -->
 
 

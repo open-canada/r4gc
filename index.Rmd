@@ -104,9 +104,10 @@ veuillez contacter [modérateur de groupe](index.html#contacts).
 
 
 
+# Preface {-}
 
-# (PART) Preface {.unnumbered}
-
+<!-- # (PART) Preface {.unnumbered} -->
+<!-- # (PART) Preface {-} -->
 
 <!-- ## Introduction to First Edition {-} -->
 ## Introduction {-}
@@ -285,21 +286,7 @@ Finally, *Appendix* includes agendas, notes, and codes  from the R4GC community 
 
 
 
-<!-- # (PART) Community discussions {-} -->
-
 # (PART) General discussions {.unnumbered}
-
-
-
-<!-- # General discussions -->
-
-
-
-<!-- # (PART) GCcollab discussions {-} -->
-
-<!-- # (PART) General Discussion: General tips {-} -->
-
-
 
 
 ```{r 11_r_general, child = '11_r_general.Rmd'}
@@ -333,13 +320,24 @@ Finally, *Appendix* includes agendas, notes, and codes  from the R4GC community 
 # (PART) Visualization and Reporting {-}
 
 
+```{r 12_rmarkdown.Rmd, child = '12_rmarkdown.Rmd'}
+```
+
 
 ```{r 12_gccollab_viz_reporting.Rmd, child = '12_gccollab_viz_reporting.Rmd'}
 ```
 
 
+```{r 12_geo.Rmd, child = '12_geo.Rmd'}
+```
+
+
 # (PART) Machine Learning and AI {-}
 
+
+
+```{r 13_text_analysis.Rmd, child = '13_text_analysis.Rmd'}
+```
 
 
 ```{r 13_gccollab_ML, child = '13_gccollab_ML.Rmd'}

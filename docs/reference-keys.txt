@@ -55,6 +55,7 @@ from-excel-to-r
 reading-various-kinds-of-data-in-r
 fread
 vroom
+rio
 readxl-and-xlsx
 discussion
 other-tips-for-efficient-coding-in-r
@@ -71,6 +72,8 @@ r6
 rstudio-tricks
 coding-online
 running-multiple-rstudio-versions
+using-r-with-gc-data-infastructure-gcdocs-aws-etc
+gcdocs
 r-markdown-for-literate-programming-and-automated-reports
 resources
 automated-generation-of-multiple-pdf-files
@@ -87,15 +90,13 @@ federal-geospatial-platform
 tutorials
 dealing-with-memory-issues
 canadian-geo-data
-using-r-with-gc-data-infastructure-gcdocs-aws-etc
-gcdocs
 record-linking-and-other-data-engineering-tasks-in-r
 demo
-statistical-tests-and-mixed-effects-analysis
 text-analysis-in-r
 open-source-textbook
 plagiarism-detection
 results-from-international-methodology-symposium
+statistical-tests-and-mixed-effects-analysis
 machine-learning-and-modeling-in-r
 resources-4
 additional-references

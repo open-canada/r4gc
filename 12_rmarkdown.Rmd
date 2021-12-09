@@ -1,0 +1,79 @@
+
+# R Markdown for literate programming and automated reports
+
+This discussion thread is for gathering knowledgebase related to R Markdown: https://rmarkdown.rstudio.com/
+
+It can be used to generate reports, slides, websites, dashboards, shiny app, books, emails.
+It is the tools allows you to do [literate programming](https://en.wikipedia.org/wiki/Literate_programming), which -- as defined by Donald Knuth - is the type of programming  where human language is combined with  computer language, making the code much easier understood by  your colleagues and yourself and  coding much more fun.
+
+## Resources
+
+Main reference: https://bookdown.org/yihui/rmarkdown/
+
+
+
+A couple of great webinars from RStudio folks on advanced use of R Markdown - with lots of source codes:
+
+
+- https://www.rstudio.com/resources/webinars/rethink-reporting-with-automation/
+- https://www.rstudio.com/resources/webinars/sharing-on-short-notice-how-to-get-your-materials-online-with-r-markdown/
+
+
+Business Reports with R Markdown:
+https://github.com/cderv/meetup-2021-rmd-business-report
+
+
+R Markdown Taxonomy:
+https://github.com/jthomasmock/penguin-project
+
+
+
+
+## Automated generation of multiple PDF files
+
+Question:
+"Can we automatically generate multiple PDF files using R RMarkdown? E.g. 20 report cards in PDF format, each showing results for 50 different parameters of the analysis?"
+
+Answer: "Absolutely!" - This is what RMarkdown is developed for.
+
+
+
+Here's a tiny  R script example showing how to do it.
+
+```{r eval=FALSE, include=FALSE}
+
+# report_generator.R
+
+mvndr_nm <- c('name1', 'name2', 'name3', 'name4', 'name5', 'name6')
+mvndr_nbr<- c('60031167', '60688509', '60074051', '60148060', '60086898', '60080204')
+
+for (i in seq_along(mvndr_nm)) {
+  rmarkdown::render("C:/Users/santi/Documents/R Scripts/Export_Data_CSV.Rmd",
+                    output_file = sprintf("MVNDR_%s.html", mvndr_nbr[i]),
+                    params = list(MVNDR_NBR = mvndr_nbr[i], MVNDR_NM = mvndr_nm[i]))
+}
+
+# Export_Data_CSV.Rmd
+# (remove # below)
+
+#---
+#title: "`r params$MVNDR_NBR`"
+#author: "Santiago Canon"
+#date: "5/26/2021"
+#output:
+#  html_document:
+#    highlight: monochrome
+#    theme: flatly
+#params:
+#  MVNDR_NBR: NA
+#  MVNDR_NM: NA
+#---
+
+#<font size="4"> This document will provide a summary of "`r params$MVNDR_NM`" performance within in QC: </font>
+```
+
+Source:
+- https://stackoverflow.com/questions/67739377/passing-multiple-parameters-in-rmarkdown-document
+- https://stackoverflow.com/questions/60203785/using-multiple-params-in-rmarkdown-yaml-fields
+
+
