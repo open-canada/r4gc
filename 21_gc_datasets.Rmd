@@ -8,7 +8,8 @@ This section provides code snippets to read, process and visualize various Open 
 Where possible, an App is developed to help visualizing and understanding the data.
 See also [Shiny Apps](#gc-apps) section of this book.
 
-NB: Most databases from Statistics Canada site can be accessed using `cansim` package, or via direct link to an .csv or .zip file.
+NB: Most databases from Statistics Canada site can be accessed using `cansim` package like in this code `dt <- cansim::get_cansim("13-10-0810-01")  %>% data.table::setDT(dt)`.
+Most other dataset can be access via direct link to an .csv, .zip,  xls file
 
 
 # Health-related
@@ -90,6 +91,25 @@ Table: 13-10-0783-01
 Release date: 2021-12-06
 Geography: Canada, Province or territory
 https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1310078301
+
+
+
+
+
+### Vital Statistics - Birth Database
+
+https://www150.statcan.gc.ca/n1/en/surveys/3231
+
+
+3. Crude birth rate, age-specific fertility rates and total fertility rate (live births)
+Table: 13-10-0418-01 (formerly: CANSIM 102-4505)
+
+9. Live births, by month
+Table: 13-10-0415-01 (formerly: CANSIM 102-4502)
+
+Live births, by age of mother
+Table: 13-10-0416-01 (formerly: CANSIM 102-4503)
+
 
 
 
