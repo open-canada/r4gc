@@ -5,11 +5,11 @@
 # GC Open Data use cases {#gc-data}
 
 This section provides code snippets to read, process and visualize various Open Canada databases of high common interest to the GC community.
+Where possible, an App is developed to help visualizing and understanding the data.
+See also [Shiny Apps](#gc-apps) section of this book.
 
-Where possible, an app is developed facilate unde
+NB: Most databases from Statistics Canada site can be accessed using `cansim` package, or via direct link to an .csv or .zip file.
 
-Additional codes are applications developed by the community are described in [Shiny Apps](#gc-apps)
-and ["Lunch and Learn"](#L-L)
 
 # Health-related
 
@@ -17,8 +17,126 @@ and ["Lunch and Learn"](#L-L)
 ## Canadian Vitals Statistics Database
 
 
+### Vital Statistics - Death Database
+
+Statistique de l'état civil - Base de données sur les décès
+
+\* / \*\* indicate that the R code / Shiny App are available in this book
+
+Fetal deaths (20 weeks or more of gestation) and late fetal deaths (28 weeks or more of gestation)
+Table: 13-10-0427-01 (formerly: CANSIM 102-4514)
+
+Perinatal mortality (late fetal deaths and early neonatal deaths)
+Table: 13-10-0714-01 (formerly: CANSIM 102-0508)
+
+Leading causes of death, infants
+Table: 13-10-0395-01 (formerly: CANSIM 102-0562)
 
 
+
+Leading causes of death, total population, by age group
+Frequency: Annual. till 2019
+Table: 13-10-0394-01
+
+Deaths and age-specific mortality rates, by selected grouped causes1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+Frequency: Annual
+Table: 13-10-0392-01
+
+\* Leading causes of death, total population (age standardization using 2011 population)
+Provisional weekly death counts, by selected grouped causes of death
+Nombre provisoire de décès et surmortalité janvier 2020 à août 2021
+
+Frequency: Weekly
+Table: 13-10-0810-01
+https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1310081001
+https://www150.statcan.gc.ca/n1/tbl/csv/13100810-eng.zip
+
+
+```{r}
+
+if (F) {
+  downloader::download("https://www150.statcan.gc.ca/n1/tbl/csv/13100810-eng.zip",
+    "13100810.zip",
+    mode = "wb"
+  )
+
+  url <- "https://www150.statcan.gc.ca/n1/tbl/csv/13100810-eng.zip"
+  temp <- tempfile()
+  download.file(url, temp)
+  dt <- fread(unzip(temp, files = "13100810.csv"))
+  rm(temp)
+}
+
+dt <- fread("13100810.csv", stringsAsFactors = T)
+dt %>% d7.dtView()
+
+dt <- dt[!is.na(VALUE) & GEO!="Yukon", .(REF_DATE, GEO, `Cause of death (ICD-10) `, VALUE)]
+dt[, REF_DATE := ymd(REF_DATE)]
+dt[, GEO := gsub(", place of occurrence", "", GEO)]
+```
+
+
+Provisional weekly death counts, by age group and sex
+Frequency: Weekly
+Table: 13-10-0768-01
+Release date: 2021-12-06
+Geography: Canada, Province or territory
+https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1310076801
+
+
+Previous releases and revisions to provisional weekly death counts1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13
+Frequency: Weekly
+Table: 13-10-0783-01
+Release date: 2021-12-06
+Geography: Canada, Province or territory
+https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1310078301
+
+
+
+## COVID-19 infection and vaccination related: 
+
+URL: <https://open-canada.github.io/Apps/covid> (See also: <https://itrack.shinyapps.io/covid/us.Rmd>).   
+Source: https://gccode.ssc-spc.gc.ca/r4gc/codes/covid 
+
+This App was built at the beginning of the pandemic. It uses open COVID-19 data for Canada and US to allow one to summarize, search and sort the results by geographical proximity using a variety of criteria (see Figure 3). More details about it and a tutorial on how to build it are provided at https://open-canada.github.io/UseR/learn2020 
+
+<img height="300" src="https://github.com/open-canada/Apps/blob/main/docs/images/itrack-covid2.png?raw=true">
+<img height="300" src="https://github.com/open-canada/Apps/blob/main/docs/images/covid-us-geo.png?raw=true">
+
+
+## Vaccination:
+
+- https://health-infobase.canada.ca/covid-19/vaccination-coverage 
+
+Cumulative number and percent of people who have received a COVID-19 vaccine in Canada by vaccination status, age group, sex, and jurisdiction, November 20, 2021
+- https://health-infobase.canada.ca/src/data/covidLive/vaccination-coverage-byAgeAndSex-overTimeDownload.csv
+
+
+
+```{r}
+strVac <- "https://health-infobase.canada.ca/src/data/covidLive/vaccination-coverage-byAgeAndSex-overTimeDownload.csv"
+dtVac <- fread(strVac, stringsAsFactors = F)
+dtVac$prfname <- NULL
+dtVac$pruid <- NULL
+dtVac[, week_end := ymd(week_end)]
+
+## 
+
+
+
+# Open Ontario Data
+
+
+https://data2.ontario.ca/en/dataset/deaths-by-cause-sex-and-age 
+We are reviewing the data in this record to determine if it can be made open. 
+
+https://data.ontario.ca/en/dataset?q=vital+statistics
+
+https://data.ontario.ca/en/dataset/covid-19-vaccine-data-in-ontario
+
+
+ 
+# Performance-related databases
 
 ## PSES Results interactive analysis and visualization: 
 
@@ -74,7 +192,8 @@ Direct link to PowerBI here: https://hranalytics-analytiquerh.tbs-sct.gc.ca/Home
 
 
 
-## Automated ATIP requests topic extraction: 
+## Automated ATIP requests topic analysis
+
 <!-- URL: <https://open-canada.github.io/Apps/atip> (mirror: https://rcanada.shinyapps.io/TBS-ATI-NLP/).    -->
 Source: <https://gccode.ssc-spc.gc.ca/r4gc/codes/atip>
 
@@ -82,6 +201,7 @@ Source: <https://gccode.ssc-spc.gc.ca/r4gc/codes/atip>
 Another Open Canada dataset that relates to the performance of many GC departments is the ATIP requests dataset [^22]. An interactive Natural Language Processing (NLP) application has been developed to enable the analysis and visualization  of these requests for each participating department  (see Figure 2). Its functionalities include: statistics summary,  automated key-words and topic extraction using N-grams, document term matrix and Latent Dirichlet Allocation. The topics can be visualized as word-clouds or as graphs that connect the related words.
 
  [^22] https://open.canada.ca/en/search/ati.
+ 
  See “Text Mining with R!” by Julia Silge and David Robinson (https://www.tidytextmining.com) for definitions of the terms.
 
 <img height="300" src="https://github.com/open-canada/Apps/blob/main/docs/images/NLP-ATIP1.png?raw=true">
@@ -91,17 +211,6 @@ Another Open Canada dataset that relates to the performance of many GC departmen
 Figure 2. Key functionalities of the ATIP App: a) department specific bi-variable statics (such as dispositions by year, shown in the image), b) department specific key topics, visualized as correlated terms graphs , c) key topics for each participating department, visualized as N-gram frequency bars (such as 2-gram, or two-word combination, shown in the image).
 
 
-## Automated municipal level COVID-19 tracker: 
-URL: <https://open-canada.github.io/Apps/covid> (See also: <https://itrack.shinyapps.io/covid/us.Rmd>).   
-Source: https://gccode.ssc-spc.gc.ca/r4gc/codes/covid 
-
-This App was built at the beginning of the pandemic. It uses open COVID-19 data for Canada and US to allow one to summarize, search and sort the results by geographical proximity using a variety of criteria (see Figure 3). More details about it and a tutorial on how to build it are provided at https://open-canada.github.io/UseR/learn2020 
-
-<img height="300" src="https://github.com/open-canada/Apps/blob/main/docs/images/itrack-covid2.png?raw=true">
-<img height="300" src="https://github.com/open-canada/Apps/blob/main/docs/images/covid-us-geo.png?raw=true">
-
-
- 
 ## Geo-mapped current, historical and predicted border wait times:  
 
 URL: <https://open-canada.github.io/Apps/border> (redirect to [open.canada.ca](https://open.canada.ca/en/app/border-wait-time-interactive-tracker-itrack-border)).   
