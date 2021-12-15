@@ -57,3 +57,124 @@ Two presentations  at [International Methodology Symposium](https://www.statcan.
 
 You can  find their decks here: https://drive.google.com/drive/folders/1TfuNmG3V8IEKDNNTcMZz7_YCKgqVVBju 
 
+
+## Useful code snippets
+
+### 
+
+
+###  Extracting, re-ordering words in a string ----
+
+https://stackoverflow.com/questions/55244680/extract-words-in-between-two-commas-in-r
+    
+```{r}
+
+word <- 'Fu Tien Mansion, Taikoo Shing, Hong Kong'
+# and I want to extract the word in between the two commas and concatenate it with the first word, what regex to use?
+# to get this: 'Taikoo Shing Fu Tien Mansion' 
+
+# 1: sub  ----
+sub("^([^,]+),\\s*([^,]+),.*", "\\2 \\1", word)
+#[1] "Taikoo Shing Fu Tien Mansion"
+
+# 2: -----
+
+x <- base::strsplit(word, ",")[[1]]
+paste(x[2], x[1])
+
+# 3 -----
+paste(
+    trimws( # Remove Leading/Trailing Whitespace
+        sapply(strsplit(word,","), `[`, 2)
+        ), 
+    trimws(sapply(strsplit(word,","), `[`, 1))
+    )
+
+
+### Automatically finding / removing common parts in strings -----
+
+
+https://stackoverflow.com/questions/48701107/find-length-of-overlap-in-strings
+```{r}
+
+findStrOverlap <- function(str1, str2, ignore.case = FALSE) { # , verbose = FALSE
+
+  if(ignore.case) {
+    str1 <- tolower(str1);    str2 <- tolower(str2)
+  }
+  if(nchar(str1) < nchar(str2)) {
+    x <- str2;    str2 <- str1;    str1 <- x
+  }
+    
+  x <- strsplit(str2, "")[[1L]]
+  n <- length(x)
+  s <- sequence(seq_len(n))
+  s <- split(s, cumsum(s == 1L))
+  s <- rep(list(s), n)
+
+  for(i in seq_along(s)) {
+    s[[i]] <- lapply(s[[i]], function(x) {
+      x <- x + (i-1L)
+      x[x <= n]
+    })
+    s[[i]] <- unique(s[[i]])
+  }
+
+  s <- unlist(s, recursive = FALSE)
+  s <- unique(s[order(-lengths(s))])
+
+  i <- 1L
+  len_s <- length(s)
+  while(i < len_s) {
+    lcs <- paste(x[s[[i]]], collapse = "")
+    # if(verbose) cat("now checking:", lcs, "\n")
+    check <- grepl(lcs, str1, fixed = TRUE)
+    if(check) {
+        # if(verbose) cat(paste0("Found: '",lcs,"' (length =", nchar(lcs), ") \n")) 
+        break
+    } else {
+      i <- i + 1L 
+    }
+  }
+  return (lcs)
+}
+
+library(data.table)
+dt <- cansim::get_cansim("13-10-0810-01") %>% setDT(dt) 
+dt <- data.table::data.table(
+    GEO=c( # From CANSIM Table
+        "Newfoundland and Labrador, place of occurrence",
+        "Prince Edward Island, place of occurrence",     
+        "Nova Scotia, place of occurrence"
+))
+
+aStr <- dt$GEO
+removeCommonStrPart <- function(aStr) {
+    str0 <- findStrOverlap( aStr[1],  aStr[2]); str0
+    str_replace(aStr, str0, "")
+}
+
+dt[, GEO:=removeCommonStrPart(GEO)][]
+#                         GEO
+#                      <char>
+#1: Newfoundland and Labrador
+#2:      Prince Edward Island
+#3:               Nova Scotia
+```
+
+
+### Useful packages
+
+`stringdist`
+```{r}
+stringdist::stringdist(aStr[1],  aStr[2], method="lcs") # 29
+stringdist::stringdistmatrix(dt$GEO, dt$GEO, method="lcs") %>% as.data.table 
+stringdist::stringdist(aStr[1],  aStr[2], method='qgram',q=2) # 37
+```
+
+#### Not as useful ....
+
+`tidystringdist` - converts stringdist results into tibble. not optimized, very slow  
+Tip: use data.table instead!
+
+
