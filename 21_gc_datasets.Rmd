@@ -4,10 +4,21 @@
 
 # GC Open Data use cases {#gc-data}
 
+This section provides code snippets to read, process and visualize various Open Canada databases of high common interest to the GC community.
 
+Where possible, an app is developed facilate unde
 
 Additional codes are applications developed by the community are described in [Shiny Apps](#gc-apps)
 and ["Lunch and Learn"](#L-L)
+
+# Health-related
+
+
+## Canadian Vitals Statistics Database
+
+
+
+
 
 ## PSES Results interactive analysis and visualization: 
 
