@@ -66,3 +66,122 @@ From https://mountainmath.ca
 - CanCovidData: Collection of data import and processing functions focused on Canadian data
 
 
+## Code snippets
+
+```{r}
+
+
+# 1.a  us-cities ----
+
+load("datasets/geoCa/uszips.rda")
+
+dtUS <- as.data.table(uszips) %>% 
+  mutate(across(where(is.character), as.factor)) %>% 
+  mutate(across(where(is.logical), as.factor));  dtUS %>% print(2); dtUS %>% summary
+saveRDS(dtUS, "citiesUS_simplemaps.Rds")
+
+dtUS <- readRDS("citiesUS_simplemaps.Rds")
+dtUS %>% fwrite("DATA_CSV/cities_us(33099).csv")
+# 33099
+
+dtUS[city != county_name]
+dtUS[city == county_name]
+dtUS$state_id <- NULL
+
+dtUS %>% names -> cols
+
+dtUS[, c(1:5, 8)]
+saveRDS(dtUS[, c(1:5, 8)], "citiesUS_simplemaps.Rds")
+
+
+# 1.b  https://simplemaps.com/data/canada-cities ----
+
+dtCaCitiesGeoPop <- readRDS("citiesCa-simplemaps.Rds") %>% setDT
+
+# dtCa2<- read_excel("geoCa/canadacities.xlsx", sheet=1) %>% data.table() #%T>% print()
+dtCaSimplemaps <- fread("geoCa/canadacities.csv")
+
+```
+
+```
+
+# 5. from google ----
+
+# https://stackoverflow.com/questions/65945015/automating-extraction-of-latitude-longitude-and-other-information-about-places
+
+# 5.1 ---- 
+require(googleway)
+set_key("your_google_key_of_39_characters")
+x= google_geocode(address = "Southern Saskatchewan", simplify = TRUE)
+x$results$geometry
+
+
+# 5.2 ---- 
+tidygeocoder::geo_osm('Southern Saskatchewan')
+
+
+
+#6 Open street map ----
+# 
+# https://machinelearnings.co/statistical-nlp-on-openstreetmap-b9d573e6cc86
+
+
+
+# 7 The  Open Database of Addresses / Educational Facilities----
+#
+# https://www.statcan.gc.ca/eng/lode/databases/oda
+# https://www.statcan.gc.ca/eng/lode/databases/odef 
+OFFLINE = T
+if (OFFLINE==T) {
+  strHome <- paste0(here::here(), "/datasets/geoCa/")
+} else {
+  strHome <- "http://www150.statcan.gc.ca/n1/pub/46-26-0001/2021001/"
+  
+}
+
+urlAddresses =  c(
+  Alberta = "ODA_AB_v1.zip",
+  BritishColumbia = "ODA_BC_v1.zip",
+  Manitoba = "ODA_MB_v1.zip",
+  NewBrunswick = "ODA_NB_v1.zip",
+  NorthwestTerritories = "ODA_NT_v1.zip",
+  NovaScotia = "ODA_NS_v1.zip",
+  Ontario = "ODA_ON_v1.zip",
+  PrinceEdwardIsland = "ODA_PE_v1.zip",
+  Quebec = "ODA_QC_v1.zip",
+  Saskatchewan = "ODA_SK_v1.zip"
+)
+
+
+
+dtUrlAddresses <- data.table(province=names(urlAddresses),url=urlAddresses) %>% setkey(province)
+
+
+dtUrlAddresses$url <- str_c(strHome, dtUrlAddresses$url) 
+
+dtUrlAddresses[, url:=str_c(strHome, url) ]
+
+
+dtAddress <- fread (urlAddresses["Alberta"])
+
+source("R_packages_examples/for-Canada/CanCovidData-master/R/datacanada_covid_data_import.R")
+
+
+read_sf(file.path(path,ff,file)) %>%
+  mutate(Name=ENGNAME, GeoUID = HR_UID) %>%
+  mutate(PR_UID=substr(HR_UID,1,2)) %>%
+  mutate(PR_NAME=province_name_lookup[PR_UID])
+
+
+
+# https://www.statcan.gc.ca/eng/lode/databases/oda
+
+
+
+# nlp-on-openstreetmap ----
+
+# https://machinelearnings.co/statistical-nlp-on-openstreetmap-b9d573e6cc86
+```
+
+
+
