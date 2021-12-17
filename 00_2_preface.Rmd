@@ -1,0 +1,182 @@
+
+
+# Preface {-}
+
+<!-- # (PART) Preface {.unnumbered} -->
+<!-- # (PART) Preface {-} -->
+
+<!-- ## Introduction to First Edition {-} -->
+## Introduction {-}
+
+<!-- Abstract -->
+
+Many Government of Canada groups are developing codes to process and visualize various kinds data, often duplicating each other’s efforts, with sub-optimal efficiency and limited level of code quality reviewing.
+This book
+<!-- This paper  -->
+presents a pan-government  initiative to address this problem. The idea is to collaboratively build a common repository of code and knowledgebase for use by anyone in the government to perform many common data science tasks,  and, in doing that, help each other to master both the data science coding skills and the industry standard collaborative practices. The book explains why R language is used as the language of choice for collaborative data science code development. It summaries R advantages and addresses its limitations, establishes the taxonomy of  discussion topics of highest interested to the GC data scientists working with R,  provides an overview of used collaborative platforms, and presents the results obtained to date. Even though the code knowledgebase is developed mainly in R,  it is meant  to be valuable also for data scientists coding in Python and other development environments.
+
+<!-- #### Need for collaboration {-} -->
+
+## Data  as 'electricity' of the 21st century {-}
+
+Data is the 'electricity' of the 21st century. It is everywhere. Everybody is using it, and one may not need special training or certification to work with data. However, in contrast to working with electricity, working with data relies on the use of data processing tools (codes), the number and complexity of which increases daily, and which are developed by other data practitioners. In other words, data science - by its nature - is the science that is fueled by collaboration of data scientists and that heavily relies on the quality of the shared data processing codes.
+
+
+Globally, and in the Government of Canada (GC) in particular, data practitioners come from many different backgrounds and may not have equal level of code programming training, which hinders the development of  high-quality (efficient, scalable and  re-usable) codes for data science problems. This gap and the need for collaboration for data scientists, specifically those coding in R language, has been raised at the 2021 GC Data Conference Workshop on Data Engineering in February 2021. 
+This book addresses this need.
+
+<!-- This presentation describes a pan-government collaborative approach that has started following this workshop in order to address the identified need. -->
+
+
+<!-- First (in Section 2), we review one the main challenges in data science, which is data engineering and which triggered the creation of the R4GC community of practice - the community that brings together data practitioners interested in using (or learning) the R language. The reasons why R is chosen as the language of choice for building the data science collaboration are explained in Section 3. Then (in Section 4), we describe the collaboration portals that have been set in support of the R4GC community activities and knowledgebase and overview key repositories and discussion threads that have been created there. Finally (in Section 5 and Appendix), we summarize the main outputs produced by the community to date. Whereas this paper serves as an introduction to the R4GC community efforts, the complete collection of the community knowledgebase is maintained as a shareable, free to use and collaboratively edited book (The R4GC Book) hosted at https://open-canada.github.io/r4gc. Feedback and contributions to this book are welcome, noting that only unclassified public domain knowledge is archived there. -->
+
+
+## Data Engineering challenge {-}
+
+This effort has started from addressing the problem of data engineering, where it is understood - in analogy with the definition of software engineering by IEEE [2] - as the field of science and technology that deals with "developing scientific and technological knowledge, methods, and experience to the design, implementation, testing, and documentation" of data-driven systems and solutions; or - in analogy with the definition of software engineering at Google [3] -  as the field that "encompasses not just the act of writing code [for data analysis, in our case], but all of the tools and processes an organization uses to build and maintain that code over time".
+
+## Towards open source and open science {-}
+
+<!-- Whereas -->
+The spectacular growth of data science tools development is overwhelmingly attributed to the collaborative open nature of the current data science code development practices. Consequently, Canadian government is also 
+<!-- at the early stages of  -->
+adopting open source industry standards for data coding and reporting. Major shift towards enabling and promoting such practices within the government has started recently, when Government of Canada adopted a number of policies in support of Digital, Open Science, and Open Government [4], when Shared Services of Canada deployed a number of collaboration platforms that are now available to all GC organizations, and when IT Security of most  GC departments approved the use of open-source data science tools such as R and R Studio.
+
+
+
+<!-- ## Uniqueness of the approach  -->
+<!-- ## Presentation bias disclosure -->
+<!-- ## Authors' professional biases -->
+<!-- ## Authors' presentation biases -->
+<!-- ## Key differences from other books {-} -->
+<!-- ## What makes this book different from other books {-} -->
+
+## Pedagogical approach {-}
+
+
+The approach to teaching (mastering) R in this book is very different from that of what most (all?)  other open-source R tutorials one will find on the Web.
+
+It is driven by the personal professional backgrounds and experiences of the authors (one comes from Computing Science, the other from Open Government) working with R and open data. - 
+
+The consistent deliberate effort throughout this book, as throughout *all* meetups and discussion of  the authors in the R4GC community portal, is put into
+going away from judging the quality of your R skills by how good your outputs (graphs, reports etc) are , but *how good the code that generated your outputs  is*. 
+
+- Is it easy to understand (without having you to read comments or documentation)?
+- Is it easy to debug
+- Is it modular?
+- Is it as simple as possible?
+- Is it re-usable?
+- Is it scalable (to larger, or different data)?
+- Does it have least possible number of dependencies (packages), and those that he uses are the best (most effciient and robust, and best supported) for the purpose?
+
+
+We focus on 
+ensuring that from the *very first* lines of code, you code is written properly, i.e, it conforms to all above criteria.
+
+
+In order to achieve that, 
+in contrast to all other tutorials (such as those provided by fabulous RStudio team), the first package we always introduce is 'data.table', and not anything else.
+All other packages and codes will be added later and through the use of 'data.table' by default.
+
+Why? - Read the section on R limitations \@ref{r_limitations}.
+
+Importantly, you will soon see that you code will not only runs much faster  - so you can run it even no your regular 16 Gb RAM laptop, it also takes less screen space and is  easier to read!
+
+And ... you will never compare your code to Italian pasta dish ("spaghetti"), and it will get used and possibly further extended by others, and bring more joy to your life.
+
+<!-- And it may get used by others. -->
+
+<!-- (if you use data.table instead of dplyr functions), -->
+
+<!-- It will become easier, not harder, if you do it. -->
+
+
+
+
+<!-- breaking the stereotypical approach to teaching R, -->
+
+
+
+## Book outline {-}
+
+
+
+
+
+The book is organized in several parts, according to 
+the topics of  interest discussed in the GCcollab R4GC group.
+Discussions around these topics are reviewed and updated regularly, commonly as part of  weekly community meetups.
+
+<!-- ### Discussion topics {-} -->
+
+<!-- Some contain more content, some less -->
+
+Part I is dedicated to *General discussions*, which includes the following:
+
+1. Why R?
+3. Learn R: *R*ight way!
+4. Great open-source textbooks
+5. Events and forums for R users
+6. Using R with GC data infrastructure 
+2. Open source policies and guidelines
+<!-- (gcdocs, AWS, etc) -->
+
+
+Part II is dedicated to the *Best Practices and Efficient Coding in R* and includes the following:
+
+7. Use R efficiently with data.table!
+2. R and Python, Unite!
+6. From Excel to R
+8. Reading various kinds of data in R
+9. Other tips and rules for coding well in R
+<!-- 9. Object oriented programming in R -->
+Part III is dedicated to *Visualization and Reporting *and includes the following: 
+
+11. Literate programming and automated reports with ‘rmarkdown’
+12. Data visualization with ‘ggplot2’ and its extensions
+13. Interactive interfaces, applications and dashboards with 'shiny'
+14. Interactive html with ‘plotly’, ‘Datatable’, ‘reactable’
+16. Geo/Spatial coding and visualization in R
+
+Part IV is dedicated *Advanced use of Data Science, Machine Learning,  and AI* and includes:
+
+15. Entity resolution and record linking  in R
+17. Text Analysis in R
+18. Machine Learning and Modeling in R
+20. Computer vision and Deep learning in R
+19. Simulation and Optimization in R
+19. Operationalizing in-house built tools and models (could go in Part I)
+
+
+Part V contains the *Tutorials* developed by and for the community. These are:
+
+19. GCCode 101
+20. Packages 101
+21. R101: Building COVID-19 Tracker App from scratch
+
+22. Geo/Spatial coding and visualization with R. Part 1:
+22. Text Analysis with R. Part 1:
+
+and a number of short "How To: tutorials such as:
+
+22. Dual Coding - Python and R unite !
+22. Working with ggtables
+22. Automate common look and feel of your ggplot graphs
+and others
+
+
+Part VI provides information about 
+<!-- the outputs of the community development.  This includes a variety of -->
+ Shiny Web Apps 
+ <!-- and other codes and libraries -->
+ developed by the community members. 
+ <!-- All codes are made data-agnostic and do not contain any internal information -->
+
+Finally, *Appendix* includes agendas, notes, and codes  from the R4GC community "Lunch and Learn" meetups.
+
+<!-- Future Plans and Release Notes will be posted there soon -->
+
+<!-- , plans and  invitation for collaboration, in particular to make this knowledgebase bilingual - in support of bilingualism in Canada and as an another opportunity for applying data science skills for public good. -->
+
+
+

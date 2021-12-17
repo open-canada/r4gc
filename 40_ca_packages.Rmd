@@ -3,9 +3,9 @@
 
 
 
+## Packages
 
-
-## Packages on CRAN
+### Packages on CRAN
 
 
 One can go to https://packagemanager.rstudio.com/ to search and explore packages.
@@ -16,7 +16,33 @@ Install them from Tools-> Install Packages in RStudio, or directly using the lin
 install.packages('cansim') `
 ```
 
+#### rgovcan  - Easy Access to the Canadian Open Government Portal
 
+https://github.com/open-canada/rgovcan
+
+A R package to interact with the Open Canada API (see https://open.canada.ca/en/access-our-application-programming-interface-api), to search and download datasets (see Licence at https://open.canada.ca/en/open-government-licence-canada). It is our hope that we will be able to bring this package up to the standard of a ropensci packages (see this issue on ropensci/wishlist https://github.com/ropensci/wishlist/issues/27).
+
+This package makes extensive use of ckanr to access the Canadian government’s CKAN REST API.
+
+
+
+```
+library("rgovcan")
+dfo_search <- govcan_search(keywords = c("dfo"), records = 10)
+dfo_search
+
+# Another possibility is to start with a package id corresponding to an actual record 
+id <- "7ac5fe02-308d-4fff-b805-80194f8ddeb4" # Package ID
+id_search <- govcan_get_record(record_id = id)
+id_search
+id_resources <- govcan_get_resources(id_search)
+id_resources
+dfo_resources <- govcan_get_resources(dfo_search)
+
+path <- "tmp/data/"
+dir.create(path, recursive = TRUE)
+govcan_dl_resources(id_resources, path = path)
+```
 
 #### CANSIM2R - Directly Extracts Complete CANSIM Data Tables
 

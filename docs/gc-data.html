@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>27 GC Open Data use cases | The R4GC Book</title>
+  <title>27 Accessing Open Data Canada databases | The R4GC Book</title>
   <meta name="description" content="Notes and tutorials from ‘Lunch and Learn Data Science with R’ weekly meetups organized by the R4GC Community" />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="27 GC Open Data use cases | The R4GC Book" />
+  <meta property="og:title" content="27 Accessing Open Data Canada databases | The R4GC Book" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="https://open-canada.github.io/r4gc" />
   <meta property="og:image" content="https://open-canada.github.io/r4gc/images/r4gc-banner.png" />
@@ -16,13 +16,14 @@
   <meta name="github-repo" content="open-canada/r4gc" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="27 GC Open Data use cases | The R4GC Book" />
+  <meta name="twitter:title" content="27 Accessing Open Data Canada databases | The R4GC Book" />
   
   <meta name="twitter:description" content="Notes and tutorials from ‘Lunch and Learn Data Science with R’ weekly meetups organized by the R4GC Community" />
   <meta name="twitter:image" content="https://open-canada.github.io/r4gc/images/r4gc-banner.png" />
 
 
 
+<meta name="date" content="2021-12-16" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -30,10 +31,9 @@
   
   <link rel="shortcut icon" href="images/R4GC.ico" type="image/x-icon" />
 <link rel="prev" href="r101-building-covid-19-tracker-app-from-scratch.html"/>
-<link rel="next" href="shiny-apps.html"/>
+<link rel="next" href="health-related-databases.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
-<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -49,6 +49,8 @@
 
 
 
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 <link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
 
@@ -57,7 +59,6 @@
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
@@ -248,10 +249,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 </ul></li>
 <li class="part"><span><b>II Art of R programming</b></span></li>
-<li class="chapter" data-level="7" data-path="use-r-efficiently-with-data.html"><a href="use-r-efficiently-with-data.html"><i class="fa fa-check"></i><b>7</b> Use R efficiently with data.table!</a>
+<li class="chapter" data-level="7" data-path="use-r-efficiently-with-data-table.html"><a href="use-r-efficiently-with-data-table.html"><i class="fa fa-check"></i><b>7</b> Use R efficiently with data.table!</a>
 <ul>
-<li class="chapter" data-level="7.1" data-path="use-r-efficiently-with-data.html"><a href="use-r-efficiently-with-data.html#data.table-vs.-dplyr"><i class="fa fa-check"></i><b>7.1</b> data.table vs. dplyr</a></li>
-<li class="chapter" data-level="7.2" data-path="use-r-efficiently-with-data.html"><a href="use-r-efficiently-with-data.html#extensions-of-data.table"><i class="fa fa-check"></i><b>7.2</b> Extensions of data.table</a></li>
+<li class="chapter" data-level="7.1" data-path="use-r-efficiently-with-data-table.html"><a href="use-r-efficiently-with-data-table.html#data.table-vs.-dplyr"><i class="fa fa-check"></i><b>7.1</b> data.table vs. dplyr</a></li>
+<li class="chapter" data-level="7.2" data-path="use-r-efficiently-with-data-table.html"><a href="use-r-efficiently-with-data-table.html#extensions-of-data.table"><i class="fa fa-check"></i><b>7.2</b> Extensions of data.table</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="python-and-r-unite.html"><a href="python-and-r-unite.html"><i class="fa fa-check"></i><b>8</b> Python and R unite!</a></li>
 <li class="chapter" data-level="9" data-path="from-excel-to-r.html"><a href="from-excel-to-r.html"><i class="fa fa-check"></i><b>9</b> From Excel to R</a></li>
@@ -295,6 +296,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="13.1" data-path="r-markdown-for-literate-programming-and-automated-reports.html"><a href="r-markdown-for-literate-programming-and-automated-reports.html#resources"><i class="fa fa-check"></i><b>13.1</b> Resources</a></li>
 <li class="chapter" data-level="13.2" data-path="r-markdown-for-literate-programming-and-automated-reports.html"><a href="r-markdown-for-literate-programming-and-automated-reports.html#automated-generation-of-multiple-pdf-files"><i class="fa fa-check"></i><b>13.2</b> Automated generation of multiple PDF files</a></li>
+<li class="chapter" data-level="13.3" data-path="r-markdown-for-literate-programming-and-automated-reports.html"><a href="r-markdown-for-literate-programming-and-automated-reports.html#useful-tricks-and-tips"><i class="fa fa-check"></i><b>13.3</b> Useful tricks and tips</a>
+<ul>
+<li class="chapter" data-level="13.3.1" data-path="r-markdown-for-literate-programming-and-automated-reports.html"><a href="r-markdown-for-literate-programming-and-automated-reports.html#in-rstudio-editor"><i class="fa fa-check"></i><b>13.3.1</b> In RStudio editor</a></li>
+<li class="chapter" data-level="13.3.2" data-path="r-markdown-for-literate-programming-and-automated-reports.html"><a href="r-markdown-for-literate-programming-and-automated-reports.html#spliting-rmd-in-chunks"><i class="fa fa-check"></i><b>13.3.2</b> Spliting Rmd in chunks</a></li>
+<li class="chapter" data-level="13.3.3" data-path="r-markdown-for-literate-programming-and-automated-reports.html"><a href="r-markdown-for-literate-programming-and-automated-reports.html#making-good-use-of-configuration-yaml-header-in-index.rmd-file"><i class="fa fa-check"></i><b>13.3.3</b> Making good use of configuration yaml header in index.Rmd file</a></li>
+<li class="chapter" data-level="13.3.4" data-path="r-markdown-for-literate-programming-and-automated-reports.html"><a href="r-markdown-for-literate-programming-and-automated-reports.html#conditional-execution-of-chunks"><i class="fa fa-check"></i><b>13.3.4</b> Conditional execution of chunks</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="welcome-to-supervised-machine-learning-for-text-analysis-in-r.html"><a href="welcome-to-supervised-machine-learning-for-text-analysis-in-r.html"><i class="fa fa-check"></i>Welcome to Supervised Machine Learning for Text Analysis in R</a>
+<ul>
+<li class="chapter" data-level="13.3.5" data-path="welcome-to-supervised-machine-learning-for-text-analysis-in-r.html"><a href="welcome-to-supervised-machine-learning-for-text-analysis-in-r.html#automated-compilation-of-rmd-files-in-github-using-github-actions"><i class="fa fa-check"></i><b>13.3.5</b> Automated compilation of Rmd files in GitHub using GitHub Actions</a></li>
 </ul></li>
 <li class="chapter" data-level="14" data-path="ggplot2-and-its-extensions-for-data-visualization.html"><a href="ggplot2-and-its-extensions-for-data-visualization.html"><i class="fa fa-check"></i><b>14</b> ggplot2 and its extensions for data visualization</a>
 <ul>
@@ -318,17 +330,103 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="17.3" data-path="geospatial-coding-and-visualization-in-r.html"><a href="geospatial-coding-and-visualization-in-r.html#tutorials"><i class="fa fa-check"></i><b>17.3</b> Tutorials</a></li>
 <li class="chapter" data-level="17.4" data-path="geospatial-coding-and-visualization-in-r.html"><a href="geospatial-coding-and-visualization-in-r.html#dealing-with-memory-issues"><i class="fa fa-check"></i><b>17.4</b> Dealing with memory issues</a></li>
 <li class="chapter" data-level="17.5" data-path="geospatial-coding-and-visualization-in-r.html"><a href="geospatial-coding-and-visualization-in-r.html#canadian-geo-data"><i class="fa fa-check"></i><b>17.5</b> Canadian geo-data</a></li>
+<li class="chapter" data-level="17.6" data-path="geospatial-coding-and-visualization-in-r.html"><a href="geospatial-coding-and-visualization-in-r.html#code-snippets"><i class="fa fa-check"></i><b>17.6</b> Code snippets</a>
+<ul>
+<li class="chapter" data-level="17.6.1" data-path="geospatial-coding-and-visualization-in-r.html"><a href="geospatial-coding-and-visualization-in-r.html#using-simplemaps.com"><i class="fa fa-check"></i><b>17.6.1</b> Using simplemaps.com</a></li>
+<li class="chapter" data-level="17.6.2" data-path="geospatial-coding-and-visualization-in-r.html"><a href="geospatial-coding-and-visualization-in-r.html#using-google-api"><i class="fa fa-check"></i><b>17.6.2</b> Using Google API</a></li>
+<li class="chapter" data-level="17.6.3" data-path="geospatial-coding-and-visualization-in-r.html"><a href="geospatial-coding-and-visualization-in-r.html#using-tidygeocoder"><i class="fa fa-check"></i><b>17.6.3</b> Using tidygeocoder</a></li>
+<li class="chapter" data-level="17.6.4" data-path="geospatial-coding-and-visualization-in-r.html"><a href="geospatial-coding-and-visualization-in-r.html#using-open-street-map"><i class="fa fa-check"></i><b>17.6.4</b> Using Open Street map</a></li>
+<li class="chapter" data-level="17.6.5" data-path="geospatial-coding-and-visualization-in-r.html"><a href="geospatial-coding-and-visualization-in-r.html#using-open-database-of-addresses-educational-facilities"><i class="fa fa-check"></i><b>17.6.5</b> Using Open Database of Addresses / Educational Facilities</a></li>
+<li class="chapter" data-level="17.6.6" data-path="geospatial-coding-and-visualization-in-r.html"><a href="geospatial-coding-and-visualization-in-r.html#getting-postal-codes"><i class="fa fa-check"></i><b>17.6.6</b> Getting Postal codes</a></li>
+</ul></li>
 </ul></li>
 <li class="part"><span><b>IV Machine Learning and AI</b></span></li>
-<li class="chapter" data-level="18" data-path="record-linking-and-other-data-engineering-tasks-in-r.html"><a href="record-linking-and-other-data-engineering-tasks-in-r.html"><i class="fa fa-check"></i><b>18</b> Record Linking and other Data Engineering tasks in R</a>
+<li class="chapter" data-level="18" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html"><i class="fa fa-check"></i><b>18</b> Data Engineering, Record Linking and Deduplication</a>
 <ul>
-<li class="chapter" data-level="18.1" data-path="record-linking-and-other-data-engineering-tasks-in-r.html"><a href="record-linking-and-other-data-engineering-tasks-in-r.html#demo"><i class="fa fa-check"></i><b>18.1</b> demo</a></li>
+<li class="chapter" data-level="18.1" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#tldl"><i class="fa fa-check"></i><b>18.1</b> TL;DL</a></li>
+<li class="chapter" data-level="18.2" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#intro-what-is-data-engineering"><i class="fa fa-check"></i><b>18.2</b> Intro: What is <em>Data Engineering</em></a>
+<ul>
+<li class="chapter" data-level="18.2.1" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#data-engineering-vs.-software-engineering"><i class="fa fa-check"></i><b>18.2.1</b> <em>Data Engineering</em> vs. <em>Software Engineering</em></a></li>
+</ul></li>
+<li class="chapter" data-level="18.3" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#data-engineering-vs.-etl-and-elt"><i class="fa fa-check"></i><b>18.3</b> Data Engineering vs. ETL and ELT</a>
+<ul>
+<li class="chapter" data-level="18.3.1" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#taxonomy-of-data-engineering-tasks"><i class="fa fa-check"></i><b>18.3.1</b> Taxonomy of Data Engineering tasks</a></li>
+</ul></li>
+<li class="chapter" data-level="18.4" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#useful-packages"><i class="fa fa-check"></i><b>18.4</b> Useful packages</a>
+<ul>
+<li class="chapter" data-level="18.4.1" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#single-variable"><i class="fa fa-check"></i><b>18.4.1</b> Single variable</a></li>
+</ul></li>
+<li class="chapter" data-level="18.5" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#r-base-and-data.table"><i class="fa fa-check"></i><b>18.5</b> 0 &gt; R base and data.table</a>
+<ul>
+<li class="chapter" data-level="18.5.1" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#description"><i class="fa fa-check"></i><b>18.5.1</b> Description</a></li>
+<li class="chapter" data-level="18.5.2" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#examples"><i class="fa fa-check"></i><b>18.5.2</b> Examples</a></li>
+</ul></li>
+<li class="chapter" data-level="18.6" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#textclean"><i class="fa fa-check"></i><b>18.6</b> 1 &gt;<code>textclean</code></a>
+<ul>
+<li class="chapter" data-level="18.6.1" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#description-1"><i class="fa fa-check"></i><b>18.6.1</b> Description</a></li>
+<li class="chapter" data-level="18.6.2" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#example"><i class="fa fa-check"></i><b>18.6.2</b> Example</a></li>
+</ul></li>
+<li class="chapter" data-level="18.7" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#package-phonics"><i class="fa fa-check"></i><b>18.7</b> 2 &gt; Package <code>phonics</code></a>
+<ul>
+<li class="chapter" data-level="18.7.1" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#description-2"><i class="fa fa-check"></i><b>18.7.1</b> Description</a></li>
+<li class="chapter" data-level="18.7.2" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#example-1"><i class="fa fa-check"></i><b>18.7.2</b> Example</a></li>
+</ul></li>
+<li class="chapter" data-level="18.8" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#package-stringdist"><i class="fa fa-check"></i><b>18.8</b> 3 &gt; Package <code>stringdist</code></a>
+<ul>
+<li class="chapter" data-level="18.8.1" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#description-3"><i class="fa fa-check"></i><b>18.8.1</b> Description</a></li>
+<li class="chapter" data-level="18.8.2" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#example-2"><i class="fa fa-check"></i><b>18.8.2</b> Example</a></li>
+</ul></li>
+<li class="chapter" data-level="18.9" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#multi-variable-recording-linking"><i class="fa fa-check"></i><b>18.9</b> Multi-variable recording linking</a></li>
+<li class="chapter" data-level="18.10" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#libraryfastlink"><i class="fa fa-check"></i><b>18.10</b> &gt;&gt; library(fastLink)</a>
+<ul>
+<li class="chapter" data-level="18.10.1" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#description-4"><i class="fa fa-check"></i><b>18.10.1</b> Description</a></li>
+<li class="chapter" data-level="18.10.2" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#dataset"><i class="fa fa-check"></i><b>18.10.2</b> Dataset</a></li>
+<li class="chapter" data-level="18.10.3" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#example-3"><i class="fa fa-check"></i><b>18.10.3</b> Example</a></li>
+</ul></li>
+<li class="chapter" data-level="18.11" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#package-recordlinkage"><i class="fa fa-check"></i><b>18.11</b> &gt;&gt; Package <code>RecordLinkage</code></a>
+<ul>
+<li class="chapter" data-level="18.11.1" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#description-5"><i class="fa fa-check"></i><b>18.11.1</b> Description</a></li>
+<li class="chapter" data-level="18.11.2" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#datasets-german-names-500-and-10000"><i class="fa fa-check"></i><b>18.11.2</b> Datasets: German names 500 and 10,000</a></li>
+</ul></li>
+<li class="chapter" data-level="18.12" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#libraryblink"><i class="fa fa-check"></i><b>18.12</b> &gt; library(blink)</a>
+<ul>
+<li class="chapter" data-level="18.12.1" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#summary"><i class="fa fa-check"></i><b>18.12.1</b> Summary</a></li>
+</ul></li>
+<li class="chapter" data-level="18.13" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#libraryreclin"><i class="fa fa-check"></i><b>18.13</b> &gt; <code>library(reclin)</code></a>
+<ul>
+<li class="chapter" data-level="18.13.1" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#description-6"><i class="fa fa-check"></i><b>18.13.1</b> Description</a></li>
+<li class="chapter" data-level="18.13.2" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#included-datasets"><i class="fa fa-check"></i><b>18.13.2</b> Included Datasets:</a></li>
+</ul></li>
+<li class="chapter" data-level="18.14" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#libraryfuzzyjoin"><i class="fa fa-check"></i><b>18.14</b> &gt;&gt; library(fuzzyjoin)</a>
+<ul>
+<li class="chapter" data-level="18.14.1" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#description-7"><i class="fa fa-check"></i><b>18.14.1</b> Description</a></li>
+<li class="chapter" data-level="18.14.2" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#example-1-joining-with-common-mispelling"><i class="fa fa-check"></i><b>18.14.2</b> Example 1: Joining with Common Mispelling</a></li>
+<li class="chapter" data-level="18.14.3" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#example-2-from-datacamp"><i class="fa fa-check"></i><b>18.14.3</b> Example 2: from datacamp</a></li>
+<li class="chapter" data-level="18.14.4" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#example-3-from-stackoverflow"><i class="fa fa-check"></i><b>18.14.4</b> Example 3: from stackoverflow</a></li>
+</ul></li>
+<li class="chapter" data-level="18.15" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#package-blink"><i class="fa fa-check"></i><b>18.15</b> &gt; Package <code>blink</code></a>
+<ul>
+<li class="chapter" data-level="18.15.1" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#description-8"><i class="fa fa-check"></i><b>18.15.1</b> Description</a></li>
+<li class="chapter" data-level="18.15.2" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#datasets-german-names-500-and-10000-1"><i class="fa fa-check"></i><b>18.15.2</b> Datasets: German names 500 and 10,000</a></li>
+</ul></li>
+<li class="chapter" data-level="18.16" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#discusion---other-methods"><i class="fa fa-check"></i><b>18.16</b> Discusion - Other methods</a></li>
 </ul></li>
 <li class="chapter" data-level="19" data-path="text-analysis-in-r.html"><a href="text-analysis-in-r.html"><i class="fa fa-check"></i><b>19</b> Text Analysis in R</a>
 <ul>
 <li class="chapter" data-level="19.1" data-path="text-analysis-in-r.html"><a href="text-analysis-in-r.html#open-source-textbook"><i class="fa fa-check"></i><b>19.1</b> Open source textbook</a></li>
 <li class="chapter" data-level="19.2" data-path="text-analysis-in-r.html"><a href="text-analysis-in-r.html#plagiarism-detection"><i class="fa fa-check"></i><b>19.2</b> Plagiarism detection</a></li>
-<li class="chapter" data-level="19.3" data-path="text-analysis-in-r.html"><a href="text-analysis-in-r.html#results-from-international-methodology-symposium"><i class="fa fa-check"></i><b>19.3</b> results from International Methodology Symposium</a></li>
+<li class="chapter" data-level="19.3" data-path="text-analysis-in-r.html"><a href="text-analysis-in-r.html#related-work-at-international-methodology-symposium"><i class="fa fa-check"></i><b>19.3</b> Related work at International Methodology Symposium</a></li>
+<li class="chapter" data-level="19.4" data-path="text-analysis-in-r.html"><a href="text-analysis-in-r.html#useful-code-snippets"><i class="fa fa-check"></i><b>19.4</b> Useful code snippets</a>
+<ul>
+<li class="chapter" data-level="19.4.1" data-path="text-analysis-in-r.html"><a href="text-analysis-in-r.html#basic-cleaning-remove-accents-benchmarking"><i class="fa fa-check"></i><b>19.4.1</b> Basic cleaning : Remove accents (benchmarking)</a></li>
+<li class="chapter" data-level="19.4.2" data-path="text-analysis-in-r.html"><a href="text-analysis-in-r.html#text-cleaning"><i class="fa fa-check"></i><b>19.4.2</b> Text cleaning</a></li>
+<li class="chapter" data-level="19.4.3" data-path="text-analysis-in-r.html"><a href="text-analysis-in-r.html#extracting-re-ordering-words-in-a-string"><i class="fa fa-check"></i><b>19.4.3</b> Extracting, re-ordering words in a string</a></li>
+<li class="chapter" data-level="19.4.4" data-path="text-analysis-in-r.html"><a href="text-analysis-in-r.html#automatically-finding-removing-common-parts-in-strings"><i class="fa fa-check"></i><b>19.4.4</b> Automatically finding / removing common parts in strings</a></li>
+<li class="chapter" data-level="19.4.5" data-path="text-analysis-in-r.html"><a href="text-analysis-in-r.html#useful-packages-1"><i class="fa fa-check"></i><b>19.4.5</b> Useful packages</a></li>
+<li class="chapter" data-level="19.4.6" data-path="text-analysis-in-r.html"><a href="text-analysis-in-r.html#cleantexttext-clean-text"><i class="fa fa-check"></i><b>19.4.6</b> <code>cleanText(text)</code>: clean text</a></li>
+<li class="chapter" data-level="19.4.7" data-path="text-analysis-in-r.html"><a href="text-analysis-in-r.html#convert-text-to-date-or-timestamp"><i class="fa fa-check"></i><b>19.4.7</b> Convert Text to Date or Timestamp</a></li>
+<li class="chapter" data-level="19.4.8" data-path="text-analysis-in-r.html"><a href="text-analysis-in-r.html#transliteration-cleaning"><i class="fa fa-check"></i><b>19.4.8</b> Transliteration &amp; cleaning</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="20" data-path="statistical-tests-and-mixed-effects-analysis.html"><a href="statistical-tests-and-mixed-effects-analysis.html"><i class="fa fa-check"></i><b>20</b> Statistical tests and mixed-effects analysis</a></li>
 <li class="chapter" data-level="21" data-path="machine-learning-and-modeling-in-r.html"><a href="machine-learning-and-modeling-in-r.html"><i class="fa fa-check"></i><b>21</b> Machine Learning and Modeling in R</a>
@@ -369,7 +467,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="25.4" data-path="packages-101.html"><a href="packages-101.html#rbuildignore"><i class="fa fa-check"></i><b>25.4</b> * .Rbuildignore</a></li>
 <li class="chapter" data-level="25.5" data-path="packages-101.html"><a href="packages-101.html#license-use_mit_license"><i class="fa fa-check"></i><b>25.5</b> * License: <code>use_mit_license()</code></a></li>
-<li class="chapter" data-level="25.6" data-path="packages-101.html"><a href="packages-101.html#description"><i class="fa fa-check"></i><b>25.6</b> * DESCRIPTION</a></li>
+<li class="chapter" data-level="25.6" data-path="packages-101.html"><a href="packages-101.html#description-9"><i class="fa fa-check"></i><b>25.6</b> * DESCRIPTION</a></li>
 <li class="chapter" data-level="25.7" data-path="packages-101.html"><a href="packages-101.html#namespace"><i class="fa fa-check"></i><b>25.7</b> * NAMESPACE</a></li>
 <li class="chapter" data-level="25.8" data-path="packages-101.html"><a href="packages-101.html#examples-and-tests"><i class="fa fa-check"></i><b>25.8</b> * Examples and tests</a></li>
 <li class="chapter" data-level="25.9" data-path="packages-101.html"><a href="packages-101.html#in-my_codes"><i class="fa fa-check"></i><b>25.9</b> .. in MY_CODES</a></li>
@@ -381,59 +479,70 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="25.15" data-path="packages-101.html"><a href="packages-101.html#optional-rtools"><i class="fa fa-check"></i><b>25.15</b> (optional) Rtools</a></li>
 </ul></li>
 <li class="chapter" data-level="26" data-path="r101-building-covid-19-tracker-app-from-scratch.html"><a href="r101-building-covid-19-tracker-app-from-scratch.html"><i class="fa fa-check"></i><b>26</b> R101: Building COVID-19 Tracker App from scratch</a></li>
-<li class="part"><span><b>VI Community Codes</b></span></li>
-<li class="chapter" data-level="27" data-path="gc-data.html"><a href="gc-data.html"><i class="fa fa-check"></i><b>27</b> GC Open Data use cases</a>
+<li class="part"><span><b>VI Community Databases</b></span></li>
+<li class="chapter" data-level="27" data-path="gc-data.html"><a href="gc-data.html"><i class="fa fa-check"></i><b>27</b> Accessing Open Data Canada databases</a>
 <ul>
-<li class="chapter" data-level="27.1" data-path="gc-data.html"><a href="gc-data.html#pses-results-interactive-analysis-and-visualization"><i class="fa fa-check"></i><b>27.1</b> PSES Results interactive analysis and visualization:</a>
+<li class="chapter" data-level="27.1" data-path="gc-data.html"><a href="gc-data.html#with-curl-fread-readxls"><i class="fa fa-check"></i><b>27.1</b> With curl, fread, readxls</a></li>
+<li class="chapter" data-level="27.2" data-path="gc-data.html"><a href="gc-data.html#with-cansim-package"><i class="fa fa-check"></i><b>27.2</b> With cansim package</a></li>
+<li class="chapter" data-level="27.3" data-path="gc-data.html"><a href="gc-data.html#via-api-using-libraryckanr"><i class="fa fa-check"></i><b>27.3</b> Via API using <code>library(ckanr)</code></a>
 <ul>
-<li class="chapter" data-level="27.1.1" data-path="gc-data.html"><a href="gc-data.html#other-tools-and-dashboards"><i class="fa fa-check"></i><b>27.1.1</b> Other tools and dashboards</a></li>
+<li class="chapter" data-level="27.3.1" data-path="gc-data.html"><a href="gc-data.html#via-api-using-libraryrgovcan"><i class="fa fa-check"></i><b>27.3.1</b> Via API using library(“rgovcan”)</a></li>
 </ul></li>
-<li class="chapter" data-level="27.2" data-path="gc-data.html"><a href="gc-data.html#automated-atip-requests-topic-extraction"><i class="fa fa-check"></i><b>27.2</b> Automated ATIP requests topic extraction:</a></li>
-<li class="chapter" data-level="27.3" data-path="gc-data.html"><a href="gc-data.html#automated-municipal-level-covid-19-tracker"><i class="fa fa-check"></i><b>27.3</b> Automated municipal level COVID-19 tracker:</a></li>
-<li class="chapter" data-level="27.4" data-path="gc-data.html"><a href="gc-data.html#geo-mapped-current-historical-and-predicted-border-wait-times"><i class="fa fa-check"></i><b>27.4</b> Geo-mapped current, historical and predicted border wait times:</a></li>
 </ul></li>
-<li class="chapter" data-level="28" data-path="shiny-apps.html"><a href="shiny-apps.html"><i class="fa fa-check"></i><b>28</b> Shiny Apps</a>
+<li class="chapter" data-level="28" data-path="health-related-databases.html"><a href="health-related-databases.html"><i class="fa fa-check"></i><b>28</b> Health-related databases</a>
 <ul>
-<li class="chapter" data-level="28.1" data-path="shiny-apps.html"><a href="shiny-apps.html#pses-results-interactive-analysis-and-visualization-1"><i class="fa fa-check"></i><b>28.1</b> PSES Results interactive analysis and visualization:</a>
+<li class="chapter" data-level="28.1" data-path="health-related-databases.html"><a href="health-related-databases.html#canadian-vitals-statistics-database"><i class="fa fa-check"></i><b>28.1</b> Canadian Vitals Statistics Database</a>
 <ul>
-<li class="chapter" data-level="28.1.1" data-path="shiny-apps.html"><a href="shiny-apps.html#other-tools-and-dashboards-1"><i class="fa fa-check"></i><b>28.1.1</b> Other tools and dashboards</a></li>
+<li class="chapter" data-level="28.1.1" data-path="health-related-databases.html"><a href="health-related-databases.html#vital-statistics---death-database"><i class="fa fa-check"></i><b>28.1.1</b> Vital Statistics - Death Database</a></li>
+<li class="chapter" data-level="28.1.2" data-path="health-related-databases.html"><a href="health-related-databases.html#vital-statistics---birth-database"><i class="fa fa-check"></i><b>28.1.2</b> Vital Statistics - Birth Database</a></li>
 </ul></li>
-<li class="chapter" data-level="28.2" data-path="shiny-apps.html"><a href="shiny-apps.html#automated-atip-requests-topic-extraction-1"><i class="fa fa-check"></i><b>28.2</b> Automated ATIP requests topic extraction:</a></li>
-<li class="chapter" data-level="28.3" data-path="shiny-apps.html"><a href="shiny-apps.html#automated-municipal-level-covid-19-tracker-1"><i class="fa fa-check"></i><b>28.3</b> Automated municipal level COVID-19 tracker:</a></li>
-<li class="chapter" data-level="28.4" data-path="shiny-apps.html"><a href="shiny-apps.html#geo-mapped-current-historical-and-predicted-border-wait-times-1"><i class="fa fa-check"></i><b>28.4</b> Geo-mapped current, historical and predicted border wait times:</a></li>
-<li class="chapter" data-level="28.5" data-path="shiny-apps.html"><a href="shiny-apps.html#demo-and-tool-for-linking-noisy-data-records"><i class="fa fa-check"></i><b>28.5</b> Demo and tool for linking noisy data records:</a></li>
-<li class="chapter" data-level="28.6" data-path="shiny-apps.html"><a href="shiny-apps.html#html-pages-comparator"><i class="fa fa-check"></i><b>28.6</b> Html pages comparator:</a></li>
-<li class="chapter" data-level="28.7" data-path="shiny-apps.html"><a href="shiny-apps.html#large-table-summarizer"><i class="fa fa-check"></i><b>28.7</b> Large table summarizer:</a></li>
+<li class="chapter" data-level="28.2" data-path="health-related-databases.html"><a href="health-related-databases.html#covid-19-infection-and-vaccination-related"><i class="fa fa-check"></i><b>28.2</b> COVID-19 infection and vaccination related:</a></li>
 </ul></li>
-<li class="appendix"><span><b>Appendices</b></span></li>
-<li class="chapter" data-level="A" data-path="lunch-and-learn-notes.html"><a href="lunch-and-learn-notes.html"><i class="fa fa-check"></i><b>A</b> Lunch and Learn notes</a>
+<li class="chapter" data-level="29" data-path="open-ontario-data.html"><a href="open-ontario-data.html"><i class="fa fa-check"></i><b>29</b> Open Ontario Data</a>
+<ul>
+<li class="chapter" data-level="29.0.1" data-path="open-ontario-data.html"><a href="open-ontario-data.html#section-1"><i class="fa fa-check"></i><b>29.0.1</b> </a></li>
+</ul></li>
+<li class="chapter" data-level="30" data-path="performance-related-databases.html"><a href="performance-related-databases.html"><i class="fa fa-check"></i><b>30</b> Performance-related databases</a>
+<ul>
+<li class="chapter" data-level="30.1" data-path="performance-related-databases.html"><a href="performance-related-databases.html#pses-results-interactive-analysis-and-visualization"><i class="fa fa-check"></i><b>30.1</b> PSES Results interactive analysis and visualization:</a>
+<ul>
+<li class="chapter" data-level="30.1.1" data-path="performance-related-databases.html"><a href="performance-related-databases.html#other-pses-tools-and-dashboards"><i class="fa fa-check"></i><b>30.1.1</b> Other PSES tools and dashboards</a></li>
+</ul></li>
+<li class="chapter" data-level="30.2" data-path="performance-related-databases.html"><a href="performance-related-databases.html#tip-requests-dataset"><i class="fa fa-check"></i><b>30.2</b> TIP requests dataset</a></li>
+<li class="chapter" data-level="30.3" data-path="performance-related-databases.html"><a href="performance-related-databases.html#geo-mapped-current-historical-and-predicted-border-wait-times"><i class="fa fa-check"></i><b>30.3</b> Geo-mapped current, historical and predicted border wait times:</a></li>
+</ul></li>
+<li class="part"><span><b>VII Community Codes</b></span></li>
+<li class="chapter" data-level="31" data-path="lunch-and-learn-notes.html"><a href="lunch-and-learn-notes.html"><i class="fa fa-check"></i><b>31</b> Lunch and Learn notes</a>
 <ul>
 <li class="chapter" data-level="" data-path="lunch-and-learn-notes.html"><a href="lunch-and-learn-notes.html#interactive-outputs-in-r-without-shiny"><i class="fa fa-check"></i>Interactive Outputs in R without Shiny</a></li>
-<li class="chapter" data-level="A.1" data-path="lunch-and-learn-notes.html"><a href="lunch-and-learn-notes.html#geospatial-coding-and-visualization-with-r.-part-1"><i class="fa fa-check"></i><b>A.1</b> Geo/Spatial coding and visualization with R. Part 1:</a></li>
-<li class="chapter" data-level="A.2" data-path="lunch-and-learn-notes.html"><a href="lunch-and-learn-notes.html#text-analysis-with-r.-part-1"><i class="fa fa-check"></i><b>A.2</b> Text Analysis with R. Part 1:</a></li>
-<li class="chapter" data-level="A.3" data-path="lunch-and-learn-notes.html"><a href="lunch-and-learn-notes.html#dual-coding---python-and-r-unite"><i class="fa fa-check"></i><b>A.3</b> Dual Coding - Python and R unite !</a></li>
-<li class="chapter" data-level="A.4" data-path="lunch-and-learn-notes.html"><a href="lunch-and-learn-notes.html#working-with-ggtables"><i class="fa fa-check"></i><b>A.4</b> Working with ggtables</a></li>
-<li class="chapter" data-level="A.5" data-path="lunch-and-learn-notes.html"><a href="lunch-and-learn-notes.html#automate-common-look-and-feel-of-your-ggplot-graphs"><i class="fa fa-check"></i><b>A.5</b> Automate common look and feel of your ggplot graphs</a></li>
-<li class="chapter" data-level="A.6" data-path="lunch-and-learn-notes.html"><a href="lunch-and-learn-notes.html#automated-generation-of-report-cards"><i class="fa fa-check"></i><b>A.6</b> Automated generation of report cards</a></li>
-<li class="chapter" data-level="A.7" data-path="lunch-and-learn-notes.html"><a href="lunch-and-learn-notes.html#discussed-rstudio-webinars"><i class="fa fa-check"></i><b>A.7</b> Discussed RStudio Webinars</a></li>
+<li class="chapter" data-level="31.1" data-path="lunch-and-learn-notes.html"><a href="lunch-and-learn-notes.html#geospatial-coding-and-visualization-with-r.-part-1"><i class="fa fa-check"></i><b>31.1</b> Geo/Spatial coding and visualization with R. Part 1:</a></li>
+<li class="chapter" data-level="31.2" data-path="lunch-and-learn-notes.html"><a href="lunch-and-learn-notes.html#text-analysis-with-r.-part-1"><i class="fa fa-check"></i><b>31.2</b> Text Analysis with R. Part 1:</a></li>
+<li class="chapter" data-level="31.3" data-path="lunch-and-learn-notes.html"><a href="lunch-and-learn-notes.html#dual-coding---python-and-r-unite"><i class="fa fa-check"></i><b>31.3</b> Dual Coding - Python and R unite !</a></li>
+<li class="chapter" data-level="31.4" data-path="lunch-and-learn-notes.html"><a href="lunch-and-learn-notes.html#working-with-ggtables"><i class="fa fa-check"></i><b>31.4</b> Working with ggtables</a></li>
+<li class="chapter" data-level="31.5" data-path="lunch-and-learn-notes.html"><a href="lunch-and-learn-notes.html#automate-common-look-and-feel-of-your-ggplot-graphs"><i class="fa fa-check"></i><b>31.5</b> Automate common look and feel of your ggplot graphs</a></li>
+<li class="chapter" data-level="31.6" data-path="lunch-and-learn-notes.html"><a href="lunch-and-learn-notes.html#automated-generation-of-report-cards"><i class="fa fa-check"></i><b>31.6</b> Automated generation of report cards</a></li>
+<li class="chapter" data-level="31.7" data-path="lunch-and-learn-notes.html"><a href="lunch-and-learn-notes.html#discussed-rstudio-webinars"><i class="fa fa-check"></i><b>31.7</b> Discussed RStudio Webinars</a></li>
 </ul></li>
-<li class="chapter" data-level="B" data-path="canada-related-open-source-r-codes-and-packages.html"><a href="canada-related-open-source-r-codes-and-packages.html"><i class="fa fa-check"></i><b>B</b> Canada-related Open source R codes and packages</a>
+<li class="chapter" data-level="32" data-path="canada-related-open-source-r-codes-and-packages.html"><a href="canada-related-open-source-r-codes-and-packages.html"><i class="fa fa-check"></i><b>32</b> Canada-related Open source R codes and packages</a>
 <ul>
-<li class="chapter" data-level="B.1" data-path="canada-related-open-source-r-codes-and-packages.html"><a href="canada-related-open-source-r-codes-and-packages.html#packages-on-cran"><i class="fa fa-check"></i><b>B.1</b> Packages on CRAN</a></li>
-<li class="chapter" data-level="B.2" data-path="canada-related-open-source-r-codes-and-packages.html"><a href="canada-related-open-source-r-codes-and-packages.html#packages-not-on-cran"><i class="fa fa-check"></i><b>B.2</b> Packages not on CRAN</a></li>
-<li class="chapter" data-level="B.3" data-path="canada-related-open-source-r-codes-and-packages.html"><a href="canada-related-open-source-r-codes-and-packages.html#codes-on-github"><i class="fa fa-check"></i><b>B.3</b> Codes on GitHub</a>
+<li class="chapter" data-level="32.1" data-path="canada-related-open-source-r-codes-and-packages.html"><a href="canada-related-open-source-r-codes-and-packages.html#packages"><i class="fa fa-check"></i><b>32.1</b> Packages</a>
 <ul>
-<li class="chapter" data-level="B.3.1" data-path="canada-related-open-source-r-codes-and-packages.html"><a href="canada-related-open-source-r-codes-and-packages.html#expenditures-and-procurement"><i class="fa fa-check"></i><b>B.3.1</b> Expenditures and procurement</a></li>
-<li class="chapter" data-level="B.3.2" data-path="canada-related-open-source-r-codes-and-packages.html"><a href="canada-related-open-source-r-codes-and-packages.html#health-and-environment"><i class="fa fa-check"></i><b>B.3.2</b> Health and Environment</a></li>
-<li class="chapter" data-level="B.3.3" data-path="canada-related-open-source-r-codes-and-packages.html"><a href="canada-related-open-source-r-codes-and-packages.html#elections"><i class="fa fa-check"></i><b>B.3.3</b> Elections</a></li>
-<li class="chapter" data-level="B.3.4" data-path="canada-related-open-source-r-codes-and-packages.html"><a href="canada-related-open-source-r-codes-and-packages.html#ottawa"><i class="fa fa-check"></i><b>B.3.4</b> Ottawa</a></li>
-<li class="chapter" data-level="B.3.5" data-path="canada-related-open-source-r-codes-and-packages.html"><a href="canada-related-open-source-r-codes-and-packages.html#vancouver"><i class="fa fa-check"></i><b>B.3.5</b> Vancouver</a></li>
-<li class="chapter" data-level="B.3.6" data-path="canada-related-open-source-r-codes-and-packages.html"><a href="canada-related-open-source-r-codes-and-packages.html#other-related-packages"><i class="fa fa-check"></i><b>B.3.6</b> Other related packages</a></li>
+<li class="chapter" data-level="32.1.1" data-path="canada-related-open-source-r-codes-and-packages.html"><a href="canada-related-open-source-r-codes-and-packages.html#packages-on-cran"><i class="fa fa-check"></i><b>32.1.1</b> Packages on CRAN</a></li>
+</ul></li>
+<li class="chapter" data-level="32.2" data-path="canada-related-open-source-r-codes-and-packages.html"><a href="canada-related-open-source-r-codes-and-packages.html#packages-not-on-cran"><i class="fa fa-check"></i><b>32.2</b> Packages not on CRAN</a></li>
+<li class="chapter" data-level="32.3" data-path="canada-related-open-source-r-codes-and-packages.html"><a href="canada-related-open-source-r-codes-and-packages.html#codes-on-github"><i class="fa fa-check"></i><b>32.3</b> Codes on GitHub</a>
+<ul>
+<li class="chapter" data-level="32.3.1" data-path="canada-related-open-source-r-codes-and-packages.html"><a href="canada-related-open-source-r-codes-and-packages.html#expenditures-and-procurement"><i class="fa fa-check"></i><b>32.3.1</b> Expenditures and procurement</a></li>
+<li class="chapter" data-level="32.3.2" data-path="canada-related-open-source-r-codes-and-packages.html"><a href="canada-related-open-source-r-codes-and-packages.html#health-and-environment"><i class="fa fa-check"></i><b>32.3.2</b> Health and Environment</a></li>
+<li class="chapter" data-level="32.3.3" data-path="canada-related-open-source-r-codes-and-packages.html"><a href="canada-related-open-source-r-codes-and-packages.html#elections"><i class="fa fa-check"></i><b>32.3.3</b> Elections</a></li>
+<li class="chapter" data-level="32.3.4" data-path="canada-related-open-source-r-codes-and-packages.html"><a href="canada-related-open-source-r-codes-and-packages.html#ottawa"><i class="fa fa-check"></i><b>32.3.4</b> Ottawa</a></li>
+<li class="chapter" data-level="32.3.5" data-path="canada-related-open-source-r-codes-and-packages.html"><a href="canada-related-open-source-r-codes-and-packages.html#vancouver"><i class="fa fa-check"></i><b>32.3.5</b> Vancouver</a></li>
+<li class="chapter" data-level="32.3.6" data-path="canada-related-open-source-r-codes-and-packages.html"><a href="canada-related-open-source-r-codes-and-packages.html#other-related-packages"><i class="fa fa-check"></i><b>32.3.6</b> Other related packages</a></li>
 </ul></li>
 </ul></li>
 <li class="divider"></li>
-<li><center><a   href="https://bookdown.org/yihui/bookdown/">
-Published with bookdown</a></center></li>
+<li><a   href="https://bookdown.org/yihui/bookdown/">
+Published with bookdown</a>/li>
 
 </ul>
 
@@ -453,70 +562,140 @@ Published with bookdown</a></center></li>
 
             <section class="normal" id="section-">
 <div id="gc-data" class="section level1" number="27">
-<h1><span class="header-section-number">27</span> GC Open Data use cases</h1>
-<p>Additional codes are applications developed by the community are described in <a href="#gc-apps">Shiny Apps</a>
-and <a href="#L-L">“Lunch and Learn”</a></p>
-<div id="pses-results-interactive-analysis-and-visualization" class="section level2" number="27.1">
-<h2><span class="header-section-number">27.1</span> PSES Results interactive analysis and visualization:</h2>
-<p>URL: <a href="https://open-canada.github.io/Apps/pses" class="uri">https://open-canada.github.io/Apps/pses</a>
-<!-- (mirror:  https://itrack.shinyapps.io/PSES/, use case: https://itrack.shinyapps.io/PSES-CBSA-SE).   -->
-Source: <a href="https://gccode.ssc-spc.gc.ca/r4gc/codes/pses" class="uri">https://gccode.ssc-spc.gc.ca/r4gc/codes/pses</a></p>
-<!-- It illustrates the power of Data Science and Visualization (when implemented for the purpose). It uses the concept of concept of Vertical vs. Horizontal comparison of results, which is most insightful when one needs to find out where (or when) exactly the problem is (or was) in an Organization. -->
-<p>No other Open Canada data is of as much common interest across the government as the PSES results [^11]. These data contain the information about all GC departments, their organizational structure and performance. A Shiny App prototype is developed to perform three most desired tasks one wished to do with these data (see Figure):</p>
-<p>[^11] <a href="https://www.canada.ca/en/treasury-board-secretariat/services/innovation/public-service-employee-survey.html" class="uri">https://www.canada.ca/en/treasury-board-secretariat/services/innovation/public-service-employee-survey.html</a></p>
-<ol style="list-style-type: decimal">
-<li>Vertical result tracking: results comparison across an organization, automated detection and visualization of the performance variation across the organization - for any given PSES question.</li>
-<li>Horizontal results tracking: results comparison over time - for any given unit, in comparison to the organization and Public Service averages</li>
-<li>Performance summary by theme: automated generation of report cards that show the performance at each level of the organization for each of theme and in relation to the rest of the organization and Public Service average.</li>
-<li>Automated generation of full report with detailed comparative analysis and recommendations: for each unit and each level of organization</li>
-</ol>
-<p><img height="300" src="https://github.com/open-canada/Apps/blob/main/docs/images/pses-eccc-st.png?raw=true">
-<img height="300" src="https://github.com/open-canada/Apps/blob/main/docs/images/pses-eccc-st-vs-themes.png?raw=true">
-<img height="300" src="https://github.com/open-canada/Apps/blob/main/docs/images/pses-cbsa-se-over-time.png?raw=true">
-<img height="300" src="https://github.com/open-canada/Apps/blob/main/docs/images/pses-cbsa-se-autoreport.png?raw=true"></p>
-<!-- ```{r, echo=FALSE, out.width="100%", fig.align = "center"} -->
-<!-- knitr::include_graphics( -->
-<!--   c( -->
-<!--     paste0("images/frontpage/Screenshot_20211024-204851-with-trees-triangle.jpg") ) -->
-<!-- ) -->
-<!-- ``` -->
-<p>Figure. Key functionalities of the PSES App prototype: a) vertical results tracking - for any question over entire organization, b) horizontal results tracking - for any unit over time, and c) performance report summary - for each unit, by theme, and in comparison to the Public Service average (shown as crosses) and other units within organization (shown as small dots). The results can be displayed filtered and sorted by score, ranking percentile, org. structure, number of responses, by theme or question.</p>
-<div id="other-tools-and-dashboards" class="section level3" number="27.1.1">
-<h3><span class="header-section-number">27.1.1</span> Other tools and dashboards</h3>
-<p>TBS Official PSES Results viewer (developed in PowerBI):
-<a href="https://hranalytics-analytiquerh.tbs-sct.gc.ca/Home/ReportList/2019?GoCTemplateCulture=en-CA" class="uri">https://hranalytics-analytiquerh.tbs-sct.gc.ca/Home/ReportList/2019?GoCTemplateCulture=en-CA</a><br />
-Direct link to PowerBI here: <a href="https://hranalytics-analytiquerh.tbs-sct.gc.ca/Home/EmbedReport/6?GoCTemplateCulture=en-CA" class="uri">https://hranalytics-analytiquerh.tbs-sct.gc.ca/Home/EmbedReport/6?GoCTemplateCulture=en-CA</a></p>
-<p>​</p>
-<!-- Example Using Tableau -->
-<!-- https://publicservicesr.blogspot.com/p/500-vizelement.html -->
+<h1><span class="header-section-number">27</span> Accessing Open Data Canada databases</h1>
+<p>This section provides code snippets to read, process and visualize various Open Canada databases of high common interest to the GC community.
+Where possible, an App is developed to help visualizing and understanding the data.
+See also <a href="#gc-apps">Shiny Apps</a> section of this book.</p>
+<!-- ## Ways to access Open Canada Data -->
+<div id="with-curl-fread-readxls" class="section level2" number="27.1">
+<h2><span class="header-section-number">27.1</span> With curl, fread, readxls</h2>
+<p>Many databases can be accessed via direct link to an .csv, .zip, .xls file, using the code shown below.
+<!-- Note, the preferred functions. --></p>
+<pre><code># txt
+dt &lt;- data.table::fread (&quot;https://health-infobase.canada.ca/src/data/covidLive/vaccination-coverage-byAgeAndSex-overTimeDownload.csv&quot;) 
+
+# compressed Rds
+curl::curl_download(&quot;https://github.com/open-canada/datasets/raw/main/statcan/13100810-20211206.Rds&quot;, &quot;13100810-20211206.Rds&quot;)
+dt &lt;- readRDS(&quot;13100810-20211206.Rds&quot;) 
+
+# All other archives
+download.file(&quot;https://www150.statcan.gc.ca/n1/tbl/csv/13100810-eng.zip&quot;, temp) # or using curl::curl_download()
+dt &lt;- fread(unzip(temp, files = &quot;13100810.csv&quot;))
+rm(temp)
+</code></pre>
 </div>
+<div id="with-cansim-package" class="section level2" number="27.2">
+<h2><span class="header-section-number">27.2</span> With cansim package</h2>
+<p>Most Statistics Canada databases can be accessed using <code>cansim</code> package with a code like the one shown below.</p>
+<p>See <a href="">L&amp;L of 2 Dec 2021 dedicated to CAMSIM</a></p>
+<p>Note that when StatCan website is unavailable however (which is often the case), you wont be able to run any <code>cansim</code> commands.
+Hence, most poupular StatCan datasets, such as those we use for R training and which we building Apps, are also cached at <a href="https://github.com/open-canada/datasets" class="uri">https://github.com/open-canada/datasets</a>, where they can be accessed using the method described above.</p>
 </div>
-<div id="automated-atip-requests-topic-extraction" class="section level2" number="27.2">
-<h2><span class="header-section-number">27.2</span> Automated ATIP requests topic extraction:</h2>
-<!-- URL: <https://open-canada.github.io/Apps/atip> (mirror: https://rcanada.shinyapps.io/TBS-ATI-NLP/).    -->
-<p>Source: <a href="https://gccode.ssc-spc.gc.ca/r4gc/codes/atip" class="uri">https://gccode.ssc-spc.gc.ca/r4gc/codes/atip</a></p>
-<p>Another Open Canada dataset that relates to the performance of many GC departments is the ATIP requests dataset [^22]. An interactive Natural Language Processing (NLP) application has been developed to enable the analysis and visualization of these requests for each participating department (see Figure 2). Its functionalities include: statistics summary, automated key-words and topic extraction using N-grams, document term matrix and Latent Dirichlet Allocation. The topics can be visualized as word-clouds or as graphs that connect the related words.</p>
-<p>[^22] <a href="https://open.canada.ca/en/search/ati" class="uri">https://open.canada.ca/en/search/ati</a>.
-See “Text Mining with R!” by Julia Silge and David Robinson (<a href="https://www.tidytextmining.com" class="uri">https://www.tidytextmining.com</a>) for definitions of the terms.</p>
-<p><img height="300" src="https://github.com/open-canada/Apps/blob/main/docs/images/NLP-ATIP1.png?raw=true">
-<img height="300" src="https://github.com/open-canada/Apps/blob/main/docs/images/NLP-ATIP2.png?raw=true"></p>
-<p>Figure 2. Key functionalities of the ATIP App: a) department specific bi-variable statics (such as dispositions by year, shown in the image), b) department specific key topics, visualized as correlated terms graphs , c) key topics for each participating department, visualized as N-gram frequency bars (such as 2-gram, or two-word combination, shown in the image).</p>
+<div id="via-api-using-libraryckanr" class="section level2" number="27.3">
+<h2><span class="header-section-number">27.3</span> Via API using <code>library(ckanr)</code></h2>
+<p>Many databases can also be accessed using <code>ckanr</code> package (e.g. Open Ontario Database), as shown in the code below.</p>
+<p>See <a href="https://github.com/open-canada/lunch_and_learn_opengov/">L&amp;L in June dedicated to CKAN</a> to learn more.
+See also <a href="https://rpubs.com/Jamesmurray1/594450">this blog</a></p>
+<!-- 
+
+library(ckanr)
+library(data.table) 
+
+ckanr_setup(url = "https://data.ontario.ca/")
+resource_search(q = "name:Vaccin")$results
+
+res <-resource_show(id ="274b819c-5d69-4539-a4db-f2950794138c")
+res$url
+destfile <- "Hospitalizations by vaccination status.csv"
+curl::curl_download(res$url, destfile)
+
+[[2]]
+<CKAN Resource> e760480e-1f95-4634-a923-98161cfb02fa 
+  Name: COVID-19 cases in hospital and ICU by OH region|
+[[3]]
+<CKAN Resource> 274b819c-5d69-4539-a4db-f2950794138c 
+  Name: Hospitalizations by vaccination status
+
+
+[[4]]
+<CKAN Resource> e760480e-1f95-4634-a923-98161cfb02fa 
+  Name: COVID-19 cases in hospital and ICU by OH region| Cas de COVID-19 dans les hôpitaux et USI par région de SO
+[[5]]
+<CKAN Resource> 8a89caa9-511c-4568-af89-7f2174b4378c 
+  Name: COVID-19 Vaccine data
+[[8]]
+<CKAN Resource> ed270bb8-340b-41f9-a7c6-e8ef587e6d11 
+  Name: Status of COVID-19 cases in Ontario
+  Description: Compiled daily reported data on COVID-19 testing and outcomes in Ontario. Blank cells represent values that were not reported.
+
+As of November 12, 2021, routine Variants of Concern (VOC) PCR testing of positive COVID-19 samples is no longer being conducted. All eligible positive COVID-19 samples will now be forwarded for whole genome sequencing.  Starting on November 16, 2021, VOC data will not be reported in Status of COVID-19 cases in Ontario.
+
+Data on VOC can be found on Public Health Ontario's [COVID-19 Variants of Concern (VOCs)](https://www.publichealthontario.ca/en/diseases-and-conditions/infectious-diseases/respiratory-diseases/novel-coronavirus/variants). Historical data on VOCs and mutations in daily and weekly epidemiological summaries can be found on [COVID-19: Epidemiologic summaries from Public Health Ontario](https://covid-19.ontario.ca/covid-19-epidemiologic-summaries-public-health-ontario)
+  
+
+[[9]]
+<CKAN Resource> 37cfeca2-059e-4a5f-a228-249f6ab1b771 
+  Name: COVID Alert downloads - Canada
+[[10]]
+<CKAN Resource> 455fd63b-603d-4608-8216-7d8647f43350 
+  Name: Confirmed positive cases of COVID19 in Ontario
+  Description: Compiled daily reported data from public health units on confirmed positive cases of COVID-19 in Ontario. 
+[[11]]
+<CKAN Resource> 775ca815-5028-4e9b-9dd4-6975ff1be021 
+  Name: COVID-19 Vaccine data by age
+  Description: As of December 1, 2021, the population counts are based on Statistics Canada's 2020 estimates.
+[[15]]
+<CKAN Resource> 2a362139-b782-43b1-b3cb-078a2ef19524 
+  Name: COVID-19 Vaccine data by Public Health Unit (PHU) and by age
+
+
+
+[[3]]
+<CKAN Resource> 2a362139-b782-43b1-b3cb-078a2ef19524 
+  Name: COVID-19 Vaccine data by Public Health Unit (PHU) and by age
+  
+[[4]]
+<CKAN Resource> eed63cf2-83dd-4598-b337-b288c0a89a16 
+  Name: Cases and rates by vaccination status
+  Description: Effective September 13, 2021, individuals are considered fully vaccinated if they have had two doses and the second dose was at least fourteen days ago. Individuals are considered partially vaccinated if they have had one dose at least fourteen days ago, or two doses where the second dose was less than fourteen days ago. Individuals are considered unvaccinated if they have not had a dose, or if their first dose was less than fourteen days ago.
+  
+[[5]] ***
+<CKAN Resource> 274b819c-5d69-4539-a4db-f2950794138c 
+  Name: Hospitalizations by vaccination status
+  Description: * This is a new data collection and the data quality will continue to improve as hospitals continue to submit data.
+* In order to understand the vaccination status of patients currently hospitalized, a new data collection process was developed and this may cause discrepancies between other hospitalization numbers being collected using a different data collection process.
+* Data on patients in ICU are being collected from two different data sources with different extraction times and public reporting cycles. The existing data source (Critical Care Information System, CCIS) does not have vaccination status. 
+* Historical data for hospitalizations by region may change over time as hospitals update previously entered data.
+* Due to incomplete weekend and holiday reporting, vaccination status data for hospital and ICU admissions is not updated on Sundays, Mondays and the day after holidays
+* Unvaccinated is defined as not having any dose, or between 0-13 days after administration of the first dose of a COVID-19 vaccine
+* Partially vaccinated is defined as 14 days or more after the first dose of a 2-dose series COVID-19 vaccine, or between 0-13 days after administration of the second dose
+* Fully vaccinated is defined as 14 days or more after receipt of the second dose of a 2-dose series COVID-19 vaccine
+  Creator/Modified: 2021-08-20T14:29:47.628879 / 2021-12-15T14:16:14.713347
+  Size: 3769
+  Format: CSV
+
+[[6]] ***
+<CKAN Resource> c08620e0-a055-4d35-8cec-875a459642c3 
+  Name: Case rates by vaccination status and age group
+  Description: Effective September 13, 2021, individuals are considered fully vaccinated if they have had two doses and the second dose was at least fourteen days ago. Individuals are considered partially vaccinated if they have had one dose at least fourteen days ago, or two doses where the second dose was less than fourteen days ago. Individuals are considered unvaccinated if they have not had a dose, or if their first dose was less than fourteen days ago.
+ 
+
+
+[[1]]
+<CKAN Resource> 97622ce6-c06a-4970-afe5-be540c748f24 
+  Name: Vital events data by month
+
+
+-->
+<div class="sourceCode" id="cb62"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb62-1"><a href="gc-data.html#cb62-1" aria-hidden="true"></a>res &lt;-<span class="kw">resource_show</span>(<span class="dt">id =</span><span class="st">&quot;274b819c-5d69-4539-a4db-f2950794138c&quot;</span>)</span>
+<span id="cb62-2"><a href="gc-data.html#cb62-2" aria-hidden="true"></a>res<span class="op">$</span>url</span></code></pre></div>
+<pre><code>## [1] &quot;https://data.ontario.ca/dataset/752ce2b7-c15a-4965-a3dc-397bf405e7cc/resource/274b819c-5d69-4539-a4db-f2950794138c/download/vac_status_hosp_icu.csv&quot;</code></pre>
+<div class="sourceCode" id="cb64"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb64-1"><a href="gc-data.html#cb64-1" aria-hidden="true"></a>destfile &lt;-<span class="st"> &quot;Hospitalizations by vaccination status.csv&quot;</span></span>
+<span id="cb64-2"><a href="gc-data.html#cb64-2" aria-hidden="true"></a>curl<span class="op">::</span><span class="kw">curl_download</span>(res<span class="op">$</span>url, destfile)</span>
+<span id="cb64-3"><a href="gc-data.html#cb64-3" aria-hidden="true"></a>dtHosp_Vac &lt;-<span class="st"> </span><span class="kw">fread</span>(destfile)</span></code></pre></div>
+<div id="via-api-using-libraryrgovcan" class="section level3" number="27.3.1">
+<h3><span class="header-section-number">27.3.1</span> Via API using library(“rgovcan”)</h3>
 </div>
-<div id="automated-municipal-level-covid-19-tracker" class="section level2" number="27.3">
-<h2><span class="header-section-number">27.3</span> Automated municipal level COVID-19 tracker:</h2>
-<p>URL: <a href="https://open-canada.github.io/Apps/covid" class="uri">https://open-canada.github.io/Apps/covid</a> (See also: <a href="https://itrack.shinyapps.io/covid/us.Rmd" class="uri">https://itrack.shinyapps.io/covid/us.Rmd</a>).<br />
-Source: <a href="https://gccode.ssc-spc.gc.ca/r4gc/codes/covid" class="uri">https://gccode.ssc-spc.gc.ca/r4gc/codes/covid</a></p>
-<p>This App was built at the beginning of the pandemic. It uses open COVID-19 data for Canada and US to allow one to summarize, search and sort the results by geographical proximity using a variety of criteria (see Figure 3). More details about it and a tutorial on how to build it are provided at <a href="https://open-canada.github.io/UseR/learn2020" class="uri">https://open-canada.github.io/UseR/learn2020</a></p>
-<p><img height="300" src="https://github.com/open-canada/Apps/blob/main/docs/images/itrack-covid2.png?raw=true">
-<img height="300" src="https://github.com/open-canada/Apps/blob/main/docs/images/covid-us-geo.png?raw=true"></p>
-</div>
-<div id="geo-mapped-current-historical-and-predicted-border-wait-times" class="section level2" number="27.4">
-<h2><span class="header-section-number">27.4</span> Geo-mapped current, historical and predicted border wait times:</h2>
-<p>URL: <a href="https://open-canada.github.io/Apps/border" class="uri">https://open-canada.github.io/Apps/border</a> (redirect to <a href="https://open.canada.ca/en/app/border-wait-time-interactive-tracker-itrack-border">open.canada.ca</a>).<br />
-Source: <a href="https://gccode.ssc-spc.gc.ca/gorodnichy/simborder" class="uri">https://gccode.ssc-spc.gc.ca/gorodnichy/simborder</a></p>
-<p>This App (shown in Figure 4) combines Open geo-spatial data with Open historical and current border wait times data to predict and visualize delays at Canadian land border crossings. The App is included (entitled iTrack-Border) in the Open Canada Apps Gallery at <a href="https://open.canada.ca/en/apps" class="uri">https://open.canada.ca/en/apps</a>, where more information about it can be found.</p>
-<p><img height="300" src="https://github.com/open-canada/Apps/blob/main/docs/images/itrack-border1.png?raw=true">
-<img height="300" src="https://github.com/open-canada/Apps/blob/main/docs/images/itrack-border2.png?raw=true"></p>
 </div>
 </div>
             </section>
@@ -525,10 +704,11 @@ Source: <a href="https://gccode.ssc-spc.gc.ca/gorodnichy/simborder" class="uri">
         </div>
       </div>
 <a href="r101-building-covid-19-tracker-app-from-scratch.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="shiny-apps.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="health-related-databases.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -568,12 +748,8 @@ gitbook.start({
 "text": null
 },
 "download": ["LL-book.epub", "LL-book.pdf"],
-"search": {
-"engine": "fuse",
-"options": null
-},
 "toc": {
-"collapse": "subsection"
+"collapse": "section"
 }
 });
 });

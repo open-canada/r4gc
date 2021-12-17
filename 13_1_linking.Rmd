@@ -1,0 +1,597 @@
+
+
+
+# Data Engineering, Record Linking and Deduplication 
+
+
+## TL;DL
+
+- Demo Tool: See http://rcanada.shinyapps.io/demo and the #GCData2021 Data Engineering workshop  presentation \ref{#gc-refs} 
+for the backgrounder and the demonstration of various Data Engineering  tasks and solutions. The source is in [GCCode]().
+
+## Intro: What is *Data Engineering*
+
+
+*Data Engineering* refers to all tasks related to automation of data processing 
+within the "insight-from-data" pipeline. 
+<!-- It can be thought of as software engineering for data science.  -->
+
+### *Data Engineering* vs. *Software Engineering*
+
+In  analogy to *Software Engineering* (a field of Computer Science  focused on developing
+["scientific and technological knowledge, methods, and experience to the design, implementation, testing, and documentation of software"[IEEE Vocabulary]](),
+developing knowledge, methods robust scalable tools for computer programs),  
+*Data Engineering* may  be treated as a field of Data Science that is focused on  developing 
+"scientific and technological knowledge, methods, and experience to the design, implementation, testing, and documentation of *data-driven solutions*"]
+
+<!-- 
+*Software Engineering*: 
+
+- "the systematic application of scientific and technological knowledge, methods, and experience to the design, implementation, testing, and documentation of software" [IEEE Systems and software engineering – Vocabulary]
+- "The application of a systematic, disciplined, quantifiable approach to the development, operation, and maintenance of software" [IEEE Standard Glossary of Software Engineering Terminology]
+
+- ""software engineering" encompasses not just the act of writing code, but all of the tools and processes an organization uses to build and maintain that code over time. [...] Software engineering can be thought of as “programming integrated over time.”" [Software Engineering at Google]
+
+-->
+
+
+## Data Engineering vs. ETL and ELT
+
+<!-- https://searchdatamanagement.techtarget.com/definition/Extract-Load-Transform-ELT -->
+<!-- With ETL, the raw data is not available in the data warehouse because it is transformed before it is loaded. With ELT, the raw data is loaded into the data warehouse (or data lake) and transformations occur on the stored data. -->
+<!-- ELT is most useful for processing the large data sets required for business intelligence (BI) and big data analytics.  -->
+
+DE Data Engineering  with ETL (Extract - Transform - Load  ) but is more than that.
+
+We’ve also observed a general shift away from drag-and-drop ETL (Extract Transform and Load) tools towards a more programmatic approach [ (i.e. Software engineering,Cmputer science approaches)  so that be scalable to  big data] 
+To a modern data engineer, traditional ETL tools are largely obsolete because logic cannot be expressed using code.
+
+<!-- 
+## Data Engineering vs. Big Data
+
+
+## Contribution to DE to bias and public trust in AI
+
+--> 
+
+### Taxonomy of Data Engineering tasks
+
+- Single variable 
+- Multiple variable, no semantic relationship
+- Multiple variable, with semantic relationship
+
+
+
+
+## Useful packages
+
+###  Single variable 
+
+
+<!-- work in three column bookdown only ```{r results='asis'} -->
+<!-- DIV_START("Show / Hide Summary") -->
+<!-- ``` -->
+
+<!-- ```{r results='asis'} -->
+<!-- DIV_END() -->
+<!-- ``` -->
+
+## 0 > R base and data.table
+
+### Description
+
+
+agrep {base}  
+adist {utils}
+
+
+```
+agrep(pattern, x, max.distance = 0.1, costs = NULL,
+ignore.case = FALSE, value = FALSE, fixed = TRUE,
+useBytes = FALSE)
+```      
+
+### Examples
+
+```{r}
+## Cf. the examples for agrep:
+adist("lasy", "1 lazy 2")
+## For a "partial approximate match" (as used for agrep):
+adist("lasy", "1 lazy 2", partial = TRUE)
+
+x <- c("1 lazy", "1", "1 LAZY")
+aregexec("laysy", x, max.distance = 2)
+aregexec("(lay)(sy)", x, max.distance = 2)
+
+```
+
+```
+
+   # https://www12.statcan.gc.ca/census-recensement/2016/dp-pd/prof/details/download-telecharger/comp/page_dl-tc.cfm?Lang=E
+
+  dtStatcan <-  fread("datasets\\geoCa\\census-data/98-401-X2016044_English_CSV_data.csv") # 14 Mb file !
+   
+  numcols <- dtStatcan[, which(sapply(.SD, is.character))]
+  dtStatcan[, (numcols):=lapply(.SD, as.factor), .SDcols=numcols]
+  summary(dtStatcan)
+
+
+  dtStatcan[str_detect(GEO_CODE, "(?i)^3506008")]
+  dtStatcan[GEO_CODE %ilike% "^3506008"]
+  dtStatcan[GEO_CODE %ilike% "(?i)^350600"]
+  dtStatcan[GEO_CODE %ilike% "(?i)^3506" & GEO_LEVEL<4][order(GEO_LEVEL)]
+  dtStatcan[GEO_CODE %ilike% "(?i)^350" & GEO_LEVEL<4][order(GEO_LEVEL)]
+  ```
+
+
+## 1  >`textclean`  {.tabset}
+
+
+
+
+###  Description
+
+textclean: Text Cleaning Tools
+
+Tools to clean and process text. Tools are geared at checking for substrings that are not optimal for analysis and replacing or removing them (normalizing) with more analysis friendly substrings or extracting them into new variables. 
+
+Imports:	data.table, english (≥ 1.0-2), glue (≥ 1.3.0), lexicon (≥ 1.0.0), mgsub (≥ 1.5.0), qdapRegex, stringi, textshape (≥ 1.0.1)
+
+https://www.sciencedirect.com/science/article/abs/pii/S088523080190169X?via%3Dihub
+https://github.com/trinker/textclean
+
+### Example
+```{r eval=FALSE, include=FALSE}
+library(textclean)
+```
+
+
+
+
+## 2 > Package `phonics` {.tabset}
+
+### Description
+
+https://cran.r-project.org/web/packages/phonics/index.html   
+https://github.com/k3jph/phonics-in-r ; https://jameshoward.us/phonics-in-r/articles/phonics.html 
+
+Provides a collection of phonetic algorithms including Soundex, Metaphone, NYSIIS, Caverphone, and others. 
+
+Phonetic Spelling Algorithm Implementations for R
+James P. Howard, II, Journal of Statistical Software, October 2020, Volume 95, Issue 8. https://www.jstatsoft.org/article/view/v095i08
+
+All functions
+
+caverphone() Caverphone
+
+cologne() Cologne Phonetic Name Coding
+
+lein() Lein Name Coding
+
+metaphone() Generate phonetic versions of strings with Metaphone
+
+mra_encode() mra_compare()Match Rating Approach Encoder
+
+nysiis() New York State Identification and Intelligence System
+
+onca() Oxford Name Compression Algorithm
+
+phonex() Phonex Name Coding
+
+phonics()
+
+Phonetic Spelling Algorithms
+
+rogerroot()
+
+Roger Root Name Coding Procedure
+
+soundex() refinedSoundex()
+
+Soundex
+
+statcan()
+
+Statistics Canada Name Coding
+
+### Example
+
+```{r eval=FALSE, include=FALSE}
+
+library("phonics")
+x1 <- "Catherine"
+x2 <- "Kathryn"
+x3 <- "Katrina"
+x4 <- "William"
+
+x <- c(x1, x2, x3, x4)
+
+soundex(x1)
+refinedSoundex(x1)
+
+(mra1 = mra_encode("Katherine"))
+## [1] "KTHRN"
+(mra2 = mra_encode("Catherine"))
+## [1] "CTHRN"
+(mra3 = mra_encode("Katarina"))
+## [1] "KTRN"
+mra_compare(mra1, mra2)
+
+```
+
+
+## 3 > Package `stringdist` {.tabset}
+
+
+### Description
+
+CRAN: https://cran.r-project.org/web/packages/stringdist/stringdist.pdf   (Date/Publication 2020-10-09 10:30:03 UTC)   
+URL: https://github.com/markvanderloo/stringdist    
+Paper: https://journal.r-project.org/archive/2014-1/loo.pdf,    
+
+Implements an approximate string matching version of R's native 'match' function. Also offers fuzzy text search based on various string distance measures. Can calculate various string distances based on edits (Damerau-Levenshtein, Hamming, Levenshtein, optimal sting alignment), qgrams (qgram, cosine, jaccard distance) or heuristic metrics (Jaro, Jaro-Winkler). An implementation of soundex is provided as well. Distances can be computed between character vectors while taking proper care of encoding or between integer vectors representing generic sequences.
+
+### Example
+
+```{r eval=FALSE, include=FALSE}
+
+
+
+texts = c("When I grow up, I want to be" , "one of the harvesters of the sea" , "I think before my days are gone" , "I want to be a fisherman"); patterns = c("fish", "gone","to be")
+
+afind(texts, patterns, method="running_cosine", q=3)
+grabl(texts,"grew", maxDist=1) 
+extract(texts, "harvested", maxDist=3)
+
+
+amatch(c("hello","g'day"),c("hi","hallo","ola"),maxDist=2)
+
+stringdist(c("g'day"),c("hi","hallo","ola"))
+
+dist <- stringdistmatrix(c("foo","bar","boo","baz")); dist
+stats::hclust(dist)
+
+stringsim("Grouchester", "Gloucester")
+
+```
+
+
+
+## Multi-variable recording linking
+
+Packages below are listed in the order of the speed and quality
+
+
+
+
+
+## >> library(fastLink)
+
+
+
+### Description
+
+Published:	2020-04-29
+
+Implements a Fellegi-Sunter probabilistic record linkage model that allows for missing data and the inclusion of auxiliary information. This includes functionalities to conduct a merge of two datasets under the Fellegi-Sunter model using the Expectation-Maximization algorithm. In addition, tools for preparing, adjusting, and summarizing data merges are included. The package implements methods described in Enamorado, Fifield, and Imai (2019) ”Using a Probabilistic Model to Assist Merging of Large-scale Administrative Records”, American Political Science Review and is available at <http://imai.fas.harvard.edu/research/linkage.html>.
+
+https://github.com/kosukeimai/fastLink
+
+https://imai.fas.harvard.edu/research/files/linkage.pdf
+
+Imports: parallel, [foreach](https://cran.r-project.org/web/packages/foreach/index.html), doParallel, gtools, [data.table], [stringdist], stringr, stringi, Rcpp
+
+
+### Dataset
+
+```{r eval=FALSE, include=FALSE}
+library(fastLink)
+dtA
+data(samplematch)
+
+```
+
+### Example
+
+```{r eval=FALSE, include=FALSE}
+matches.out <- fastLink(
+  dfA = dfA, dfB = dfB, 
+  varnames = c("firstname", "middlename", "lastname", "housenum", "streetname", "city", "birthyear"),
+  stringdist.match = c("firstname", "middlename", "lastname", "streetname", "city"),
+  partial.match = c("firstname", "lastname", "streetname")
+)
+
+
+```
+
+
+
+## >> Package `RecordLinkage` {.tabset}
+
+
+### Description
+
+RecordLinkage: Record Linkage Functions for Linking and Deduplicating Data Sets   
+
+Provides functions for linking and deduplicating data sets. Methods based on a stochastic approach are implemented as well as classification algorithms from the machine learning domain. For details, see our paper "The RecordLinkage Package: Detecting Errors in Data" Sariyar M / Borg A (2010) <doi:10.32614/RJ-2010-017>.
+
+Published:	2020-08-25   
+Depends:	R (≥ 3.5.0), DBI, RSQLite (≥ 1.0.0), ff    
+Imports:	Machine learning - e1071, rpart, ada, ipred, stats, evd, methods,  nnet. Efficiency - data.table (≥ 1.7.8),
+
+Reverse enhances:	SoundexBR
+
+
+
+### Datasets: German names 500 and 10,000
+
+The RLdata500 data consists of 500 records with 10 percent duplication.
+
+
+
+
+
+## > library(blink) {.tabset}
+
+```{r eval=FALSE, include=FALSE}
+library(blink)
+```
+
+### Summary
+
+2020-09-30
+“Entity Resolution with Emprically Motivated Priors”, Bayesian Analysis, (10),4:849-975.
+We will be using the RecordLinkage package in R and the RLdata500 data set.
+[link](https://cran.r-project.org/web/packages/blink/vignettes/introEBLink.html)
+
+
+
+## >  `library(reclin)`  {.tabset}
+
+
+### Description
+
+Title: Record Linkage Toolkit
+
+Date: 2018-08-09
+
+Description: Functions to assist in performing probabilistic record linkage and
+deduplication: generating pairs, comparing records, em-algorithm for
+estimating m- and u-probabilities, forcing one-to-one matching. Can also be
+used for pre- and post-processing for machine learning methods for record
+linkage.
+
+Depends:	lvec, ldat, R (≥ 3.4.0)
+Imports:	stringdist, lpSolve, Rcpp
+
+Comments: Used in DataCamp training
+
+https://cran.r-project.org/web/packages/reclin/reclin.pdf
+https://github.com/djvanderlaan/reclin
+https://cran.r-project.org/web/packages/reclin/vignettes/introduction_to_reclin.html (with Two small artificial  datasets: first and last names with address, sex, postcode)
+https://cran.r-project.org/web/packages/reclin/vignettes/deduplication.html
+
+### Included Datasets: 
+
+Two small (6 and 5 record) artificial names data
+
+```{r eval=FALSE, include=FALSE}
+library(reclin)
+data("linkexample1", "linkexample2")
+print(linkexample1)
+
+```
+
+ 
+
+####  Deduplication example
+
+
+```{r eval=FALSE, include=FALSE}
+# https://cran.r-project.org/web/packages/reclin/vignettes/introduction_to_reclin.html
+
+# ...
+
+# https://cran.r-project.org/web/packages/reclin/vignettes/deduplication.html
+
+library(reclin)
+library(dplyr)
+data("town_names")
+town_names %>% 
+  as.data.table() %>% 
+  kable()
+
+town_names$clean_name <- gsub("[^[:alnum:]]", "", town_names$name)
+town_names$clean_name <- gsub("0", "o", town_names$clean_name)
+
+p <- pair_blocking(town_names, town_names) %>% 
+  filter_pairs_for_deduplication() %>%
+  compare_pairs("clean_name", default_comparator = jaro_winkler()) %>% 
+  score_simsum() %>% 
+  select_threshold(0.88)
+
+head(p)
+# xtable(p)
+
+
+res <- deduplicate_equivalence(p)
+head(res)
+
+
+res <- res %>% group_by(duplicate_groups, official_name) %>% mutate(n = n()) %>% 
+  group_by(duplicate_groups) %>%
+  mutate(group_name = first(official_name, order_by = desc(n)))
+
+
+precision <- res %>% group_by(group_name) %>% 
+  summarise(precision = sum(group_name == official_name)/n())
+
+precision_recall <- res %>% group_by(official_name) %>% 
+  summarise(recall = sum(group_name == official_name)/n()) %>%
+  left_join(precision, by = c("official_name" = "group_name")) %>% 
+  mutate(precision = ifelse(is.na(precision), 0, precision))
+
+precision_recall 
+
+
+summarise(precision_recall, mean(recall), mean(precision))
+
+``` 
+
+## >>  library(fuzzyjoin)
+
+
+
+### Description
+
+fuzzyjoin: Join Tables Together on Inexact Matching  
+Join tables together based not on whether columns match exactly, but whether they are similar by some comparison. Implementations include string distance and regular expression matching.
+
+Published:	2020-05-15
+
+Imports:	stringdist
+
+https://cran.r-project.org/web/packages/fuzzyjoin/vignettes/stringdist_join.html
+
+<!-- Comments: Used in DataCamptraining ?-->
+
+### Example 1: Joining with Common Mispelling
+
+```{r eval=FALSE, include=FALSE}
+# see also dataenh-00-tm.R
+
+library(fuzzyjoin) 
+if (F) {
+  u <- "https://en.wikipedia.org/wiki/Wikipedia:Lists_of_common_misspellings/For_machines"
+  h <- read_html(u)
+  
+  misspellings <- h %>%
+    html_nodes("pre") %>%
+    html_text() %>%
+    readr::read_delim(col_names = c("misspelling", "correct"), delim = ">",
+                      skip = 1) %>%
+    mutate(misspelling = str_sub(misspelling, 1, -2)) %>%
+    unnest(correct = str_split(correct, ", ")) %>%
+    filter(Encoding(correct) != "UTF-8")
+}
+data(misspellings)
+
+setDT(misspellings)
+
+
+library(qdapDictionaries)
+DICTIONARY %>% setDT
+
+words <- as.data.table(DICTIONARY)
+
+set.seed(2016)
+sub_misspellings <- misspellings %>%
+  sample_n(1000)
+joined <- sub_misspellings %>%
+  stringdist_inner_join(words, by = c(misspelling = "word"), max_dist = 1)
+joined
+
+joined %>%
+  count(misspelling, correct)
+
+which_correct <- joined %>%
+  group_by(misspelling, correct) %>%
+  summarize(guesses = n(), one_correct = any(correct == word))
+
+which_correct
+
+left_joined <- sub_misspellings %>%
+  stringdist_left_join(words, by = c(misspelling = "word"), max_dist = 1)
+
+left_joined
+
+left_joined %>%
+  filter(is.na(word))
+
+left_joined2 <- sub_misspellings %>%
+  stringdist_left_join(words, by = c(misspelling = "word"), max_dist = 2)
+
+left_joined2
+
+left_joined2 %>%
+  filter(is.na(word))
+
+```
+
+### Example 2: from datacamp
+
+```{r eval=FALSE, include=FALSE}
+# https://rpubs.com/Sergio_Garcia/data_cleaning_in_r
+library(fuzzyjoin)
+# Create pairs
+pair_blocking(zagat, fodors, blocking_var = "city") %>%
+  # Compare pairs
+  compare_pairs(by = "name", default_comparator = jaro_winkler()) %>%
+  # Score pairs
+  score_problink()  %>%
+  # Select pairs
+  select_n_to_m()
+
+```
+
+### Example 3: from stackoverflow
+
+
+```
+# https://stackoverflow.com/questions/52402768/r-fuzzy-merge-using-agrep-and-data-table
+library("data.table")
+dt1 = data.table(Name = c("ASML HOLDING","ABN AMRO GROUP"), A = c(1,2))
+dt2 = data.table(Name = c("ASML HOLDING NV", "ABN AMRO GROUP"), B = c("p", "q"))
+
+dt1 = data.frame(Name = c("ASML HOLDING","ABN AMRO GROUP"), A = c(1,2),Date=c(1,2))
+dt2 = data.frame(Name = c("ASML HOLDING NV", "ABN AMRO GROUP", "ABN AMRO GROUP"), B = c("p", "q","r"),Date=c(1,2,3))
+
+dt1 %>% fuzzy_inner_join(dt2, by=c("Date","Name"), match_fun=f) %>% filter(Date.x==Date.y)
+
+library(fuzzyjoin)
+f <- Vectorize(function(x,y) agrepl(x, y,
+                                    ignore.case=TRUE,
+                                    max.distance = 0.05, useBytes = TRUE))
+dt1 %>% fuzzy_inner_join(dt2, by="Name", match_fun=f)
+
+
+
+
+```
+
+
+
+
+## > Package `blink` {.tabset}
+
+
+### Description
+
+blink: Record Linkage for Empirically Motivated Priors
+
+An implementation of the model in Steorts (2015) <doi:10.1214/15-BA965SI>, which performs Bayesian entity resolution for categorical and text data, for any distance function defined by the user. In addition, the precision and recall are in the package to allow one to compare to any other comparable method such as logistic regression, Bayesian additive regression trees (BART), or random forests. The experiments are reproducible and illustrated using a simple vignette. LICENSE: GPL-3 + file license.
+
+Depends:	 stringdist
+
+Published:	2020-10-06
+
+
+https://projecteuclid.org/euclid.ba/1441790411
+https://cran.r-project.org/web/packages/blink/vignettes/introEBLink.html
+
+
+### Datasets: German names 500 and 10,000
+
+
+
+
+## Discusion - Other methods
+
+LSTMs - Have you tried using LSTMs for record linkage for entity linkage? We were quiet sucessful in doing it compared to probalistic linkage. 
+
+<!-- [11:29 AM] Ritter, Christian - DSCD/DSCD (Guest) -->
+
+<!-- Gorodnichy, Dmitry  Have you tried using LSTMs for record linkage for entity linkage? We were quiet sucessful in doing it compared to probalistic linkage. -->
+
+
+

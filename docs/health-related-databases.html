@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>1 Why R? | The R4GC Book</title>
+  <title>28 Health-related databases | The R4GC Book</title>
   <meta name="description" content="Notes and tutorials from ‘Lunch and Learn Data Science with R’ weekly meetups organized by the R4GC Community" />
   <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="1 Why R? | The R4GC Book" />
+  <meta property="og:title" content="28 Health-related databases | The R4GC Book" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="https://open-canada.github.io/r4gc" />
   <meta property="og:image" content="https://open-canada.github.io/r4gc/images/r4gc-banner.png" />
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="open-canada/r4gc" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="1 Why R? | The R4GC Book" />
+  <meta name="twitter:title" content="28 Health-related databases | The R4GC Book" />
   
   <meta name="twitter:description" content="Notes and tutorials from ‘Lunch and Learn Data Science with R’ weekly meetups organized by the R4GC Community" />
   <meta name="twitter:image" content="https://open-canada.github.io/r4gc/images/r4gc-banner.png" />
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="images/R4GC.ico" type="image/x-icon" />
-<link rel="prev" href="preface.html"/>
-<link rel="next" href="learn-r-right-way.html"/>
+<link rel="prev" href="gc-data.html"/>
+<link rel="next" href="open-ontario-data.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -561,90 +561,114 @@ Published with bookdown</a>/li>
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="why-r" class="section level1" number="1">
-<h1><span class="header-section-number">1</span> Why R?</h1>
-<!-- This is the question many ask. - Why should I use/learn R?  -->
-<p>R is one of the fastest growing programming languages and environment for data science, visualization and processing.
-R integrates well with Python and other free and commercial Data Science tools. It can also do something that other tools cannot and is very well supported by growing international community.</p>
-<p>It also comes with RStudio - a free Integrated Development Environment (IDE) that is now supported by most GC Agencies and Departments, and that is becoming one of the main tools for data related problems worldwide. For Microsoft data users, anything you do with Excel, Access, Power BI, you can also do with R and RStudio.</p>
-<div id="top-10-r-advantages-for-data-science" class="section level2" number="1.1">
-<h2><span class="header-section-number">1.1</span> Top 10 R advantages for Data Science</h2>
-<p>A quick review of the presentations made at the 2021 International Methodology Symposium showed that about one third of projects presented at the symposium were done using R and RStudio. If counting the percentage of projects dealing with data visualization, including geo/spatial mapping, then this number becomes close to two thirds of all presented projects. Clearly, even though Python remains the most frequently used language for machine learning and complex data analysis tasks, R has become de-facto the language of choice in many government departments when it comes to developing interactive reports, web applications and complex visualizations, thanks to such its popular packages as “rmarkdown”, “ggplot” and “shiny”.</p>
-<p>Other advantages of R highlighted at the Symposium include: common tidy data approach shared across all R packages; peer-reviewing and curation of packages by CRAN (Comprehensive R Archive Network), which is facilitated through the “devtool” R package that is specifically designed for this purpose; and RStudio-led movement for R education and deployment. All of these are in contrast to the ‘wild-west’ development of Python packages (which is a popular expression even among Python users), and are very important for enabling collaborative development of data science codes and knowledgebase.</p>
-<p>To summarize,
-<!-- Table 1 presents the Top 10, most quoted by the R4GC community,  reasons to use R for data science. -->
-<!-- There was much discussion around this topic, and  -->
-below are our own Top 10 reasons to use R for Data Science - filtered and refined by the members of this community.</p>
-<ol style="list-style-type: decimal">
-<li>Advanced graphics with ggplot2 and its extensions</li>
-<li>Automated report/tutorials/textbooks generation with RMarkdown</li>
-<li>Streamlined package development with devtools</li>
-<li>Streamlined Interactive interfaces and dashboards development and deployment with Shiny</li>
-<li>“Best for geocomputation”*</li>
-<li>Common tidy design shared across packages</li>
-<li>Curated peer-tested repo of packages at CRAN</li>
-<li>RStudio IDE (Integrated Development Environment) on desktop and cloud (rstudio.cloud)</li>
-<li>Full support and inter-operability with Python from the same IDE</li>
-<li>Global RStudio**-led movement for R education and advancement (rstudio.com)</li>
-</ol>
-<ul>
-<li><p><a href="https://geocompr.robinlovelace.net/intro.html#why-use-r-for-geocomputation" class="uri">https://geocompr.robinlovelace.net/intro.html#why-use-r-for-geocomputation</a> (also <a href="https://geocompr.robinlovelace.net/preface.html#why-r" class="uri">https://geocompr.robinlovelace.net/preface.html#why-r</a>)</p></li>
-<li><p>RStudio is a free suit of tools and education resources to program in R developed by a Public Benefit Corporation, which also provides free on-cloud IDE for coding data science projects in R and other languages</p></li>
-</ul>
-<!-- R advantages: -->
-<!-- Thousands of free curated peer-tested ready to use packages - including several for Natural Language Processing, record linking, Web Crawling, geocoding used in this App - from CRAN: https://cran.r-project.org -->
-<!-- Global RStudio-led movement for R education and advancement - in contrast to “Wild West” development of Python. Latest rstudio::global(2021) counted over 10,000 attendees and lists over 50 free tutorials and presentations accessible from https://rstudio.com/conference/ -->
-<!-- Free on-cloud IDE (Integrated Development Environment) to start learning and coding in R in no time: https://rstudio.cloud -->
-<!-- Fast in-place processing of data tables: -->
-<!-- Full Python - R support and f inter-operabilityvfrom the same RStudio IDE -->
-<!-- Common tidy design shared across packages, -->
-<!-- Advanced declarative graphics, -->
-<!-- Streamlined package development, -->
-<!-- Pipelining and other code optimizations, -->
-<!-- Interactive interfaces for reports and dashboards, -->
-<!-- Self-learning tools and free text books on all R subjects: from https://education.rstudio.com/ and https://bookdown.org/ -->
-<!-- Professional publication suit that incorporates LaTeX and HTML, -->
-<!-- Easy web-publishing of data reports and deployment of web-applications -->
+<div id="health-related-databases" class="section level1" number="28">
+<h1><span class="header-section-number">28</span> Health-related databases</h1>
+<div id="canadian-vitals-statistics-database" class="section level2" number="28.1">
+<h2><span class="header-section-number">28.1</span> Canadian Vitals Statistics Database</h2>
+<div id="vital-statistics---death-database" class="section level3" number="28.1.1">
+<h3><span class="header-section-number">28.1.1</span> Vital Statistics - Death Database</h3>
+<p>Statistique de l’état civil - Base de données sur les décès</p>
+<!-- \* / \*\* indicate that the R code / Shiny App are available in this book -->
+<div id="leading-causes-of-death" class="section level4" number="28.1.1.1">
+<h4><span class="header-section-number">28.1.1.1</span> Leading causes of death</h4>
+<p>Provisional weekly death counts, by selected grouped causes of death</p>
+<p>Nombre provisoire de décès et surmortalité janvier 2020 à août 2021</p>
+<p>Frequency: Weekly
+Table: 13-10-0810-01
+<a href="https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1310081001" class="uri">https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1310081001</a>
+<a href="https://www150.statcan.gc.ca/n1/tbl/csv/13100810-eng.zip" class="uri">https://www150.statcan.gc.ca/n1/tbl/csv/13100810-eng.zip</a></p>
+<div class="sourceCode" id="cb65"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb65-1"><a href="health-related-databases.html#cb65-1" aria-hidden="true"></a><span class="cf">if</span> (F) {</span>
+<span id="cb65-2"><a href="health-related-databases.html#cb65-2" aria-hidden="true"></a>  curl<span class="op">::</span><span class="kw">curl_download</span>(<span class="st">&quot;https://www150.statcan.gc.ca/n1/tbl/csv/13100810-eng.zip&quot;</span>,</span>
+<span id="cb65-3"><a href="health-related-databases.html#cb65-3" aria-hidden="true"></a>    <span class="st">&quot;13100810.zip&quot;</span>,</span>
+<span id="cb65-4"><a href="health-related-databases.html#cb65-4" aria-hidden="true"></a>    <span class="dt">mode =</span> <span class="st">&quot;wb&quot;</span></span>
+<span id="cb65-5"><a href="health-related-databases.html#cb65-5" aria-hidden="true"></a>  )</span>
+<span id="cb65-6"><a href="health-related-databases.html#cb65-6" aria-hidden="true"></a></span>
+<span id="cb65-7"><a href="health-related-databases.html#cb65-7" aria-hidden="true"></a>  url &lt;-<span class="st"> &quot;https://www150.statcan.gc.ca/n1/tbl/csv/13100810-eng.zip&quot;</span></span>
+<span id="cb65-8"><a href="health-related-databases.html#cb65-8" aria-hidden="true"></a>  temp &lt;-<span class="st"> </span><span class="kw">tempfile</span>()</span>
+<span id="cb65-9"><a href="health-related-databases.html#cb65-9" aria-hidden="true"></a>  <span class="kw">download.file</span>(url, temp)</span>
+<span id="cb65-10"><a href="health-related-databases.html#cb65-10" aria-hidden="true"></a>  dt &lt;-<span class="st"> </span><span class="kw">fread</span>(<span class="kw">unzip</span>(temp, <span class="dt">files =</span> <span class="st">&quot;13100810.csv&quot;</span>))</span>
+<span id="cb65-11"><a href="health-related-databases.html#cb65-11" aria-hidden="true"></a>  <span class="kw">rm</span>(temp)</span>
+<span id="cb65-12"><a href="health-related-databases.html#cb65-12" aria-hidden="true"></a>}</span>
+<span id="cb65-13"><a href="health-related-databases.html#cb65-13" aria-hidden="true"></a></span>
+<span id="cb65-14"><a href="health-related-databases.html#cb65-14" aria-hidden="true"></a>dt &lt;-<span class="st"> </span><span class="kw">fread</span> (<span class="st">&quot;https://github.com/open-canada/datasets/raw/main/statcan/13100810-after-20190901.csv&quot;</span>, <span class="dt">stringsAsFactors =</span> F)</span>
+<span id="cb65-15"><a href="health-related-databases.html#cb65-15" aria-hidden="true"></a></span>
+<span id="cb65-16"><a href="health-related-databases.html#cb65-16" aria-hidden="true"></a>dt[, Date <span class="op">:</span><span class="er">=</span><span class="st"> </span><span class="kw">ymd</span>(Date)]</span>
+<span id="cb65-17"><a href="health-related-databases.html#cb65-17" aria-hidden="true"></a>dt[, GEO <span class="op">:</span><span class="er">=</span><span class="st"> </span><span class="kw">gsub</span>(<span class="st">&quot;, place of occurrence&quot;</span>, <span class="st">&quot;&quot;</span>, GEO)]</span>
+<span id="cb65-18"><a href="health-related-databases.html#cb65-18" aria-hidden="true"></a></span>
+<span id="cb65-19"><a href="health-related-databases.html#cb65-19" aria-hidden="true"></a></span>
+<span id="cb65-20"><a href="health-related-databases.html#cb65-20" aria-hidden="true"></a>dt0 &lt;-<span class="st"> </span>dt[ Date <span class="op">&gt;=</span><span class="st"> &quot;2019-10-01&quot;</span> ]</span>
+<span id="cb65-21"><a href="health-related-databases.html#cb65-21" aria-hidden="true"></a></span>
+<span id="cb65-22"><a href="health-related-databases.html#cb65-22" aria-hidden="true"></a></span>
+<span id="cb65-23"><a href="health-related-databases.html#cb65-23" aria-hidden="true"></a><span class="co"># Plot GEO vertically - allows comparison across Causes</span></span>
+<span id="cb65-24"><a href="health-related-databases.html#cb65-24" aria-hidden="true"></a></span>
+<span id="cb65-25"><a href="health-related-databases.html#cb65-25" aria-hidden="true"></a><span class="kw">ggplot</span>(dt0) <span class="op">+</span><span class="st">    </span><span class="kw">guides</span>(<span class="dt">col =</span> <span class="st">&quot;none&quot;</span>) <span class="op">+</span></span>
+<span id="cb65-26"><a href="health-related-databases.html#cb65-26" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_step</span>(<span class="kw">aes</span>(Date, val_norm, <span class="dt">col =</span> <span class="st">`</span><span class="dt">Cause of death (ICD-10)</span><span class="st">`</span>)) <span class="op">+</span></span>
+<span id="cb65-27"><a href="health-related-databases.html#cb65-27" aria-hidden="true"></a><span class="st">    </span><span class="kw">facet_grid</span>(GEO <span class="op">~</span><span class="st"> `</span><span class="dt">Cause of death (ICD-10)</span><span class="st">`</span>, <span class="dt">scales =</span> <span class="st">&quot;free&quot;</span>) <span class="op">+</span></span>
+<span id="cb65-28"><a href="health-related-databases.html#cb65-28" aria-hidden="true"></a><span class="st">    </span><span class="kw">labs</span>( <span class="dt">title =</span> <span class="ot">NULL</span>, <span class="dt">x =</span> <span class="ot">NULL</span>, <span class="dt">y =</span> <span class="ot">NULL</span>,</span>
+<span id="cb65-29"><a href="health-related-databases.html#cb65-29" aria-hidden="true"></a>          <span class="dt">caption =</span> <span class="st">&quot;Source: Statistics Canada - Table 13-10-0810-01&quot;</span>  )</span></code></pre></div>
+<pre><code>## Warning: Removed 745 row(s) containing missing values (geom_path).</code></pre>
+<p><img src="LL-book_files/figure-html/unnamed-chunk-22-1.png" width="672" /></p>
+<div class="sourceCode" id="cb67"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb67-1"><a href="health-related-databases.html#cb67-1" aria-hidden="true"></a><span class="co"># Plot Causes vertically - allows comparison across GEO</span></span>
+<span id="cb67-2"><a href="health-related-databases.html#cb67-2" aria-hidden="true"></a></span>
+<span id="cb67-3"><a href="health-related-databases.html#cb67-3" aria-hidden="true"></a><span class="kw">ggplot</span>(dt0) <span class="op">+</span><span class="st">  </span><span class="kw">theme</span>(<span class="dt">legend.position =</span> <span class="st">&quot;bottom&quot;</span>) <span class="op">+</span></span>
+<span id="cb67-4"><a href="health-related-databases.html#cb67-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_step</span>(<span class="kw">aes</span>(Date, val_norm, <span class="dt">col =</span> <span class="st">`</span><span class="dt">Cause of death (ICD-10)</span><span class="st">`</span>)) <span class="op">+</span></span>
+<span id="cb67-5"><a href="health-related-databases.html#cb67-5" aria-hidden="true"></a><span class="st">    </span><span class="kw">facet_grid</span>(<span class="st">`</span><span class="dt">Cause of death (ICD-10)</span><span class="st">`</span> <span class="op">~</span><span class="st"> </span>GEO, <span class="dt">scales =</span> <span class="st">&quot;free&quot;</span>) <span class="op">+</span></span>
+<span id="cb67-6"><a href="health-related-databases.html#cb67-6" aria-hidden="true"></a><span class="st">    </span><span class="kw">labs</span>(  <span class="dt">title =</span> <span class="ot">NULL</span>, <span class="dt">x =</span> <span class="ot">NULL</span>, <span class="dt">y =</span> <span class="ot">NULL</span>,</span>
+<span id="cb67-7"><a href="health-related-databases.html#cb67-7" aria-hidden="true"></a>           <span class="dt">caption =</span> <span class="st">&quot;Source: Statistics Canada - Table 13-10-0810-01&quot;</span>    )</span></code></pre></div>
+<pre><code>## Warning: Removed 745 row(s) containing missing values (geom_path).</code></pre>
+<p><img src="LL-book_files/figure-html/unnamed-chunk-22-2.png" width="672" /></p>
 </div>
-<div id="r_limitations" class="section level2" number="1.2">
-<h2><span class="header-section-number">1.2</span> Tackling the limitations of R</h2>
-<p>The main deficiency of R (in particular, when compared to Python) is that many R functions and packages are not developed to be memory- or processing time- efficient, and “by default”, i.e., unless special care is taken in developing the code, most codes written in R are very slow and consume prohibitively large amount of memory, making it often impossible to run data processing codes on ordinarily laptops (with not more than 16 GB of RAM) such as those used by majority of GC employees. This is because all variables in R, including data array and data frame variables (which are naturally very large) are passed to a function by copying the entire variable content from one memory location to another , and then copying it back after the function completes its operation. In other programming languages, such as Python, C++, or Java, such operations normally are not done by passing the entire object to a function, but rather by pasing only a pointer to (or memory address of) an object that needs to be processed by the function, which is much faster and does not consume a lot of memory. This deficiency however can be practically entirely eliminated, should the R code be developed using the “efficiency-by-design” methodology that is offered by the ‘data.table’ R package. This is why much emphasis in the R4GC community discussions is put on encouraging the community members to use ‘data.table’ class by default (or always) instead of base ‘data.frame’ class.</p>
-<p>Another deficiency of R is that object-oriented programming (OOP) is not native in R. There are a number of ways to implement an object in R - using S3, S4 and R6 classes, however each of them has its own limitations. This deficiency however is not critical, because fast and memory-efficient codes can still be developed with and without OOP, and, if needed, a portion of the OOP code can be also built in Python (or C++) and then used from within R using ‘Rcpp’ and ‘reticulate’ packages.</p>
+<div id="other" class="section level4" number="28.1.1.2">
+<h4><span class="header-section-number">28.1.1.2</span> Other</h4>
+<p>Provisional weekly death counts, by age group and sex
+Frequency: Weekly
+Table: 13-10-0768-01
+Release date: 2021-12-06
+Geography: Canada, Province or territory
+<a href="https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1310076801" class="uri">https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1310076801</a></p>
+<p>Previous releases and revisions to provisional weekly death counts1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13
+Frequency: Weekly
+Table: 13-10-0783-01
+Release date: 2021-12-06
+Geography: Canada, Province or territory
+<a href="https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1310078301" class="uri">https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1310078301</a></p>
+<p>Fetal deaths (20 weeks or more of gestation) and late fetal deaths (28 weeks or more of gestation)
+Table: 13-10-0427-01 (formerly: CANSIM 102-4514)</p>
+<p>Perinatal mortality (late fetal deaths and early neonatal deaths)
+Table: 13-10-0714-01 (formerly: CANSIM 102-0508)</p>
+<p>Deaths and age-specific mortality rates, by selected grouped causes1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+Frequency: Annual
+Table: 13-10-0392-01</p>
+<p>Leading causes of death, total population, by age group
+Frequency: Annual. till 2019
+Table: 13-10-0394-01</p>
+<p>Leading causes of death, infants
+Table: 13-10-0395-01 (formerly: CANSIM 102-0562)</p>
 </div>
-<div id="r-vs.-python" class="section level2" number="1.3">
-<h2><span class="header-section-number">1.3</span> R vs. Python</h2>
-<p>Main references:</p>
+</div>
+<div id="vital-statistics---birth-database" class="section level3" number="28.1.2">
+<h3><span class="header-section-number">28.1.2</span> Vital Statistics - Birth Database</h3>
+<p><a href="https://www150.statcan.gc.ca/n1/en/surveys/3231" class="uri">https://www150.statcan.gc.ca/n1/en/surveys/3231</a></p>
+<p>Crude birth rate, age-specific fertility rates and total fertility rate (live births)
+Table: 13-10-0418-01 (formerly: CANSIM 102-4505)</p>
+<p>Live births, by month
+Table: 13-10-0415-01 (formerly: CANSIM 102-4502)</p>
+<p>Live births, by age of mother
+Table: 13-10-0416-01 (formerly: CANSIM 102-4503)</p>
+</div>
+</div>
+<div id="covid-19-infection-and-vaccination-related" class="section level2" number="28.2">
+<h2><span class="header-section-number">28.2</span> COVID-19 infection and vaccination related:</h2>
 <ul>
-<li><a href="https://docs.rstudio.com/tutorials/user/using-python-with-rstudio-and-reticulate/" class="uri">https://docs.rstudio.com/tutorials/user/using-python-with-rstudio-and-reticulate/</a></li>
-<li><a href="https://www.datacamp.com/community/tutorials/using-both-python-r" class="uri">https://www.datacamp.com/community/tutorials/using-both-python-r</a></li>
+<li><a href="https://health-infobase.canada.ca/covid-19/vaccination-coverage" class="uri">https://health-infobase.canada.ca/covid-19/vaccination-coverage</a></li>
 </ul>
-<p>The latter has also a nice summary of PROs vs. CONs for both languages, subjectively summarized by myself below:</p>
-<p>Python’s PROs:</p>
-<ul>
-<li>Object-oriented language (this is a big one for me)<br />
-</li>
-<li>General Purpose , i.e. you can use elsewhere (e.g. with raspberry pi - www.raspberrypi.org, as I did for one of my daughters’ projects)<br />
-</li>
-<li>Simple and easy to understand and learn (this could be subjective, but I would generally agree that R is not taught they way I personally would teach it, i.e. based on computer science principles, rather than on memorizing a collection of various heuristic tools and functions.)<br />
-</li>
-<li>Efficient (fast) packages for advanced machine learning activities, e.g. tensorflow or keras (which you can use from R too, but it could be less efficient), also a large collection of audio manipulation / recognition (some of whicg I played with for one of my biometrics projects)</li>
-</ul>
-<p>Python CONs:</p>
-<ul>
-<li>Not really designed for advanced manipulation or visualization of data</li>
-</ul>
-<p>R’s PRO’s:</p>
-<ul>
-<li>It is designed specifically for data tasks</li>
-<li>CRAN provides &gt;10K peer-tested (!) packages for any data task you may think of . (I would also add - It also provides much great tools to get you OWN work be tested and featured one day in CRAN - which is what we are doing now at our Learn R Meet-ups!)</li>
-<li>ggplot2 graphics is unbeatable</li>
-<li>Capable of standalone analyses with built-in packages. (Anyone knows what it means??)</li>
-</ul>
-<p>R’s CON’s:</p>
-<ul>
-<li>Not the fastest or memory efficient (Hey- That’s without <code>data.table</code> package! I don’t think so,if you use <code>data.table</code>,properly)</li>
-<li>Object-oriented programming is not native or as easy in R, compared to Python. - Actually, I added this one. To me, this is one of main motivations to see how to use both Python and R, instead of R by itself. But for someone else, this could be not tie-breaker though</li>
-</ul>
+<p>Cumulative number and percent of people who have received a COVID-19 vaccine in Canada by vaccination status, age group, sex, and jurisdiction, November 20, 2021
+- <a href="https://health-infobase.canada.ca/src/data/covidLive/vaccination-coverage-byAgeAndSex-overTimeDownload.csv" class="uri">https://health-infobase.canada.ca/src/data/covidLive/vaccination-coverage-byAgeAndSex-overTimeDownload.csv</a></p>
+<div class="sourceCode" id="cb69"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb69-1"><a href="health-related-databases.html#cb69-1" aria-hidden="true"></a>strVac &lt;-<span class="st"> &quot;https://health-infobase.canada.ca/src/data/covidLive/vaccination-coverage-byAgeAndSex-overTimeDownload.csv&quot;</span></span>
+<span id="cb69-2"><a href="health-related-databases.html#cb69-2" aria-hidden="true"></a>dtVac &lt;-<span class="st"> </span><span class="kw">fread</span>(strVac, <span class="dt">stringsAsFactors =</span> F)</span>
+<span id="cb69-3"><a href="health-related-databases.html#cb69-3" aria-hidden="true"></a>dtVac<span class="op">$</span>prfname &lt;-<span class="st"> </span><span class="ot">NULL</span></span>
+<span id="cb69-4"><a href="health-related-databases.html#cb69-4" aria-hidden="true"></a>dtVac<span class="op">$</span>pruid &lt;-<span class="st"> </span><span class="ot">NULL</span></span>
+<span id="cb69-5"><a href="health-related-databases.html#cb69-5" aria-hidden="true"></a>dtVac[, week_end <span class="op">:</span><span class="er">=</span><span class="st"> </span><span class="kw">ymd</span>(week_end)]</span></code></pre></div>
 </div>
 </div>
             </section>
@@ -652,8 +676,8 @@ below are our own Top 10 reasons to use R for Data Science - filtered and refine
           </div>
         </div>
       </div>
-<a href="preface.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="learn-r-right-way.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="gc-data.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="open-ontario-data.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

@@ -37,11 +37,9 @@ Question:
 Answer: "Absolutely!" - This is what RMarkdown is developed for.
 
 
-
 Here's a tiny  R script example showing how to do it.
 
-```{r eval=FALSE, include=FALSE}
-
+```
 # report_generator.R
 
 mvndr_nm <- c('name1', 'name2', 'name3', 'name4', 'name5', 'name6')
@@ -54,22 +52,18 @@ for (i in seq_along(mvndr_nm)) {
 }
 
 # Export_Data_CSV.Rmd
-# (remove # below)
+# (remove # and REMOVETHIS_ and replace \' with \` below)
 
-#---
-#title: "`r params$MVNDR_NBR`"
-#author: "Santiago Canon"
-#date: "5/26/2021"
-#output:
-#  html_document:
-#    highlight: monochrome
-#    theme: flatly
-#params:
-#  MVNDR_NBR: NA
-#  MVNDR_NM: NA
-#---
 
-#<font size="4"> This document will provide a summary of "`r params$MVNDR_NM`" performance within in QC: </font>
+# - - -
+# REMOVETHIS_title: "'r REMOVETHIS_params$MVNDR_NBR'"
+# output:  html_document:
+# REMOVETHIS_params:
+#   MVNDR_NBR: NA
+#   MVNDR_NM: NA
+# - - -
+
+This document  provides a summary of "' r REMOVETHIS_params$MVNDR_NM'" performance within in QC
 ```
 
 Source:
@@ -77,3 +71,105 @@ Source:
 - https://stackoverflow.com/questions/60203785/using-multiple-params-in-rmarkdown-yaml-fields
 
 
+
+## Useful tricks and tips
+
+
+### In RStudio editor
+
+In Tools -> Global Options... -> R Markdown
+
+- Choose "Show in Document outline: BOTH Sections and Chunks.
+- Uncheck "Show output inline", so you can see it Console as you normally do when running from .R file
+
+In Tools ->Global Options...  -> Pane Layout and Appearance, 
+- you can add additional Pan (starting from RStudio 1.2)
+- We like it having Console window on left (to see more!)
+- Some also like dark theme (eg. "Vibrant ink" diplays comments well, others do not)
+
+### Spliting Rmd in chunks
+
+- Split your long Rmd into small ones! 
+- Give them names - sorted / tagged by order and keywords
+- For debugging or simplify your work  use `knitr::knit_exit()` r code.
+- Use (PART) and {-} when you need to split in part and not to index the page
+
+See index.Rmd of this book. Below is excerpt from them
+ 
+``` 
+  # (PART) Community Codes {-}
+  ` ` `{r 21_gc_datasets, child = '21_gc_datasets.Rmd'}
+  ` ` `
+  ...
+
+  # (APPENDIX) Appendices {-}
+  ` ` `{r 40_ca_packages, child = '40_ca_packages.Rmd'}
+  ` ` `
+  ...
+
+  ` ` `{r include=FALSE}
+  knitr::knit_exit() # Stop compiling here
+  ` ` `
+  ...
+  
+  ` ` `{r 99_some_notready_parts, child = '99_some_notready_parts.Rmd'}
+  ` ` `
+  ...
+```
+
+### Making good use of configuration  yaml header  in  index.Rmd file
+
+See index.Rmd of this book and the other (forked) books in https://github.com/open-canada/
+
+
+
+
+### Conditional execution of chunks
+
+
+#### From smltar book
+
+Excerpt from https://github.com/open-canada/smltar/blob/master/index.Rmd
+
+`r if (knitr:::is_html_output()) '
+# Welcome to Supervised Machine Learning for Text Analysis in R {-}
+This is the [website](https://smltar.com/) for *Supervised Machine Learning for Text Analysis in R*! Visit the [GitHub repository for this site](https://github.com/EmilHvitfeldt/smltar), or buy a physical copy from [CRC Press](https://doi.org/10.1201/9781003093459), [Bookshop.org](https://bookshop.org/books/supervised-machine-learning-for-text-analysis-in-r-9780367554194/9780367554194), or [Amazon](https://amzn.to/3DaHzjF). 
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This online work by [Emil Hvitfeldt](https://www.hvitfeldt.me/) and [Julia Silge](http://juliasilge.com/) is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+'`
+
+
+#### From geocompr
+
+
+From https://github.com/open-canada/geocompr/blob/main/index.Rmd.
+
+First you do this:
+
+```
+
+``{r index-1, echo=FALSE}
+is_html = knitr::is_html_output()
+``
+```
+
+Then this:
+
+```
+``{asis index-2, echo=is_html}
+This is the online version of The R4GC Book.
+``
+```
+
+
+
+#### With Shiny in flexdashboard
+
+You can also use it when you (don't) want to run a Shiny code. See Chapter on [Shiny] 
+
+
+### Automated compilation of  Rmd files in GitHub using GitHub Actions
+
+See how this is done here: https://github.com/open-canada/geocompr/tree/main/.github/workflows
+
+The `main.yaml` script compiles the source (located in https://github.com/open-canada/geocompr) into a bookdown book (located in 
+https://github.com/open-canada/geocompr/tree/gh-pages and viewable at https://open-canada.github.io/geocompr/)

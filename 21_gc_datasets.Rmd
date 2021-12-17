@@ -2,17 +2,178 @@
 
 
 
-# GC Open Data use cases {#gc-data}
+# Accessing Open Data Canada databases {#gc-data}
 
 This section provides code snippets to read, process and visualize various Open Canada databases of high common interest to the GC community.
 Where possible, an App is developed to help visualizing and understanding the data.
 See also [Shiny Apps](#gc-apps) section of this book.
 
-NB: Most databases from Statistics Canada site can be accessed using `cansim` package like in this code `dt <- cansim::get_cansim("13-10-0810-01")  %>% data.table::setDT(dt)`.
-Most other dataset can be access via direct link to an .csv, .zip,  xls file
+<!-- ## Ways to access Open Canada Data -->
+
+## With curl, fread, readxls
+
+Many  databases can be accessed via direct link to an .csv, .zip,  .xls file, using the code  shown below. 
+<!-- Note, the preferred functions. -->
 
 
-# Health-related
+```
+# txt
+dt <- data.table::fread ("https://health-infobase.canada.ca/src/data/covidLive/vaccination-coverage-byAgeAndSex-overTimeDownload.csv") 
+
+# compressed Rds
+curl::curl_download("https://github.com/open-canada/datasets/raw/main/statcan/13100810-20211206.Rds", "13100810-20211206.Rds")
+dt <- readRDS("13100810-20211206.Rds") 
+
+# All other archives
+download.file("https://www150.statcan.gc.ca/n1/tbl/csv/13100810-eng.zip", temp) # or using curl::curl_download()
+dt <- fread(unzip(temp, files = "13100810.csv"))
+rm(temp)
+
+```
+
+## With cansim package
+
+Most Statistics Canada databases can be  accessed using `cansim` package with a code like  the one shown below. 
+
+See [L&L of 2 Dec 2021 dedicated to CAMSIM]()
+
+Note that when StatCan website is  unavailable however (which is often  the case), you wont be able to run any `cansim` commands. 
+Hence, most poupular StatCan datasets, such as those we use for R training  and which we building Apps, are also cached at https://github.com/open-canada/datasets, where they can be accessed using the method described above.
+
+``` {r eval=FALSE, include=FALSE, echo=T}
+library(cansim)`
+search_cansim_cubes("Vital") # or search_cansim_tables("Vital")
+dt <- cansim::get_cansim("13-10-0810-01")  %>% data.table::setDT(dt)`
+```
+
+
+
+## Via API using `library(ckanr)`
+
+
+Many databases can also be accessed using `ckanr` package (e.g.  Open Ontario Database), as shown in  the code below. 
+
+See [L&L in June dedicated to CKAN](https://github.com/open-canada/lunch_and_learn_opengov/) to learn more.
+See also [this blog](https://rpubs.com/Jamesmurray1/594450)
+
+```{r eval=T, include=FALSE, echo=T}
+library(ckanr)
+
+ckanr_setup(url = "https://data.ontario.ca/")
+resource_search(q = "name:Vaccin")$results  # COVID, Vital, Hospital
+
+res <-resource_show(id ="274b819c-5d69-4539-a4db-f2950794138c")
+res$url
+destfile <- "Hospitalizations by vaccination status.csv"
+curl::curl_download(res$url, destfile)
+
+
+```
+
+<!-- 
+
+library(ckanr)
+library(data.table) 
+
+ckanr_setup(url = "https://data.ontario.ca/")
+resource_search(q = "name:Vaccin")$results
+
+res <-resource_show(id ="274b819c-5d69-4539-a4db-f2950794138c")
+res$url
+destfile <- "Hospitalizations by vaccination status.csv"
+curl::curl_download(res$url, destfile)
+
+[[2]]
+<CKAN Resource> e760480e-1f95-4634-a923-98161cfb02fa 
+  Name: COVID-19 cases in hospital and ICU by OH region|
+[[3]]
+<CKAN Resource> 274b819c-5d69-4539-a4db-f2950794138c 
+  Name: Hospitalizations by vaccination status
+
+
+[[4]]
+<CKAN Resource> e760480e-1f95-4634-a923-98161cfb02fa 
+  Name: COVID-19 cases in hospital and ICU by OH region| Cas de COVID-19 dans les hôpitaux et USI par région de SO
+[[5]]
+<CKAN Resource> 8a89caa9-511c-4568-af89-7f2174b4378c 
+  Name: COVID-19 Vaccine data
+[[8]]
+<CKAN Resource> ed270bb8-340b-41f9-a7c6-e8ef587e6d11 
+  Name: Status of COVID-19 cases in Ontario
+  Description: Compiled daily reported data on COVID-19 testing and outcomes in Ontario. Blank cells represent values that were not reported.
+
+As of November 12, 2021, routine Variants of Concern (VOC) PCR testing of positive COVID-19 samples is no longer being conducted. All eligible positive COVID-19 samples will now be forwarded for whole genome sequencing.  Starting on November 16, 2021, VOC data will not be reported in Status of COVID-19 cases in Ontario.
+
+Data on VOC can be found on Public Health Ontario's [COVID-19 Variants of Concern (VOCs)](https://www.publichealthontario.ca/en/diseases-and-conditions/infectious-diseases/respiratory-diseases/novel-coronavirus/variants). Historical data on VOCs and mutations in daily and weekly epidemiological summaries can be found on [COVID-19: Epidemiologic summaries from Public Health Ontario](https://covid-19.ontario.ca/covid-19-epidemiologic-summaries-public-health-ontario)
+  
+
+[[9]]
+<CKAN Resource> 37cfeca2-059e-4a5f-a228-249f6ab1b771 
+  Name: COVID Alert downloads - Canada
+[[10]]
+<CKAN Resource> 455fd63b-603d-4608-8216-7d8647f43350 
+  Name: Confirmed positive cases of COVID19 in Ontario
+  Description: Compiled daily reported data from public health units on confirmed positive cases of COVID-19 in Ontario. 
+[[11]]
+<CKAN Resource> 775ca815-5028-4e9b-9dd4-6975ff1be021 
+  Name: COVID-19 Vaccine data by age
+  Description: As of December 1, 2021, the population counts are based on Statistics Canada's 2020 estimates.
+[[15]]
+<CKAN Resource> 2a362139-b782-43b1-b3cb-078a2ef19524 
+  Name: COVID-19 Vaccine data by Public Health Unit (PHU) and by age
+
+
+
+[[3]]
+<CKAN Resource> 2a362139-b782-43b1-b3cb-078a2ef19524 
+  Name: COVID-19 Vaccine data by Public Health Unit (PHU) and by age
+  
+[[4]]
+<CKAN Resource> eed63cf2-83dd-4598-b337-b288c0a89a16 
+  Name: Cases and rates by vaccination status
+  Description: Effective September 13, 2021, individuals are considered fully vaccinated if they have had two doses and the second dose was at least fourteen days ago. Individuals are considered partially vaccinated if they have had one dose at least fourteen days ago, or two doses where the second dose was less than fourteen days ago. Individuals are considered unvaccinated if they have not had a dose, or if their first dose was less than fourteen days ago.
+  
+[[5]] ***
+<CKAN Resource> 274b819c-5d69-4539-a4db-f2950794138c 
+  Name: Hospitalizations by vaccination status
+  Description: * This is a new data collection and the data quality will continue to improve as hospitals continue to submit data.
+* In order to understand the vaccination status of patients currently hospitalized, a new data collection process was developed and this may cause discrepancies between other hospitalization numbers being collected using a different data collection process.
+* Data on patients in ICU are being collected from two different data sources with different extraction times and public reporting cycles. The existing data source (Critical Care Information System, CCIS) does not have vaccination status. 
+* Historical data for hospitalizations by region may change over time as hospitals update previously entered data.
+* Due to incomplete weekend and holiday reporting, vaccination status data for hospital and ICU admissions is not updated on Sundays, Mondays and the day after holidays
+* Unvaccinated is defined as not having any dose, or between 0-13 days after administration of the first dose of a COVID-19 vaccine
+* Partially vaccinated is defined as 14 days or more after the first dose of a 2-dose series COVID-19 vaccine, or between 0-13 days after administration of the second dose
+* Fully vaccinated is defined as 14 days or more after receipt of the second dose of a 2-dose series COVID-19 vaccine
+  Creator/Modified: 2021-08-20T14:29:47.628879 / 2021-12-15T14:16:14.713347
+  Size: 3769
+  Format: CSV
+
+[[6]] ***
+<CKAN Resource> c08620e0-a055-4d35-8cec-875a459642c3 
+  Name: Case rates by vaccination status and age group
+  Description: Effective September 13, 2021, individuals are considered fully vaccinated if they have had two doses and the second dose was at least fourteen days ago. Individuals are considered partially vaccinated if they have had one dose at least fourteen days ago, or two doses where the second dose was less than fourteen days ago. Individuals are considered unvaccinated if they have not had a dose, or if their first dose was less than fourteen days ago.
+ 
+
+
+[[1]]
+<CKAN Resource> 97622ce6-c06a-4970-afe5-be540c748f24 
+  Name: Vital events data by month
+
+
+-->
+
+```{r}
+res <-resource_show(id ="274b819c-5d69-4539-a4db-f2950794138c")
+res$url
+destfile <- "Hospitalizations by vaccination status.csv"
+curl::curl_download(res$url, destfile)
+dtHosp_Vac <- fread(destfile)
+```
+  
+
+### Via API using library("rgovcan")
+
+# Health-related databases
 
 
 ## Canadian Vitals Statistics Database
@@ -22,29 +183,13 @@ Most other dataset can be access via direct link to an .csv, .zip,  xls file
 
 Statistique de l'état civil - Base de données sur les décès
 
-\* / \*\* indicate that the R code / Shiny App are available in this book
+<!-- \* / \*\* indicate that the R code / Shiny App are available in this book -->
 
-Fetal deaths (20 weeks or more of gestation) and late fetal deaths (28 weeks or more of gestation)
-Table: 13-10-0427-01 (formerly: CANSIM 102-4514)
-
-Perinatal mortality (late fetal deaths and early neonatal deaths)
-Table: 13-10-0714-01 (formerly: CANSIM 102-0508)
-
-Leading causes of death, infants
-Table: 13-10-0395-01 (formerly: CANSIM 102-0562)
+#### Leading causes of death
 
 
-
-Leading causes of death, total population, by age group
-Frequency: Annual. till 2019
-Table: 13-10-0394-01
-
-Deaths and age-specific mortality rates, by selected grouped causes1, 2, 3, 4, 5, 6, 7, 8, 9, 10
-Frequency: Annual
-Table: 13-10-0392-01
-
-\* Leading causes of death, total population (age standardization using 2011 population)
 Provisional weekly death counts, by selected grouped causes of death
+
 Nombre provisoire de décès et surmortalité janvier 2020 à août 2021
 
 Frequency: Weekly
@@ -52,11 +197,10 @@ Table: 13-10-0810-01
 https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1310081001
 https://www150.statcan.gc.ca/n1/tbl/csv/13100810-eng.zip
 
-
 ```{r}
 
 if (F) {
-  downloader::download("https://www150.statcan.gc.ca/n1/tbl/csv/13100810-eng.zip",
+  curl::curl_download("https://www150.statcan.gc.ca/n1/tbl/csv/13100810-eng.zip",
     "13100810.zip",
     mode = "wb"
   )
@@ -68,14 +212,35 @@ if (F) {
   rm(temp)
 }
 
-dt <- fread("13100810.csv", stringsAsFactors = T)
-dt %>% d7.dtView()
+dt <- fread ("https://github.com/open-canada/datasets/raw/main/statcan/13100810-after-20190901.csv", stringsAsFactors = F)
 
-dt <- dt[!is.na(VALUE) & GEO!="Yukon", .(REF_DATE, GEO, `Cause of death (ICD-10) `, VALUE)]
-dt[, REF_DATE := ymd(REF_DATE)]
+dt[, Date := ymd(Date)]
 dt[, GEO := gsub(", place of occurrence", "", GEO)]
+
+
+dt0 <- dt[ Date >= "2019-10-01" ]
+
+
+# Plot GEO vertically - allows comparison across Causes
+
+ggplot(dt0) +    guides(col = "none") +
+    geom_step(aes(Date, val_norm, col = `Cause of death (ICD-10)`)) +
+    facet_grid(GEO ~ `Cause of death (ICD-10)`, scales = "free") +
+    labs( title = NULL, x = NULL, y = NULL,
+          caption = "Source: Statistics Canada - Table 13-10-0810-01"  )
+
+# Plot Causes vertically - allows comparison across GEO
+
+ggplot(dt0) +  theme(legend.position = "bottom") +
+    geom_step(aes(Date, val_norm, col = `Cause of death (ICD-10)`)) +
+    facet_grid(`Cause of death (ICD-10)` ~ GEO, scales = "free") +
+    labs(  title = NULL, x = NULL, y = NULL,
+           caption = "Source: Statistics Canada - Table 13-10-0810-01"    )
+
 ```
 
+
+#### Other
 
 Provisional weekly death counts, by age group and sex
 Frequency: Weekly
@@ -94,6 +259,22 @@ https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1310078301
 
 
 
+Fetal deaths (20 weeks or more of gestation) and late fetal deaths (28 weeks or more of gestation)
+Table: 13-10-0427-01 (formerly: CANSIM 102-4514)
+
+Perinatal mortality (late fetal deaths and early neonatal deaths)
+Table: 13-10-0714-01 (formerly: CANSIM 102-0508)
+
+Deaths and age-specific mortality rates, by selected grouped causes1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+Frequency: Annual
+Table: 13-10-0392-01
+
+Leading causes of death, total population, by age group
+Frequency: Annual. till 2019
+Table: 13-10-0394-01
+
+Leading causes of death, infants
+Table: 13-10-0395-01 (formerly: CANSIM 102-0562)
 
 
 ### Vital Statistics - Birth Database
@@ -101,10 +282,10 @@ https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1310078301
 https://www150.statcan.gc.ca/n1/en/surveys/3231
 
 
-3. Crude birth rate, age-specific fertility rates and total fertility rate (live births)
+Crude birth rate, age-specific fertility rates and total fertility rate (live births)
 Table: 13-10-0418-01 (formerly: CANSIM 102-4505)
 
-9. Live births, by month
+Live births, by month
 Table: 13-10-0415-01 (formerly: CANSIM 102-4502)
 
 Live births, by age of mother
@@ -115,16 +296,8 @@ Table: 13-10-0416-01 (formerly: CANSIM 102-4503)
 
 ## COVID-19 infection and vaccination related: 
 
-URL: <https://open-canada.github.io/Apps/covid> (See also: <https://itrack.shinyapps.io/covid/us.Rmd>).   
-Source: https://gccode.ssc-spc.gc.ca/r4gc/codes/covid 
-
-This App was built at the beginning of the pandemic. It uses open COVID-19 data for Canada and US to allow one to summarize, search and sort the results by geographical proximity using a variety of criteria (see Figure 3). More details about it and a tutorial on how to build it are provided at https://open-canada.github.io/UseR/learn2020 
-
-<img height="300" src="https://github.com/open-canada/Apps/blob/main/docs/images/itrack-covid2.png?raw=true">
-<img height="300" src="https://github.com/open-canada/Apps/blob/main/docs/images/covid-us-geo.png?raw=true">
 
 
-## Vaccination:
 
 - https://health-infobase.canada.ca/covid-19/vaccination-coverage 
 
@@ -140,12 +313,15 @@ dtVac$prfname <- NULL
 dtVac$pruid <- NULL
 dtVac[, week_end := ymd(week_end)]
 
-## 
-
+```
 
 
 # Open Ontario Data
 
+### 
+
+COVID-19 cases in hospital and ICU, by Ontario Health (OH) region
+https://data.ontario.ca/datastore/dump/e760480e-1f95-4634-a923-98161cfb02fa?bom=True
 
 https://data2.ontario.ca/en/dataset/deaths-by-cause-sex-and-age 
 We are reviewing the data in this record to determine if it can be made open. 
@@ -197,7 +373,7 @@ Figure. Key functionalities of the PSES App prototype: a) vertical results track
 
 
 
-### Other tools and dashboards
+### Other PSES tools and dashboards
 
 TBS Official PSES Results viewer (developed in PowerBI): 
 https://hranalytics-analytiquerh.tbs-sct.gc.ca/Home/ReportList/2019?GoCTemplateCulture=en-CA    
@@ -212,10 +388,10 @@ Direct link to PowerBI here: https://hranalytics-analytiquerh.tbs-sct.gc.ca/Home
 
 
 
-## Automated ATIP requests topic analysis
+## TIP requests dataset 
 
 <!-- URL: <https://open-canada.github.io/Apps/atip> (mirror: https://rcanada.shinyapps.io/TBS-ATI-NLP/).    -->
-Source: <https://gccode.ssc-spc.gc.ca/r4gc/codes/atip>
+
 
 
 Another Open Canada dataset that relates to the performance of many GC departments is the ATIP requests dataset [^22]. An interactive Natural Language Processing (NLP) application has been developed to enable the analysis and visualization  of these requests for each participating department  (see Figure 2). Its functionalities include: statistics summary,  automated key-words and topic extraction using N-grams, document term matrix and Latent Dirichlet Allocation. The topics can be visualized as word-clouds or as graphs that connect the related words.

@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>19 Text Analysis in R | The R4GC Book</title>
   <meta name="description" content="Notes and tutorials from ‘Lunch and Learn Data Science with R’ weekly meetups organized by the R4GC Community" />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
   <meta property="og:title" content="19 Text Analysis in R | The R4GC Book" />
   <meta property="og:type" content="book" />
@@ -23,17 +23,17 @@
 
 
 
+<meta name="date" content="2021-12-16" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="images/R4GC.ico" type="image/x-icon" />
-<link rel="prev" href="record-linking-and-other-data-engineering-tasks-in-r.html"/>
+<link rel="prev" href="data-engineering-record-linking-and-deduplication.html"/>
 <link rel="next" href="statistical-tests-and-mixed-effects-analysis.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
-<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -49,6 +49,8 @@
 
 
 
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 <link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
 
@@ -57,7 +59,6 @@
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
@@ -248,10 +249,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 </ul></li>
 <li class="part"><span><b>II Art of R programming</b></span></li>
-<li class="chapter" data-level="7" data-path="use-r-efficiently-with-data.html"><a href="use-r-efficiently-with-data.html"><i class="fa fa-check"></i><b>7</b> Use R efficiently with data.table!</a>
+<li class="chapter" data-level="7" data-path="use-r-efficiently-with-data-table.html"><a href="use-r-efficiently-with-data-table.html"><i class="fa fa-check"></i><b>7</b> Use R efficiently with data.table!</a>
 <ul>
-<li class="chapter" data-level="7.1" data-path="use-r-efficiently-with-data.html"><a href="use-r-efficiently-with-data.html#data.table-vs.-dplyr"><i class="fa fa-check"></i><b>7.1</b> data.table vs. dplyr</a></li>
-<li class="chapter" data-level="7.2" data-path="use-r-efficiently-with-data.html"><a href="use-r-efficiently-with-data.html#extensions-of-data.table"><i class="fa fa-check"></i><b>7.2</b> Extensions of data.table</a></li>
+<li class="chapter" data-level="7.1" data-path="use-r-efficiently-with-data-table.html"><a href="use-r-efficiently-with-data-table.html#data.table-vs.-dplyr"><i class="fa fa-check"></i><b>7.1</b> data.table vs. dplyr</a></li>
+<li class="chapter" data-level="7.2" data-path="use-r-efficiently-with-data-table.html"><a href="use-r-efficiently-with-data-table.html#extensions-of-data.table"><i class="fa fa-check"></i><b>7.2</b> Extensions of data.table</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="python-and-r-unite.html"><a href="python-and-r-unite.html"><i class="fa fa-check"></i><b>8</b> Python and R unite!</a></li>
 <li class="chapter" data-level="9" data-path="from-excel-to-r.html"><a href="from-excel-to-r.html"><i class="fa fa-check"></i><b>9</b> From Excel to R</a></li>
@@ -295,6 +296,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="13.1" data-path="r-markdown-for-literate-programming-and-automated-reports.html"><a href="r-markdown-for-literate-programming-and-automated-reports.html#resources"><i class="fa fa-check"></i><b>13.1</b> Resources</a></li>
 <li class="chapter" data-level="13.2" data-path="r-markdown-for-literate-programming-and-automated-reports.html"><a href="r-markdown-for-literate-programming-and-automated-reports.html#automated-generation-of-multiple-pdf-files"><i class="fa fa-check"></i><b>13.2</b> Automated generation of multiple PDF files</a></li>
+<li class="chapter" data-level="13.3" data-path="r-markdown-for-literate-programming-and-automated-reports.html"><a href="r-markdown-for-literate-programming-and-automated-reports.html#useful-tricks-and-tips"><i class="fa fa-check"></i><b>13.3</b> Useful tricks and tips</a>
+<ul>
+<li class="chapter" data-level="13.3.1" data-path="r-markdown-for-literate-programming-and-automated-reports.html"><a href="r-markdown-for-literate-programming-and-automated-reports.html#in-rstudio-editor"><i class="fa fa-check"></i><b>13.3.1</b> In RStudio editor</a></li>
+<li class="chapter" data-level="13.3.2" data-path="r-markdown-for-literate-programming-and-automated-reports.html"><a href="r-markdown-for-literate-programming-and-automated-reports.html#spliting-rmd-in-chunks"><i class="fa fa-check"></i><b>13.3.2</b> Spliting Rmd in chunks</a></li>
+<li class="chapter" data-level="13.3.3" data-path="r-markdown-for-literate-programming-and-automated-reports.html"><a href="r-markdown-for-literate-programming-and-automated-reports.html#making-good-use-of-configuration-yaml-header-in-index.rmd-file"><i class="fa fa-check"></i><b>13.3.3</b> Making good use of configuration yaml header in index.Rmd file</a></li>
+<li class="chapter" data-level="13.3.4" data-path="r-markdown-for-literate-programming-and-automated-reports.html"><a href="r-markdown-for-literate-programming-and-automated-reports.html#conditional-execution-of-chunks"><i class="fa fa-check"></i><b>13.3.4</b> Conditional execution of chunks</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="welcome-to-supervised-machine-learning-for-text-analysis-in-r.html"><a href="welcome-to-supervised-machine-learning-for-text-analysis-in-r.html"><i class="fa fa-check"></i>Welcome to Supervised Machine Learning for Text Analysis in R</a>
+<ul>
+<li class="chapter" data-level="13.3.5" data-path="welcome-to-supervised-machine-learning-for-text-analysis-in-r.html"><a href="welcome-to-supervised-machine-learning-for-text-analysis-in-r.html#automated-compilation-of-rmd-files-in-github-using-github-actions"><i class="fa fa-check"></i><b>13.3.5</b> Automated compilation of Rmd files in GitHub using GitHub Actions</a></li>
 </ul></li>
 <li class="chapter" data-level="14" data-path="ggplot2-and-its-extensions-for-data-visualization.html"><a href="ggplot2-and-its-extensions-for-data-visualization.html"><i class="fa fa-check"></i><b>14</b> ggplot2 and its extensions for data visualization</a>
 <ul>
@@ -318,17 +330,103 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="17.3" data-path="geospatial-coding-and-visualization-in-r.html"><a href="geospatial-coding-and-visualization-in-r.html#tutorials"><i class="fa fa-check"></i><b>17.3</b> Tutorials</a></li>
 <li class="chapter" data-level="17.4" data-path="geospatial-coding-and-visualization-in-r.html"><a href="geospatial-coding-and-visualization-in-r.html#dealing-with-memory-issues"><i class="fa fa-check"></i><b>17.4</b> Dealing with memory issues</a></li>
 <li class="chapter" data-level="17.5" data-path="geospatial-coding-and-visualization-in-r.html"><a href="geospatial-coding-and-visualization-in-r.html#canadian-geo-data"><i class="fa fa-check"></i><b>17.5</b> Canadian geo-data</a></li>
+<li class="chapter" data-level="17.6" data-path="geospatial-coding-and-visualization-in-r.html"><a href="geospatial-coding-and-visualization-in-r.html#code-snippets"><i class="fa fa-check"></i><b>17.6</b> Code snippets</a>
+<ul>
+<li class="chapter" data-level="17.6.1" data-path="geospatial-coding-and-visualization-in-r.html"><a href="geospatial-coding-and-visualization-in-r.html#using-simplemaps.com"><i class="fa fa-check"></i><b>17.6.1</b> Using simplemaps.com</a></li>
+<li class="chapter" data-level="17.6.2" data-path="geospatial-coding-and-visualization-in-r.html"><a href="geospatial-coding-and-visualization-in-r.html#using-google-api"><i class="fa fa-check"></i><b>17.6.2</b> Using Google API</a></li>
+<li class="chapter" data-level="17.6.3" data-path="geospatial-coding-and-visualization-in-r.html"><a href="geospatial-coding-and-visualization-in-r.html#using-tidygeocoder"><i class="fa fa-check"></i><b>17.6.3</b> Using tidygeocoder</a></li>
+<li class="chapter" data-level="17.6.4" data-path="geospatial-coding-and-visualization-in-r.html"><a href="geospatial-coding-and-visualization-in-r.html#using-open-street-map"><i class="fa fa-check"></i><b>17.6.4</b> Using Open Street map</a></li>
+<li class="chapter" data-level="17.6.5" data-path="geospatial-coding-and-visualization-in-r.html"><a href="geospatial-coding-and-visualization-in-r.html#using-open-database-of-addresses-educational-facilities"><i class="fa fa-check"></i><b>17.6.5</b> Using Open Database of Addresses / Educational Facilities</a></li>
+<li class="chapter" data-level="17.6.6" data-path="geospatial-coding-and-visualization-in-r.html"><a href="geospatial-coding-and-visualization-in-r.html#getting-postal-codes"><i class="fa fa-check"></i><b>17.6.6</b> Getting Postal codes</a></li>
+</ul></li>
 </ul></li>
 <li class="part"><span><b>IV Machine Learning and AI</b></span></li>
-<li class="chapter" data-level="18" data-path="record-linking-and-other-data-engineering-tasks-in-r.html"><a href="record-linking-and-other-data-engineering-tasks-in-r.html"><i class="fa fa-check"></i><b>18</b> Record Linking and other Data Engineering tasks in R</a>
+<li class="chapter" data-level="18" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html"><i class="fa fa-check"></i><b>18</b> Data Engineering, Record Linking and Deduplication</a>
 <ul>
-<li class="chapter" data-level="18.1" data-path="record-linking-and-other-data-engineering-tasks-in-r.html"><a href="record-linking-and-other-data-engineering-tasks-in-r.html#demo"><i class="fa fa-check"></i><b>18.1</b> demo</a></li>
+<li class="chapter" data-level="18.1" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#tldl"><i class="fa fa-check"></i><b>18.1</b> TL;DL</a></li>
+<li class="chapter" data-level="18.2" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#intro-what-is-data-engineering"><i class="fa fa-check"></i><b>18.2</b> Intro: What is <em>Data Engineering</em></a>
+<ul>
+<li class="chapter" data-level="18.2.1" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#data-engineering-vs.-software-engineering"><i class="fa fa-check"></i><b>18.2.1</b> <em>Data Engineering</em> vs. <em>Software Engineering</em></a></li>
+</ul></li>
+<li class="chapter" data-level="18.3" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#data-engineering-vs.-etl-and-elt"><i class="fa fa-check"></i><b>18.3</b> Data Engineering vs. ETL and ELT</a>
+<ul>
+<li class="chapter" data-level="18.3.1" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#taxonomy-of-data-engineering-tasks"><i class="fa fa-check"></i><b>18.3.1</b> Taxonomy of Data Engineering tasks</a></li>
+</ul></li>
+<li class="chapter" data-level="18.4" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#useful-packages"><i class="fa fa-check"></i><b>18.4</b> Useful packages</a>
+<ul>
+<li class="chapter" data-level="18.4.1" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#single-variable"><i class="fa fa-check"></i><b>18.4.1</b> Single variable</a></li>
+</ul></li>
+<li class="chapter" data-level="18.5" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#r-base-and-data.table"><i class="fa fa-check"></i><b>18.5</b> 0 &gt; R base and data.table</a>
+<ul>
+<li class="chapter" data-level="18.5.1" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#description"><i class="fa fa-check"></i><b>18.5.1</b> Description</a></li>
+<li class="chapter" data-level="18.5.2" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#examples"><i class="fa fa-check"></i><b>18.5.2</b> Examples</a></li>
+</ul></li>
+<li class="chapter" data-level="18.6" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#textclean"><i class="fa fa-check"></i><b>18.6</b> 1 &gt;<code>textclean</code></a>
+<ul>
+<li class="chapter" data-level="18.6.1" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#description-1"><i class="fa fa-check"></i><b>18.6.1</b> Description</a></li>
+<li class="chapter" data-level="18.6.2" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#example"><i class="fa fa-check"></i><b>18.6.2</b> Example</a></li>
+</ul></li>
+<li class="chapter" data-level="18.7" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#package-phonics"><i class="fa fa-check"></i><b>18.7</b> 2 &gt; Package <code>phonics</code></a>
+<ul>
+<li class="chapter" data-level="18.7.1" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#description-2"><i class="fa fa-check"></i><b>18.7.1</b> Description</a></li>
+<li class="chapter" data-level="18.7.2" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#example-1"><i class="fa fa-check"></i><b>18.7.2</b> Example</a></li>
+</ul></li>
+<li class="chapter" data-level="18.8" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#package-stringdist"><i class="fa fa-check"></i><b>18.8</b> 3 &gt; Package <code>stringdist</code></a>
+<ul>
+<li class="chapter" data-level="18.8.1" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#description-3"><i class="fa fa-check"></i><b>18.8.1</b> Description</a></li>
+<li class="chapter" data-level="18.8.2" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#example-2"><i class="fa fa-check"></i><b>18.8.2</b> Example</a></li>
+</ul></li>
+<li class="chapter" data-level="18.9" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#multi-variable-recording-linking"><i class="fa fa-check"></i><b>18.9</b> Multi-variable recording linking</a></li>
+<li class="chapter" data-level="18.10" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#libraryfastlink"><i class="fa fa-check"></i><b>18.10</b> &gt;&gt; library(fastLink)</a>
+<ul>
+<li class="chapter" data-level="18.10.1" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#description-4"><i class="fa fa-check"></i><b>18.10.1</b> Description</a></li>
+<li class="chapter" data-level="18.10.2" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#dataset"><i class="fa fa-check"></i><b>18.10.2</b> Dataset</a></li>
+<li class="chapter" data-level="18.10.3" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#example-3"><i class="fa fa-check"></i><b>18.10.3</b> Example</a></li>
+</ul></li>
+<li class="chapter" data-level="18.11" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#package-recordlinkage"><i class="fa fa-check"></i><b>18.11</b> &gt;&gt; Package <code>RecordLinkage</code></a>
+<ul>
+<li class="chapter" data-level="18.11.1" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#description-5"><i class="fa fa-check"></i><b>18.11.1</b> Description</a></li>
+<li class="chapter" data-level="18.11.2" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#datasets-german-names-500-and-10000"><i class="fa fa-check"></i><b>18.11.2</b> Datasets: German names 500 and 10,000</a></li>
+</ul></li>
+<li class="chapter" data-level="18.12" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#libraryblink"><i class="fa fa-check"></i><b>18.12</b> &gt; library(blink)</a>
+<ul>
+<li class="chapter" data-level="18.12.1" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#summary"><i class="fa fa-check"></i><b>18.12.1</b> Summary</a></li>
+</ul></li>
+<li class="chapter" data-level="18.13" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#libraryreclin"><i class="fa fa-check"></i><b>18.13</b> &gt; <code>library(reclin)</code></a>
+<ul>
+<li class="chapter" data-level="18.13.1" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#description-6"><i class="fa fa-check"></i><b>18.13.1</b> Description</a></li>
+<li class="chapter" data-level="18.13.2" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#included-datasets"><i class="fa fa-check"></i><b>18.13.2</b> Included Datasets:</a></li>
+</ul></li>
+<li class="chapter" data-level="18.14" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#libraryfuzzyjoin"><i class="fa fa-check"></i><b>18.14</b> &gt;&gt; library(fuzzyjoin)</a>
+<ul>
+<li class="chapter" data-level="18.14.1" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#description-7"><i class="fa fa-check"></i><b>18.14.1</b> Description</a></li>
+<li class="chapter" data-level="18.14.2" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#example-1-joining-with-common-mispelling"><i class="fa fa-check"></i><b>18.14.2</b> Example 1: Joining with Common Mispelling</a></li>
+<li class="chapter" data-level="18.14.3" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#example-2-from-datacamp"><i class="fa fa-check"></i><b>18.14.3</b> Example 2: from datacamp</a></li>
+<li class="chapter" data-level="18.14.4" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#example-3-from-stackoverflow"><i class="fa fa-check"></i><b>18.14.4</b> Example 3: from stackoverflow</a></li>
+</ul></li>
+<li class="chapter" data-level="18.15" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#package-blink"><i class="fa fa-check"></i><b>18.15</b> &gt; Package <code>blink</code></a>
+<ul>
+<li class="chapter" data-level="18.15.1" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#description-8"><i class="fa fa-check"></i><b>18.15.1</b> Description</a></li>
+<li class="chapter" data-level="18.15.2" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#datasets-german-names-500-and-10000-1"><i class="fa fa-check"></i><b>18.15.2</b> Datasets: German names 500 and 10,000</a></li>
+</ul></li>
+<li class="chapter" data-level="18.16" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#discusion---other-methods"><i class="fa fa-check"></i><b>18.16</b> Discusion - Other methods</a></li>
 </ul></li>
 <li class="chapter" data-level="19" data-path="text-analysis-in-r.html"><a href="text-analysis-in-r.html"><i class="fa fa-check"></i><b>19</b> Text Analysis in R</a>
 <ul>
 <li class="chapter" data-level="19.1" data-path="text-analysis-in-r.html"><a href="text-analysis-in-r.html#open-source-textbook"><i class="fa fa-check"></i><b>19.1</b> Open source textbook</a></li>
 <li class="chapter" data-level="19.2" data-path="text-analysis-in-r.html"><a href="text-analysis-in-r.html#plagiarism-detection"><i class="fa fa-check"></i><b>19.2</b> Plagiarism detection</a></li>
-<li class="chapter" data-level="19.3" data-path="text-analysis-in-r.html"><a href="text-analysis-in-r.html#results-from-international-methodology-symposium"><i class="fa fa-check"></i><b>19.3</b> results from International Methodology Symposium</a></li>
+<li class="chapter" data-level="19.3" data-path="text-analysis-in-r.html"><a href="text-analysis-in-r.html#related-work-at-international-methodology-symposium"><i class="fa fa-check"></i><b>19.3</b> Related work at International Methodology Symposium</a></li>
+<li class="chapter" data-level="19.4" data-path="text-analysis-in-r.html"><a href="text-analysis-in-r.html#useful-code-snippets"><i class="fa fa-check"></i><b>19.4</b> Useful code snippets</a>
+<ul>
+<li class="chapter" data-level="19.4.1" data-path="text-analysis-in-r.html"><a href="text-analysis-in-r.html#basic-cleaning-remove-accents-benchmarking"><i class="fa fa-check"></i><b>19.4.1</b> Basic cleaning : Remove accents (benchmarking)</a></li>
+<li class="chapter" data-level="19.4.2" data-path="text-analysis-in-r.html"><a href="text-analysis-in-r.html#text-cleaning"><i class="fa fa-check"></i><b>19.4.2</b> Text cleaning</a></li>
+<li class="chapter" data-level="19.4.3" data-path="text-analysis-in-r.html"><a href="text-analysis-in-r.html#extracting-re-ordering-words-in-a-string"><i class="fa fa-check"></i><b>19.4.3</b> Extracting, re-ordering words in a string</a></li>
+<li class="chapter" data-level="19.4.4" data-path="text-analysis-in-r.html"><a href="text-analysis-in-r.html#automatically-finding-removing-common-parts-in-strings"><i class="fa fa-check"></i><b>19.4.4</b> Automatically finding / removing common parts in strings</a></li>
+<li class="chapter" data-level="19.4.5" data-path="text-analysis-in-r.html"><a href="text-analysis-in-r.html#useful-packages-1"><i class="fa fa-check"></i><b>19.4.5</b> Useful packages</a></li>
+<li class="chapter" data-level="19.4.6" data-path="text-analysis-in-r.html"><a href="text-analysis-in-r.html#cleantexttext-clean-text"><i class="fa fa-check"></i><b>19.4.6</b> <code>cleanText(text)</code>: clean text</a></li>
+<li class="chapter" data-level="19.4.7" data-path="text-analysis-in-r.html"><a href="text-analysis-in-r.html#convert-text-to-date-or-timestamp"><i class="fa fa-check"></i><b>19.4.7</b> Convert Text to Date or Timestamp</a></li>
+<li class="chapter" data-level="19.4.8" data-path="text-analysis-in-r.html"><a href="text-analysis-in-r.html#transliteration-cleaning"><i class="fa fa-check"></i><b>19.4.8</b> Transliteration &amp; cleaning</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="20" data-path="statistical-tests-and-mixed-effects-analysis.html"><a href="statistical-tests-and-mixed-effects-analysis.html"><i class="fa fa-check"></i><b>20</b> Statistical tests and mixed-effects analysis</a></li>
 <li class="chapter" data-level="21" data-path="machine-learning-and-modeling-in-r.html"><a href="machine-learning-and-modeling-in-r.html"><i class="fa fa-check"></i><b>21</b> Machine Learning and Modeling in R</a>
@@ -369,7 +467,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="25.4" data-path="packages-101.html"><a href="packages-101.html#rbuildignore"><i class="fa fa-check"></i><b>25.4</b> * .Rbuildignore</a></li>
 <li class="chapter" data-level="25.5" data-path="packages-101.html"><a href="packages-101.html#license-use_mit_license"><i class="fa fa-check"></i><b>25.5</b> * License: <code>use_mit_license()</code></a></li>
-<li class="chapter" data-level="25.6" data-path="packages-101.html"><a href="packages-101.html#description"><i class="fa fa-check"></i><b>25.6</b> * DESCRIPTION</a></li>
+<li class="chapter" data-level="25.6" data-path="packages-101.html"><a href="packages-101.html#description-9"><i class="fa fa-check"></i><b>25.6</b> * DESCRIPTION</a></li>
 <li class="chapter" data-level="25.7" data-path="packages-101.html"><a href="packages-101.html#namespace"><i class="fa fa-check"></i><b>25.7</b> * NAMESPACE</a></li>
 <li class="chapter" data-level="25.8" data-path="packages-101.html"><a href="packages-101.html#examples-and-tests"><i class="fa fa-check"></i><b>25.8</b> * Examples and tests</a></li>
 <li class="chapter" data-level="25.9" data-path="packages-101.html"><a href="packages-101.html#in-my_codes"><i class="fa fa-check"></i><b>25.9</b> .. in MY_CODES</a></li>
@@ -381,59 +479,70 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="25.15" data-path="packages-101.html"><a href="packages-101.html#optional-rtools"><i class="fa fa-check"></i><b>25.15</b> (optional) Rtools</a></li>
 </ul></li>
 <li class="chapter" data-level="26" data-path="r101-building-covid-19-tracker-app-from-scratch.html"><a href="r101-building-covid-19-tracker-app-from-scratch.html"><i class="fa fa-check"></i><b>26</b> R101: Building COVID-19 Tracker App from scratch</a></li>
-<li class="part"><span><b>VI Community Codes</b></span></li>
-<li class="chapter" data-level="27" data-path="gc-data.html"><a href="gc-data.html"><i class="fa fa-check"></i><b>27</b> GC Open Data use cases</a>
+<li class="part"><span><b>VI Community Databases</b></span></li>
+<li class="chapter" data-level="27" data-path="gc-data.html"><a href="gc-data.html"><i class="fa fa-check"></i><b>27</b> Accessing Open Data Canada databases</a>
 <ul>
-<li class="chapter" data-level="27.1" data-path="gc-data.html"><a href="gc-data.html#pses-results-interactive-analysis-and-visualization"><i class="fa fa-check"></i><b>27.1</b> PSES Results interactive analysis and visualization:</a>
+<li class="chapter" data-level="27.1" data-path="gc-data.html"><a href="gc-data.html#with-curl-fread-readxls"><i class="fa fa-check"></i><b>27.1</b> With curl, fread, readxls</a></li>
+<li class="chapter" data-level="27.2" data-path="gc-data.html"><a href="gc-data.html#with-cansim-package"><i class="fa fa-check"></i><b>27.2</b> With cansim package</a></li>
+<li class="chapter" data-level="27.3" data-path="gc-data.html"><a href="gc-data.html#via-api-using-libraryckanr"><i class="fa fa-check"></i><b>27.3</b> Via API using <code>library(ckanr)</code></a>
 <ul>
-<li class="chapter" data-level="27.1.1" data-path="gc-data.html"><a href="gc-data.html#other-tools-and-dashboards"><i class="fa fa-check"></i><b>27.1.1</b> Other tools and dashboards</a></li>
+<li class="chapter" data-level="27.3.1" data-path="gc-data.html"><a href="gc-data.html#via-api-using-libraryrgovcan"><i class="fa fa-check"></i><b>27.3.1</b> Via API using library(“rgovcan”)</a></li>
 </ul></li>
-<li class="chapter" data-level="27.2" data-path="gc-data.html"><a href="gc-data.html#automated-atip-requests-topic-extraction"><i class="fa fa-check"></i><b>27.2</b> Automated ATIP requests topic extraction:</a></li>
-<li class="chapter" data-level="27.3" data-path="gc-data.html"><a href="gc-data.html#automated-municipal-level-covid-19-tracker"><i class="fa fa-check"></i><b>27.3</b> Automated municipal level COVID-19 tracker:</a></li>
-<li class="chapter" data-level="27.4" data-path="gc-data.html"><a href="gc-data.html#geo-mapped-current-historical-and-predicted-border-wait-times"><i class="fa fa-check"></i><b>27.4</b> Geo-mapped current, historical and predicted border wait times:</a></li>
 </ul></li>
-<li class="chapter" data-level="28" data-path="shiny-apps.html"><a href="shiny-apps.html"><i class="fa fa-check"></i><b>28</b> Shiny Apps</a>
+<li class="chapter" data-level="28" data-path="health-related-databases.html"><a href="health-related-databases.html"><i class="fa fa-check"></i><b>28</b> Health-related databases</a>
 <ul>
-<li class="chapter" data-level="28.1" data-path="shiny-apps.html"><a href="shiny-apps.html#pses-results-interactive-analysis-and-visualization-1"><i class="fa fa-check"></i><b>28.1</b> PSES Results interactive analysis and visualization:</a>
+<li class="chapter" data-level="28.1" data-path="health-related-databases.html"><a href="health-related-databases.html#canadian-vitals-statistics-database"><i class="fa fa-check"></i><b>28.1</b> Canadian Vitals Statistics Database</a>
 <ul>
-<li class="chapter" data-level="28.1.1" data-path="shiny-apps.html"><a href="shiny-apps.html#other-tools-and-dashboards-1"><i class="fa fa-check"></i><b>28.1.1</b> Other tools and dashboards</a></li>
+<li class="chapter" data-level="28.1.1" data-path="health-related-databases.html"><a href="health-related-databases.html#vital-statistics---death-database"><i class="fa fa-check"></i><b>28.1.1</b> Vital Statistics - Death Database</a></li>
+<li class="chapter" data-level="28.1.2" data-path="health-related-databases.html"><a href="health-related-databases.html#vital-statistics---birth-database"><i class="fa fa-check"></i><b>28.1.2</b> Vital Statistics - Birth Database</a></li>
 </ul></li>
-<li class="chapter" data-level="28.2" data-path="shiny-apps.html"><a href="shiny-apps.html#automated-atip-requests-topic-extraction-1"><i class="fa fa-check"></i><b>28.2</b> Automated ATIP requests topic extraction:</a></li>
-<li class="chapter" data-level="28.3" data-path="shiny-apps.html"><a href="shiny-apps.html#automated-municipal-level-covid-19-tracker-1"><i class="fa fa-check"></i><b>28.3</b> Automated municipal level COVID-19 tracker:</a></li>
-<li class="chapter" data-level="28.4" data-path="shiny-apps.html"><a href="shiny-apps.html#geo-mapped-current-historical-and-predicted-border-wait-times-1"><i class="fa fa-check"></i><b>28.4</b> Geo-mapped current, historical and predicted border wait times:</a></li>
-<li class="chapter" data-level="28.5" data-path="shiny-apps.html"><a href="shiny-apps.html#demo-and-tool-for-linking-noisy-data-records"><i class="fa fa-check"></i><b>28.5</b> Demo and tool for linking noisy data records:</a></li>
-<li class="chapter" data-level="28.6" data-path="shiny-apps.html"><a href="shiny-apps.html#html-pages-comparator"><i class="fa fa-check"></i><b>28.6</b> Html pages comparator:</a></li>
-<li class="chapter" data-level="28.7" data-path="shiny-apps.html"><a href="shiny-apps.html#large-table-summarizer"><i class="fa fa-check"></i><b>28.7</b> Large table summarizer:</a></li>
+<li class="chapter" data-level="28.2" data-path="health-related-databases.html"><a href="health-related-databases.html#covid-19-infection-and-vaccination-related"><i class="fa fa-check"></i><b>28.2</b> COVID-19 infection and vaccination related:</a></li>
 </ul></li>
-<li class="appendix"><span><b>Appendices</b></span></li>
-<li class="chapter" data-level="A" data-path="lunch-and-learn-notes.html"><a href="lunch-and-learn-notes.html"><i class="fa fa-check"></i><b>A</b> Lunch and Learn notes</a>
+<li class="chapter" data-level="29" data-path="open-ontario-data.html"><a href="open-ontario-data.html"><i class="fa fa-check"></i><b>29</b> Open Ontario Data</a>
+<ul>
+<li class="chapter" data-level="29.0.1" data-path="open-ontario-data.html"><a href="open-ontario-data.html#section-1"><i class="fa fa-check"></i><b>29.0.1</b> </a></li>
+</ul></li>
+<li class="chapter" data-level="30" data-path="performance-related-databases.html"><a href="performance-related-databases.html"><i class="fa fa-check"></i><b>30</b> Performance-related databases</a>
+<ul>
+<li class="chapter" data-level="30.1" data-path="performance-related-databases.html"><a href="performance-related-databases.html#pses-results-interactive-analysis-and-visualization"><i class="fa fa-check"></i><b>30.1</b> PSES Results interactive analysis and visualization:</a>
+<ul>
+<li class="chapter" data-level="30.1.1" data-path="performance-related-databases.html"><a href="performance-related-databases.html#other-pses-tools-and-dashboards"><i class="fa fa-check"></i><b>30.1.1</b> Other PSES tools and dashboards</a></li>
+</ul></li>
+<li class="chapter" data-level="30.2" data-path="performance-related-databases.html"><a href="performance-related-databases.html#tip-requests-dataset"><i class="fa fa-check"></i><b>30.2</b> TIP requests dataset</a></li>
+<li class="chapter" data-level="30.3" data-path="performance-related-databases.html"><a href="performance-related-databases.html#geo-mapped-current-historical-and-predicted-border-wait-times"><i class="fa fa-check"></i><b>30.3</b> Geo-mapped current, historical and predicted border wait times:</a></li>
+</ul></li>
+<li class="part"><span><b>VII Community Codes</b></span></li>
+<li class="chapter" data-level="31" data-path="lunch-and-learn-notes.html"><a href="lunch-and-learn-notes.html"><i class="fa fa-check"></i><b>31</b> Lunch and Learn notes</a>
 <ul>
 <li class="chapter" data-level="" data-path="lunch-and-learn-notes.html"><a href="lunch-and-learn-notes.html#interactive-outputs-in-r-without-shiny"><i class="fa fa-check"></i>Interactive Outputs in R without Shiny</a></li>
-<li class="chapter" data-level="A.1" data-path="lunch-and-learn-notes.html"><a href="lunch-and-learn-notes.html#geospatial-coding-and-visualization-with-r.-part-1"><i class="fa fa-check"></i><b>A.1</b> Geo/Spatial coding and visualization with R. Part 1:</a></li>
-<li class="chapter" data-level="A.2" data-path="lunch-and-learn-notes.html"><a href="lunch-and-learn-notes.html#text-analysis-with-r.-part-1"><i class="fa fa-check"></i><b>A.2</b> Text Analysis with R. Part 1:</a></li>
-<li class="chapter" data-level="A.3" data-path="lunch-and-learn-notes.html"><a href="lunch-and-learn-notes.html#dual-coding---python-and-r-unite"><i class="fa fa-check"></i><b>A.3</b> Dual Coding - Python and R unite !</a></li>
-<li class="chapter" data-level="A.4" data-path="lunch-and-learn-notes.html"><a href="lunch-and-learn-notes.html#working-with-ggtables"><i class="fa fa-check"></i><b>A.4</b> Working with ggtables</a></li>
-<li class="chapter" data-level="A.5" data-path="lunch-and-learn-notes.html"><a href="lunch-and-learn-notes.html#automate-common-look-and-feel-of-your-ggplot-graphs"><i class="fa fa-check"></i><b>A.5</b> Automate common look and feel of your ggplot graphs</a></li>
-<li class="chapter" data-level="A.6" data-path="lunch-and-learn-notes.html"><a href="lunch-and-learn-notes.html#automated-generation-of-report-cards"><i class="fa fa-check"></i><b>A.6</b> Automated generation of report cards</a></li>
-<li class="chapter" data-level="A.7" data-path="lunch-and-learn-notes.html"><a href="lunch-and-learn-notes.html#discussed-rstudio-webinars"><i class="fa fa-check"></i><b>A.7</b> Discussed RStudio Webinars</a></li>
+<li class="chapter" data-level="31.1" data-path="lunch-and-learn-notes.html"><a href="lunch-and-learn-notes.html#geospatial-coding-and-visualization-with-r.-part-1"><i class="fa fa-check"></i><b>31.1</b> Geo/Spatial coding and visualization with R. Part 1:</a></li>
+<li class="chapter" data-level="31.2" data-path="lunch-and-learn-notes.html"><a href="lunch-and-learn-notes.html#text-analysis-with-r.-part-1"><i class="fa fa-check"></i><b>31.2</b> Text Analysis with R. Part 1:</a></li>
+<li class="chapter" data-level="31.3" data-path="lunch-and-learn-notes.html"><a href="lunch-and-learn-notes.html#dual-coding---python-and-r-unite"><i class="fa fa-check"></i><b>31.3</b> Dual Coding - Python and R unite !</a></li>
+<li class="chapter" data-level="31.4" data-path="lunch-and-learn-notes.html"><a href="lunch-and-learn-notes.html#working-with-ggtables"><i class="fa fa-check"></i><b>31.4</b> Working with ggtables</a></li>
+<li class="chapter" data-level="31.5" data-path="lunch-and-learn-notes.html"><a href="lunch-and-learn-notes.html#automate-common-look-and-feel-of-your-ggplot-graphs"><i class="fa fa-check"></i><b>31.5</b> Automate common look and feel of your ggplot graphs</a></li>
+<li class="chapter" data-level="31.6" data-path="lunch-and-learn-notes.html"><a href="lunch-and-learn-notes.html#automated-generation-of-report-cards"><i class="fa fa-check"></i><b>31.6</b> Automated generation of report cards</a></li>
+<li class="chapter" data-level="31.7" data-path="lunch-and-learn-notes.html"><a href="lunch-and-learn-notes.html#discussed-rstudio-webinars"><i class="fa fa-check"></i><b>31.7</b> Discussed RStudio Webinars</a></li>
 </ul></li>
-<li class="chapter" data-level="B" data-path="canada-related-open-source-r-codes-and-packages.html"><a href="canada-related-open-source-r-codes-and-packages.html"><i class="fa fa-check"></i><b>B</b> Canada-related Open source R codes and packages</a>
+<li class="chapter" data-level="32" data-path="canada-related-open-source-r-codes-and-packages.html"><a href="canada-related-open-source-r-codes-and-packages.html"><i class="fa fa-check"></i><b>32</b> Canada-related Open source R codes and packages</a>
 <ul>
-<li class="chapter" data-level="B.1" data-path="canada-related-open-source-r-codes-and-packages.html"><a href="canada-related-open-source-r-codes-and-packages.html#packages-on-cran"><i class="fa fa-check"></i><b>B.1</b> Packages on CRAN</a></li>
-<li class="chapter" data-level="B.2" data-path="canada-related-open-source-r-codes-and-packages.html"><a href="canada-related-open-source-r-codes-and-packages.html#packages-not-on-cran"><i class="fa fa-check"></i><b>B.2</b> Packages not on CRAN</a></li>
-<li class="chapter" data-level="B.3" data-path="canada-related-open-source-r-codes-and-packages.html"><a href="canada-related-open-source-r-codes-and-packages.html#codes-on-github"><i class="fa fa-check"></i><b>B.3</b> Codes on GitHub</a>
+<li class="chapter" data-level="32.1" data-path="canada-related-open-source-r-codes-and-packages.html"><a href="canada-related-open-source-r-codes-and-packages.html#packages"><i class="fa fa-check"></i><b>32.1</b> Packages</a>
 <ul>
-<li class="chapter" data-level="B.3.1" data-path="canada-related-open-source-r-codes-and-packages.html"><a href="canada-related-open-source-r-codes-and-packages.html#expenditures-and-procurement"><i class="fa fa-check"></i><b>B.3.1</b> Expenditures and procurement</a></li>
-<li class="chapter" data-level="B.3.2" data-path="canada-related-open-source-r-codes-and-packages.html"><a href="canada-related-open-source-r-codes-and-packages.html#health-and-environment"><i class="fa fa-check"></i><b>B.3.2</b> Health and Environment</a></li>
-<li class="chapter" data-level="B.3.3" data-path="canada-related-open-source-r-codes-and-packages.html"><a href="canada-related-open-source-r-codes-and-packages.html#elections"><i class="fa fa-check"></i><b>B.3.3</b> Elections</a></li>
-<li class="chapter" data-level="B.3.4" data-path="canada-related-open-source-r-codes-and-packages.html"><a href="canada-related-open-source-r-codes-and-packages.html#ottawa"><i class="fa fa-check"></i><b>B.3.4</b> Ottawa</a></li>
-<li class="chapter" data-level="B.3.5" data-path="canada-related-open-source-r-codes-and-packages.html"><a href="canada-related-open-source-r-codes-and-packages.html#vancouver"><i class="fa fa-check"></i><b>B.3.5</b> Vancouver</a></li>
-<li class="chapter" data-level="B.3.6" data-path="canada-related-open-source-r-codes-and-packages.html"><a href="canada-related-open-source-r-codes-and-packages.html#other-related-packages"><i class="fa fa-check"></i><b>B.3.6</b> Other related packages</a></li>
+<li class="chapter" data-level="32.1.1" data-path="canada-related-open-source-r-codes-and-packages.html"><a href="canada-related-open-source-r-codes-and-packages.html#packages-on-cran"><i class="fa fa-check"></i><b>32.1.1</b> Packages on CRAN</a></li>
+</ul></li>
+<li class="chapter" data-level="32.2" data-path="canada-related-open-source-r-codes-and-packages.html"><a href="canada-related-open-source-r-codes-and-packages.html#packages-not-on-cran"><i class="fa fa-check"></i><b>32.2</b> Packages not on CRAN</a></li>
+<li class="chapter" data-level="32.3" data-path="canada-related-open-source-r-codes-and-packages.html"><a href="canada-related-open-source-r-codes-and-packages.html#codes-on-github"><i class="fa fa-check"></i><b>32.3</b> Codes on GitHub</a>
+<ul>
+<li class="chapter" data-level="32.3.1" data-path="canada-related-open-source-r-codes-and-packages.html"><a href="canada-related-open-source-r-codes-and-packages.html#expenditures-and-procurement"><i class="fa fa-check"></i><b>32.3.1</b> Expenditures and procurement</a></li>
+<li class="chapter" data-level="32.3.2" data-path="canada-related-open-source-r-codes-and-packages.html"><a href="canada-related-open-source-r-codes-and-packages.html#health-and-environment"><i class="fa fa-check"></i><b>32.3.2</b> Health and Environment</a></li>
+<li class="chapter" data-level="32.3.3" data-path="canada-related-open-source-r-codes-and-packages.html"><a href="canada-related-open-source-r-codes-and-packages.html#elections"><i class="fa fa-check"></i><b>32.3.3</b> Elections</a></li>
+<li class="chapter" data-level="32.3.4" data-path="canada-related-open-source-r-codes-and-packages.html"><a href="canada-related-open-source-r-codes-and-packages.html#ottawa"><i class="fa fa-check"></i><b>32.3.4</b> Ottawa</a></li>
+<li class="chapter" data-level="32.3.5" data-path="canada-related-open-source-r-codes-and-packages.html"><a href="canada-related-open-source-r-codes-and-packages.html#vancouver"><i class="fa fa-check"></i><b>32.3.5</b> Vancouver</a></li>
+<li class="chapter" data-level="32.3.6" data-path="canada-related-open-source-r-codes-and-packages.html"><a href="canada-related-open-source-r-codes-and-packages.html#other-related-packages"><i class="fa fa-check"></i><b>32.3.6</b> Other related packages</a></li>
 </ul></li>
 </ul></li>
 <li class="divider"></li>
-<li><center><a   href="https://bookdown.org/yihui/bookdown/">
-Published with bookdown</a></center></li>
+<li><a   href="https://bookdown.org/yihui/bookdown/">
+Published with bookdown</a>/li>
 
 </ul>
 
@@ -471,12 +580,538 @@ A good place to start is the “stylo” package (<a href="https://github.com/co
 Is this focused on English language text? Are there lexicons or libraries for comparison within other languages (e.g., French)?</p>
 <p>A: Stylo works well with quite a few non-English languages. French, for example, is supported, as are a number of languages with non-Latin alphabets like Arabic and Korean.</p>
 </div>
-<div id="results-from-international-methodology-symposium" class="section level2" number="19.3">
-<h2><span class="header-section-number">19.3</span> results from International Methodology Symposium</h2>
+<div id="related-work-at-international-methodology-symposium" class="section level2" number="19.3">
+<h2><span class="header-section-number">19.3</span> Related work at International Methodology Symposium</h2>
 <p>Two presentations at <a href="https://www.statcan.gc.ca/en/conferences/symposium2021/program">International Methodology Symposium</a> were about Text Analysis with R, with great ideas from both:</p>
-<p>11B-4 by Andrew Stelmach from StatCan: used <code>library(fastText)</code> - a very powerful package from facebook AI team for efficient learning of word representations and sentence classification.</p>
-<p>11B-2 by Dave Campbell from Carleton U: used the approach that we discussed at L&amp;L on October 9 (based on bag of words cosine distance / correlation) for matching beer products description - <a href="https://gccode.ssc-spc.gc.ca/r4gc/resources/text/" class="uri">https://gccode.ssc-spc.gc.ca/r4gc/resources/text/</a>), but addtionally applied SVD (singular value decomposition) to reduce comparison to the most imporant words, thus reducing significantly the dimension and speed.</p>
+<ul>
+<li><p>11B-4 by Andrew Stelmach from StatCan: used <code>library(fastText)</code> - a very powerful package from facebook AI team for efficient learning of word representations and sentence classification.</p></li>
+<li><p>11B-2 by Dave Campbell from Carleton U: used the approach that we discussed at L&amp;L on October 9 (based on bag of words cosine distance / correlation) for matching beer products description - <a href="https://gccode.ssc-spc.gc.ca/r4gc/resources/text/" class="uri">https://gccode.ssc-spc.gc.ca/r4gc/resources/text/</a>), but addtionally applied SVD (singular value decomposition) to reduce comparison to the most imporant words, thus reducing significantly the dimension and speed.</p></li>
+</ul>
 <p>You can find their decks here: <a href="https://drive.google.com/drive/folders/1TfuNmG3V8IEKDNNTcMZz7_YCKgqVVBju" class="uri">https://drive.google.com/drive/folders/1TfuNmG3V8IEKDNNTcMZz7_YCKgqVVBju</a></p>
+</div>
+<div id="useful-code-snippets" class="section level2" number="19.4">
+<h2><span class="header-section-number">19.4</span> Useful code snippets</h2>
+<div id="basic-cleaning-remove-accents-benchmarking" class="section level3" number="19.4.1">
+<h3><span class="header-section-number">19.4.1</span> Basic cleaning : Remove accents (benchmarking)</h3>
+<pre><code>
+dtCases &lt;- fread(&quot;https://github.com/ishaberry/Covid19Canada/raw/master/cases.csv&quot;, stringsAsFactors = F )
+dtCases %&gt;% dim
+system.time(dtCases [, city0 := health_region])
+system.time(dtCases [, city1 := base::iconv (health_region, from=&quot;UTF-8&quot;, to=&quot;ASCII//TRANSLIT&quot;)])
+system.time(dtCases [, city2 := textclean::replace_non_ascii (health_region)])
+system.time(dtCases [, city3 := stringi::stri_trans_general (health_region,id = &quot;Latin-ASCII&quot;)])
+dtCases[city0!=city1, city0:city3] %&gt;% unique
+
+
+microbenchmark::microbenchmark(  
+  dtCases [, city0 := iconv (health_region, to=&quot;ASCII//TRANSLIT&quot;)],
+  dtCases [, city1 := iconv (health_region, to=&quot;ASCII//TRANSLIT&quot;)],
+  dtCases [, city2 := textclean::replace_non_ascii (health_region)],
+  dtCases [, city3 := stringi::stri_trans_general (health_region,id = &quot;Latin-ASCII&quot;)],
+  times=10)
+
+# Unit: milliseconds
+# expr       min        lq
+# dtCases[, `:=`(city0, iconv(health_region, to = &quot;ASCII//TRANSLIT&quot;))]  166.8094  168.8169
+# dtCases[, `:=`(city1, iconv(health_region, to = &quot;ASCII//TRANSLIT&quot;))]  165.9741  168.5937
+# dtCases[, `:=`(city2, textclean::replace_non_ascii(health_region))] 8757.1358 8867.7838
+# dtCases[, `:=`(city3, stringi::stri_trans_general(health_region,      id = &quot;Latin-ASCII&quot;))] 4204.2102 4230.9790
+# mean    median        uq       max neval
+# 172.8043  172.4714  174.7670  181.1422    10
+# 173.8419  171.0345  172.6113  204.4243    10
+# 9088.6954 9049.1962 9273.6495 9545.8301    10
+# 4301.7987 4293.4896 4339.4618 4430.2948    10</code></pre>
+</div>
+<div id="text-cleaning" class="section level3" number="19.4.2">
+<h3><span class="header-section-number">19.4.2</span> Text cleaning</h3>
+<pre><code>library(textclean)
+# library(textshape) #with(DATA, split_portion(state, n.words = 10))
+# https://github.com/trinker/textclean
+
+if(F) {
+  mgsub(textclean::DATA$state, c(&quot;i&quot;, &quot;it&quot;), c(&quot;&lt;&lt;I&gt;&gt;&quot;, &quot;[[IT]]&quot;))
+  mgsub(DATA$state, &quot;[[:punct:]]&quot;, &quot;&lt;&lt;PUNCT&gt;&gt;&quot;, fixed = FALSE)
+  x &lt;- c(
+    &quot;&lt;bold&gt;Random&lt;/bold&gt; text with symbols: &amp;nbsp; &amp;lt; &amp;gt; &amp;amp; &amp;quot; &amp;apos;&quot;,
+    &quot;&lt;p&gt;More text&lt;/p&gt; &amp;cent; &amp;pound; &amp;yen; &amp;euro; &amp;copy; &amp;reg;&quot;,
+    &quot;Welcome to A I: the best W O R L D!&quot;,
+    &quot;6 Ekstr\xf8m&quot;, &quot;J\xf6reskog&quot;, &quot;bi\xdfchen Z\xfcrcher&quot;,
+    &quot;I&#39;m liiiike whyyyyy me?&quot;, &quot;Wwwhhatttt!&quot;
+  )
+  
+  replace_html(x)
+  replace_kern(x)
+  x;  Encoding(x) &lt;- &quot;latin1&quot;; x
+  replace_non_ascii(x)
+  
+  # Tokens
+  ## Set Up the Tokens to Replace
+  
+  lexicon::grady_augmented # 122806 #English words
+  
+  lexicon::common_names # 5493 #Names
+  nms &lt;- gsub(&quot;(^.)(.*)&quot;, &quot;\\U\\1\\L\\2&quot;, lexicon::common_names, perl = TRUE)
+  head(nms)
+  
+  fuzzyjoin::misspellings %&gt;% nrow() #4505
+  
+  replace_white(x)
+  replace_word_elongation(x)
+  
+  
+}
+
+cleanWords &lt;- function(phrase)  {
+  # cleanWords &lt;- function(phrase, changecase = c(&quot;no&quot;, &quot;upper&quot;, &quot;lower&quot;, &quot;title&quot;))  {
+  phrase %&gt;% 
+    # gsub(&quot;[^[:alnum:]]&quot;, &quot;&quot;, .) %&gt;%
+    gsub(&quot;[^[A-Za-z0-9 -]]&quot;, &quot;&quot;, .) %&gt;%
+    gsub(&quot; {2,}&quot;, &quot; &quot;, .) 
+  # %&gt;%
+  # iconv(to=&quot;ASCII//TRANSLIT&quot;)     
+  # replace_non_ascii
+  # str_to_lower()
+  # ifelse(changecase == &quot;upper&quot;, str_to_upper(),
+  #        ifelse (changecase == &quot;lower&quot;, str_to_lower(),
+  #                ifelse(changecase == &quot;title&quot;, str_to_title(),
+  #                       .)
+  #        )
+  # )
+}
+
+arrayTranslitFromCyrilic &lt;- function (slovo=&quot;Дмитрий Городничий&quot;) {
+  c(
+    slovo %&gt;% stri_trans_general(&quot;ukrainian-Latin/bgn&quot;)%&gt;% cleanWords,
+    slovo %&gt;% stri_trans_general(&quot;Russian-Latin/bgn&quot;)%&gt;% cleanWords,
+    slovo %&gt;% stri_trans_general(&quot;Bulgarian-Latin/bgn&quot;)%&gt;% cleanWords,
+    slovo %&gt;% stri_trans_general(&quot;Belarusian-Latin/bgn&quot;)%&gt;% cleanWords,
+    slovo %&gt;% stri_trans_general(&quot;Serbian-Latin/bgn&quot;)%&gt;% cleanWords,
+    slovo %&gt;% stri_trans_general(&quot;cyrillic-latin&quot;)%&gt;% cleanWords
+  )
+}
+
+if (F) {
+  # library(stringi)
+  dt &lt;- stri_trans_list() %&gt;% data.table () %&gt;% setnames(&quot;coding&quot;)#
+  dt[coding %ilike% &quot;Latin&quot;][]
+  dt[coding %ilike% &quot;cyr&quot;]
+  dt[coding %ilike% &quot;ascii&quot;]
+  dt1 &lt;- iconvlist() %&gt;% data.table () %&gt;% setnames(&quot;coding&quot;)#
+  dt1[coding %ilike% &quot;ascii&quot;]
+  dt1[coding %ilike% &quot;ASCII&quot;]
+  dt1[coding %ilike% &quot;TRANSLIT&quot;]
+  
+  &quot;Montréal&quot; %&gt;% iconv(to=&quot;ASCII//TRANSLIT&quot;)
+  
+  c(&quot;шерсть&quot;,&quot;женщина&quot;, &quot;челюсть&quot;, &quot;Володимир Зеленський&quot;, &quot;Дмитрий Городничий&quot;) %&gt;% 
+    sapply( translitFromCyrilic )
+  
+}</code></pre>
+</div>
+<div id="extracting-re-ordering-words-in-a-string" class="section level3" number="19.4.3">
+<h3><span class="header-section-number">19.4.3</span> Extracting, re-ordering words in a string</h3>
+<p><a href="https://stackoverflow.com/questions/55244680/extract-words-in-between-two-commas-in-r" class="uri">https://stackoverflow.com/questions/55244680/extract-words-in-between-two-commas-in-r</a></p>
+<pre><code>
+word &lt;- &#39;Fu Tien Mansion, Taikoo Shing, Hong Kong&#39;
+# and I want to extract the word in between the two commas and concatenate it with the first word, what regex to use?
+# to get this: &#39;Taikoo Shing Fu Tien Mansion&#39; 
+
+# 1: sub  ----
+sub(&quot;^([^,]+),\\s*([^,]+),.*&quot;, &quot;\\2 \\1&quot;, word)
+#[1] &quot;Taikoo Shing Fu Tien Mansion&quot;
+
+# 2: -----
+
+x &lt;- base::strsplit(word, &quot;,&quot;)[[1]]
+paste(x[2], x[1])
+
+# 3 -----
+paste(
+    trimws( # Remove Leading/Trailing Whitespace
+        sapply(strsplit(word,&quot;,&quot;), `[`, 2)
+        ), 
+    trimws(sapply(strsplit(word,&quot;,&quot;), `[`, 1))
+    )</code></pre>
+</div>
+<div id="automatically-finding-removing-common-parts-in-strings" class="section level3" number="19.4.4">
+<h3><span class="header-section-number">19.4.4</span> Automatically finding / removing common parts in strings</h3>
+<p><a href="https://stackoverflow.com/questions/48701107/find-length-of-overlap-in-strings" class="uri">https://stackoverflow.com/questions/48701107/find-length-of-overlap-in-strings</a></p>
+<pre><code>findStrOverlap &lt;- function(str1, str2, ignore.case = FALSE) { # , verbose = FALSE
+
+  if(ignore.case) {
+    str1 &lt;- tolower(str1);    str2 &lt;- tolower(str2)
+  }
+  if(nchar(str1) &lt; nchar(str2)) {
+    x &lt;- str2;    str2 &lt;- str1;    str1 &lt;- x
+  }
+    
+  x &lt;- strsplit(str2, &quot;&quot;)[[1L]]
+  n &lt;- length(x)
+  s &lt;- sequence(seq_len(n))
+  s &lt;- split(s, cumsum(s == 1L))
+  s &lt;- rep(list(s), n)
+
+  for(i in seq_along(s)) {
+    s[[i]] &lt;- lapply(s[[i]], function(x) {
+      x &lt;- x + (i-1L)
+      x[x &lt;= n]
+    })
+    s[[i]] &lt;- unique(s[[i]])
+  }
+
+  s &lt;- unlist(s, recursive = FALSE)
+  s &lt;- unique(s[order(-lengths(s))])
+
+  i &lt;- 1L
+  len_s &lt;- length(s)
+  while(i &lt; len_s) {
+    lcs &lt;- paste(x[s[[i]]], collapse = &quot;&quot;)
+    # if(verbose) cat(&quot;now checking:&quot;, lcs, &quot;\n&quot;)
+    check &lt;- grepl(lcs, str1, fixed = TRUE)
+    if(check) {
+        # if(verbose) cat(paste0(&quot;Found: &#39;&quot;,lcs,&quot;&#39; (length =&quot;, nchar(lcs), &quot;) \n&quot;)) 
+        break
+    } else {
+      i &lt;- i + 1L 
+    }
+  }
+  return (lcs)
+}
+
+library(data.table)
+dt &lt;- cansim::get_cansim(&quot;13-10-0810-01&quot;) %&gt;% setDT(dt) 
+dt &lt;- data.table::data.table(
+    GEO=c( # From CANSIM Table
+        &quot;Newfoundland and Labrador, place of occurrence&quot;,
+        &quot;Prince Edward Island, place of occurrence&quot;,     
+        &quot;Nova Scotia, place of occurrence&quot;
+))
+
+aStr &lt;- dt$GEO
+removeCommonStrPart &lt;- function(aStr) {
+    str0 &lt;- findStrOverlap( aStr[1],  aStr[2]); str0
+    str_replace(aStr, str0, &quot;&quot;)
+}
+
+dt[, GEO:=removeCommonStrPart(GEO)][]
+#                         GEO
+#                      &lt;char&gt;
+#1: Newfoundland and Labrador
+#2:      Prince Edward Island
+#3:               Nova Scotia</code></pre>
+</div>
+<div id="useful-packages-1" class="section level3" number="19.4.5">
+<h3><span class="header-section-number">19.4.5</span> Useful packages</h3>
+<p><code>stringdist</code></p>
+<pre><code>stringdist::stringdist(aStr[1],  aStr[2], method=&quot;lcs&quot;) # 29
+stringdist::stringdistmatrix(dt$GEO, dt$GEO, method=&quot;lcs&quot;) %&gt;% as.data.table 
+stringdist::stringdist(aStr[1],  aStr[2], method=&#39;qgram&#39;,q=2) # 37</code></pre>
+<div id="not-as-useful-." class="section level4" number="19.4.5.1">
+<h4><span class="header-section-number">19.4.5.1</span> Not as useful ….</h4>
+<p><code>tidystringdist</code> - converts stringdist results into tibble. not optimized, very slow<br />
+Better to use write code yourself to do that using data.table !</p>
+</div>
+<div id="language-detection-and-converting" class="section level4" number="19.4.5.2">
+<h4><span class="header-section-number">19.4.5.2</span> Language Detection and converting</h4>
+<p><a href="https://stackoverflow.com/questions/8078604/detect-text-language-in-r" class="uri">https://stackoverflow.com/questions/8078604/detect-text-language-in-r</a></p>
+<pre><code># 2.1 ----
+library(textcat)
+# The textcat Package for n-Gram Based Text Categorization in R. Journal of Statistical Software, http://www.jstatsoft.org/v52/i06/
+
+# 2.2 cld2 - best + archived cran ----
+
+library(cld2) # the fastest of all
+# library(cld3) #
+
+if( F) {
+  url &lt;- &quot;http://cran.us.r-project.org/src/contrib/Archive/cldr/cldr_1.1.0.tar.gz&quot;
+  pkgFile&lt;-&quot;cldr_1.1.0.tar.gz&quot;
+  download.file(url = url, destfile = pkgFile)
+  install.packages(pkgs=pkgFile, type=&quot;source&quot;, repos=NULL)
+  unlink(pkgFile)
+  # or devtools::install_version(&quot;cldr&quot;,version=&quot;1.1.0&quot;)
+  
+  #usage
+  library(cldr)
+  demo(cldr)
+}
+
+# The cldr package in a previous answer is not any more available on CRAN and may be difficult to install. However, Google&#39;s (Chromium&#39;s) cld libraries are now available in R through other dedicated packages, cld2 and cld3. 
+
+# 2.3 ----
+# An approach in R would be to keep a text file of English words. I have several of these including one from http://www.sil.org/linguistics/wordlists/english/. After sourcing the .txt file you can use this file to match against each tweet. Something like:
+
+lapply(tweets, function(x) EnglishWordComparisonList %in% x)
+
+
+# 2.9 benchmarking - data! ----
+
+data(reuters, package = &quot;kernlab&quot;) # a corpus of articles in english
+reuters
+length(reuters)
+# [1] 40
+sapply(reuters ,nchar)
+# [1] 1311  800  511 2350  343  388 3705  604  254  239  632  607  867  240
+# [15]  234  172  538  887 2500 1030  538 2681  338  402  563 2825 2800  947
+# [29] 2156 2103 2283  604  632  602  642  892 1187  472 1829  367
+text &lt;- unlist(reuters)
+
+microbenchmark::microbenchmark(
+  textcat = textcat::textcat(text),
+  cld2 = cld2::detect_language(text),
+  cld3 = cld3::detect_language(text),
+  detect_from_sw = detect_from_sw(text,c(&quot;english&quot;,&quot;french&quot;,&quot;german&quot;)),
+  times=10)
+
+
+# Text analysis ----
+
+# . reading / shaping text ----
+
+# ???
+library(textshape)
+# https://github.com/trinker/textshape
+# textshape is small suite of text reshaping and restructuring functions. Many of these functions are descended from tools in the qdapTools package. This brings reshaping tools under one roof with specific functionality of the package limited to text reshaping.
+# This package is meant to be used jointly with the textclean package, which provides cleaning and text normalization functionality. Additionally, the textreadr package is designed to import various common text data sources into R for reshaping and cleaning.
+
+library(textreadr)
+# pdf_doc &lt;- system.file(&quot;docs/rl10075oralhistoryst002.pdf&quot;, package = &quot;textreadr&quot;)
+# html_doc &lt;- system.file(&#39;docs/textreadr_creed.html&#39;, package = &quot;textreadr&quot;)
+# 
+#Some other implementations of text readers in R:
+# tm
+# readtext
+
+&#39;https://github.com/trinker/textreadr/raw/master/inst/docs/pres.deb1.docx&#39; %&gt;%
+  download() %&gt;%
+  read_docx() %&gt;%
+  head(3)
+# &gt; Plagiarism detection ----  
+
+
+
+# https://cran.r-project.org/web/packages/RNewsflow/vignettes/RNewsflow.html
+
+library(RNewsflow)
+
+
+
+#it also installs
+library(fastmatch)
+library(quanteda)
+rnewsflow_dfm 
+
+# https://cran.r-project.org/web/packages/corpustools/vignettes/corpustools.html
+
+library(corpustools)
+# corpustools: Managing, Querying and Analyzing Tokenized Text
+# Provides text analysis in R, focusing on the use of a tokenized text format. 
+
+
+
+# syuzhet: Extracts Sentiment and Sentiment-Derived Plot Arcs from Text
+library(syuzhet)
+
+
+# 5 &gt; Web crawling ----
+
+
+# fuzzyjoin::misspellings ------
+## Not run: 
+library(rvest)
+library(readr)
+library(dplyr)
+library(stringr)
+library(tidyr)
+
+u &lt;- &quot;https://en.wikipedia.org/wiki/Wikipedia:Lists_of_common_misspellings/For_machines&quot;
+h &lt;- read_html(u)
+
+misspellings &lt;- h %&gt;%
+  html_nodes(&quot;pre&quot;) %&gt;%
+  html_text() %&gt;%
+  readr::read_delim(col_names = c(&quot;misspelling&quot;, &quot;correct&quot;), delim = &quot;&gt;&quot;,
+                    skip = 1) %&gt;%
+  mutate(misspelling = str_sub(misspelling, 1, -2)) %&gt;%
+  unnest(correct = str_split(correct, &quot;, &quot;)) %&gt;%
+  filter(Encoding(correct) != &quot;UTF-8&quot;)
+
+## End(Not run)
+
+
+## selectr
+
+# https://cran.r-project.org/web/packages/selectr/
+#   https://sjp.co.nz/projects/selectr
+# 
+#   selectr: Translate CSS Selectors to XPath Expressions
+# Translates a CSS3 selector into an equivalent XPath expression. This allows us to use CSS selectors when working with the XML package as it can only evaluate XPath expressions. Also provided are convenience functions useful for using CSS selectors on XML nodes. This package is a port of the Python package &#39;cssselect&#39; (&lt;https://cssselect.readthedocs.io/&gt;).
+# 
+# Suggests: testthat, XML, xml2
+# Reverse imports:  cliapp, ganalytics, Rcrawler, rvest, wikilake
+
+
+##  Rcrawler
+
+# Rcrawler: Web Crawler and Scraper
+# Performs parallel web crawling and web scraping. It is designed to crawl, parse and store web pages to produce data that can be directly used for analysis application.
+# https://cran.r-project.org/web/packages/Rcrawler
+# https://github.com/salimk/Rcrawler/
+#   RCrawler: An R package for parallel web crawling and scraping,  https://www.sciencedirect.com/science/article/pii/S2352711017300110?via%3Dihub
+# 
+# Version:  0.1.9-1
+# Imports:  httr, xml2, data.table, foreach, doParallel, parallel, selectr, webdriver, callr, jsonlite
+# Published:    2018-11-11
+# 
+# https://cran.r-project.org/web/packages/xml2/index.html</code></pre>
+</div>
+</div>
+<div id="cleantexttext-clean-text" class="section level3" number="19.4.6">
+<h3><span class="header-section-number">19.4.6</span> <code>cleanText(text)</code>: clean text</h3>
+<div id="data-cleaning-tasks" class="section level4" number="19.4.6.1">
+<h4><span class="header-section-number">19.4.6.1</span> Data cleaning Tasks:</h4>
+<!-- https://github.com/trinker/textclean#dates -->
+<ul>
+<li>Stripping non relevant symbols, including spaces</li>
+<li>Contractions and Incomplete words</li>
+<li>abbreviations and slang</li>
+<li>Kerning (“B O M B!”)</li>
+<li>Elongations (looong)</li>
+<li>converting from Non-ASCII, removing accents</li>
+<li>cleaning Numbers: 99,999; 99.999; 99.99%; 99,99%; 2nd</li>
+<li>normalizing words to a common form (eg Title)</li>
+<li>fixing common typos</li>
+</ul>
+<!-- ```{r} -->
+<!-- textInput("typedFreeText", "Type anything you want",  -->
+<!--           # value=as.character(x),  -->
+<!--           width="100%") -->
+<!-- ``` -->
+<!-- Example:  -->
+</div>
+<div id="example-1-1" class="section level4" number="19.4.6.2">
+<h4><span class="header-section-number">19.4.6.2</span> Example 1:</h4>
+<pre><code>
+x &lt;- c(&quot;i like&quot;, &quot;&lt;p&gt;i want. &lt;/p&gt;. thet them ther .&quot;, &quot;I am ! that|&quot;, &quot;&quot;, NA, 
+       &quot;&amp;quot;they&amp;quot; they,were there&quot;, &quot;.&quot;, &quot;   &quot;, &quot;?&quot;, &quot;3;&quot;, &quot;I like goud eggs!&quot;, 
+       &quot;bi\xdfchen Z\xfcrcher&quot;, &quot;i 4like...&quot;, &quot;\\tgreat&quot;,  &quot;She said \&quot;yes\&quot;&quot;)
+Encoding(x) &lt;- &quot;latin1&quot;
+x &lt;- as.factor(x)
+
+
+renderPrint(x)
+
+
+### Problem diagnosis
+
+check_text(x)
+</code></pre>
+<!-- # check_text(x) %>% print() %>% data.table() %>% xtable::xtable() -->
+<!-- # strip(textclean::DATA$state, apostrophe.remove = TRUE) -->
+</div>
+</div>
+<div id="convert-text-to-date-or-timestamp" class="section level3" number="19.4.7">
+<h3><span class="header-section-number">19.4.7</span> Convert Text to Date or Timestamp</h3>
+<pre><code>  
+text2date &lt;- function(a) {
+  
+  a &lt;- a %&gt;% str_replace(&quot;XII&quot;, &quot;12&quot;) %&gt;%
+    str_replace(&quot;XI&quot;, &quot;11&quot;)%&gt;%
+    str_replace(&quot;IX&quot;, &quot;9&quot;)%&gt;%
+    str_replace(&quot;X&quot;, &quot;10&quot;)%&gt;%
+    str_replace(&quot;VIII&quot;, &quot;8&quot;)%&gt;%
+    str_replace(&quot;VII&quot;, &quot;7&quot;)%&gt;%
+    str_replace(&quot;VI&quot;, &quot;6&quot;)%&gt;%
+    str_replace(&quot;IV&quot;, &quot;4&quot;)%&gt;%
+    str_replace(&quot;V&quot;, &quot;5&quot;)%&gt;%
+    str_replace(&quot;III&quot;, &quot;3&quot;)%&gt;%
+    str_replace(&quot;II&quot;, &quot;2&quot;)%&gt;%
+    str_replace(&quot;I&quot;, &quot;1&quot;)
+  
+  x &lt;-  dmy(a);
+  if (is.na(x)) x &lt;-  dym(a)
+  if (is.na(x)) x &lt;-  ymd(a)
+  if (is.na(x)) x &lt;-  ydm(a)
+  if (is.na(x)) x &lt;-  mdy(a)
+  if (is.na(x)) x &lt;-  myd(a)
+  if (is.na(x)) x &lt;-  ymd_hms(a)
+  
+  if (year(x)&gt;3000) x &lt;- x - years(100)
+  return (x)
+}
+
+# text2dtDate
+text2dtYYMMDD &lt;- function(a, text=F, date=F, timestamp=F) {
+  x &lt;- text2date(a)
+  dt &lt;- data.table(YY=year(x) %&gt;% as.integer(), MM=month(x)%&gt;% as.integer(), DD=day(x)%&gt;% as.integer() )
+  # cols &lt;- 1:ncol(dt)
+  # dt[, (cols):=lapply(.SD, as.integer), .SDcols=cols]
+  if (text)  dt %&lt;&gt;% cbind(data.table(text=a))
+  if (date)  dt %&lt;&gt;% cbind(data.table(date=x))
+  if (timestamp)  dt %&lt;&gt;% cbind(data.table(timestamp=now(&quot;EST&quot;)))
+  return(dt)
+}
+
+
+text2timestamp &lt;- function (a) {
+  x &lt;-  ymd_hms (a);
+  if (is.na(x)) x &lt;- ymd_hm (a)
+  if (is.na(x)) x &lt;- ymd_h (a)
+  if (is.na(x)) x &lt;- dmy_hms (a)
+  if (is.na(x)) x &lt;- dmy_hm (a)
+  if (is.na(x)) x &lt;- dmy_h (a)
+  if (is.na(x)) x &lt;- mdy_hms (a)
+  if (is.na(x)) x &lt;- mdy_hm (a)
+  if (is.na(x)) x &lt;- mdy_h (a)
+  if (is.na(x)) x &lt;- ydm_hms (a)
+  if (is.na(x)) x &lt;- ydm_hm (a)
+  if (is.na(x)) x &lt;- ydm_h (a) 
+  if (is.na(x)) x &lt;- text2date (a)
+  return(x)
+}</code></pre>
+</div>
+<div id="transliteration-cleaning" class="section level3" number="19.4.8">
+<h3><span class="header-section-number">19.4.8</span> Transliteration &amp; cleaning</h3>
+<pre><code>  cleanPhrase &lt;- function(phrase)  {
+  
+  phrase %&gt;% 
+    gsub(&quot;[^[:alnum:]]&quot;, &quot;&quot;, .) %&gt;%
+    gsub(&quot;[^[A-Za-z0-9 -]]&quot;, &quot;&quot;, .) %&gt;%
+    gsub(&quot; {2,}&quot;, &quot; &quot;, .)   %&gt;%
+    iconv(to=&quot;ASCII//TRANSLIT&quot;)    %&gt;%
+    textclean::replace_non_ascii  %&gt;%
+    stringr::str_to_lower()
+}
+
+cleanWords &lt;- function(phrase)  {
+  # cleanWords &lt;- function(phrase, changecase = c(&quot;no&quot;, &quot;upper&quot;, &quot;lower&quot;, &quot;title&quot;))  {
+  phrase %&gt;% 
+    # gsub(&quot;[^[:alnum:]]&quot;, &quot;&quot;, .) %&gt;%
+    gsub(&quot;[^[A-Za-z0-9 -]]&quot;, &quot;&quot;, .) %&gt;%
+    gsub(&quot; {2,}&quot;, &quot; &quot;, .) 
+  # %&gt;%
+  # iconv(to=&quot;ASCII//TRANSLIT&quot;)     
+  # replace_non_ascii
+  # str_to_lower()
+  # ifelse(changecase == &quot;upper&quot;, str_to_upper(),
+  #        ifelse (changecase == &quot;lower&quot;, str_to_lower(),
+  #                ifelse(changecase == &quot;title&quot;, str_to_title(),
+  #                       .)
+  #        )
+  # )
+}
+
+arrayTranslitFromCyrilic &lt;- function (slovo=&quot;Дмитрий Городничий&quot;) {
+  c(
+    slovo %&gt;% stri_trans_general(&quot;ukrainian-Latin/bgn&quot;)%&gt;% cleanWords,
+    slovo %&gt;% stri_trans_general(&quot;Russian-Latin/bgn&quot;)%&gt;% cleanWords,
+    slovo %&gt;% stri_trans_general(&quot;Bulgarian-Latin/bgn&quot;)%&gt;% cleanWords,
+    slovo %&gt;% stri_trans_general(&quot;Belarusian-Latin/bgn&quot;)%&gt;% cleanWords,
+    slovo %&gt;% stri_trans_general(&quot;Serbian-Latin/bgn&quot;)%&gt;% cleanWords,
+    slovo %&gt;% stri_trans_general(&quot;cyrillic-latin&quot;)%&gt;% cleanWords
+  )
+}</code></pre>
+</div>
 </div>
 </div>
             </section>
@@ -484,11 +1119,12 @@ Is this focused on English language text? Are there lexicons or libraries for co
           </div>
         </div>
       </div>
-<a href="record-linking-and-other-data-engineering-tasks-in-r.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="data-engineering-record-linking-and-deduplication.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 <a href="statistical-tests-and-mixed-effects-analysis.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -528,12 +1164,8 @@ gitbook.start({
 "text": null
 },
 "download": ["LL-book.epub", "LL-book.pdf"],
-"search": {
-"engine": "fuse",
-"options": null
-},
 "toc": {
-"collapse": "subsection"
+"collapse": "section"
 }
 });
 });

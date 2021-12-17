@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>18 Record Linking and other Data Engineering tasks in R | The R4GC Book</title>
+  <title>28 Health-related | The R4GC Book</title>
   <meta name="description" content="Notes and tutorials from ‘Lunch and Learn Data Science with R’ weekly meetups organized by the R4GC Community" />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="18 Record Linking and other Data Engineering tasks in R | The R4GC Book" />
+  <meta property="og:title" content="28 Health-related | The R4GC Book" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="https://open-canada.github.io/r4gc" />
   <meta property="og:image" content="https://open-canada.github.io/r4gc/images/r4gc-banner.png" />
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="open-canada/r4gc" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="18 Record Linking and other Data Engineering tasks in R | The R4GC Book" />
+  <meta name="twitter:title" content="28 Health-related | The R4GC Book" />
   
   <meta name="twitter:description" content="Notes and tutorials from ‘Lunch and Learn Data Science with R’ weekly meetups organized by the R4GC Community" />
   <meta name="twitter:image" content="https://open-canada.github.io/r4gc/images/r4gc-banner.png" />
@@ -29,11 +29,10 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="images/R4GC.ico" type="image/x-icon" />
-<link rel="prev" href="geospatial-coding-and-visualization-in-r.html"/>
-<link rel="next" href="text-analysis-in-r.html"/>
+<link rel="prev" href="gc-data.html"/>
+<link rel="next" href="open-ontario-data.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
-<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -49,6 +48,8 @@
 
 
 
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 <link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
 
@@ -57,7 +58,6 @@
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
@@ -248,10 +248,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 </ul></li>
 <li class="part"><span><b>II Art of R programming</b></span></li>
-<li class="chapter" data-level="7" data-path="use-r-efficiently-with-data.html"><a href="use-r-efficiently-with-data.html"><i class="fa fa-check"></i><b>7</b> Use R efficiently with data.table!</a>
+<li class="chapter" data-level="7" data-path="use-r-efficiently-with-data-table.html"><a href="use-r-efficiently-with-data-table.html"><i class="fa fa-check"></i><b>7</b> Use R efficiently with data.table!</a>
 <ul>
-<li class="chapter" data-level="7.1" data-path="use-r-efficiently-with-data.html"><a href="use-r-efficiently-with-data.html#data.table-vs.-dplyr"><i class="fa fa-check"></i><b>7.1</b> data.table vs. dplyr</a></li>
-<li class="chapter" data-level="7.2" data-path="use-r-efficiently-with-data.html"><a href="use-r-efficiently-with-data.html#extensions-of-data.table"><i class="fa fa-check"></i><b>7.2</b> Extensions of data.table</a></li>
+<li class="chapter" data-level="7.1" data-path="use-r-efficiently-with-data-table.html"><a href="use-r-efficiently-with-data-table.html#data.table-vs.-dplyr"><i class="fa fa-check"></i><b>7.1</b> data.table vs. dplyr</a></li>
+<li class="chapter" data-level="7.2" data-path="use-r-efficiently-with-data-table.html"><a href="use-r-efficiently-with-data-table.html#extensions-of-data.table"><i class="fa fa-check"></i><b>7.2</b> Extensions of data.table</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="python-and-r-unite.html"><a href="python-and-r-unite.html"><i class="fa fa-check"></i><b>8</b> Python and R unite!</a></li>
 <li class="chapter" data-level="9" data-path="from-excel-to-r.html"><a href="from-excel-to-r.html"><i class="fa fa-check"></i><b>9</b> From Excel to R</a></li>
@@ -295,6 +295,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="13.1" data-path="r-markdown-for-literate-programming-and-automated-reports.html"><a href="r-markdown-for-literate-programming-and-automated-reports.html#resources"><i class="fa fa-check"></i><b>13.1</b> Resources</a></li>
 <li class="chapter" data-level="13.2" data-path="r-markdown-for-literate-programming-and-automated-reports.html"><a href="r-markdown-for-literate-programming-and-automated-reports.html#automated-generation-of-multiple-pdf-files"><i class="fa fa-check"></i><b>13.2</b> Automated generation of multiple PDF files</a></li>
+<li class="chapter" data-level="13.3" data-path="r-markdown-for-literate-programming-and-automated-reports.html"><a href="r-markdown-for-literate-programming-and-automated-reports.html#useful-tricks-and-tips"><i class="fa fa-check"></i><b>13.3</b> Useful tricks and tips</a>
+<ul>
+<li class="chapter" data-level="13.3.1" data-path="r-markdown-for-literate-programming-and-automated-reports.html"><a href="r-markdown-for-literate-programming-and-automated-reports.html#in-rstudio-editor"><i class="fa fa-check"></i><b>13.3.1</b> In RStudio editor</a></li>
+<li class="chapter" data-level="13.3.2" data-path="r-markdown-for-literate-programming-and-automated-reports.html"><a href="r-markdown-for-literate-programming-and-automated-reports.html#spliting-rmd-in-chunks"><i class="fa fa-check"></i><b>13.3.2</b> Spliting Rmd in chunks</a></li>
+<li class="chapter" data-level="13.3.3" data-path="r-markdown-for-literate-programming-and-automated-reports.html"><a href="r-markdown-for-literate-programming-and-automated-reports.html#making-good-use-of-configuration-yaml-header-in-index.rmd-file"><i class="fa fa-check"></i><b>13.3.3</b> Making good use of configuration yaml header in index.Rmd file</a></li>
+<li class="chapter" data-level="13.3.4" data-path="r-markdown-for-literate-programming-and-automated-reports.html"><a href="r-markdown-for-literate-programming-and-automated-reports.html#conditional-execution-of-chunks"><i class="fa fa-check"></i><b>13.3.4</b> Conditional execution of chunks</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="welcome-to-supervised-machine-learning-for-text-analysis-in-r.html"><a href="welcome-to-supervised-machine-learning-for-text-analysis-in-r.html"><i class="fa fa-check"></i>Welcome to Supervised Machine Learning for Text Analysis in R</a>
+<ul>
+<li class="chapter" data-level="13.3.5" data-path="welcome-to-supervised-machine-learning-for-text-analysis-in-r.html"><a href="welcome-to-supervised-machine-learning-for-text-analysis-in-r.html#automated-compilation-of-rmd-files-in-github-using-github-actions"><i class="fa fa-check"></i><b>13.3.5</b> Automated compilation of Rmd files in GitHub using GitHub Actions</a></li>
 </ul></li>
 <li class="chapter" data-level="14" data-path="ggplot2-and-its-extensions-for-data-visualization.html"><a href="ggplot2-and-its-extensions-for-data-visualization.html"><i class="fa fa-check"></i><b>14</b> ggplot2 and its extensions for data visualization</a>
 <ul>
@@ -318,17 +329,103 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="17.3" data-path="geospatial-coding-and-visualization-in-r.html"><a href="geospatial-coding-and-visualization-in-r.html#tutorials"><i class="fa fa-check"></i><b>17.3</b> Tutorials</a></li>
 <li class="chapter" data-level="17.4" data-path="geospatial-coding-and-visualization-in-r.html"><a href="geospatial-coding-and-visualization-in-r.html#dealing-with-memory-issues"><i class="fa fa-check"></i><b>17.4</b> Dealing with memory issues</a></li>
 <li class="chapter" data-level="17.5" data-path="geospatial-coding-and-visualization-in-r.html"><a href="geospatial-coding-and-visualization-in-r.html#canadian-geo-data"><i class="fa fa-check"></i><b>17.5</b> Canadian geo-data</a></li>
+<li class="chapter" data-level="17.6" data-path="geospatial-coding-and-visualization-in-r.html"><a href="geospatial-coding-and-visualization-in-r.html#code-snippets"><i class="fa fa-check"></i><b>17.6</b> Code snippets</a>
+<ul>
+<li class="chapter" data-level="17.6.1" data-path="geospatial-coding-and-visualization-in-r.html"><a href="geospatial-coding-and-visualization-in-r.html#using-simplemaps.com"><i class="fa fa-check"></i><b>17.6.1</b> Using simplemaps.com</a></li>
+<li class="chapter" data-level="17.6.2" data-path="geospatial-coding-and-visualization-in-r.html"><a href="geospatial-coding-and-visualization-in-r.html#using-google-api"><i class="fa fa-check"></i><b>17.6.2</b> Using Google API</a></li>
+<li class="chapter" data-level="17.6.3" data-path="geospatial-coding-and-visualization-in-r.html"><a href="geospatial-coding-and-visualization-in-r.html#using-tidygeocoder"><i class="fa fa-check"></i><b>17.6.3</b> Using tidygeocoder</a></li>
+<li class="chapter" data-level="17.6.4" data-path="geospatial-coding-and-visualization-in-r.html"><a href="geospatial-coding-and-visualization-in-r.html#using-open-street-map"><i class="fa fa-check"></i><b>17.6.4</b> Using Open Street map</a></li>
+<li class="chapter" data-level="17.6.5" data-path="geospatial-coding-and-visualization-in-r.html"><a href="geospatial-coding-and-visualization-in-r.html#using-open-database-of-addresses-educational-facilities"><i class="fa fa-check"></i><b>17.6.5</b> Using Open Database of Addresses / Educational Facilities</a></li>
+<li class="chapter" data-level="17.6.6" data-path="geospatial-coding-and-visualization-in-r.html"><a href="geospatial-coding-and-visualization-in-r.html#getting-postal-codes"><i class="fa fa-check"></i><b>17.6.6</b> Getting Postal codes</a></li>
+</ul></li>
 </ul></li>
 <li class="part"><span><b>IV Machine Learning and AI</b></span></li>
-<li class="chapter" data-level="18" data-path="record-linking-and-other-data-engineering-tasks-in-r.html"><a href="record-linking-and-other-data-engineering-tasks-in-r.html"><i class="fa fa-check"></i><b>18</b> Record Linking and other Data Engineering tasks in R</a>
+<li class="chapter" data-level="18" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html"><i class="fa fa-check"></i><b>18</b> Data Engineering, Record Linking and Deduplication</a>
 <ul>
-<li class="chapter" data-level="18.1" data-path="record-linking-and-other-data-engineering-tasks-in-r.html"><a href="record-linking-and-other-data-engineering-tasks-in-r.html#demo"><i class="fa fa-check"></i><b>18.1</b> demo</a></li>
+<li class="chapter" data-level="18.1" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#tldl"><i class="fa fa-check"></i><b>18.1</b> TL;DL</a></li>
+<li class="chapter" data-level="18.2" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#intro-what-is-data-engineering"><i class="fa fa-check"></i><b>18.2</b> Intro: What is <em>Data Engineering</em></a>
+<ul>
+<li class="chapter" data-level="18.2.1" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#data-engineering-vs.-software-engineering"><i class="fa fa-check"></i><b>18.2.1</b> <em>Data Engineering</em> vs. <em>Software Engineering</em></a></li>
+</ul></li>
+<li class="chapter" data-level="18.3" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#data-engineering-vs.-etl-and-elt"><i class="fa fa-check"></i><b>18.3</b> Data Engineering vs. ETL and ELT</a>
+<ul>
+<li class="chapter" data-level="18.3.1" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#taxonomy-of-data-engineering-tasks"><i class="fa fa-check"></i><b>18.3.1</b> Taxonomy of Data Engineering tasks</a></li>
+</ul></li>
+<li class="chapter" data-level="18.4" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#useful-packages"><i class="fa fa-check"></i><b>18.4</b> Useful packages</a>
+<ul>
+<li class="chapter" data-level="18.4.1" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#single-variable"><i class="fa fa-check"></i><b>18.4.1</b> Single variable</a></li>
+</ul></li>
+<li class="chapter" data-level="18.5" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#r-base-and-data.table"><i class="fa fa-check"></i><b>18.5</b> 0 &gt; R base and data.table</a>
+<ul>
+<li class="chapter" data-level="18.5.1" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#description"><i class="fa fa-check"></i><b>18.5.1</b> Description</a></li>
+<li class="chapter" data-level="18.5.2" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#examples"><i class="fa fa-check"></i><b>18.5.2</b> Examples</a></li>
+</ul></li>
+<li class="chapter" data-level="18.6" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#textclean"><i class="fa fa-check"></i><b>18.6</b> 1 &gt;<code>textclean</code></a>
+<ul>
+<li class="chapter" data-level="18.6.1" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#description-1"><i class="fa fa-check"></i><b>18.6.1</b> Description</a></li>
+<li class="chapter" data-level="18.6.2" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#example"><i class="fa fa-check"></i><b>18.6.2</b> Example</a></li>
+</ul></li>
+<li class="chapter" data-level="18.7" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#package-phonics"><i class="fa fa-check"></i><b>18.7</b> 2 &gt; Package <code>phonics</code></a>
+<ul>
+<li class="chapter" data-level="18.7.1" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#description-2"><i class="fa fa-check"></i><b>18.7.1</b> Description</a></li>
+<li class="chapter" data-level="18.7.2" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#example-1"><i class="fa fa-check"></i><b>18.7.2</b> Example</a></li>
+</ul></li>
+<li class="chapter" data-level="18.8" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#package-stringdist"><i class="fa fa-check"></i><b>18.8</b> 3 &gt; Package <code>stringdist</code></a>
+<ul>
+<li class="chapter" data-level="18.8.1" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#description-3"><i class="fa fa-check"></i><b>18.8.1</b> Description</a></li>
+<li class="chapter" data-level="18.8.2" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#example-2"><i class="fa fa-check"></i><b>18.8.2</b> Example</a></li>
+</ul></li>
+<li class="chapter" data-level="18.9" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#multi-variable-recording-linking"><i class="fa fa-check"></i><b>18.9</b> Multi-variable recording linking</a></li>
+<li class="chapter" data-level="18.10" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#libraryfastlink"><i class="fa fa-check"></i><b>18.10</b> &gt;&gt; library(fastLink)</a>
+<ul>
+<li class="chapter" data-level="18.10.1" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#description-4"><i class="fa fa-check"></i><b>18.10.1</b> Description</a></li>
+<li class="chapter" data-level="18.10.2" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#dataset"><i class="fa fa-check"></i><b>18.10.2</b> Dataset</a></li>
+<li class="chapter" data-level="18.10.3" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#example-3"><i class="fa fa-check"></i><b>18.10.3</b> Example</a></li>
+</ul></li>
+<li class="chapter" data-level="18.11" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#package-recordlinkage"><i class="fa fa-check"></i><b>18.11</b> &gt;&gt; Package <code>RecordLinkage</code></a>
+<ul>
+<li class="chapter" data-level="18.11.1" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#description-5"><i class="fa fa-check"></i><b>18.11.1</b> Description</a></li>
+<li class="chapter" data-level="18.11.2" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#datasets-german-names-500-and-10000"><i class="fa fa-check"></i><b>18.11.2</b> Datasets: German names 500 and 10,000</a></li>
+</ul></li>
+<li class="chapter" data-level="18.12" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#libraryblink"><i class="fa fa-check"></i><b>18.12</b> &gt; library(blink)</a>
+<ul>
+<li class="chapter" data-level="18.12.1" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#summary"><i class="fa fa-check"></i><b>18.12.1</b> Summary</a></li>
+</ul></li>
+<li class="chapter" data-level="18.13" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#libraryreclin"><i class="fa fa-check"></i><b>18.13</b> &gt; <code>library(reclin)</code></a>
+<ul>
+<li class="chapter" data-level="18.13.1" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#description-6"><i class="fa fa-check"></i><b>18.13.1</b> Description</a></li>
+<li class="chapter" data-level="18.13.2" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#included-datasets"><i class="fa fa-check"></i><b>18.13.2</b> Included Datasets:</a></li>
+</ul></li>
+<li class="chapter" data-level="18.14" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#libraryfuzzyjoin"><i class="fa fa-check"></i><b>18.14</b> &gt;&gt; library(fuzzyjoin)</a>
+<ul>
+<li class="chapter" data-level="18.14.1" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#description-7"><i class="fa fa-check"></i><b>18.14.1</b> Description</a></li>
+<li class="chapter" data-level="18.14.2" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#example-1-joining-with-common-mispelling"><i class="fa fa-check"></i><b>18.14.2</b> Example 1: Joining with Common Mispelling</a></li>
+<li class="chapter" data-level="18.14.3" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#example-2-from-datacamp"><i class="fa fa-check"></i><b>18.14.3</b> Example 2: from datacamp</a></li>
+<li class="chapter" data-level="18.14.4" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#example-3-from-stackoverflow"><i class="fa fa-check"></i><b>18.14.4</b> Example 3: from stackoverflow</a></li>
+</ul></li>
+<li class="chapter" data-level="18.15" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#package-blink"><i class="fa fa-check"></i><b>18.15</b> &gt; Package <code>blink</code></a>
+<ul>
+<li class="chapter" data-level="18.15.1" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#description-8"><i class="fa fa-check"></i><b>18.15.1</b> Description</a></li>
+<li class="chapter" data-level="18.15.2" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#datasets-german-names-500-and-10000-1"><i class="fa fa-check"></i><b>18.15.2</b> Datasets: German names 500 and 10,000</a></li>
+</ul></li>
+<li class="chapter" data-level="18.16" data-path="data-engineering-record-linking-and-deduplication.html"><a href="data-engineering-record-linking-and-deduplication.html#discusion---other-methods"><i class="fa fa-check"></i><b>18.16</b> Discusion - Other methods</a></li>
 </ul></li>
 <li class="chapter" data-level="19" data-path="text-analysis-in-r.html"><a href="text-analysis-in-r.html"><i class="fa fa-check"></i><b>19</b> Text Analysis in R</a>
 <ul>
 <li class="chapter" data-level="19.1" data-path="text-analysis-in-r.html"><a href="text-analysis-in-r.html#open-source-textbook"><i class="fa fa-check"></i><b>19.1</b> Open source textbook</a></li>
 <li class="chapter" data-level="19.2" data-path="text-analysis-in-r.html"><a href="text-analysis-in-r.html#plagiarism-detection"><i class="fa fa-check"></i><b>19.2</b> Plagiarism detection</a></li>
-<li class="chapter" data-level="19.3" data-path="text-analysis-in-r.html"><a href="text-analysis-in-r.html#results-from-international-methodology-symposium"><i class="fa fa-check"></i><b>19.3</b> results from International Methodology Symposium</a></li>
+<li class="chapter" data-level="19.3" data-path="text-analysis-in-r.html"><a href="text-analysis-in-r.html#related-work-at-international-methodology-symposium"><i class="fa fa-check"></i><b>19.3</b> Related work at International Methodology Symposium</a></li>
+<li class="chapter" data-level="19.4" data-path="text-analysis-in-r.html"><a href="text-analysis-in-r.html#useful-code-snippets"><i class="fa fa-check"></i><b>19.4</b> Useful code snippets</a>
+<ul>
+<li class="chapter" data-level="19.4.1" data-path="text-analysis-in-r.html"><a href="text-analysis-in-r.html#basic-cleaning-remove-accents-benchmarking"><i class="fa fa-check"></i><b>19.4.1</b> Basic cleaning : Remove accents (benchmarking)</a></li>
+<li class="chapter" data-level="19.4.2" data-path="text-analysis-in-r.html"><a href="text-analysis-in-r.html#text-cleaning"><i class="fa fa-check"></i><b>19.4.2</b> Text cleaning</a></li>
+<li class="chapter" data-level="19.4.3" data-path="text-analysis-in-r.html"><a href="text-analysis-in-r.html#extracting-re-ordering-words-in-a-string"><i class="fa fa-check"></i><b>19.4.3</b> Extracting, re-ordering words in a string</a></li>
+<li class="chapter" data-level="19.4.4" data-path="text-analysis-in-r.html"><a href="text-analysis-in-r.html#automatically-finding-removing-common-parts-in-strings"><i class="fa fa-check"></i><b>19.4.4</b> Automatically finding / removing common parts in strings</a></li>
+<li class="chapter" data-level="19.4.5" data-path="text-analysis-in-r.html"><a href="text-analysis-in-r.html#useful-packages-1"><i class="fa fa-check"></i><b>19.4.5</b> Useful packages</a></li>
+<li class="chapter" data-level="19.4.6" data-path="text-analysis-in-r.html"><a href="text-analysis-in-r.html#cleantexttext-clean-text"><i class="fa fa-check"></i><b>19.4.6</b> <code>cleanText(text)</code>: clean text</a></li>
+<li class="chapter" data-level="19.4.7" data-path="text-analysis-in-r.html"><a href="text-analysis-in-r.html#convert-text-to-date-or-timestamp"><i class="fa fa-check"></i><b>19.4.7</b> Convert Text to Date or Timestamp</a></li>
+<li class="chapter" data-level="19.4.8" data-path="text-analysis-in-r.html"><a href="text-analysis-in-r.html#transliteration-cleaning"><i class="fa fa-check"></i><b>19.4.8</b> Transliteration &amp; cleaning</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="20" data-path="statistical-tests-and-mixed-effects-analysis.html"><a href="statistical-tests-and-mixed-effects-analysis.html"><i class="fa fa-check"></i><b>20</b> Statistical tests and mixed-effects analysis</a></li>
 <li class="chapter" data-level="21" data-path="machine-learning-and-modeling-in-r.html"><a href="machine-learning-and-modeling-in-r.html"><i class="fa fa-check"></i><b>21</b> Machine Learning and Modeling in R</a>
@@ -369,7 +466,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="25.4" data-path="packages-101.html"><a href="packages-101.html#rbuildignore"><i class="fa fa-check"></i><b>25.4</b> * .Rbuildignore</a></li>
 <li class="chapter" data-level="25.5" data-path="packages-101.html"><a href="packages-101.html#license-use_mit_license"><i class="fa fa-check"></i><b>25.5</b> * License: <code>use_mit_license()</code></a></li>
-<li class="chapter" data-level="25.6" data-path="packages-101.html"><a href="packages-101.html#description"><i class="fa fa-check"></i><b>25.6</b> * DESCRIPTION</a></li>
+<li class="chapter" data-level="25.6" data-path="packages-101.html"><a href="packages-101.html#description-9"><i class="fa fa-check"></i><b>25.6</b> * DESCRIPTION</a></li>
 <li class="chapter" data-level="25.7" data-path="packages-101.html"><a href="packages-101.html#namespace"><i class="fa fa-check"></i><b>25.7</b> * NAMESPACE</a></li>
 <li class="chapter" data-level="25.8" data-path="packages-101.html"><a href="packages-101.html#examples-and-tests"><i class="fa fa-check"></i><b>25.8</b> * Examples and tests</a></li>
 <li class="chapter" data-level="25.9" data-path="packages-101.html"><a href="packages-101.html#in-my_codes"><i class="fa fa-check"></i><b>25.9</b> .. in MY_CODES</a></li>
@@ -384,26 +481,47 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="part"><span><b>VI Community Codes</b></span></li>
 <li class="chapter" data-level="27" data-path="gc-data.html"><a href="gc-data.html"><i class="fa fa-check"></i><b>27</b> GC Open Data use cases</a>
 <ul>
-<li class="chapter" data-level="27.1" data-path="gc-data.html"><a href="gc-data.html#pses-results-interactive-analysis-and-visualization"><i class="fa fa-check"></i><b>27.1</b> PSES Results interactive analysis and visualization:</a>
+<li class="chapter" data-level="27.1" data-path="gc-data.html"><a href="gc-data.html#ways-to-access-open-canada-data"><i class="fa fa-check"></i><b>27.1</b> Ways to access Open Canada Data</a>
 <ul>
-<li class="chapter" data-level="27.1.1" data-path="gc-data.html"><a href="gc-data.html#other-tools-and-dashboards"><i class="fa fa-check"></i><b>27.1.1</b> Other tools and dashboards</a></li>
+<li class="chapter" data-level="27.1.1" data-path="gc-data.html"><a href="gc-data.html#with-download-fread-readxls"><i class="fa fa-check"></i><b>27.1.1</b> With download, fread, readxls</a></li>
 </ul></li>
-<li class="chapter" data-level="27.2" data-path="gc-data.html"><a href="gc-data.html#automated-atip-requests-topic-extraction"><i class="fa fa-check"></i><b>27.2</b> Automated ATIP requests topic extraction:</a></li>
-<li class="chapter" data-level="27.3" data-path="gc-data.html"><a href="gc-data.html#automated-municipal-level-covid-19-tracker"><i class="fa fa-check"></i><b>27.3</b> Automated municipal level COVID-19 tracker:</a></li>
-<li class="chapter" data-level="27.4" data-path="gc-data.html"><a href="gc-data.html#geo-mapped-current-historical-and-predicted-border-wait-times"><i class="fa fa-check"></i><b>27.4</b> Geo-mapped current, historical and predicted border wait times:</a></li>
+<li class="chapter" data-level="27.2" data-path="gc-data.html"><a href="gc-data.html#with-cansim-package"><i class="fa fa-check"></i><b>27.2</b> With cansim package</a></li>
+<li class="chapter" data-level="27.3" data-path="gc-data.html"><a href="gc-data.html#using-api-with-ckanr-package"><i class="fa fa-check"></i><b>27.3</b> Using API with <code>ckanr</code> package</a></li>
 </ul></li>
-<li class="chapter" data-level="28" data-path="shiny-apps.html"><a href="shiny-apps.html"><i class="fa fa-check"></i><b>28</b> Shiny Apps</a>
+<li class="chapter" data-level="28" data-path="health-related.html"><a href="health-related.html"><i class="fa fa-check"></i><b>28</b> Health-related</a>
 <ul>
-<li class="chapter" data-level="28.1" data-path="shiny-apps.html"><a href="shiny-apps.html#pses-results-interactive-analysis-and-visualization-1"><i class="fa fa-check"></i><b>28.1</b> PSES Results interactive analysis and visualization:</a>
+<li class="chapter" data-level="28.1" data-path="health-related.html"><a href="health-related.html#canadian-vitals-statistics-database"><i class="fa fa-check"></i><b>28.1</b> Canadian Vitals Statistics Database</a>
 <ul>
-<li class="chapter" data-level="28.1.1" data-path="shiny-apps.html"><a href="shiny-apps.html#other-tools-and-dashboards-1"><i class="fa fa-check"></i><b>28.1.1</b> Other tools and dashboards</a></li>
+<li class="chapter" data-level="28.1.1" data-path="health-related.html"><a href="health-related.html#vital-statistics---death-database"><i class="fa fa-check"></i><b>28.1.1</b> Vital Statistics - Death Database</a></li>
+<li class="chapter" data-level="28.1.2" data-path="health-related.html"><a href="health-related.html#vital-statistics---birth-database"><i class="fa fa-check"></i><b>28.1.2</b> Vital Statistics - Birth Database</a></li>
 </ul></li>
-<li class="chapter" data-level="28.2" data-path="shiny-apps.html"><a href="shiny-apps.html#automated-atip-requests-topic-extraction-1"><i class="fa fa-check"></i><b>28.2</b> Automated ATIP requests topic extraction:</a></li>
-<li class="chapter" data-level="28.3" data-path="shiny-apps.html"><a href="shiny-apps.html#automated-municipal-level-covid-19-tracker-1"><i class="fa fa-check"></i><b>28.3</b> Automated municipal level COVID-19 tracker:</a></li>
-<li class="chapter" data-level="28.4" data-path="shiny-apps.html"><a href="shiny-apps.html#geo-mapped-current-historical-and-predicted-border-wait-times-1"><i class="fa fa-check"></i><b>28.4</b> Geo-mapped current, historical and predicted border wait times:</a></li>
-<li class="chapter" data-level="28.5" data-path="shiny-apps.html"><a href="shiny-apps.html#demo-and-tool-for-linking-noisy-data-records"><i class="fa fa-check"></i><b>28.5</b> Demo and tool for linking noisy data records:</a></li>
-<li class="chapter" data-level="28.6" data-path="shiny-apps.html"><a href="shiny-apps.html#html-pages-comparator"><i class="fa fa-check"></i><b>28.6</b> Html pages comparator:</a></li>
-<li class="chapter" data-level="28.7" data-path="shiny-apps.html"><a href="shiny-apps.html#large-table-summarizer"><i class="fa fa-check"></i><b>28.7</b> Large table summarizer:</a></li>
+<li class="chapter" data-level="28.2" data-path="health-related.html"><a href="health-related.html#covid-19-infection-and-vaccination-related"><i class="fa fa-check"></i><b>28.2</b> COVID-19 infection and vaccination related:</a></li>
+</ul></li>
+<li class="chapter" data-level="29" data-path="open-ontario-data.html"><a href="open-ontario-data.html"><i class="fa fa-check"></i><b>29</b> Open Ontario Data</a>
+<ul>
+<li class="chapter" data-level="29.0.1" data-path="open-ontario-data.html"><a href="open-ontario-data.html#section-1"><i class="fa fa-check"></i><b>29.0.1</b> </a></li>
+</ul></li>
+<li class="chapter" data-level="30" data-path="performance-related-databases.html"><a href="performance-related-databases.html"><i class="fa fa-check"></i><b>30</b> Performance-related databases</a>
+<ul>
+<li class="chapter" data-level="30.1" data-path="performance-related-databases.html"><a href="performance-related-databases.html#pses-results-interactive-analysis-and-visualization"><i class="fa fa-check"></i><b>30.1</b> PSES Results interactive analysis and visualization:</a>
+<ul>
+<li class="chapter" data-level="30.1.1" data-path="performance-related-databases.html"><a href="performance-related-databases.html#other-tools-and-dashboards"><i class="fa fa-check"></i><b>30.1.1</b> Other tools and dashboards</a></li>
+</ul></li>
+<li class="chapter" data-level="30.2" data-path="performance-related-databases.html"><a href="performance-related-databases.html#automated-atip-requests-topic-analysis"><i class="fa fa-check"></i><b>30.2</b> Automated ATIP requests topic analysis</a></li>
+<li class="chapter" data-level="30.3" data-path="performance-related-databases.html"><a href="performance-related-databases.html#geo-mapped-current-historical-and-predicted-border-wait-times"><i class="fa fa-check"></i><b>30.3</b> Geo-mapped current, historical and predicted border wait times:</a></li>
+</ul></li>
+<li class="chapter" data-level="31" data-path="shiny-apps.html"><a href="shiny-apps.html"><i class="fa fa-check"></i><b>31</b> Shiny Apps</a>
+<ul>
+<li class="chapter" data-level="31.1" data-path="shiny-apps.html"><a href="shiny-apps.html#pses-results-interactive-analysis-and-visualization-1"><i class="fa fa-check"></i><b>31.1</b> PSES Results interactive analysis and visualization:</a>
+<ul>
+<li class="chapter" data-level="31.1.1" data-path="shiny-apps.html"><a href="shiny-apps.html#other-tools-and-dashboards-1"><i class="fa fa-check"></i><b>31.1.1</b> Other tools and dashboards</a></li>
+</ul></li>
+<li class="chapter" data-level="31.2" data-path="shiny-apps.html"><a href="shiny-apps.html#automated-atip-requests-topic-extraction"><i class="fa fa-check"></i><b>31.2</b> Automated ATIP requests topic extraction:</a></li>
+<li class="chapter" data-level="31.3" data-path="shiny-apps.html"><a href="shiny-apps.html#automated-municipal-level-covid-19-tracker"><i class="fa fa-check"></i><b>31.3</b> Automated municipal level COVID-19 tracker:</a></li>
+<li class="chapter" data-level="31.4" data-path="shiny-apps.html"><a href="shiny-apps.html#geo-mapped-current-historical-and-predicted-border-wait-times-1"><i class="fa fa-check"></i><b>31.4</b> Geo-mapped current, historical and predicted border wait times:</a></li>
+<li class="chapter" data-level="31.5" data-path="shiny-apps.html"><a href="shiny-apps.html#demo-and-tool-for-linking-noisy-data-records"><i class="fa fa-check"></i><b>31.5</b> Demo and tool for linking noisy data records:</a></li>
+<li class="chapter" data-level="31.6" data-path="shiny-apps.html"><a href="shiny-apps.html#html-pages-comparator"><i class="fa fa-check"></i><b>31.6</b> Html pages comparator:</a></li>
+<li class="chapter" data-level="31.7" data-path="shiny-apps.html"><a href="shiny-apps.html#large-table-summarizer"><i class="fa fa-check"></i><b>31.7</b> Large table summarizer:</a></li>
 </ul></li>
 <li class="appendix"><span><b>Appendices</b></span></li>
 <li class="chapter" data-level="A" data-path="lunch-and-learn-notes.html"><a href="lunch-and-learn-notes.html"><i class="fa fa-check"></i><b>A</b> Lunch and Learn notes</a>
@@ -452,12 +570,114 @@ Published with bookdown</a></center></li>
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="record-linking-and-other-data-engineering-tasks-in-r" class="section level1" number="18">
-<h1><span class="header-section-number">18</span> Record Linking and other Data Engineering tasks in R</h1>
-<div id="demo" class="section level2" number="18.1">
-<h2><span class="header-section-number">18.1</span> demo</h2>
-<p>See <a href="http://rcanada.shinyapps.io/demo" class="uri">http://rcanada.shinyapps.io/demo</a> and the #GCData2021 Data Engineering workshop presentation -
-for the backgrounder and the demonstration of various DE tasks and solutions.</p>
+<div id="health-related" class="section level1" number="28">
+<h1><span class="header-section-number">28</span> Health-related</h1>
+<div id="canadian-vitals-statistics-database" class="section level2" number="28.1">
+<h2><span class="header-section-number">28.1</span> Canadian Vitals Statistics Database</h2>
+<div id="vital-statistics---death-database" class="section level3" number="28.1.1">
+<h3><span class="header-section-number">28.1.1</span> Vital Statistics - Death Database</h3>
+<p>Statistique de l’état civil - Base de données sur les décès</p>
+<!-- \* / \*\* indicate that the R code / Shiny App are available in this book -->
+<div id="leading-causes-of-death" class="section level4" number="28.1.1.1">
+<h4><span class="header-section-number">28.1.1.1</span> Leading causes of death</h4>
+<p>Provisional weekly death counts, by selected grouped causes of death</p>
+<p>Nombre provisoire de décès et surmortalité janvier 2020 à août 2021</p>
+<p>Frequency: Weekly
+Table: 13-10-0810-01
+<a href="https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1310081001" class="uri">https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1310081001</a>
+<a href="https://www150.statcan.gc.ca/n1/tbl/csv/13100810-eng.zip" class="uri">https://www150.statcan.gc.ca/n1/tbl/csv/13100810-eng.zip</a></p>
+<div class="sourceCode" id="cb65"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb65-1"><a href="health-related.html#cb65-1" aria-hidden="true"></a><span class="cf">if</span> (F) {</span>
+<span id="cb65-2"><a href="health-related.html#cb65-2" aria-hidden="true"></a>  curl<span class="op">::</span><span class="kw">curl_download</span>(<span class="st">&quot;https://www150.statcan.gc.ca/n1/tbl/csv/13100810-eng.zip&quot;</span>,</span>
+<span id="cb65-3"><a href="health-related.html#cb65-3" aria-hidden="true"></a>    <span class="st">&quot;13100810.zip&quot;</span>,</span>
+<span id="cb65-4"><a href="health-related.html#cb65-4" aria-hidden="true"></a>    <span class="dt">mode =</span> <span class="st">&quot;wb&quot;</span></span>
+<span id="cb65-5"><a href="health-related.html#cb65-5" aria-hidden="true"></a>  )</span>
+<span id="cb65-6"><a href="health-related.html#cb65-6" aria-hidden="true"></a></span>
+<span id="cb65-7"><a href="health-related.html#cb65-7" aria-hidden="true"></a>  url &lt;-<span class="st"> &quot;https://www150.statcan.gc.ca/n1/tbl/csv/13100810-eng.zip&quot;</span></span>
+<span id="cb65-8"><a href="health-related.html#cb65-8" aria-hidden="true"></a>  temp &lt;-<span class="st"> </span><span class="kw">tempfile</span>()</span>
+<span id="cb65-9"><a href="health-related.html#cb65-9" aria-hidden="true"></a>  <span class="kw">download.file</span>(url, temp)</span>
+<span id="cb65-10"><a href="health-related.html#cb65-10" aria-hidden="true"></a>  dt &lt;-<span class="st"> </span><span class="kw">fread</span>(<span class="kw">unzip</span>(temp, <span class="dt">files =</span> <span class="st">&quot;13100810.csv&quot;</span>))</span>
+<span id="cb65-11"><a href="health-related.html#cb65-11" aria-hidden="true"></a>  <span class="kw">rm</span>(temp)</span>
+<span id="cb65-12"><a href="health-related.html#cb65-12" aria-hidden="true"></a>}</span>
+<span id="cb65-13"><a href="health-related.html#cb65-13" aria-hidden="true"></a></span>
+<span id="cb65-14"><a href="health-related.html#cb65-14" aria-hidden="true"></a>dt &lt;-<span class="st"> </span><span class="kw">fread</span> (<span class="st">&quot;https://github.com/open-canada/datasets/raw/main/statcan/13100810-after-20190901.csv&quot;</span>, <span class="dt">stringsAsFactors =</span> F)</span>
+<span id="cb65-15"><a href="health-related.html#cb65-15" aria-hidden="true"></a></span>
+<span id="cb65-16"><a href="health-related.html#cb65-16" aria-hidden="true"></a>dt[, Date <span class="op">:</span><span class="er">=</span><span class="st"> </span><span class="kw">ymd</span>(Date)]</span>
+<span id="cb65-17"><a href="health-related.html#cb65-17" aria-hidden="true"></a>dt[, GEO <span class="op">:</span><span class="er">=</span><span class="st"> </span><span class="kw">gsub</span>(<span class="st">&quot;, place of occurrence&quot;</span>, <span class="st">&quot;&quot;</span>, GEO)]</span>
+<span id="cb65-18"><a href="health-related.html#cb65-18" aria-hidden="true"></a></span>
+<span id="cb65-19"><a href="health-related.html#cb65-19" aria-hidden="true"></a></span>
+<span id="cb65-20"><a href="health-related.html#cb65-20" aria-hidden="true"></a>dt0 &lt;-<span class="st"> </span>dt[ Date <span class="op">&gt;=</span><span class="st"> &quot;2019-10-01&quot;</span> ]</span>
+<span id="cb65-21"><a href="health-related.html#cb65-21" aria-hidden="true"></a></span>
+<span id="cb65-22"><a href="health-related.html#cb65-22" aria-hidden="true"></a></span>
+<span id="cb65-23"><a href="health-related.html#cb65-23" aria-hidden="true"></a><span class="co"># Plot GEO vertically - allows comparison across Causes</span></span>
+<span id="cb65-24"><a href="health-related.html#cb65-24" aria-hidden="true"></a></span>
+<span id="cb65-25"><a href="health-related.html#cb65-25" aria-hidden="true"></a><span class="kw">ggplot</span>(dt0) <span class="op">+</span><span class="st">    </span><span class="kw">guides</span>(<span class="dt">col =</span> <span class="st">&quot;none&quot;</span>) <span class="op">+</span></span>
+<span id="cb65-26"><a href="health-related.html#cb65-26" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_step</span>(<span class="kw">aes</span>(Date, val_norm, <span class="dt">col =</span> <span class="st">`</span><span class="dt">Cause of death (ICD-10)</span><span class="st">`</span>)) <span class="op">+</span></span>
+<span id="cb65-27"><a href="health-related.html#cb65-27" aria-hidden="true"></a><span class="st">    </span><span class="kw">facet_grid</span>(GEO <span class="op">~</span><span class="st"> `</span><span class="dt">Cause of death (ICD-10)</span><span class="st">`</span>, <span class="dt">scales =</span> <span class="st">&quot;free&quot;</span>) <span class="op">+</span></span>
+<span id="cb65-28"><a href="health-related.html#cb65-28" aria-hidden="true"></a><span class="st">    </span><span class="kw">labs</span>( <span class="dt">title =</span> <span class="ot">NULL</span>, <span class="dt">x =</span> <span class="ot">NULL</span>, <span class="dt">y =</span> <span class="ot">NULL</span>,</span>
+<span id="cb65-29"><a href="health-related.html#cb65-29" aria-hidden="true"></a>          <span class="dt">caption =</span> <span class="st">&quot;Source: Statistics Canada - Table 13-10-0810-01&quot;</span>  )</span></code></pre></div>
+<pre><code>## Warning: Removed 745 row(s) containing missing values (geom_path).</code></pre>
+<p><img src="LL-book_files/figure-html/unnamed-chunk-22-1.png" width="672" /></p>
+<div class="sourceCode" id="cb67"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb67-1"><a href="health-related.html#cb67-1" aria-hidden="true"></a><span class="co"># Plot Causes vertically - allows comparison across GEO</span></span>
+<span id="cb67-2"><a href="health-related.html#cb67-2" aria-hidden="true"></a></span>
+<span id="cb67-3"><a href="health-related.html#cb67-3" aria-hidden="true"></a><span class="kw">ggplot</span>(dt0) <span class="op">+</span><span class="st">  </span><span class="kw">theme</span>(<span class="dt">legend.position =</span> <span class="st">&quot;bottom&quot;</span>) <span class="op">+</span></span>
+<span id="cb67-4"><a href="health-related.html#cb67-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_step</span>(<span class="kw">aes</span>(Date, val_norm, <span class="dt">col =</span> <span class="st">`</span><span class="dt">Cause of death (ICD-10)</span><span class="st">`</span>)) <span class="op">+</span></span>
+<span id="cb67-5"><a href="health-related.html#cb67-5" aria-hidden="true"></a><span class="st">    </span><span class="kw">facet_grid</span>(<span class="st">`</span><span class="dt">Cause of death (ICD-10)</span><span class="st">`</span> <span class="op">~</span><span class="st"> </span>GEO, <span class="dt">scales =</span> <span class="st">&quot;free&quot;</span>) <span class="op">+</span></span>
+<span id="cb67-6"><a href="health-related.html#cb67-6" aria-hidden="true"></a><span class="st">    </span><span class="kw">labs</span>(  <span class="dt">title =</span> <span class="ot">NULL</span>, <span class="dt">x =</span> <span class="ot">NULL</span>, <span class="dt">y =</span> <span class="ot">NULL</span>,</span>
+<span id="cb67-7"><a href="health-related.html#cb67-7" aria-hidden="true"></a>           <span class="dt">caption =</span> <span class="st">&quot;Source: Statistics Canada - Table 13-10-0810-01&quot;</span>    )</span></code></pre></div>
+<pre><code>## Warning: Removed 745 row(s) containing missing values (geom_path).</code></pre>
+<p><img src="LL-book_files/figure-html/unnamed-chunk-22-2.png" width="672" /></p>
+</div>
+<div id="other" class="section level4" number="28.1.1.2">
+<h4><span class="header-section-number">28.1.1.2</span> Other</h4>
+<p>Provisional weekly death counts, by age group and sex
+Frequency: Weekly
+Table: 13-10-0768-01
+Release date: 2021-12-06
+Geography: Canada, Province or territory
+<a href="https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1310076801" class="uri">https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1310076801</a></p>
+<p>Previous releases and revisions to provisional weekly death counts1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13
+Frequency: Weekly
+Table: 13-10-0783-01
+Release date: 2021-12-06
+Geography: Canada, Province or territory
+<a href="https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1310078301" class="uri">https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1310078301</a></p>
+<p>Fetal deaths (20 weeks or more of gestation) and late fetal deaths (28 weeks or more of gestation)
+Table: 13-10-0427-01 (formerly: CANSIM 102-4514)</p>
+<p>Perinatal mortality (late fetal deaths and early neonatal deaths)
+Table: 13-10-0714-01 (formerly: CANSIM 102-0508)</p>
+<p>Deaths and age-specific mortality rates, by selected grouped causes1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+Frequency: Annual
+Table: 13-10-0392-01</p>
+<p>Leading causes of death, total population, by age group
+Frequency: Annual. till 2019
+Table: 13-10-0394-01</p>
+<p>Leading causes of death, infants
+Table: 13-10-0395-01 (formerly: CANSIM 102-0562)</p>
+</div>
+</div>
+<div id="vital-statistics---birth-database" class="section level3" number="28.1.2">
+<h3><span class="header-section-number">28.1.2</span> Vital Statistics - Birth Database</h3>
+<p><a href="https://www150.statcan.gc.ca/n1/en/surveys/3231" class="uri">https://www150.statcan.gc.ca/n1/en/surveys/3231</a></p>
+<p>Crude birth rate, age-specific fertility rates and total fertility rate (live births)
+Table: 13-10-0418-01 (formerly: CANSIM 102-4505)</p>
+<p>Live births, by month
+Table: 13-10-0415-01 (formerly: CANSIM 102-4502)</p>
+<p>Live births, by age of mother
+Table: 13-10-0416-01 (formerly: CANSIM 102-4503)</p>
+</div>
+</div>
+<div id="covid-19-infection-and-vaccination-related" class="section level2" number="28.2">
+<h2><span class="header-section-number">28.2</span> COVID-19 infection and vaccination related:</h2>
+<ul>
+<li><a href="https://health-infobase.canada.ca/covid-19/vaccination-coverage" class="uri">https://health-infobase.canada.ca/covid-19/vaccination-coverage</a></li>
+</ul>
+<p>Cumulative number and percent of people who have received a COVID-19 vaccine in Canada by vaccination status, age group, sex, and jurisdiction, November 20, 2021
+- <a href="https://health-infobase.canada.ca/src/data/covidLive/vaccination-coverage-byAgeAndSex-overTimeDownload.csv" class="uri">https://health-infobase.canada.ca/src/data/covidLive/vaccination-coverage-byAgeAndSex-overTimeDownload.csv</a></p>
+<div class="sourceCode" id="cb69"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb69-1"><a href="health-related.html#cb69-1" aria-hidden="true"></a>strVac &lt;-<span class="st"> &quot;https://health-infobase.canada.ca/src/data/covidLive/vaccination-coverage-byAgeAndSex-overTimeDownload.csv&quot;</span></span>
+<span id="cb69-2"><a href="health-related.html#cb69-2" aria-hidden="true"></a>dtVac &lt;-<span class="st"> </span><span class="kw">fread</span>(strVac, <span class="dt">stringsAsFactors =</span> F)</span>
+<span id="cb69-3"><a href="health-related.html#cb69-3" aria-hidden="true"></a>dtVac<span class="op">$</span>prfname &lt;-<span class="st"> </span><span class="ot">NULL</span></span>
+<span id="cb69-4"><a href="health-related.html#cb69-4" aria-hidden="true"></a>dtVac<span class="op">$</span>pruid &lt;-<span class="st"> </span><span class="ot">NULL</span></span>
+<span id="cb69-5"><a href="health-related.html#cb69-5" aria-hidden="true"></a>dtVac[, week_end <span class="op">:</span><span class="er">=</span><span class="st"> </span><span class="kw">ymd</span>(week_end)]</span></code></pre></div>
 </div>
 </div>
             </section>
@@ -465,11 +685,12 @@ for the backgrounder and the demonstration of various DE tasks and solutions.</p
           </div>
         </div>
       </div>
-<a href="geospatial-coding-and-visualization-in-r.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="text-analysis-in-r.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="gc-data.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="open-ontario-data.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -509,10 +730,6 @@ gitbook.start({
 "text": null
 },
 "download": ["LL-book.epub", "LL-book.pdf"],
-"search": {
-"engine": "fuse",
-"options": null
-},
 "toc": {
 "collapse": "subsection"
 }
